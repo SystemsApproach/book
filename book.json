@@ -1,0 +1,15 @@
+{
+  "title": "XOS Guide",
+  "root": ".",
+  "structure": {
+    "summary": "SUMMARY.md"
+  },
+  "variables": {
+    "branch": "master"
+  },
+  "plugins": [
+    "anchorjs",
+    "smart-nav-collapse",
+    "versions-select"
+  ]
+}
