@@ -22,17 +22,14 @@
 # use all rules
 all
 
-# Exclude rule: Header levels should only increment by one level at a time
-exclude_rule 'MD001'
-
 # Indent lists with 4 spaces
 rule 'MD007', :indent => 4
 
 # Exclude rule: Trailing spaces
 exclude_rule 'MD009'
 
-# Don't enforce line length limitations
-#exclude_rule 'MD013'
+# Don't enforce line length limitations within code blocks and tables
+rule 'MD013', :code_blocks => false, :tables => false
 
 # Allow  ! and ? as trailing punctuation in headers
 rule 'MD026', :punctuation => '.,;:'
@@ -43,11 +40,8 @@ exclude_rule 'MD027'
 # Numbered lists should have the correct order
 rule 'MD029', :style => "ordered"
 
-# Exclude rule: Fenced code blocks should be surrounded by blank lines
-exclude_rule 'MD031'
+# Allow Bare URLs
+exclude_rule 'MD034'
 
-# Exclude rule: Emphasis used instead of a header
-exclude_rule 'MD036'
-
-# Gitbook won't care about multiple blank lines
-exclude_rule 'MD012'
+# Allow copyright notice as an HTML comment before top level header
+exclude_rule 'MD041'
