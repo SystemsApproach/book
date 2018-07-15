@@ -1,60 +1,105 @@
-# Preface
+<!--- Copyright 2018, Larry Peterson & Bruce Davie    --->
+<!--- Licsenced under the CC BY License, Version 4.0 --->
+<!--- https://creativecommons.org/licenses/by/4.0  --->
+
+# Preface 
 
 This site contains source text for *Computer Networks: A Systems
-Approach*, now available under the Creative Commons (CC BY) licensing
-terms. The community is invited to contribute fixes, updates, and new
-material under the same terms.
+Approach*, now available under terms of the [Creative Commons
+(CC BY 4.0)](https://creativecommons.org/licenses/by/4.0)
+license. The community is invited to contribute corrections,
+improvements, updates, and new material under the same terms.
 
-The material is organize as a git repository per chapter, with a
-"root" repo (this one) containing the gitbook files needed to build a
-full book. To build a web-viewable version, do the following:
+Like many open source software projects, this one has been seeded
+with once proprietary content: the 5th edition of *Peterson and Davie*,
+with the copyright held by Elsevier. Our hope is that open sourcing
+this material will not only make it widely available, but also serve
+as an attractor for new content: updating what's already there,
+expanding it to include additional topics, and augmenting the text
+with additional teaching collateral.
+
+We will initially play an editorial role—vetting and wordsmithing
+contributions—but our plan is share ownership of the project with
+others committed to its success.
+
+## Getting Started
+
+The material is organize as a git repository per chapter, each
+focusing on a major networking topic like *Internetworking* or
+*Congestion Control*. A "root" repo (this one) contains the gitbook
+files that can be used to create a full book. To build a web-viewable
+version, you need first need to install a couple packages:
+
+* [Gitbook Toolchain](https://toolchain.gitbook.com/setup.html)
+* [Node.js Package Manager](https://www.npmjs.com/get-npm)
+
+Do the following to download the source:
 
 ```shell
-mkdir systemsapproach
-cd systemsapproach
+mkdir ~/systemsapproach
+cd ~/systemsapproach
 git clone https://github.com/systemsapproach/book.git
 cd book
 git submodule init
 git submodule update
 ```
 
-then type
+Then to build the gitbook, simply type:
 
 ```shell
 make
 ```
 
-If all goes well, you will be able to view the book at
+If all goes well, you will be able to view the book in your browser at
 `localhost:4000`.
 
-If you have fixes or updates you'd like to commit back to GitHub, do
-that using `git` commands from the corresponding submodule
-(directory). For example, to fix a typo in `chapter1/README.md` do the
-following:
+## How to Contribute
+
+We hope that if you use this material, you are also willing to
+contribute back to it. If you are new to open source, you might check
+out this [How to Contribute to Open
+Source](https://opensource.guide/how-to-contribute/) Guide.
+Among other things, you'll learn about posting *Issues* that you'd
+like to see addressed, and issuing *Pull Requests* to merge your
+improvements back into GitHub.
+
+If you do want to contribute either patches or new material, you will
+need to sign a [Contributor Licensing Agreement
+(CLA)](https://github.com/SystemsApproach/book/blob/master/CLA.md).
+There's nothing you need to do this minute, but you'll be prompted to
+sign the CLA the first time you make a pull request.
+
+The CLA is pretty straightforward: it establishes that (a) you have
+the right to contribute what you're contributing, and (b) what you
+contribute is available to everyone else under the same
+[CC BY](https://creativecommons.org/licenses/by/4.0) terms as
+the existing content. The CLA is a little unusual in that it explicitly
+calls out Elsevier's rights, but suffice it to say, the publishing
+industry is still getting comfortable with open source.
+
+You should also familiarize yourself with the expected style. As a
+simple first step,  we recommend you check to see if new text
+you'd like to submit passes our `MarkDownLint` test. To do this,
+run
 
 ```shell
-cd chapter1
-...edit README.md...
-git add README.md
-git commit -c "fixed typo"
-git push
+cd ~/systemsapproach
+make lint
 ```
 
-This will typically result in a "pull request" that someone with write
-permission on the repo (initially authors-now-editors Larry Peterson
-and Bruce Davie) will need to approve. Over time, we hope to grow the
-set of contributors that have write premission on one or more
-repos/chapters. 
-
-If you'd like to contribute and are looking for something that needs
-work, see the [Project
-Board](https://github.com/orgs/SystemsApproach/projects/).
-
+Finally, if you'd like to contribute and are looking for something
+that needs attention, see the current list of
+[Issues](https://github.com/orgs/SystemsApproach/issues/)
+or the [Project Board](https://github.com/orgs/SystemsApproach/projects/).
 We'd also like to expand the set of topics/chapters beyond the initial
-set inherited from the 5th edition. If you have ideas, we'd love to
+set inherited from the 5th edition, so if you have ideas, we'd love to
 hear from you.
 
-Finally, one bit of legalese. To contibute you need to first sign and
-submit a Contributor Licensing Agreement (CLA). It's pretty
-straightforward, establishing that what you contribute is available to
-everyone else under the same terms as what others have contributed.
+## Join Us
+
+We hope you've gotten value out of *Computer Networks: A Systems
+Approach* over the years, and we're eager to have you join us in this
+new venture.
+
+Larry Peterson & Bruce Davie  
+August 1, 2018

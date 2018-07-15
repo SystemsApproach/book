@@ -32,7 +32,7 @@ rule 'MD007', :indent => 4
 exclude_rule 'MD009'
 
 # Don't enforce line length limitations
-exclude_rule 'MD013'
+#exclude_rule 'MD013'
 
 # Allow  ! and ? as trailing punctuation in headers
 rule 'MD026', :punctuation => '.,;:'
