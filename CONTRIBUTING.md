@@ -24,60 +24,69 @@ Preface in the original book:
 
 > **Approach**
 >
-> For an area that's as dynamic and changing
-> as computer networks, the most
-> important thing a textbook can offer is perspective---to distinguish between
-> what's important and what's not, and between what's lasting and what's
-> superficial. Based on our experience over the past 20 years doing research
-> that has led to new networking technology, teaching undergraduate and
-> graduate students about the latest trends in networking, and delivering
-> advanced networking products to market, we have developed a
-> perspective---which we call the *systems approach*---that forms the
-> soul of this book. The systems approach has several implications:
+> For an area that's as dynamic and changing as computer
+> networks, the most important thing a textbook can offer is
+> perspective—to distinguish between what's important and what's not,
+> and between what's lasting and what's superficial. Based on our
+> experience over the past 25-plus years doing research that has led to new
+> networking technology, teaching undergraduate and graduate students
+> about the latest trends in networking, and delivering advanced
+> networking products to market, we have developed a perspective—which
+> we call the *systems approach*—that forms the soul of this
+> book. The systems approach has several implications:
 >
-> * Rather than accept existing artifacts as gospel, we start with first
-> principles and walk you through the thought process that led to today's
-> networks. This allows us to explain \emph{why} networks look like they do.
-> It is our experience that once you understand the underlying concepts, any
-> new protocol that you are confronted with will be relatively easy to digest.
+> * *First Principles.* Rather than accept existing artifacts as gospel, we 
+> start with first principles and walk you through the thought process that 
+> led to today's networks. This allows us to explain *why* networks look
+> like they do.  It is our experience that once you understand the
+> underlying concepts, any new protocol that you are confronted with
+> will be relatively easy to digest.
 >
-> * Although the material is loosely organized around the traditional
-> network layers, starting at the bottom and moving up the protocol stack,
-> we do not adopt a rigidly layerist approach. Many topics---congestion control
-> and security are good examples---have implications up and down the hierarchy,
-> and so we discuss them outside the traditional layered model. In short,
-> we believe layering makes a good servant but a poor master; it's more often
-> useful to take an end-to-end perspective.
+> * *Non-layerist.* Although the material is loosely organized around the 
+> traditional network layers, starting at the bottom and moving up the 
+> protocol stack, we do not adopt a rigidly layerist approach. Many
+> topics—congestion control and security are good examples—have
+> implications up and down the hierarchy, and so we discuss them outside
+> the traditional layered model. Similarly, routers and switches have so
+> much in common (and are often combined as single products) that we
+> discuss them in the same chapter. In short, we believe layering makes a
+> good servant but a poor master; it's more often useful to take an
+> end-to-end perspective.
 >
-> * Rather than explain how protocols work in the abstract, we use the
-> most important protocols in use today---many of them from the TCP/IP
-> Internet---to illustrate how networks work in practice. This allows us to
-> include real-world experiences in the discussion.
+> * *Real-world Examples.* Rather than explain how protocols work in the 
+> abstract, we use the most important protocols in use today—most of them 
+> from the TCP/IP Internet—to illustrate how networks work in practice. This
+> allows us to include real-world experiences in the discussion.
 >
-> * Although at the lowest levels networks are constructed from commodity
-> that can be bought from computer vendors and communication services
-> that can be leased from the phone company, it is the software that allows
-> networks to provide new services and adapt quickly to changing circumstances.
-> It is for this reason that we emphasize how network software is implemented,
-> rather than stopping with a description of the abstract algorithms involved.
-> 
-> * Networks are constructed from many building-block pieces, and while
-> it is necessary to be able to abstract away uninteresting elements when
-> solving a particular problem, it is essential to understand how all the
-> pieces fit together to form a functioning network. We therefore spend
-> considerable time explaining the overall end-to-end behavior of networks,
-> not just the individual components, so that it is possible to understand
-> how a complete network operates, all the way from the application to the
-> hardware.
+> * *Software.* Although at the lowest levels networks are constructed from
+> commodity hardware that can be bought from computer vendors and
+> communication services that can be leased from the phone company, it
+> is the software that allows networks to provide new services and adapt
+> quickly to changing circumstances.  It is for this reason that we
+> emphasize how network software is implemented, rather than stopping
+> with a description of the abstract algorithms involved. We also include
+> code segments taken from a working protocol stack to illustrate how
+> you might implement certain protocols and algorithms.
 >
-> * The systems approach implies doing experimental performance studies,
-> and then using the data you gather both to quantitatively analyze various
-> design options and to guide you in optimizing the implementation. This
-> emphasis on empirical analysis pervades the book.
-> 
-> * Networks are like other computer systems---for example, operating
-> systems, processor architectures, distributed and parallel systems, and
-> so on. They are all large and complex. To help manage this complexity, system
-> builders often draw on a collection of design principles. We highlight these
-> design principles as they are introduced throughout the book, illustrated,
-> of course, with examples from computer networks.
+> * *End-to-end Focus.* Networks are constructed from many building-block
+> pieces, and while it is necessary to be able to abstract away uninteresting
+> elements when solving a particular problem, it is essential to
+> understand how all the pieces fit together to form a functioning
+> network. We therefore spend considerable time explaining the overall
+> end-to-end behavior of networks, not just the individual components,
+> so that it is possible to understand how a complete network operates,
+> all the way from the application to the hardware.
+>
+> * *Performance.* The systems approach implies doing experimental
+> performance studies, and then using the data you gather both to quantitatively
+> analyze various design options and to guide you in optimizing the
+> implementation. This emphasis on empirical analysis pervades the book.
+>
+> * *Design Principles.* Networks are like other computer
+> systems—for example, operating 
+> systems, processor architectures, distributed and parallel systems,
+> and so on. They are all large and complex. To help manage this
+> complexity, system builders often draw on a collection of design
+> principles. We highlight these design principles as they are
+> introduced throughout the book, illustrated, of course, with examples
+> from computer networks.
