@@ -105,4 +105,4 @@ Approach* over the years, and we're eager to have you join us in this
 new venture.
 
 Larry Peterson & Bruce Davie  
-August 1, 2018
+August 8, 2018
