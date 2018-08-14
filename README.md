@@ -116,6 +116,3 @@ new venture.
 Larry Peterson & Bruce Davie  
 August 2018
 
-{% creativecommons type="by" %}
-{% endcreativecommons %}
-
