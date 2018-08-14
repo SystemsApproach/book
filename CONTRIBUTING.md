@@ -7,17 +7,41 @@ mailing list before putting in a lot of effort. The first step is to
 
 Also, while GitHub is a great place to archive and track revisions over time,
 it is often the case that a shared Google Document is a better tool for
-collaboration. This is true not only for from-scratch efforts, but also as a way to
-get comments and feedback on a fairly complete draft. If you're game, we
-have a shared [Google Drive Folder](https://drive.google.com/drive/u/2/folders/1diDcXKTyMFyuR7g1M6gTRuCnHXAUYj7C?ths=true).
+collaboration. This is true not only for from-scratch efforts, but
+also as a way to get comments and feedback on a fairly complete
+draft. If you're game, we have a shared
+[Google Drive Folder](https://drive.google.com/drive/u/2/folders/1diDcXKTyMFyuR7g1M6gTRuCnHXAUYj7C?ths=true).
+
+If you have new material that doesn't fit into the current book
+organization in an obvious way, check it into the `advanced-topics`
+repo. We'll figure out the best way to organize material (both old and
+new) over time. We've also created a `tools` repo in anticipation of
+contributions describing network diagnostic, monitoring, and analysis
+tools students can run to "see" the Internet in action.
 
 As for stylistic guidelines, there are only a few things to keep in mind.
 
-First, try to keep each major topic (what corresponded to a chapter in the original textbook) self-contained, with minimal forward- or backward-references to other material. The idea is that each chapter should be able to stand alone.
+First, try to keep each major topic (what corresponded to a chapter in
+the original textbook) self-contained, with minimal forward- or
+backward-references to other material. The idea is that each chapter
+should be able to stand alone. (Think self-contained software module
+with no hard-coded dependencies.)
 
-Second, adhere to best practices using MarkDown. Run make lint on any new text you write. See https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md for the rules being applied.
+Second, adhere to best practices using MarkDown. Run `make lint` on any
+new text you write. See
+https://github.com/markdownlint/markdownlint/blob/master/docs/RULES.md
+for the rules being applied. This may seem pedantic, but it's
+important that the raw MarkDown be easily read, edited, and compared.
 
-Third, when creating figures, start with the PowerPoint template available here (TODO).
+> **Note:** We're relaxed the "No Inline HTML" rule (MD033) to allow
+> for the current treatment of Figures and Tables. This will
+> eventually be corrected, and we suggest otherwise abiding by the
+> rule.
+
+Third, when creating figures, reuse as many of the existing graphical
+elements as possible and stick to the current color scheme. Check in
+both editable source (currently `.eps`) and a PNG file (300 dpi) for each
+figure.
 
 Finally, keep the *Systems Approach* in mind as you write. To quote the
 Preface in the original book:

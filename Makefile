@@ -17,6 +17,9 @@ LINT_STYLE ?= mdl_relaxed.rb
 serve: setup
 	gitbook serve
 
+pdf:	setup
+	gitbook pdf ./ ./book.pdf
+
 build: setup
 	gitbook build
 
