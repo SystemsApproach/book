@@ -22,3 +22,6 @@
 [submodule "congestion"]
 	path = congestion
 	url = https://github.com/SystemsApproach/congestion
+[submodule "data"]
+	path = data
+	url = https://github.com/SystemsApproach/data
