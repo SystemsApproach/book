@@ -1,0 +1,7 @@
+_book/
+*.pdf
+*.tex
+.DS_Store
+*.sh
+private/
+scripts/
