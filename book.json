@@ -2,14 +2,25 @@
   "title": "Computer Networks: A Systems Approach",
   "root": ".",
   "structure": {
-    "summary": "SUMMARY.md"
+      "summary": "SUMMARY.md"
+  },
+  "styles": {
+     "website": "styles/website.css",
+     "pdf": "styles/pdf.css"
   },
   "variables": {
-    "branch": "master"
+      "branch": "master"
   },
   "plugins": [
-    "anchorjs",
-    "smart-nav-collapse",
-    "versions-select"
-  ]
+     "anchorjs",
+     "katex",
+     "block-align",
+     "sequence-diagrams",
+     "creativecommons",
+     "custom-favicon",
+     "smart-nav-collapse"
+  ],
+  "pluginsConfig" : {
+      "favicon": "bridge.ico"
+  }
 }

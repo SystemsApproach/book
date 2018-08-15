@@ -4,3 +4,6 @@
 [submodule "chapter2"]
 	path = chapter2
 	url = https://github.com/systemsapproach/chapter2.git
+[submodule "foundation"]
+	path = foundation
+	url = https://github.com/systemsapproach/foundation.git	
