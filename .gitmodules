@@ -13,3 +13,6 @@
 [submodule "internetworking"]
 	path = internetworking
 	url = https://github.com/SystemsApproach/internetworking
+[submodule "scaling"]
+	path = scaling
+	url = https://github.com/SystemsApproach/scaling
