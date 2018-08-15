@@ -28,3 +28,6 @@
 [submodule "security"]
 	path = security
 	url = https://github.com/SystemsApproach/security
+[submodule "applications"]
+	path = applications
+	url = https://github.com/SystemsApproach/applications
