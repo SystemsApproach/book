@@ -1,0 +1,82 @@
+/* Figures */
+body {
+    counter-reset: figure;
+}
+
+figcaption::before {
+    counter-increment: figure;
+    content: "Figure " counter(figure) ". ";
+}
+
+figure {
+    text-align: center;
+}
+
+figure.line {border: 2px solid #06bcf9;
+	     border-style: none none solid none;
+	     margin-bottom: 15pt;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5pt;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: .5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  color: #254356;
+  text-rendering: optimizeLegibility;
+}
+
+h3, h4, h5, h6 {
+  margin-bottom: .5rem;
+  font-style: italic;
+  line-height: 1.25;
+  color: #313131;
+  text-rendering: optimizeLegibility;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 4px solid #254356;
+}
+
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #254356;   
+}
+
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Tables */
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid #e5e5e5;
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px solid #e5e5e5;
+}
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+th {
+    font-style: bold;
+}
