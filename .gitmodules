@@ -1,6 +1,3 @@
-[submodule "chapter1"]
-	path = chapter1
-	url = https://github.com/systemsapproach/chapter1.git
 [submodule "chapter2"]
 	path = chapter2
 	url = https://github.com/systemsapproach/chapter2.git
