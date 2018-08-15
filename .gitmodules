@@ -7,3 +7,6 @@
 [submodule "foundation"]
 	path = foundation
 	url = https://github.com/SystemsApproach/foundation
+[submodule "direct"]
+	path = direct
+	url = https://github.com/SystemsApproach/direct
