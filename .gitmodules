@@ -10,3 +10,6 @@
 [submodule "direct"]
 	path = direct
 	url = https://github.com/SystemsApproach/direct
+[submodule "internetworking"]
+	path = internetworking
+	url = https://github.com/SystemsApproach/internetworking
