@@ -13,11 +13,27 @@ draft. If you're game, we have a shared
 [Google Drive Folder](https://drive.google.com/drive/u/2/folders/1diDcXKTyMFyuR7g1M6gTRuCnHXAUYj7C?ths=true).
 
 If you have new material that doesn't fit into the current book
-organization in an obvious way, check it into the `advanced-topics`
-repo. We'll figure out the best way to organize material (both old and
-new) over time. We've also created a `tools` repo in anticipation of
-contributions describing network diagnostic, monitoring, and analysis
-tools students can run to "see" the Internet in action.
+organization in an obvious way, check it into one of the following
+repositories:
+
+* [sdn](https://github.com/SystemsApproach/sdn): Sections or articles
+  related to Software-Defined Networking.
+
+* [cloud](https://github.com/SystemsApproach/cloud): Sections or
+  articles related to cloud networking, both how Internet protocols
+  have been adapted to work in data centers and how the cloud has
+  impacted the greater Internet.
+
+* [tools](https://github.com/SystemsApproach/tools): Tutorials or user
+  guides describing diagnostic, monitoring, visualization, or analysis
+  tools that can be used to gain insight into the how the Internet
+  works in practice.
+
+* [advanced-topics](https://github.com/SystemsApproach/advanced-topics):
+  Sections or articles on any other advanced topic.
+
+This likely a stop-gap solution. We'll figure out the best way to
+organize material (both old and new) over time. 
 
 As for stylistic guidelines, there are only a few things to keep in mind.
 
