@@ -32,7 +32,7 @@ repositories:
 * [advanced-topics](https://github.com/SystemsApproach/advanced-topics):
   Sections or articles on any other advanced topic.
 
-This likely a stop-gap solution. We'll figure out the best way to
+This is likely a stop-gap solution. We'll figure out the best way to
 organize material (both old and new) over time. 
 
 As for stylistic guidelines, there are only a few things to keep in mind.
