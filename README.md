@@ -28,7 +28,7 @@ the following information:
 
 ## Getting Started
 
-The material is organize as a git repository per chapter, each of
+The material is organized as a git repository per chapter, each of
 which focuses on a major networking topic (e.g., *Internetworking*,
 *Congestion Control*). A "root" repo (this one) contains the gitbook
 files that can be used to create a full book. To build a web-viewable
@@ -102,7 +102,7 @@ hear from you. Send email to `discuss@systemsapproach.org`, or better
 yet, [join the
 forum](https://groups.google.com/a/systemsapproach.org/forum/#!forum/discuss).
 
-Finally, in as much as this an on-going effort, we will try to record
+Finally, in as much as this is an on-going effort, we will try to record
 and track our
 [progress](https://github.com/SystemsApproach/book/blob/master/status.md).
 For now, think of this as a poor-man's release notes.
