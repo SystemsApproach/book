@@ -30,9 +30,10 @@ the following information:
 
 The material is organized as a git repository per chapter, each of
 which focuses on a major networking topic (e.g., *Internetworking*,
-*Congestion Control*). A "root" repo (this one) contains the gitbook
-files that can be used to create a full book. To build a web-viewable
-version, you first need to install a couple packages:
+*Congestion Control*). A "root" repo
+([this one](https://github.com/SystemsApproach/book)) contains the
+gitbook files that can be used to create a full book. To build a
+web-viewable version, you first need to install a couple packages:
 
 * [Gitbook Toolchain](https://toolchain.gitbook.com/setup.html)
 * [Node.js Package Manager](https://www.npmjs.com/get-npm)
