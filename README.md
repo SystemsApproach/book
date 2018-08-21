@@ -26,6 +26,11 @@ the following information:
 > Source: https://github.com/SystemsApproach  
 > License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)*
 
+## Read the book
+
+An online version of the book is pusblished at
+[https://book.systemsapproach.org](https://book.systemsapproach.org)
+
 ## Getting Started
 
 The material is organized as a git repository per chapter, each of
