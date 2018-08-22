@@ -28,7 +28,7 @@ the following information:
 
 ## Read the book
 
-An online version of the book is pusblished at
+An online version of the book is published at
 [https://book.systemsapproach.org](https://book.systemsapproach.org)
 
 ## Getting Started
@@ -62,7 +62,7 @@ make
 
 If all goes well, you will be able to view the book in your browser at
 `localhost:4000`. (If all doesn't go well, you might try typing `make`
-a second tme.)
+a second time.)
 
 ## How to Contribute
 
