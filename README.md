@@ -62,7 +62,7 @@ make
 
 If all goes well, you will be able to view the book in your browser at
 `localhost:4000`. (If all doesn't go well, you might try typing `make`
-a second tme.)
+a second time.)
 
 You can also build other versions of the book (e.g., pdf, ebook), but
 doing so requires installing other packages, as documented on the
