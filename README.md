@@ -26,14 +26,14 @@ the following information:
 > Source: https://github.com/SystemsApproach  
 > License: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0)*
 
-## Read the book
+## Read the Book
 
-An online version of the book is pusblished at
-[https://book.systemsapproach.org](https://book.systemsapproach.org)
+An online version of the book is published at
+[https://book.systemsapproach.org](https://book.systemsapproach.org).
 
-## Getting Started
+## Build the Book
 
-The material is organized as a git repository per chapter, each of
+The source content is organized as a git repository per chapter, each of
 which focuses on a major networking topic (e.g., *Internetworking*,
 *Congestion Control*). A "root" repo
 ([this one](https://github.com/SystemsApproach/book)) contains the
@@ -63,6 +63,10 @@ make
 If all goes well, you will be able to view the book in your browser at
 `localhost:4000`. (If all doesn't go well, you might try typing `make`
 a second tme.)
+
+You can also build other versions of the book (e.g., pdf, ebook), but
+doing so requires installing other packages, as documented on the
+[GitBook Toolchain](https://toolchain.gitbook.com/ebook.html) site.
 
 ## How to Contribute
 
