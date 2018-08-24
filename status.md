@@ -18,3 +18,11 @@ There are two known issues:
 * Math equations do not always render correctly on an initial view.
   Reloading the page fixes it. 
 
+This initial version is tagged `v5.0`.
+
+## August 23, 2018
+
+Started a `refresh` branch for a low-hanging-fruit pass. The goal is
+to fix egregiously out-of-date material without spending too much
+time adding new content. Minor refactoring/renaming when appropriate.
+May include minimal/placeholder subsections to be expanded later.
