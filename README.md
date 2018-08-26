@@ -30,6 +30,10 @@ the following information:
 
 An online version of the book is published at
 [https://book.systemsapproach.org](https://book.systemsapproach.org).
+You can also find PDF and eBook versions
+[here](https://github.com/SystemsApproach/book/tree/master/published).
+To track progress and receive notices about new versions, you can follow
+the project on [Facebook](https://www.facebook.com/Computer-Networks-A-Systems-Approach-110933578952503/).
 
 ## Build the Book
 
