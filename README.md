@@ -119,7 +119,9 @@ forum](https://groups.google.com/a/systemsapproach.org/forum/#!forum/discuss).
 Finally, in as much as this is an on-going effort, we will try to record
 and track our
 [progress](https://github.com/SystemsApproach/book/blob/master/status.md).
-For now, think of this as a poor-man's release notes.
+For now, think of this as a poor-man's release notes. Additional
+information about work-in-progress can be found in the
+[wiki](https://github.com/SystemsApproach/book/wiki).
 
 ## Join Us
 
