@@ -34,7 +34,7 @@
     * [5.1 Simple Demultiplexor (UDP)](e2e/udp.md)
     * [5.2 Reliable Byte Stream (TCP)](e2e/tcp.md)
     * [5.3 Remote Procedure Call](e2e/rpc.md)
-    * [5.4 Transport for Real-Time Applications (RTP)](e2e/rtp.md)
+    * [5.4 Transport for Real-Time (RTP)](e2e/rtp.md)
     * [5.5 Summary](e2e/summary.md)
 * [Chapter 6: Congestion Control and Resource Allocation](congestion/problem.md)
     * [6.1 Issues in Resource Allocation](congestion/issues.md)
