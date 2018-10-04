@@ -18,10 +18,10 @@ serve: setup
 	gitbook serve
 
 pdf:	setup
-	gitbook pdf ./ ./book.pdf
+	gitbook pdf ./ ./published/book.pdf
 
 epub:	setup
-	gitbook epub ./ ./book.epub
+	gitbook epub ./ ./published/book.epub
 
 build: setup
 	gitbook build
