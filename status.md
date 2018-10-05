@@ -1,5 +1,17 @@
 # Status
 
+For a roadmap of ongoing and planned work, see the
+[book wiki](https://github.com/SystemsApproach/book/wiki).
+
+## October 5, 2018 
+
+This latest version is tagged `5.1`. It is the result of a
+front-to-back pass over the 5th edition, refreshing out-of-date
+numbers, adding more timely and relevant examples, correcting
+statements that were no longer valid, and fixing errors introduced
+in translation from LaTeX to MarkDown. Minimal new content was
+added (Section 2.8, on *Access Networks*, is the exception).
+
 ## August 16, 2018
 
 The majority of the 5e content has been uploaded to github. Doing
@@ -18,11 +30,6 @@ There are two known issues:
 * Math equations do not always render correctly on an initial view.
   Reloading the page fixes it. 
 
-This initial version is tagged `v5.0`.
+This initial version is tagged `5.0`.
 
-## August 23, 2018
 
-Started a `refresh` branch for a low-hanging-fruit pass. The goal is
-to fix egregiously out-of-date material without spending too much
-time adding new content. Minor refactoring/renaming when appropriate.
-May include minimal/placeholder subsections to be expanded later.
