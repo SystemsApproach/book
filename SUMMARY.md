@@ -40,7 +40,7 @@
     * [6.1 Issues in Resource Allocation](congestion/issues.md)
     * [6.2 Queuing Disciplines](congestion/queuing.md)
     * [6.3 TCP Congestion Control](congestion/tcpcc.md)
-    * [6.4 Congestion Avoidance](congestion/avoidance.md)
+    * [6.4 Advanced Congestion Control](congestion/avoidance.md)
     * [6.5 Quality of Service](congestion/qos.md)
     * [6.6 Summary](congestion/summary.md)
 * [Chapter 7: End-to-End Data](data/problem.md)
