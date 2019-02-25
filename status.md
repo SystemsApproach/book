@@ -6,10 +6,11 @@ For a roadmap of ongoing and planned work, see the
 ## December 31, 2018
 
 This latest version is tagged `5.2`. It includes two major updates:
-Section 2.8 on *Access Networks* (including fiber-to-the-home and
-5G cellular) and Section 3.4 on *Switch Implementations* (including
-recently available white-box switches). This version also corrects
-many typos.
+[Section 2.8](https://github.com/SystemsApproach/direct/blob/master/access.md)
+on *Access Networks* (including fiber-to-the-home and 5G cellular) and
+[Section 3.4](https://github.com/SystemsApproach/internetworking/blob/master/impl.md)
+on *Switch Implementations* (including recently available white-box
+switches). This version also corrects many typos.
 
 ## October 5, 2018 
 
