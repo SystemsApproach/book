@@ -1,4 +1,4 @@
-# Status
+# Release Notes
 
 For a roadmap of ongoing and planned work, see the
 [book wiki](https://github.com/SystemsApproach/book/wiki).
