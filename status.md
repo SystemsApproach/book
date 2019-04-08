@@ -9,7 +9,7 @@ This latest version tagged `v5.4`. Major updates include:
 
 * Added `Broader Perspective` (discussing cloudification) to the end
 of each chapter; linked starting with
-[Section 1.8](https://github.com/SystemsApproach/book/blob/master/trend.md)
+[Section 1.8](https://github.com/SystemsApproach/foundation/blob/master/trend.md)
 * Added overview of VXLAN to
 [Section 3.5](https://github.com/SystemsApproach/internetworking/blob/master/trend.md)
 * Added discussion of Cloud's impact on Internet structure to
