@@ -3,6 +3,26 @@
 For a roadmap of ongoing and planned work, see the
 [book wiki](https://github.com/SystemsApproach/book/wiki).
 
+## April 8, 2019
+
+This latest version tagged `v5.4`. Major updates include:
+
+* Added `Broader Perspective` (discussing cloudification) to the end
+of each chapter; linked starting with
+[Section 1.8](https://github.com/SystemsApproach/book/blob/master/trend.md)
+* Added overview of VXLAN to
+[Section 3.5](https://github.com/SystemsApproach/internetworking/blob/master/trend.md)
+* Added discussion of Cloud's impact on Internet structure to
+[Section 4.5](https://github.com/SystemsApproach/scaling/blob/master/trend.md)
+* Added description of HTTP adaptive streaming to
+[Section 7.2](https://github.com/SystemsApproach/data/blob/master/multimedia.md)
+* Added new
+[Section 8.1](https://github.com/SystemsApproach/security/blob/master/trust.md)
+to discuss *threats* and *trust*
+* Added description of decentralized identity management to
+[Section 8.6](https://github.com/SystemsApproach/security/blob/master/trend.md)
+* Added description more recent management systems to [Section 9.3](https://github.com/SystemsApproach/applications/blob/master/infrastructure.md)
+  
 ## February 25, 2019
 
 This latest version is tagged `v5.3`. Major updates include:
