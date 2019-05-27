@@ -81,6 +81,13 @@ th {
     font-style: bold;
 }
 
+caption{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #757575;
+  text-align: center;
+}
+
 figure {
     width: 400px;
     margin: auto;
