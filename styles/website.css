@@ -80,3 +80,28 @@ tbody tr:nth-child(odd) th {
 th {
     font-style: bold;
 }
+
+caption{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #757575;
+  text-align: center;
+}
+
+figure {
+    width: 600px;
+    margin: auto;
+}
+
+figcaption {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #757575;
+  text-align: center;
+}
+
+blockquote {
+    border-left: 5px #5DADE2 solid;
+    margin: 0px 0px 0px 00px;
+    padding: 0px 5px 0px 20px;
+}
