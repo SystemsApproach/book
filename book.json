@@ -18,11 +18,17 @@
      "block-align",
      "flexible-alerts",
      "sequence-diagrams",
-     "creativecommons",
+      "creativecommons",
+     "intopic-toc",
      "custom-favicon",
      "smart-nav-collapse"
   ],
   "pluginsConfig" : {
-      "favicon": "bridge.ico"
+      "favicon": "bridge.ico",
+      "intopic-toc": {
+        "label": "Content",
+	"selector": ".markdown-section h2",
+        "visible": true
+      }
   }
 }
