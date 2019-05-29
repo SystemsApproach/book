@@ -65,7 +65,7 @@ h4, h5, h6 {
 table {
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid #e5e5e5;
+  border: 4px solid #e5e5e5;
   border-collapse: collapse;
 }
 td,
