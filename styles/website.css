@@ -1,6 +1,6 @@
 /* Figures */
 body {
-    counter-reset: figure;
+    counter-reset: figure table;
 }
 
 figcaption::before {
@@ -8,7 +8,16 @@ figcaption::before {
     content: "Figure " counter(figure) ". ";
 }
 
+tabcaption::before {
+    counter-increment: table;
+    content: "Table " counter(table) ". ";
+}
+
 figure {
+    text-align: center;
+}
+
+table {
     text-align: center;
 }
 
@@ -96,6 +105,13 @@ figure {
 figcaption {
   margin-top: 5px;
   margin-bottom: 10px;
+  color: #757575;
+  text-align: center;
+}
+
+tabcaption {
+  margin-top: 10px;
+  margin-bottom: 5px;
   color: #757575;
   text-align: center;
 }

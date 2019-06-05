@@ -1,6 +1,6 @@
 /* Figures */
 body {
-    counter-reset: figure;
+    counter-reset: figure table;
 }
 
 figcaption::before {
@@ -8,7 +8,16 @@ figcaption::before {
     content: "Figure " counter(figure) ". ";
 }
 
+tabcaption::before {
+    counter-increment: table;
+    content: "Table " counter(table) ". ";
+}
+
 figure {
+    text-align: center;
+}
+
+table {
     text-align: center;
 }
 
@@ -65,7 +74,7 @@ h4, h5, h6 {
 table {
   margin-bottom: 1rem;
   width: 100%;
-  border: 1px solid #e5e5e5;
+  border: 4px solid #e5e5e5;
   border-collapse: collapse;
 }
 td,
@@ -80,3 +89,36 @@ tbody tr:nth-child(odd) th {
 th {
     font-style: bold;
 }
+
+caption{
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #757575;
+  text-align: center;
+}
+
+figure {
+    width: 400px;
+    margin: auto;
+}
+
+figcaption {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #757575;
+  text-align: center;
+}
+
+tabcaption {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #757575;
+  text-align: center;
+}
+
+blockquote {
+    border-left: 5px #5DADE2 solid;
+    margin: 0px 0px 0px 00px;
+    padding: 0px 5px 0px 20px;
+}
+
