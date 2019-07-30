@@ -1,4 +1,4 @@
-# Preface 
+# README
 
 This site contains source text for *Computer Networks: A Systems
 Approach*, now available under terms of the [Creative Commons
@@ -39,6 +39,13 @@ the project on
 and [Twitter](https://twitter.com/SystemsAppr).
 To read a running commentary on how the Internet is evolving, follow
 the [Systems Approach Blog](https://www.systemsapproach.org).
+
+> The latest release is v6.0, which you can roughly equate with a 6th 
+> Edition. Read the [Preface](preface.md) to find out what's new in this 
+> version. Note that Morgan Kaufmann (Elsevier) plans to publish a
+> 6th edition of their textbook based on a fork of this version, but
+> going forward, open source releases and any future published editions
+> will not necessarily stay in sync.
 
 ## Build the Book
 

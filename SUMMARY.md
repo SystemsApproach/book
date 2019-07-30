@@ -1,6 +1,7 @@
 # Summary
 
-* [Preface](README.md)
+* [About](README.md)
+* [Preface](preface.md)
 * [Chapter 1: Foundation](foundation/problem.md)
     * [1.1 Applications](foundation/applications.md)
     * [1.2 Requirements](foundation/requirements.md)
