@@ -57,7 +57,34 @@ and *Software-Defined Networks* (SDN).
 * Section 9.1 updated to include a description of *HTTP/2*, along with
    a discussion of *REST*, *gRPC*, and *Cloud Services*.
 * Section 9.3 expaned to include a description of modern *Network
-  Management Systems* including the use of *OpenConfig* and *gNMI*.
+Management Systems* including the use of *OpenConfig* and *gNMI*.
+
+We would like to acknowledge the following people for their help with
+new content:
+
+* Larry Brakmo: TCP Congestion Control
+* Carmelo Cascone: White-Box Switches
+* Charles Chan: White-Box Switches
+* Jude Nelson: Decentralized Identity
+* Oguz Sunay: Cellular Networks
+* Thomas Vachuska: Network Management
+
+And the following individuals (github users) for their various contributions:
+
+* Mohammed Al-Ameen
+* Andy Bavier
+* Manuel Berfelde
+* Chris Goldsworthy
+* John Hartman
+* Diego López León
+* Matteo Scandolo
+* Mike Wawrzoniak
+* 罗泽轩 (spacewander)
+* Arnaud (arvdrpoo)
+* Desmond (kingdido999)
+* Guo (ZJUGuoShuai)
+* Hellman (eshellman)
+* Xtao (vertextao)
 
 Larry & Bruce  
 August 2019
