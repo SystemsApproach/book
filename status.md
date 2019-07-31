@@ -3,6 +3,16 @@
 For a roadmap of ongoing and planned work, see the
 [book wiki](https://github.com/SystemsApproach/book/wiki).
 
+## August 1, 2019
+
+This release is tagged `v6.0`, which roughly equates with a 6th
+Edition. Read the [Preface](preface.md) to find out what's new.
+
+Note that Morgan Kaufmann (Elsevier) plans to publish a 6th edition of
+their textbook based on a fork of this version. Going forward, open 
+source releases found here will not necessarily stay in sync with any 
+future published editions.
+
 ## April 8, 2019
 
 This latest version tagged `v5.4`. Major updates include:

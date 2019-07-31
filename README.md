@@ -42,10 +42,10 @@ the [Systems Approach Blog](https://www.systemsapproach.org).
 
 > The latest release is v6.0, which you can roughly equate with a 6th 
 > Edition. Read the [Preface](preface.md) to find out what's new in this 
-> version. Note that Morgan Kaufmann (Elsevier) plans to publish a
-> 6th edition of their textbook based on a fork of this version, but
-> going forward, open source releases and any future published editions
-> will not necessarily stay in sync.
+> version. Note that Morgan Kaufmann (Elsevier) plans to publish a 
+> 6th edition of their textbook based on a fork of this version, but 
+> going forward, open source releases found here will not necessarily
+> stay in sync with any future published editions.
 
 ## Build the Book
 
