@@ -23,8 +23,8 @@ three main ways:
   and now-familar cloud applications like GoToMeeting, Netflix, and
   Spotify. This is in keeping with our emphasis on the design process
   and not just the end result, which is especially important today since
-  so much the Internet is now available primarily in proprietary commercial
-  products.
+  so much the Internet is primarily available in proprietary commercial
+  services.
 
 * We place the Internet in the broader context of the Cloud, and just as
    importantly, in the context of the commerial forces that are shaping
@@ -33,7 +33,7 @@ three main ways:
    *Broader Perspective* section at the end of each chapter. We hope
    one side-effect of this discussion is to foster an appreciation for
    the Internet's continuous evolution, and the opportunity for
-   innovation it represents.
+   innovation this represents.
 
 More specifically, the 6th Edition includes the following major changes:
 

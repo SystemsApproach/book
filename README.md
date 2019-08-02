@@ -40,12 +40,31 @@ and [Twitter](https://twitter.com/SystemsAppr).
 To read a running commentary on how the Internet is evolving, follow
 the [Systems Approach Blog](https://www.systemsapproach.org).
 
-> The latest release is v6.0, which you can roughly equate with a 6th 
-> Edition. Read the [Preface](preface.md) to find out what's new in this 
-> version. Note that Morgan Kaufmann (Elsevier) plans to publish a 
-> 6th edition of their textbook based on a fork of this version, but 
-> going forward, open source releases found here will not necessarily
-> stay in sync with any future published editions.
+## Releases and Editions
+
+We release ever-changing open source content rather than publish
+fixed books, although you can roughly equate v6.0 with a 6th
+Edition. Read the [Preface](preface.md) to find out what's new in this
+version. Note that Morgan Kaufmann (Elsevier) plans to publish a 
+6th edition of their textbook based on a fork of v6.0, but going
+forward, open source releases found here will not necessarily stay in
+sync with any future published editions.
+
+In general, `master` contains a coherent and internally consistent
+version of the material. (If it were code, the book would build and run.)
+New content under development is checked into branches until it can be
+merged into `master` without breaking self-consistency. The web
+version of the book available at
+[https://book.systemsapproach.org](https://book.systemsapproach.org)
+is periodically generated from `master`, and corresponds to a typical
+maintenance release, although we do not bother to tag it as such
+(e.g., 6.0.1).
+
+Minor releases (e.g., v6.1) are tagged whenever there is sufficient new
+content to justify the effort. This happens quarterly, give-or-take,
+and is primarily to create a snapshot so that everyone in a course can
+know they are using the same version. The off-line formats (e.g., pdf,
+epub) are also generated with every minor release.
 
 ## Build the Book
 
