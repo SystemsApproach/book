@@ -75,7 +75,7 @@ which focuses on a major networking topic (e.g., *Internetworking*,
 gitbook files that can be used to create a full book. To build a
 web-viewable version, you first need to install a couple packages:
 
-* [Gitbook Toolchain](https://toolchain.gitbook.com/setup.html)
+* [Gitbook Toolchain](https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md)
 * [Node.js Package Manager](https://www.npmjs.com/get-npm)
 
 Then do the following to download the source:
