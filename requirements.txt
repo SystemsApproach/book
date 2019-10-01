@@ -1,0 +1,14 @@
+Sphinx~=1.8.5
+actdiag~=0.5.4
+blockdiag~=1.5.4
+livereload~=2.6.1
+nwdiag~=1.0.4
+recommonmark~=0.6.0
+rstcheck~=3.3.1
+seqdiag~=0.9.6
+sphinx-reload~=0.2.0
+sphinx-rtd-theme~=0.4.3
+sphinxcontrib-actdiag~=0.8.5
+sphinxcontrib-blockdiag~=1.5.5
+sphinxcontrib-nwdiag~=0.9.5
+sphinxcontrib-seqdiag~=0.8.5
