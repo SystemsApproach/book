@@ -175,8 +175,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'book.tex', u'5G Mobile Networks: A Systems Approach',
-     u'Peterson and Sunay', 'manual', True),
+    (master_doc, 'book.tex', u'Computer Networks: A Systems Approach',
+     u'Peterson and Davie', 'manual', True),
 ]
 
 latex_toplevel_sectioning = 'chapter'
@@ -198,8 +198,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'Trellis Docs', u'Trellis Docs',
-     author, 'TrellisDocs', 'One line description of project.',
+    (master_doc, 'Computer Networks', u'Computer Networks',
+     author, 'Peterson and Davie', 'A Systems Approach',
      'Miscellaneous'),
 ]
 
