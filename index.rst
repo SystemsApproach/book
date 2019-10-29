@@ -7,9 +7,13 @@ Computer Networks: A Systems Approach
 
 .. toctree::
    :maxdepth: 2
-   :caption: Table of Contents 
+   :caption: Table of Contents
 
    preface.rst
    foundation.rst
    direct.rst
+   internetworking.rst
+   scaling.rst   
+   e2e.rst
+   congestion.rst
    README.rst

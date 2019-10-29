@@ -4,7 +4,7 @@ Chapter 2:  Direct Links
    It is a mistake to look too far ahead. Only one link in the chain
    of destiny can be handled at a time.
 
-   *Winston Churchill*
+   *—Winston Churchill*
 
 .. toctree::
    :maxdepth: 2 
