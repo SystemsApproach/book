@@ -104,8 +104,8 @@ pygments_style = None
 # Enable numbered figures
 numfig = True
 numfig_format = {
-    'figure': 'Figure %s:',
-    'table':  'Table %s:'
+    'figure': 'Figure %s.',
+    'table':  'Table %s.'
     }
 
 # Ignore link check for the following websites
