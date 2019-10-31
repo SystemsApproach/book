@@ -6,5 +6,7 @@ _book/
 *.sh
 private/
 scripts/
-alt-SUMMARY.md
+_build/
 _static/
+doc_venv/
+cover.docx
