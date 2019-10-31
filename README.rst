@@ -21,20 +21,18 @@ project with others committed to its success.
 And if you make use of this work, the attribution should include the
 following information:
 
-   *Title: Computer Networks: A Systems Approach
-   Authors: Larry Peterson and Bruce Davie
-   Copyright: Elsevier, 2012
-   Source: https://github.com/SystemsApproach
-   License:*\ `CC BY
-   4.0 <https://creativecommons.org/licenses/by/4.0>`__
+|  Title: *Computer Networks: A Systems Approach*
+|  Authors: Larry Peterson and Bruce Davie*
+|  Copyright: Elsevier, 2012
+|  Source: https://github.com/SystemsApproach
+|  License: `CC BY  4.0 <https://creativecommons.org/licenses/by/4.0>`__
 
 Read the Book
 -------------
 
 An online version of the book is published at
-https://book.systemsapproach.org. You can also find PDF and eBook
-versions
-`here <https://github.com/SystemsApproach/book/tree/master/published>`__.
+https://book.systemsapproach.org. You can also find a PDF version
+`here <https://github.com/SystemsApproach/5G/releases>`__.
 
 To track progress and receive notices about new versions, you can follow
 the project on
@@ -48,7 +46,7 @@ Releases and Editions
 
 We release ever-changing open source content rather than publish fixed
 books, although you can roughly equate v6.0 with a 6th Edition. Read the
-`Preface <preface.md>`__ to find out what’s new in this version. Note
+`Preface <preface.html>`__ to find out what’s new in this version. Note
 that Morgan Kaufmann (Elsevier) plans to publish a 6th edition of their
 textbook based on a fork of v6.0, but going forward, open source
 releases found here will not necessarily stay in sync with any future
@@ -75,15 +73,10 @@ Build the Book
 The source content is organized as a git repository per chapter, each of
 which focuses on a major networking topic (e.g., *Internetworking*,
 *Congestion Control*). A “root” repo (`this
-one <https://github.com/SystemsApproach/book>`__) contains the gitbook
-files that can be used to create a full book. To build a web-viewable
-version, you first need to install a couple packages:
+one <https://github.com/SystemsApproach/book>`__) contains the
+top-level files needed to assemble a full book.
 
--  `Gitbook
-   Toolchain <https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md>`__
--  `Node.js Package Manager <https://www.npmjs.com/get-npm>`__
-
-Then do the following to download the source:
+To build a web-viewable version, you first need to download the source:
 
 .. code:: shell
 
@@ -94,19 +87,17 @@ Then do the following to download the source:
    git submodule init
    git submodule update
 
-To build a web version of the book, simply type:
+The build process is stored in the ``Makefile`` and requires Python be 
+installed. The ``Makefile`` will create a virtualenv (``doc_venv``) which 
+installs the documentation generation toolset. 
 
-.. code:: shell
+To generate HTML in ``_build/html``,  run ``make html``.
 
-   make
+To get a live reload in your browser (refreshes on file save), run ``make reload``.
 
-If all goes well, you will be able to view the book in your browser at
-``localhost:4000``. (If all doesn’t go well, you might try typing
-``make`` a second time.)
+To check the formatting of the book, run ``make lint``.
 
-You can also build other versions of the book (e.g., pdf, ebook), but
-doing so requires installing other packages, as documented on the
-`GitBook Toolchain <https://toolchain.gitbook.com/ebook.html>`__ site.
+To see the other available output formats, run ``make``.
 
 How to Contribute
 -----------------
@@ -135,14 +126,7 @@ does signal their intent to continue publishing textbooks based on the
 material.
 
 You should also familiarize yourself with the `guidelines for
-contributing <https://github.com/SystemsApproach/book/blob/master/CONTRIBUTING.md>`__.
-As a first step, we recommend you check to see if any new text you’d
-like to submit passes our ``MarkDownLint`` test. To do this, run
-
-.. code:: shell
-
-   cd ~/systemsapproach
-   make lint
+contributing <https://github.com/SystemsApproach/book/blob/master/CONTRIBUTING.rst>`__.
 
 If you’d like to contribute and are looking for something that needs
 attention, see the current `Project
@@ -155,7 +139,8 @@ forum <https://groups.google.com/a/systemsapproach.org/forum/#!forum/discuss>`__
 
 Finally, in as much as this is an on-going effort, we will try to record
 and track our
-`progress <https://github.com/SystemsApproach/book/blob/master/status.md>`__.
+`progress
+<https://github.com/SystemsApproach/book/blob/master/status.rst>`__.
 For now, think of this as a poor-man’s release notes. Additional
 information about work-in-progress can be found in the
 `wiki <https://github.com/SystemsApproach/book/wiki>`__.
@@ -168,4 +153,4 @@ Approach* over the years, and we’re eager to have you join us in this
 new venture.
 
 | Larry Peterson & Bruce Davie
-| August 2018
+| November 2019
