@@ -96,7 +96,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = [u'_build', 'doc_venv', 'requirements.txt', 'Thumbs.db', '.DS_Store', 'repos', '*/vendor', 'sidebars', 'private']
+exclude_patterns = [u'_build', 'doc_venv', 'requirements.txt', 'Thumbs.db', '.DS_Store', 'repos', '*/vendor', 'sidebars', 'private', 'status.rst', '*/README.rst', 'CONTRIBUTING.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None

@@ -14,7 +14,7 @@ Chapter 9: Applications
    applications/multimedia.rst
    applications/infrastructure.rst
    applications/overlays.rst
-   applicationsp/trend.rst
+   applications/trend.rst
 
 
 

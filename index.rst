@@ -17,4 +17,6 @@ Computer Networks: A Systems Approach
    e2e.rst
    congestion.rst
    data.rst
+   security.rst
+   applications.rst
    README.rst
