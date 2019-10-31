@@ -31,22 +31,22 @@ main ways:
    as importantly, in the context of the commerial forces that are
    shaping the Internet and Cloud. This has minimal impact on the
    technical details presented throughout the book, but it is discussed
-   in a new *Broader Perspective* section at the end of each chapter. We
+   in a new *Perspective* section at the end of each chapter. We
    hope one side-effect of this discussion is to foster an appreciation
    for the Internet’s continuous evolution, and the opportunity for
    innovation this represents.
 
 More specifically, the 6th Edition includes the following major changes:
 
--  New Section 1.6 introduces the recurring *Cloudification* theme.
+-  New Perspective Section in Chapter 1 introduces the recurring *Cloudification* theme.
 -  New Section 2.8 describes the *Access Network*, including Passive
    Optical Networks (PON) and 5G’s Radio Access Networks (RAN).
 -  Section 3.4 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
--  New Section 3.5 describes *VXLANs* and the role of overlays in the
-   Cloud.
--  New Section 4.5 describes how the *Cloud* impacts the Internet’s
-   structure.
+-  New Perspective Section in Chapter 3 describes *VXLANs* and the
+   role of overlays in the Cloud.
+-  New Perspective Section in Chapter 4 describes how the *Cloud*
+   impacts the Internet’s structure.
 -  Section 5.3 expanded to include a description of *gRPC*.
 -  Sections 6.3 and 6.4 updated to include descriptions of *TCP CUBIC,
    DCTCP,* and *BBR*.
@@ -56,8 +56,8 @@ More specifically, the 6th Edition includes the following major changes:
 -  Section 7.2 expanded to include a desciption of *HTTP Adaptive
    Streaming*.
 -  New Section 8.1 introduces the duality of *Threats* and *Trust*.
--  New Section 8.6 describes *Decentralized Identity Management* and the
-   role of *Blockchains*.
+-  New Perspective Section in Chapter 8 describes *Decentralized
+   Identity Management* and the role of *Blockchains*.
 -  Section 9.1 updated to include a description of *HTTP/2*, along with
    a discussion of *REST*, *gRPC*, and *Cloud Services*.
 -  Section 9.3 expaned to include a description of modern *Network
