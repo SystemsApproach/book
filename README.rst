@@ -22,7 +22,7 @@ And if you make use of this work, the attribution should include the
 following information:
 
 |  Title: *Computer Networks: A Systems Approach*
-|  Authors: Larry Peterson and Bruce Davie*
+|  Authors: Larry Peterson and Bruce Davie
 |  Copyright: Elsevier, 2012
 |  Source: https://github.com/SystemsApproach
 |  License: `CC BY  4.0 <https://creativecommons.org/licenses/by/4.0>`__

@@ -18,23 +18,22 @@ main ways:
    problems being addressed, and updating the numbers to represent the
    state-of-the-art technology (e.g., 10-Gbps Ethernet).
 
--  We emphasize a historical perspective, connecting the dots between
-   the original research that led to the development of technologies
-   like multicast, real-time video streaming, and quality-of-service,
-   and now-familar cloud applications like GoToMeeting, Netflix, and
-   Spotify. This is in keeping with our emphasis on the design process
-   and not just the end result, which is especially important today
-   since so much the Internet is primarily available in proprietary
-   commercial services.
+- We connect the dots between the original research that led to the
+   development of technologies like multicast, real-time video
+   streaming, and quality-of-service, and the now-familar cloud
+   applications like GoToMeeting, Netflix, and Spotify. This is in
+   keeping with our emphasis on the design process and not just the
+   end result, which is especially important today since so much the
+   Internet is primarily available in proprietary commercial services.
 
--  We place the Internet in the broader context of the Cloud, and just
+- We place the Internet in the broader context of the Cloud, and just
    as importantly, in the context of the commerial forces that are
-   shaping the Internet and Cloud. This has minimal impact on the
-   technical details presented throughout the book, but it is discussed
-   in a new *Perspective* section at the end of each chapter. We
-   hope one side-effect of this discussion is to foster an appreciation
-   for the Internet’s continuous evolution, and the opportunity for
-   innovation this represents.
+   shaping the Cloud. This has minimal impact on the technical details
+   presented throughout the book, but it is discussed in a new
+   *Perspective* section at the end of each chapter. We hope one
+   side-effect of this discussion is to foster an appreciation for the
+   Internet’s continuous evolution, and the opportunity for innovation
+   this represents.
 
 More specifically, the 6th Edition includes the following major changes:
 
