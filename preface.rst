@@ -18,7 +18,7 @@ main ways:
    problems being addressed, and updating the numbers to represent the
    state-of-the-art technology (e.g., 10-Gbps Ethernet).
 
-- We connect the dots between the original research that led to the
+-  We connect the dots between the original research that led to the
    development of technologies like multicast, real-time video
    streaming, and quality-of-service, and the now-familar cloud
    applications like GoToMeeting, Netflix, and Spotify. This is in
@@ -27,13 +27,13 @@ main ways:
    Internet is primarily available in proprietary commercial services.
 
 - We place the Internet in the broader context of the Cloud, and just
-   as importantly, in the context of the commerial forces that are
-   shaping the Cloud. This has minimal impact on the technical details
-   presented throughout the book, but it is discussed in a new
-   *Perspective* section at the end of each chapter. We hope one
-   side-effect of this discussion is to foster an appreciation for the
-   Internet’s continuous evolution, and the opportunity for innovation
-   this represents.
+  as importantly, in the context of the commerial forces that are
+  shaping the Cloud. This has minimal impact on the technical details
+  presented throughout the book, but it is discussed in a new
+  *Perspective* section at the end of each chapter. We hope one
+  side-effect of this discussion is to foster an appreciation for the
+  Internet’s continuous evolution, and the opportunity for innovation
+  this represents.
 
 More specifically, the 6th Edition includes the following major changes:
 
@@ -62,6 +62,9 @@ More specifically, the 6th Edition includes the following major changes:
 -  Section 9.3 expaned to include a description of modern *Network
    Management Systems* including the use of *OpenConfig* and *gNMI*.
 
+Acknowledgements
+----------------
+
 We would like to acknowledge the following people for their help with
 new content:
 
@@ -72,23 +75,35 @@ new content:
 -  Oguz Sunay: Cellular Networks
 -  Thomas Vachuska: Network Management
 
-And the following individuals (github users) for their various
-contributions:
+Along with the following individuals (github users) for their various
+contributions and bug fixes:
 
--  Mohammed Al-Ameen
--  Andy Bavier
--  Manuel Berfelde
--  Chris Goldsworthy
--  John Hartman
--  Diego López León
--  Matteo Scandolo
--  Mike Wawrzoniak
--  罗泽轩 (spacewander)
--  Arnaud (arvdrpoo)
--  Desmond (kingdido999)
--  Guo (ZJUGuoShuai)
--  Hellman (eshellman)
--  Xtao (vertextao)
+.. hlist::
+   :columns: 3
 
-| Larry & Bruce
-| August 2019
+   -  Mohammed Al-Ameen
+   -  Andy Bavier
+   -  Manuel Berfelde
+   -  Chris Goldsworthy
+   -  John Hartman
+   -  Diego López León
+   -  Matteo Scandolo
+   -  Mike Wawrzoniak
+   -  罗泽轩 (spacewander)
+   -  Arnaud (arvdrpoo)
+   -  Desmond (kingdido999)
+   -  Guo (ZJUGuoShuai)
+   -  Hellman (eshellman)
+   -  Xtao (vertextao)
+
+Finally, we would like to thank the following reviewers for their many
+helpful comments and suggestions. Their impact was significant.
+
+- Mark J. Indelicato, Rochester Institute of Technology 
+- Michael Yonshik Choi, Illinois Institute of Technology
+- Sarvesh Kulkarni, Villanova University
+- Alexander L. Wijesinha Towson University
+
+| Larry & Bruce 
+| August 2019 
+
