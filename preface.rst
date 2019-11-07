@@ -80,17 +80,17 @@ characterized as having three major parts:
 
 This characterization can be applied at the Chapter level: Chapter 1
 is foundational, Chapters 2, 3, 5, and 9 are core, and Chapters 4, 6,
-7, and 8 are more advanced.
+7, and 8 cover more advanced topics.
 
 This characterization can also be applied at the Section level, where
-roughly speaking, each Chapter advance from basic concepts to specific
-technology to advanced techniques. For example, Chapter 3 starts by
-introducing the basics of switched networks (3.1), then covers the
-specifics of Switched Ethernet and the IP Internet (3.2-3.4), and
-concludes with an optional advanced topic (3.5). Similarly, Chapter 6
-starts with foundational ideas (6.1-6.2), then explores TCP congestion
-control (6.3), and concludes with optional advanced material
-(6.4-6.5).
+roughly speaking, each Chapter advances from basic concepts to
+specific technology to advanced techniques. For example, Chapter 3
+starts by introducing the basics of switched networks (3.1), then
+covers the specifics of Switched Ethernet and the IP Internet
+(3.2-3.4), and concludes with an optional discusion of SDN
+(3.5). Similarly, Chapter 6 starts with foundational ideas (6.1-6.2),
+then explores TCP congestion control (6.3), and concludes with
+optional advanced material (6.4-6.5).
 
 Acknowledgements
 ----------------
