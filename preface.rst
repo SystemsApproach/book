@@ -132,7 +132,7 @@ helpful comments and suggestions. Their impact was significant.
 - Mark J. Indelicato, Rochester Institute of Technology 
 - Michael Yonshik Choi, Illinois Institute of Technology
 - Sarvesh Kulkarni, Villanova University
-- Alexander L. Wijesinha Towson University
+- Alexander L. Wijesinha, Towson University
 
 | Larry & Bruce 
 | August 2019 
