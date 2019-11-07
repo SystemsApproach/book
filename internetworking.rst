@@ -10,6 +10,7 @@ Chapter 3:  Internetworking
 
    internetworking/problem.rst
    internetworking/switching.rst
+   internetworking/ethernet.rst
    internetworking/basic-ip.rst
    internetworking/routing.rst
    internetworking/impl.rst
