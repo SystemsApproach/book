@@ -40,7 +40,7 @@ More specifically, the 6th Edition includes the following major changes:
 -  New Perspective Section in Chapter 1 introduces the recurring *Cloudification* theme.
 -  New Section 2.8 describes the *Access Network*, including Passive
    Optical Networks (PON) and 5G’s Radio Access Networks (RAN).
--  Section 3.4 updated to include descriptions of *White-Box Switches*
+-  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes *VXLANs* and the
    role of overlays in the Cloud.
@@ -61,6 +61,36 @@ More specifically, the 6th Edition includes the following major changes:
    a discussion of *REST*, *gRPC*, and *Cloud Services*.
 -  Section 9.3 expaned to include a description of modern *Network
    Management Systems* including the use of *OpenConfig* and *gNMI*.
+
+Organization
+------------
+
+To construct a networking course around the material in this book, it
+can be helpful to understand the overall organization, which can be
+characterized as having three major parts:
+
+* Conceptual and foundational material, that is, the big ideas at the
+  heart of networking.
+
+* Core protocols and algorithms that illustrate how the foundational
+  ideas are put to practice in real networks.
+
+* Advanced material that might or might not fit in any single semester
+  course.
+
+This characterization can be applied at the Chapter level: Chapter 1
+is foundational, Chapters 2, 3, 5, and 9 are core, and Chapters 4, 6,
+7, and 8 are more advanced.
+
+This characterization can also be applied at the Section level, where
+roughly speaking, each Chapter advance from basic concepts to specific
+technology to advanced techniques. For example, Chapter 3 starts by
+introducing the basics of switched networks (3.1), then covers the
+specifics of Switched Ethernet and the IP Internet (3.2-3.4), and
+concludes with an optional advanced topic (3.5). Similarly, Chapter 6
+starts with foundational ideas (6.1-6.2), then explores TCP congestion
+control (6.3), and concludes with optional advanced material
+(6.4-6.5).
 
 Acknowledgements
 ----------------
