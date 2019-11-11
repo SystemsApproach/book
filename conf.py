@@ -59,7 +59,7 @@ warning_is_error = True
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
+# ones. ***Replace "mathjax" with "imgmath" for epub output.***
 extensions = [
     'recommonmark',
     'sphinx.ext.coverage',
