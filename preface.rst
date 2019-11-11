@@ -73,7 +73,7 @@ characterized as having three major parts:
   heart of networking.
 
 * Core protocols and algorithms that illustrate how the foundational
-  ideas are put to practice in real networks.
+  ideas are put to practice.
 
 * Advanced material that might or might not fit in any single semester
   course.
