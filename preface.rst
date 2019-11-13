@@ -37,15 +37,18 @@ main ways:
 
 More specifically, the 6th Edition includes the following major changes:
 
--  New Perspective Section in Chapter 1 introduces the recurring *Cloudification* theme.
+-  New Perspective Section in Chapter 1 introduces the recurring
+   *Cloudification* theme.
 -  New Section 2.8 describes the *Access Network*, including Passive
    Optical Networks (PON) and 5G’s Radio Access Networks (RAN).
+-  Section 3.2 rewritten to emphasize *Switched Ethernet*.
 -  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes *VXLANs* and the
    role of overlays in the Cloud.
 -  New Perspective Section in Chapter 4 describes how the *Cloud*
    impacts the Internet’s structure.
+-  Section 5.2 expanded to include a discussion of *QUIC*.
 -  Section 5.3 expanded to include a description of *gRPC*.
 -  Sections 6.3 and 6.4 updated to include descriptions of *TCP CUBIC,
    DCTCP,* and *BBR*.

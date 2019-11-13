@@ -66,7 +66,7 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.mathjax',
     'sphinx.ext.todo',
-    'sphinx.ext.autosectionlabel',    
+    'sphinx.ext.autosectionlabel',
     'sphinxcontrib.actdiag',
     'sphinxcontrib.blockdiag',
     'sphinxcontrib.nwdiag',
@@ -111,7 +111,7 @@ numfig_format = {
 
 # Ignore link check for the following websites
 # linkcheck_ignore = [
-#     'https://www.opennetworking.org/trellis/',
+#     'https://book.systemspproach.org/',
 # ]
 
 # -- Options for HTML output -------------------------------------------------
