@@ -8,11 +8,11 @@ the scene. In many ways, this is reminiscent of the dramatic affect the
 Web was having on the Internet when we published the 1st Edition of the
 book in 1996.
 
-The 6th Edition adapts to the times, but keeps the *Systems Approach* as
-its north star. In broad strokes, we updated this new edition in three
-main ways:
+The 6th Edition adapts to the times, but keeps the *Systems Approach*
+as its north star. In broad strokes, we update and improve this new
+edition in four main ways:
 
--  We refreshed the examples to reflect the current state of the world.
+-  We refresh the examples to reflect the current state of the world.
    This includes deleting anachronisms (e.g., dial-up modem), using
    popular applications (e.g., Netflix, Spotify) to motivate the
    problems being addressed, and updating the numbers to represent the
@@ -34,6 +34,13 @@ main ways:
   side-effect of this discussion is to foster an appreciation for the
   Internet’s continuous evolution, and the opportunity for innovation
   this represents.
+
+- We distill the important principles of network design in a series
+  of *Key Takeaways* throughout the book. Each takeaway is a concise
+  statement of either a general system design rule or a central
+  networking concept, drawing on the examples presented in the
+  surrounding text. In effect, these takeaways are the high-level
+  "learning objectives" for the book.
 
 More specifically, the 6th Edition includes the following major changes:
 
