@@ -1,7 +1,8 @@
 About This Book
 ===============
 
-This site contains source text for *Computer Networks: A Systems
+This `site <https://github.com/SystemsApproach>`__
+contains source text for *Computer Networks: A Systems
 Approach*, now available under terms of the `Creative Commons (CC BY
 4.0) <https://creativecommons.org/licenses/by/4.0>`__ license. The
 community is invited to contribute corrections, improvements, updates,
