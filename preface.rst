@@ -37,7 +37,7 @@ edition in four main ways:
   
 - We distill the important principles of network design in a series
   of *Key Takeaways* throughout the book. Each takeaway is a concise
-  statement of either a general system design rule or a central
+  statement of either a general system design rule or a fundamental
   networking concept, drawing on the examples presented in the
   surrounding text. Pedagogically, these takeaways correspond to the
   high-level *learning objectives* for the book.
@@ -145,5 +145,5 @@ helpful comments and suggestions. Their impact was significant.
 - Alexander L. Wijesinha, Towson University
 
 | Larry & Bruce 
-| August 2019 
+| November 2019 
 
