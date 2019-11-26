@@ -25,7 +25,7 @@ August 1, 2019
 
 This release is tagged ``v6.0``, which roughly equates with a 6th
 Edition. Read the `Preface
-<https://github.com/SystemsApproach/security/blob/v6.0/preface.md>`__
+<https://github.com/SystemsApproach/book/blob/v6.0/preface.md>`__
 to find out what’s new.
 
 Note that Morgan Kaufmann (Elsevier) plans to publish a 6th edition of
