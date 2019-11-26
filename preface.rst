@@ -48,11 +48,14 @@ More specifically, the 6th Edition includes the following major changes:
    *Cloudification* theme.
 -  New Section 2.8 describes the *Access Network*, including Passive
    Optical Networks (PON) and 5G’s Radio Access Networks (RAN).
--  Section 3.2 rewritten to emphasize *Switched Ethernet*.
+-  Refactored topics across Sections 3.1 (*Switching Basics*) and 3.2
+   (*Switched Ethernet*).
 -  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes *VXLANs* and the
    role of overlays in the Cloud.
+-  Refactored topics across Sections 4.1 (*Global Internet*) and 4.2
+   (*IP Version 6*).   
 -  New Perspective Section in Chapter 4 describes how the *Cloud*
    impacts the Internet’s structure.
 -  Section 5.2 expanded to include a discussion of *QUIC*.
@@ -65,6 +68,8 @@ More specifically, the 6th Edition includes the following major changes:
 -  Section 7.2 expanded to include a desciption of *HTTP Adaptive
    Streaming*.
 -  New Section 8.1 introduces the duality of *Threats* and *Trust*.
+-  Refactored topics across Sections 8.3 (*Key Predistribution*) and
+   8.2 (*Authentication Protocols*).
 -  New Perspective Section in Chapter 8 describes *Decentralized
    Identity Management* and the role of *Blockchains*.
 -  Section 9.1 updated to include a description of *HTTP/2*, along with
@@ -135,6 +140,8 @@ contributions and bug fixes:
    -  Guo (ZJUGuoShuai)
    -  Hellman (eshellman)
    -  Xtao (vertextao)
+   -  Mike Appelman
+   -  Seth (springbov)      
 
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
