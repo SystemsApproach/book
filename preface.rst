@@ -49,7 +49,7 @@ More specifically, the 6th Edition includes the following major changes:
 -  New Section 2.8 describes the *Access Network*, including Passive
    Optical Networks (PON) and 5G’s Radio Access Networks (RAN).
 -  Refactored topics across Sections 3.1 (*Switching Basics*) and 3.2
-   (*Switched Ethernet*).
+   (*Switched Ethernet*), including expanded coverage of VLANs.
 -  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes *VXLANs* and the

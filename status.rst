@@ -4,6 +4,22 @@ Release Notes
 For a roadmap of ongoing and planned work, see the `book
 wiki <https://github.com/SystemsApproach/book/wiki>`__.
 
+November 26, 2019
+-----------------
+
+This latest version is tagged ``v6.1``. It includes many improvements
+suggested by reviewers, most notably:
+
+-  Refactored topics across Sections 3.1 (*Switching Basics*) and 3.2
+   (*Switched Ethernet*), including expanded coverage of VLANs.
+-  Section 5.2 expanded to include a discussion of *QUIC*.
+-  Refactored topics across Sections 8.3 (*Key Predistribution*) and
+   8.2 (*Authentication Protocols*).
+
+This release also migrates from the GitBook toolchain (with *MarkDown*
+as the source format) to the Sphinx toolchain (with *reStructuredText*
+as the source format).
+
 August 1, 2019
 --------------
 
