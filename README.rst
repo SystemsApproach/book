@@ -32,8 +32,8 @@ Read the Book
 -------------
 
 An online version of the book is published at
-https://book.systemsapproach.org. You can also find a PDF version
-`here <https://github.com/SystemsApproach/5G/releases>`__.
+https://book.systemsapproach.org. You can also download .pdf and .epub
+versions from `here <https://github.com/SystemsApproach/book/releases>`__.
 
 To track progress and receive notices about new versions, you can follow
 the project on
