@@ -4,7 +4,7 @@ Preface
 It has been nearly ten years since the 5th Edition of *Computer
 Networks: A Systems Approach* was published. Much has changed in that
 time, most notably, the explosion of the cloud and smartphone apps onto
-the scene. In many ways, this is reminiscent of the dramatic affect the
+the scene. In many ways, this is reminiscent of the dramatic effect the
 Web was having on the Internet when we published the 1st Edition of the
 book in 1996.
 
@@ -20,14 +20,14 @@ edition in four main ways:
 
 -  We connect the dots between the original research that led to the
    development of technologies like multicast, real-time video
-   streaming, and quality-of-service, and the now-familar cloud
+   streaming, and quality-of-service, and the now-familiar cloud
    applications like GoToMeeting, Netflix, and Spotify. This is in
    keeping with our emphasis on the design process and not just the
    end result, which is especially important today since so much the
    Internet is primarily available in proprietary commercial services.
 
 - We place the Internet in the broader context of the Cloud, and just
-  as importantly, in the context of the commerial forces that are
+  as importantly, in the context of the commercial forces that are
   shaping the Cloud. This has minimal impact on the technical details
   presented throughout the book, but it is discussed in a new
   *Perspective* section at the end of each chapter. We hope one
@@ -64,8 +64,8 @@ More specifically, the 6th Edition includes the following major changes:
    DCTCP,* and *BBR*.
 -  Section 6.4 expanded to include a description of *Active Queue
    Management* (AQM).
--  Section 7.1 expanded to include a desciption of *Protocol Buffers*.
--  Section 7.2 expanded to include a desciption of *HTTP Adaptive
+-  Section 7.1 expanded to include a description of *Protocol Buffers*.
+-  Section 7.2 expanded to include a description of *HTTP Adaptive
    Streaming*.
 -  New Section 8.1 introduces the duality of *Threats* and *Trust*.
 -  Refactored topics across Sections 8.3 (*Key Predistribution*) and
@@ -74,7 +74,7 @@ More specifically, the 6th Edition includes the following major changes:
    Identity Management* and the role of *Blockchains*.
 -  Section 9.1 updated to include a description of *HTTP/2*, along with
    a discussion of *REST*, *gRPC*, and *Cloud Services*.
--  Section 9.3 expaned to include a description of modern *Network
+-  Section 9.3 expanded to include a description of modern *Network
    Management Systems* including the use of *OpenConfig* and *gNMI*.
 
 Organization
@@ -102,7 +102,7 @@ roughly speaking, each Chapter advances from basic concepts to
 specific technology to advanced techniques. For example, Chapter 3
 starts by introducing the basics of switched networks (3.1), then
 covers the specifics of Switched Ethernet and the IP Internet
-(3.2-3.4), and concludes with an optional discusion of SDN
+(3.2-3.4), and concludes with an optional discussion of SDN
 (3.5). Similarly, Chapter 6 starts with foundational ideas (6.1-6.2),
 then explores TCP congestion control (6.3), and concludes with
 optional advanced material (6.4-6.5).
@@ -120,7 +120,7 @@ new content:
 -  Oguz Sunay: Cellular Networks
 -  Thomas Vachuska: Network Management
 
-Along with the following individuals (github users) for their various
+Along with the following individuals (GitHub users) for their various
 contributions and bug fixes:
 
 .. hlist::
