@@ -69,7 +69,7 @@ More specifically, the 6th Edition includes the following major changes:
    Streaming*.
 -  New Section 8.1 introduces the duality of *Threats* and *Trust*.
 -  Refactored topics across Sections 8.3 (*Key Predistribution*) and
-   8.2 (*Authentication Protocols*).
+   8.4 (*Authentication Protocols*).
 -  New Perspective Section in Chapter 8 describes *Decentralized
    Identity Management* and the role of *Blockchains*.
 -  Section 9.1 updated to include a description of *HTTP/2*, along with
@@ -106,6 +106,7 @@ covers the specifics of Switched Ethernet and the IP Internet
 (3.5). Similarly, Chapter 6 starts with foundational ideas (6.1-6.2),
 then explores TCP congestion control (6.3), and concludes with
 optional advanced material (6.4-6.5).
+
 
 Acknowledgements
 ----------------

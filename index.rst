@@ -19,4 +19,5 @@ Computer Networks: A Systems Approach
    data.rst
    security.rst
    applications.rst
+   supplements.rst
    README.rst
