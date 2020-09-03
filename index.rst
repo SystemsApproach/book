@@ -1,6 +1,7 @@
 .. image:: bridge.png
    :width: 250px
    :align: center
+   :target: https://systemsapproach.org		   
 
 Computer Networks: A Systems Approach
 ======================================
