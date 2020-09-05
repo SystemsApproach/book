@@ -28,7 +28,7 @@ gives appropriate credit (with a link to the formal publication through
 the relevant DOI), provides a link to the license, indicates if changes
 were made and  the licensor is not represented as endorsing the use
 made of the work. The full details of the license are available at
-https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.
+https://creativecommons.org/licenses/by/4.0/legalcode.
 
 B. You confirm that the Contribution is original to You, except for
 any third-party material that is either in the public domain or for
