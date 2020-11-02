@@ -4,7 +4,7 @@ Preface
 It has been nearly ten years since the 5th Edition of *Computer
 Networks: A Systems Approach* was published. Much has changed in that
 time, most notably, the explosion of the cloud and smartphone apps onto
-the scene. In many ways, this is reminiscent of the dramatic affect the
+the scene. In many ways, this is reminiscent of the dramatic effect the
 Web was having on the Internet when we published the 1st Edition of the
 book in 1996.
 
