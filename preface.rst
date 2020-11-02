@@ -128,10 +128,14 @@ contributions and bug fixes:
    :columns: 3
 
    -  Mohammed Al-Ameen
+   -  Mike Appelman 
    -  Andy Bavier
    -  Manuel Berfelde
+   -  Brian Bohe
+   -  Peter DeLong
    -  Chris Goldsworthy
    -  John Hartman
+   -  Ethan Lam
    -  Diego López León
    -  Matteo Scandolo
    -  Mike Wawrzoniak
@@ -141,7 +145,6 @@ contributions and bug fixes:
    -  Guo (ZJUGuoShuai)
    -  Hellman (eshellman)
    -  Xtao (vertextao)
-   -  Mike Appelman
    -  Seth (springbov)      
 
 Finally, we would like to thank the following reviewers for their many
