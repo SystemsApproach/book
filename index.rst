@@ -10,6 +10,7 @@ Computer Networks: A Systems Approach
    :maxdepth: 2
    :caption: Table of Contents
 
+   foreword.rst
    preface.rst
    foundation.rst
    direct.rst

@@ -4,7 +4,7 @@ Preface
 It has been nearly ten years since the fifth edition of *Computer
 Networks: A Systems Approach* was published. Much has changed in that
 time, most notably, the explosion of the cloud and smartphone apps onto
-the scene. In many ways, this is reminiscent of the dramatic affect the
+the scene. In many ways, this is reminiscent of the dramatic effect the
 Web was having on the Internet when we published the first edition of the
 book in 1996.
 
@@ -134,10 +134,14 @@ contributions and bug fixes:
    :columns: 3
 
    -  Mohammed Al-Ameen
+   -  Mike Appelman 
    -  Andy Bavier
    -  Manuel Berfelde
+   -  Brian Bohe
+   -  Peter DeLong
    -  Chris Goldsworthy
    -  John Hartman
+   -  Ethan Lam
    -  Diego López León
    -  Matteo Scandolo
    -  Mike Wawrzoniak
@@ -147,7 +151,6 @@ contributions and bug fixes:
    -  Guo (ZJUGuoShuai)
    -  Hellman (eshellman)
    -  Xtao (vertextao)
-   -  Mike Appelman
    -  Joep (joepeding) 
    -  Seth (springbov)      
 
@@ -200,4 +203,5 @@ in this new venture.
 
 | Larry & Bruce 
 | October 2020
+
 
