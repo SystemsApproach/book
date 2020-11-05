@@ -1,15 +1,15 @@
 Preface
 =======
 
-It has been nearly ten years since the 5th Edition of *Computer
+It has been nearly ten years since the fifth edition of *Computer
 Networks: A Systems Approach* was published. Much has changed in that
 time, most notably, the explosion of the cloud and smartphone apps onto
 the scene. In many ways, this is reminiscent of the dramatic affect the
-Web was having on the Internet when we published the 1st Edition of the
+Web was having on the Internet when we published the first edition of the
 book in 1996.
 
-The 6th Edition adapts to the times, but keeps the *Systems Approach*
-as its north star. In broad strokes, we update and improve this new
+The sixth edition adapts to the times, but keeps the *Systems Approach*
+as its North Star. In broad strokes, we update and improve this new
 edition in four main ways:
 
 -  We refresh the examples to reflect the current state of the world.
@@ -21,10 +21,12 @@ edition in four main ways:
 -  We connect the dots between the original research that led to the
    development of technologies like multicast, real-time video
    streaming, and quality-of-service, and the now-familiar cloud
-   applications like GoToMeeting, Netflix, and Spotify. This is in
+   applications like Zoom, Netflix, and Spotify. This is in
    keeping with our emphasis on the design process and not just the
-   end result, which is especially important today since so much the
-   Internet is primarily available in proprietary commercial services.
+   end result, which is especially important today since so much of
+   the Internet’s functionality is primarily delivered by
+   proprietary commercial services. 
+
 
 - We place the Internet in the broader context of the Cloud, and just
   as importantly, in the context of the commercial forces that are
@@ -41,8 +43,11 @@ edition in four main ways:
   networking concept, drawing on the examples presented in the
   surrounding text. Pedagogically, these takeaways correspond to the
   high-level *learning objectives* for the book.
+
+New Material in the Sixth Edition
+---------------------------------
   
-More specifically, the 6th Edition includes the following major changes:
+More specifically, the sixth edition includes the following major changes:
 
 -  New Perspective Section in Chapter 1 introduces the recurring
    *Cloudification* theme.
@@ -52,7 +57,8 @@ More specifically, the 6th Edition includes the following major changes:
    (*Switched Ethernet*), including expanded coverage of VLANs.
 -  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
--  New Perspective Section in Chapter 3 describes *VXLANs* and the
+-  New Perspective Section in Chapter 3 describes virtual network
+   ovelays, *VXLAN*, and the
    role of overlays in the Cloud.
 -  Refactored topics across Sections 4.1 (*Global Internet*) and 4.2
    (*IP Version 6*).   
@@ -142,6 +148,7 @@ contributions and bug fixes:
    -  Hellman (eshellman)
    -  Xtao (vertextao)
    -  Mike Appelman
+   -  Joep (joepeding) 
    -  Seth (springbov)      
 
 Finally, we would like to thank the following reviewers for their many
@@ -152,6 +159,45 @@ helpful comments and suggestions. Their impact was significant.
 - Sarvesh Kulkarni, Villanova University
 - Alexander L. Wijesinha, Towson University
 
+Open Source
+-----------
+
+Source for this book is available on
+https://github.com/SystemsApproach, and is available under terms of
+the Creative Commons (CC BY 4.0) license. The community is invited to
+contribute corrections, improvements, updates, and new material under
+the same terms.  Like many open source software projects, this one has
+been seeded with once restricted content: the fifth edition of
+Peterson and Davie, copyrighted by Elsevier. Our hope is that open
+sourcing this material will both make it widely available and serve as
+an attractor for new content: updating what’s already there, expanding
+it to cover new topics, and augmenting the text with additional
+teaching collateral.
+
+If you make use of this work, the attribution
+should include the following information:
+
+|  Title: *Computer Networks: A Systems Approach*
+|  Authors: Larry Peterson and Bruce Davie
+|  Copyright: Elsevier, 2012
+|  Source: https://github.com/SystemsApproach
+|  License: `CC BY  4.0 <https://creativecommons.org/licenses/by/4.0>`__
+
+
+How to Contribute
+-----------------
+
+We hope that, if you use this
+material, you are also willing to contribute back to it. If you are
+new to open source, you might check out this How to Contribute to Open
+Source (https://opensource.guide/how-to-contribute) guide. Among other
+things, you’ll learn about posting Issues that you’d like to see
+addressed, and issuing Pull Requests to merge your improvements back
+into GitHub.  We hope you’ve derived value from Computer Networks: A
+Systems Approach over the years, and we’re eager to have you join us
+in this new venture.
+
+
 | Larry & Bruce 
-| November 2019 
+| October 2020
 
