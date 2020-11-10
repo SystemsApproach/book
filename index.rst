@@ -1,5 +1,5 @@
-.. image:: bridge.png
-   :width: 250px
+.. image:: bridge.jpg
+   :width: 300px
    :align: center
    :target: https://systemsapproach.org		   
 
