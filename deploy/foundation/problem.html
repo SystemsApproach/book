@@ -1,0 +1,291 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Problem: Building a Network &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.1 Applications" href="applications.html" />
+    <link rel="prev" title="Chapter 1: Foundation" href="../foundation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Problem: Building a Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">1.1 Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">1.2 Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">1.3 Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html">1.4 Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html">1.5 Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Feature Velocity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../foundation.html">Chapter 1:  Foundation</a> &raquo;</li>
+        
+      <li>Problem: Building a Network</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/foundation/problem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="problem-building-a-network">
+<h1>Problem: Building a Network<a class="headerlink" href="#problem-building-a-network" title="Permalink to this headline">¶</a></h1>
+<p>Suppose you want to build a computer network, one that has the potential
+to grow to global proportions and to support applications as diverse as
+teleconferencing, video on demand, electronic commerce, distributed
+computing, and digital libraries. What available technologies would
+serve as the underlying building blocks, and what kind of software
+architecture would you design to integrate these building blocks into an
+effective communication service? Answering this question is the
+overriding goal of this book—to describe the available building
+materials and then to show how they can be used to construct a network
+from the ground up.</p>
+<p>Before we can understand how to design a computer network, we should
+first agree on exactly what a computer network is. At one time, the term
+<em>network</em> meant the set of serial lines used to attach dumb terminals to
+mainframe computers. Other important networks include the voice
+telephone network and the cable TV network used to disseminate video
+signals. The main things these networks have in common are that they are
+specialized to handle one particular kind of data (keystrokes, voice, or
+video) and they typically connect to special-purpose devices (terminals,
+hand receivers, and television sets).</p>
+<p>What distinguishes a computer network from these other types of
+networks? Probably the most important characteristic of a computer
+network is its generality. Computer networks are built primarily from
+general-purpose programmable hardware, and they are not optimized for a
+particular application like making phone calls or delivering television
+signals. Instead, they are able to carry many different types of data,
+and they support a wide, and ever growing, range of applications.
+Today’s computer networks have pretty much taken over the functions
+previously performed by single-use networks. This chapter looks at some
+typical applications of computer networks and discusses the requirements
+that a network designer who wishes to support such applications must be
+aware of.</p>
+<p>Once we understand the requirements, how do we proceed? Fortunately, we
+will not be building the first network. Others, most notably the
+community of researchers responsible for the Internet, have gone before
+us. We will use the wealth of experience generated from the Internet to
+guide our design. This experience is embodied in a <em>network
+architecture</em> that identifies the available hardware and software
+components and shows how they can be arranged to form a complete network
+system.</p>
+<p>In addition to understanding how networks are built, it is increasingly
+important to understand how they are operated or managed and how network
+applications are developed. Almost all of us now have computer networks
+in our homes, offices, and in some cases in our cars, so operating
+networks is no longer a matter only for a few specialists. And with the
+proliferation of smartphones, many more of this generation are
+developing networked applications than in the past. So we need to
+consider networks from these multiple perspectives: builders, operators,
+application developers.</p>
+<p>To start us on the road toward understanding how to build, operate, and
+program a network, this chapter does four things. First, it explores the
+requirements that different applications and different communities of
+people place on the network. Second, it introduces the idea of a network
+architecture, which lays the foundation for the rest of the book. Third,
+it introduces some of the key elements in the implementation of computer
+networks. Finally, it identifies the key metrics that are used to
+evaluate the performance of computer networks.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="applications.html" class="btn btn-neutral float-right" title="1.1 Applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../foundation.html" class="btn btn-neutral float-left" title="Chapter 1: Foundation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

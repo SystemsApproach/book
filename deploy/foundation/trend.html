@@ -1,0 +1,312 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Perspective: Feature Velocity &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 2: Direct Links" href="../direct.html" />
+    <link rel="prev" title="1.5 Performance" href="performance.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Building a Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">1.1 Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">1.2 Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">1.3 Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html">1.4 Software</a></li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html">1.5 Performance</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Perspective: Feature Velocity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../foundation.html">Chapter 1:  Foundation</a> &raquo;</li>
+        
+      <li>Perspective: Feature Velocity</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/foundation/trend.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="perspective-feature-velocity">
+<h1>Perspective: Feature Velocity<a class="headerlink" href="#perspective-feature-velocity" title="Permalink to this headline">¶</a></h1>
+<p>This chapter introduces some of the stakeholders in computer
+networks—network designers, application developers, end users, and
+network operators—to help motivate the technical requirements that shape
+how networks are designed and built. This presumes all design decisions
+are purely technical, but of course, that’s usually not the case. Many
+other factors, from market forces, to government policy, to ethical
+considerations, also influence how networks are designed and built.</p>
+<p>Of these, the marketplace is the most influential, and corresponds to
+the interplay between network operators (e.g., AT&amp;T, Comcast, Verizon,
+DT, NTT, China Unicom), network equipment venders (e.g., Cisco, Juniper,
+Ericsson, Nokia, Huawei, NEC), application and service providers (e.g.,
+Facebook, Google, Amazon, Microsoft, Apple, Netflix, Spotify), and of
+course, subscribers and customers (i.e., individuals, but also
+enterprises and businesses). The lines between these players are not
+always crisp, with many companies playing multiple roles. The most
+notable example of this are the large cloud providers, who (a) build
+their own networking equipment using commodity components, (b) deploy
+and operate their own networks, and (c) provide end-user services and
+applications on top of their networks.</p>
+<p>When you account for these other factors in the technical design
+process, you realize there are a couple of implicit assumptions in the
+textbook version of the story that need to be reevaluated. One is that
+designing a network is a one-time activity. Build it once and use it
+forever (modulo hardware upgrades so users can enjoy the benefits of the
+latest performance improvements). A second is that the job of building
+the network is largely divorced from the job of operating the network.
+Neither of these assumptions is quite right.</p>
+<p>The network’s design is clearly evolving, and we have documented these
+changes with each new edition of the textbook over the years. Doing that
+on a timeline measured in years has historically been good enough, but
+anyone that has downloaded and used the latest smartphone app knows how
+glacially slow anything measured in years is by today’s standards.
+Designing for evolution has to be part of the decision making process.</p>
+<p>On the second point, the companies that build networks are almost always
+the same ones that operate them. They are collectively known as <em>network
+operators</em>, and they include the companies listed above. But if we again
+look to the cloud for inspiration, we see that develop-and-operate isn’t
+true just at the company level, but it is also how the fastest moving
+cloud companies organize their engineering teams: around the <em>DevOps</em>
+model. (If you are unfamiliar with DevOps, we recommend you read <em>Site
+Reliability Engineering: How Google Runs Production Systems</em> to see how
+it is practiced.)</p>
+<p>What this all means is that computer networks are now in the midst of a
+major transformation, with network operators trying to simultaneously
+accelerate the pace of innovation (sometimes known as feature velocity)
+and yet continue to offer a reliable service (preserve stability). And
+they are increasingly doing this by adopting the best practices of cloud
+providers, which can be summarized as having two major themes: (1) take
+advantage of commodity hardware and move all intelligence into software,
+and (2) adopt agile engineering processes that break down barriers
+between development and operations.</p>
+<p>This transformation is sometimes called the “cloudification” or
+“softwarization” of the network, and while the Internet has always had
+a robust software ecosystem, it has historically been limited to the
+applications running <em>on top of</em> the network (e.g., using the Socket
+API described in <a class="reference internal" href="software.html#software"><span class="std std-ref">Section 1.4</span></a>).  What’s changed
+is that today these same cloud-inspired engineering practices are
+being applied to the <em>internals</em> of the network. This new approach,
+known as <em>Software Defined Networks</em> (SDN), is a game changer, not so
+much in terms of how we address the fundamental technical challenges
+of framing, routing, fragmentation/reassembly, packet scheduling,
+congestion control, security, and so on, but in terms of how rapidly
+the network evolves to support new features.</p>
+<p>This transformation is so important that we take it up again in the
+<em>Perspective</em> section at the end of each chapter. As these discussions
+will explore, what happens in the networking industry is partly about
+technology, but also partly about many other non-technical factors,
+all of which is a testament to how deeply embedded the Internet
+is in our lives.</p>
+<div class="admonition-broader-perspective admonition">
+<p class="first admonition-title">Broader Perspective</p>
+<p>To continue reading about the cloudification of the Internet, see
+<a class="reference internal" href="../direct/trend.html#perspective-race-to-the-edge"><span class="std std-ref">Perspective: Race to the Edge</span></a>.</p>
+<p class="last">To learn more about DevOps, we recommend: <a class="reference external" href="https://www.amazon.com/Site-Reliability-Engineering-Production-Systems/dp/149192912X/ref=pd_bxgy_14_img_2/131-5109792-2268338?_encoding=UTF8&amp;pd_rd_i=149192912X&amp;pd_rd_r=4b77155f-234d-11e9-944e-278ce23a35b5&amp;pd_rd_w=qIfxg&amp;pd_rd_wg=12dE2&amp;pf_rd_p=6725dbd6-9917-451d-beba-16af7874e407&amp;pf_rd_r=5GN656H9VEG4WEVGB728&amp;psc=1&amp;refRID=5GN656H9VEG4WEVGB728">Site Reliability
+Engineering: How Google Runs Production Systems</a>,
+2016.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../direct.html" class="btn btn-neutral float-right" title="Chapter 2: Direct Links" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="performance.html" class="btn btn-neutral float-left" title="1.5 Performance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

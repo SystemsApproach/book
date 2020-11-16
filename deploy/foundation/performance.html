@@ -1,0 +1,635 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.5 Performance &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Perspective: Feature Velocity" href="trend.html" />
+    <link rel="prev" title="1.4 Software" href="software.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Building a Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">1.1 Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">1.2 Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">1.3 Architecture</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software.html">1.4 Software</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.5 Performance</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bandwidth-and-latency">Bandwidth and Latency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delay-bandwidth-product">Delay × Bandwidth Product</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#high-speed-networks">High-Speed Networks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#application-performance-needs">Application Performance Needs</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Feature Velocity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../foundation.html">Chapter 1:  Foundation</a> &raquo;</li>
+        
+      <li>1.5 Performance</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/foundation/performance.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="performance">
+<h1>1.5 Performance<a class="headerlink" href="#performance" title="Permalink to this headline">¶</a></h1>
+<p>Up to this point, we have focused primarily on the functional aspects of
+networks. Like any computer system, however, computer networks are also
+expected to perform well. This is because the effectiveness of
+computations distributed over the network often depends directly on the
+efficiency with which the network delivers the computation’s data. While
+the old programming adage “first get it right and then make it fast”
+remains true, in networking it is often necessary to “design for
+performance.” It is therefore important to understand the various
+factors that impact network performance.</p>
+<div class="section" id="bandwidth-and-latency">
+<h2>Bandwidth and Latency<a class="headerlink" href="#bandwidth-and-latency" title="Permalink to this headline">¶</a></h2>
+<p>Network performance is measured in two fundamental ways: <em>bandwidth</em>
+(also called <em>throughput</em>) and <em>latency</em> (also called <em>delay</em>). The
+bandwidth of a network is given by the number of bits that can be
+transmitted over the network in a certain period of time. For example, a
+network might have a bandwidth of 10 million bits/second (Mbps), meaning
+that it is able to deliver 10&nbsp;million bits every second. It is sometimes
+useful to think of bandwidth in terms of how long it takes to transmit
+each bit of data. On a 10-Mbps network, for example, it takes 0.1
+microsecond (μs) to transmit each bit.</p>
+<p>Bandwidth and throughput are subtly different terms. First of all,
+bandwidth is literally a measure of the width of a frequency band. For
+example, legacy voice-grade telephone lines supported a frequency band
+ranging from 300 to 3300&nbsp;Hz; it was said to have a bandwidth of 3300 Hz
+- 300 Hz = 3000 Hz. If you see the word <em>bandwidth</em> used in a situation
+in which it is being measured in hertz, then it probably refers to the
+range of signals that can be accommodated.</p>
+<p>When we talk about the bandwidth of a communication link, we normally
+refer to the number of bits per second that can be transmitted on the
+link. This is also sometimes called the <em>data rate.</em> We might say that
+the bandwidth of an Ethernet link is 10&nbsp;Mbps. A useful distinction can
+also be made, however, between the maximum data rate that is available
+on the&nbsp;link and the number of bits per second that we can actually
+transmit over the link in practice. We tend to use the word <em>throughput</em>
+to refer to the <em>measured performance</em> of a system. Thus, because of
+various inefficiencies of implementation, a pair of nodes connected by a
+link with a bandwidth of 10&nbsp;Mbps might achieve a throughput of only
+2&nbsp;Mbps. This would mean that an application on one host could send data
+to the other host at 2&nbsp;Mbps.</p>
+<p>Finally, we often talk about the bandwidth <em>requirements</em> of an
+application. This is the number of bits per second that it needs to
+transmit over the network to perform acceptably. For some applications,
+this might be “whatever I can get”; for others, it might be some fixed
+number (preferably not more than the available link bandwidth); and for
+others, it might be a number that varies with time. We will provide more
+on this topic later in this section.</p>
+<p>While you can talk about the bandwidth of the network as a whole,
+sometimes you want to be more precise, focusing, for example, on the
+bandwidth of a single physical link or of a logical process-to-process
+channel. At the physical level, bandwidth is constantly improving, with
+no end in sight. Intuitively, if you think of a second of time as a
+distance you could measure with a ruler and bandwidth as how many bits
+fit in that distance, then you can think of each bit as a pulse of some
+width. For example, each bit on a 1-Mbps link is 1 μs wide, while each
+bit on a 2-Mbps link is 0.5 μs wide, as illustrated in <a class="reference internal" href="#fig-bit-width"><span class="std std-numref">Figure
+16</span></a>. The more sophisticated the transmitting and receiving
+technology, the narrower each bit can become and, thus, the higher the
+bandwidth. For logical process-to-process channels, bandwidth is also
+influenced by other factors, including how many times the software that
+implements the channel has to handle, and possibly transform, each bit
+of data.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-bit-width"></span><a class="reference internal image-reference" href="../_images/f01-16-9780123850591.png"><img alt="../_images/f01-16-9780123850591.png" src="../_images/f01-16-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 16. </span><span class="caption-text">Bits transmitted at a particular bandwidth can be
+regarded as having some width: (a) bits transmitted at 1 Mbps
+(each bit is 1 microsecond wide); (b) bits transmitted at 2 Mbps
+(each bit is 0.5 microseconds wide).</span></p>
+</div>
+<p>The second performance metric, latency, corresponds to how long it takes
+a message to travel from one end of a network to the other. (As with
+bandwidth, we could be focused on the latency of a single link or an
+end-to-end channel.) Latency is measured strictly in terms of time. For
+example, a transcontinental network might have a latency of
+24&nbsp;milliseconds (ms); that is, it takes a message 24&nbsp;ms to travel from
+one coast of North America to the other. There are many situations in
+which it is more important to know how long it takes to send a message
+from one end of a network to the other and back, rather than the one-way
+latency. We call this the <em>round-trip time</em> (RTT) of the network.</p>
+<p>We often think of latency as having three components. First, there is
+the speed-of-light propagation delay. This delay occurs because nothing,
+including a bit on a wire, can travel faster than the speed of light. If
+you know the distance between two points, you can calculate the
+speed-of-light latency, although you have to be careful because light
+travels across different media at different speeds: It travels at
+3.0 × 10<sup>8</sup> m/s in a vacuum, 2.3 × 10<sup>8</sup> m/s
+in a copper cable, and 2.0 × 10<sup>8</sup> m/s in an optical fiber.
+Second, there is the amount of time it takes to transmit a unit of data.
+This is a function of the network bandwidth and the size of the packet in
+which the data is carried. Third, there may be queuing delays inside the
+network, since packet switches generally need to store packets for some
+time before forwarding them on an outbound link. So, we could define the
+total latency as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Latency</span> <span class="o">=</span> <span class="n">Propagation</span> <span class="o">+</span> <span class="n">Transmit</span> <span class="o">+</span> <span class="n">Queue</span>
+<span class="n">Propagation</span> <span class="o">=</span>  <span class="n">Distance</span><span class="o">/</span><span class="n">SpeedOfLight</span>
+<span class="n">Transmit</span> <span class="o">=</span> <span class="n">Size</span><span class="o">/</span><span class="n">Bandwidth</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">Distance</span></code> is the length of the wire over which the data will
+travel, <code class="docutils literal notranslate"><span class="pre">SpeedOfLight</span></code> is the effective speed of light over that wire,
+<code class="docutils literal notranslate"><span class="pre">Size</span></code> is the size of the packet, and <code class="docutils literal notranslate"><span class="pre">Bandwidth</span></code> is the bandwidth
+at which the packet is transmitted. Note that if the message contains
+only one bit and we are talking about a single link (as opposed to a
+whole network), then the <code class="docutils literal notranslate"><span class="pre">Transmit</span></code> and <code class="docutils literal notranslate"><span class="pre">Queue</span></code> terms are not
+relevant, and latency corresponds to the propagation delay only.</p>
+<p>Bandwidth and latency combine to define the performance characteristics
+of a given link or channel. Their relative importance, however, depends
+on the application. For some applications, latency dominates bandwidth.
+For example, a client that sends a 1-byte message to a server and
+receives a 1-byte message in return is latency bound. Assuming that no
+serious computation is involved in preparing the response, the
+application will perform much differently on a transcontinental channel
+with a 100-ms&nbsp;RTT than it will on an across-the-room channel with a
+1-ms&nbsp;RTT. Whether the channel is 1&nbsp;Mbps or 100&nbsp;Mbps is relatively
+insignificant, however, since the former implies that the time to
+transmit a byte (<code class="docutils literal notranslate"><span class="pre">Transmit</span></code>) is 8 μs and the latter implies
+<code class="docutils literal notranslate"><span class="pre">Transmit</span></code> = 0.08 μs.</p>
+<p>In contrast, consider a digital library program that is being asked to
+fetch a 25-megabyte (MB) image—the more bandwidth that is available, the
+faster it will be able to return the image to the user. Here, the
+bandwidth of the channel dominates performance. To see this, suppose
+that the channel has a bandwidth of 10&nbsp;Mbps. It will take 20&nbsp;seconds to
+transmit the image (25 × 10<sup>6</sup> × 8-bits / (10 × 10<sup>6</sup>
+Mbps = 20 seconds), making it relatively unimportant if the image
+is on the other side of a 1-ms channel or a 100-ms channel; the difference
+between a 20.001-second response time and a 20.1-second response time is
+negligible.</p>
+<div class="figure align-center" id="id2">
+<span id="fig-latency"></span><a class="reference internal image-reference" href="../_images/f01-17-9780123850591.png"><img alt="../_images/f01-17-9780123850591.png" src="../_images/f01-17-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 17. </span><span class="caption-text">Perceived latency (response time) versus round-trip
+time for various object sizes and link speeds.</span></p>
+</div>
+<p><a class="reference internal" href="#fig-latency"><span class="std std-numref">Figure 17</span></a> gives you a sense of how latency or
+bandwidth can dominate performance in different circumstances. The
+graph shows how long it takes to move objects of various sizes
+(1&nbsp;byte, 2&nbsp;KB, 1&nbsp;MB) across networks with RTTs ranging from 1 to
+100&nbsp;ms and link speeds of either 1.5 or 10&nbsp;Mbps. We use logarithmic
+scales to show relative performance. For a 1-byte object (say, a
+keystroke), latency remains almost exactly equal to the RTT, so that
+you cannot distinguish between a 1.5-Mbps network and a 10-Mbps
+network. For a 2-KB object (say, an email message), the link speed
+makes quite a difference on a 1-ms RTT network but a negligible
+difference on a 100-ms RTT network. And for a 1-MB object (say, a
+digital image), the RTT makes no difference—it is the link speed that
+dominates performance across the full range of RTT.</p>
+<p>Note that throughout this book we use the terms <em>latency</em> and <em>delay</em> in
+a generic way to denote how long it takes to perform a particular
+function, such as delivering a message or moving an object. When we are
+referring to the specific amount of time it takes a signal to propagate
+from one end of a link to another, we use the term <em>propagation delay</em>.
+Also, we make it clear in the context of the discussion whether we are
+referring to the one-way latency or the round-trip time.</p>
+<p>As an aside, computers are becoming so fast that when we connect them to
+networks, it is sometimes useful to think, at least figuratively, in
+terms of <em>instructions per mile</em>. Consider what happens when a computer
+that is able to execute 100&nbsp;billion instructions per second sends a
+message out on a channel with a 100-ms&nbsp;RTT. (To make the math easier,
+assume that the message covers a distance of 5000 miles.) If that
+computer sits idle the full 100&nbsp;ms waiting for a reply message, then it
+has forfeited the ability to execute 10&nbsp;billion instructions, or 2
+million instructions per mile. It had better have been worth going over
+the network to justify this waste.</p>
+</div>
+<div class="section" id="delay-bandwidth-product">
+<h2>Delay × Bandwidth Product<a class="headerlink" href="#delay-bandwidth-product" title="Permalink to this headline">¶</a></h2>
+<p>It is also useful to talk about the product of these two metrics, often
+called the <em>delay × bandwidth product</em>. Intuitively, if we think of a
+channel between a pair of processes as a hollow pipe (see <a class="reference internal" href="#fig-pipe"><span class="std std-numref">Figure
+18</span></a>), where the latency corresponds to the length of the pipe
+and the bandwidth gives the diameter of the pipe, then the delay ×
+bandwidth product gives the volume of the pipe—the maximum number of
+bits that could be in transit through the pipe at any given instant.
+Said another way, if latency (measured in time) corresponds to the
+length of the pipe, then given the width of each bit (also measured in
+time) you can calculate how many bits fit in the pipe. For example, a
+transcontinental channel with a one-way latency of 50&nbsp;ms and a bandwidth
+of 45 Mbps is able to hold</p>
+<p class="centered">
+<strong>50 × 10<sup>-3</sup> × 45 × 10<sup>6</sup> <em>bits/sec</em> = 2.25
+× 10<sup>6</sup> <em>bits</em></strong></p><p>or approximately 280&nbsp;KB of data. In other words, this example channel
+(pipe) holds as many bytes as the memory of a personal computer from the
+early 1980s could hold.</p>
+<div class="figure align-center" id="id3">
+<span id="fig-pipe"></span><a class="reference internal image-reference" href="../_images/f01-18-9780123850591.png"><img alt="../_images/f01-18-9780123850591.png" src="../_images/f01-18-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 18. </span><span class="caption-text">Network as a pipe.</span></p>
+</div>
+<p>The delay × bandwidth product is important to know when constructing
+high-performance networks because it corresponds to how many bits the
+sender must transmit before the first bit arrives at the receiver. If
+the sender is expecting the receiver to somehow signal that bits are
+starting to arrive, and it takes another channel latency for this signal
+to propagate back to the sender, then the sender can send up one <em>RTT ×
+bandwidth</em> worth of data before hearing from the receiver that all is
+well. The bits in the pipe are said to be “in flight,” which means that
+if the receiver tells the sender to stop transmitting it might receive
+up to one RTT × bandwidth’s worth of data before the sender manages to
+respond. In our example above, that amount corresponds to
+5.5 × 10<sup>6</sup> bits (671&nbsp;KB) of data. On the other hand, if
+the sender does not fill the pipe—i.e., does not send a whole RTT ×
+bandwidth product’s worth of data before it stops to wait for a
+signal—the sender will not fully utilize the network.</p>
+<p>Note that most of the time we are interested in the RTT scenario,
+which we simply refer to as the delay × bandwidth product, without
+explicitly saying that “delay” is the RTT (i.e., multiply the one-way
+delay by two). Usually, whether the “delay” in delay × bandwidth means
+one-way latency or RTT is made clear by the context. <a class="reference internal" href="#tab-delay-bw"><span class="std std-numref">Table 1</span></a> shows some examples of RTT × bandwidth products for
+some typical network links.</p>
+<span id="tab-delay-bw"></span><table border="1" class="colwidths-auto docutils align-center" id="id4">
+<caption><span class="caption-number">Table 1. </span><span class="caption-text">Example delay × bandwidth products.</span><a class="headerlink" href="#id4" title="Permalink to this table">¶</a></caption>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Link Type</th>
+<th class="head">Bandwidth</th>
+<th class="head">One-Way Distance</th>
+<th class="head">RTT</th>
+<th class="head">RTT x Bandwidth</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Wireless LAN</td>
+<td>54 Mbps</td>
+<td>50 m</td>
+<td>0.33 μs</td>
+<td>18 bits</td>
+</tr>
+<tr class="row-odd"><td>Satellite</td>
+<td>1 Gbps</td>
+<td>35,000 km</td>
+<td>230 ms</td>
+<td>230 Mb</td>
+</tr>
+<tr class="row-even"><td>Cross-country fiber</td>
+<td>10 Gbps</td>
+<td>4,000 km</td>
+<td>40 ms</td>
+<td>400 Mb</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="high-speed-networks">
+<h2>High-Speed Networks<a class="headerlink" href="#high-speed-networks" title="Permalink to this headline">¶</a></h2>
+<p>The seeming continual increase in bandwidth causes network designers to
+start thinking about what happens in the limit or, stated another way,
+what is the impact on network design of having infinite bandwidth
+available.</p>
+<p>Although high-speed networks bring a dramatic change in the bandwidth
+available to applications, in many respects their impact on how we think
+about networking comes in what does <em>not</em> change as bandwidth increases:
+the speed of light. To quote Scotty from <em>Star Trek,</em> “Ye cannae change
+the laws of physics.” In other words, “high speed” does not mean that
+latency improves at the same rate as bandwidth; the transcontinental RTT
+of a 1-Gbps link is the same 100&nbsp;ms as it is for a 1-Mbps link.</p>
+<p>To appreciate the significance of ever-increasing bandwidth in the face
+of fixed latency, consider what is required to transmit a 1-MB file over
+a 1-Mbps network versus over a 1-Gbps network, both of which have an RTT
+of 100&nbsp;ms. In the case of the 1-Mbps network, it takes 80 round-trip
+times to transmit the file; during each RTT, 1.25% of the file is sent.
+In contrast, the same 1-MB file doesn’t even come close to filling
+1&nbsp;RTT’s worth of the 1-Gbps link, which has a delay × bandwidth product
+of 12.5&nbsp;MB.</p>
+<p><a class="reference internal" href="#fig-bw-lat"><span class="std std-numref">Figure 19</span></a> illustrates the difference between the two
+networks. In effect, the 1-MB file looks like a stream of data that
+needs to be transmitted across a 1-Mbps network, while it looks like a
+single packet on a 1-Gbps network. To help drive this point home,
+consider that a 1-MB file is to a 1-Gbps network what a 1-KB <em>packet</em> is
+to a 1-Mbps network.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-bw-lat"></span><a class="reference internal image-reference" href="../_images/f01-19-9780123850591.png"><img alt="../_images/f01-19-9780123850591.png" src="../_images/f01-19-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 19. </span><span class="caption-text">Relationship between bandwidth and latency. A 1-MB
+file would fill the 1-Mbps link 80 times but only fill 1/12th of a
+1-Gbps link.</span></p>
+</div>
+<p>Another way to think about the situation is that more data can be
+transmitted during each RTT on a high-speed network, so much so that a
+single RTT becomes a significant amount of time. Thus, while you
+wouldn’t think twice about the difference between a file transfer taking
+101&nbsp;RTTs rather than 100&nbsp;RTTs (a relative difference of only 1%),
+suddenly the difference between 1&nbsp;RTT and 2&nbsp;RTTs is significant—a 100%
+increase. In other words, latency, rather than throughput, starts to
+dominate our thinking about network design.</p>
+<p>Perhaps the best way to understand the relationship between throughput
+and latency is to return to basics. The effective end-to-end throughput
+that can be achieved over a network is given by the simple relationship</p>
+<p class="centered">
+<strong>Throughput = TransferSize / TransferTime</strong></p><p>where TransferTime includes not only the elements of one-way
+identified earlier in this section, but also any additional time spent
+requesting or setting up the transfer. Generally, we represent this
+relationship as</p>
+<p class="centered">
+<strong>TransferTime = RTT + 1/Bandwidth x TransferSize</strong></p><p>We use in this calculation to account for a request message being sent
+across the network and the data being sent back. For example, consider a
+situation where a user wants to fetch a 1-MB file across a 1-Gbps with a
+round-trip time of 100&nbsp;ms. This includes both the transmit time for 1&nbsp;MB
+(1 / 1 Gbps × 1 MB = 8 ms) and the 100-ms&nbsp;RTT, for a total transfer time
+of 108&nbsp;ms. This means that the effective throughput will be</p>
+<p class="centered">
+<strong>1 MB / 108 ms = 74.1 Mbps</strong></p><p>not 1&nbsp;Gbps. Clearly, transferring a larger amount of data will help
+improve the effective throughput, where in the limit an infinitely large
+transfer size will cause the effective throughput to approach the
+network bandwidth. On the other hand, having to endure more than
+1&nbsp;RTT—for example, to retransmit missing packets—will hurt the effective
+throughput for any transfer of finite size and will be most noticeable
+for small transfers.</p>
+</div>
+<div class="section" id="application-performance-needs">
+<h2>Application Performance Needs<a class="headerlink" href="#application-performance-needs" title="Permalink to this headline">¶</a></h2>
+<p>The discussion in this section has taken a network-centric view of
+performance; that is, we have talked in terms of what a given link or
+channel will support. The unstated assumption has been that application
+programs have simple needs—they want as much bandwidth as the network
+can provide. This is certainly true of the aforementioned digital
+library program that is retrieving a 250-MB image; the more bandwidth
+that is available, the faster the program will be able to return the
+image to the user.</p>
+<p>However, some applications are able to state an upper limit on how much
+bandwidth they need. Video applications are a prime example. Suppose one
+wants to stream a video that is one quarter the size of a standard TV
+screen; that is, it has a resolution of 352 by 240 pixels. If each pixel
+is represented by 24 bits of information, as would be the case for
+24-bit color, then the size of each frame would be (352 × 240 × 24) /
+8 = 247.5 KB If the application needs to support a frame rate of
+30&nbsp;frames per second, then it might request a throughput rate of 75
+Mbps. The ability of the network to provide more bandwidth is of no
+interest to such an application because it has only so much data to
+transmit in a given period of time.</p>
+<p>Unfortunately, the situation is not as simple as this example suggests.
+Because the difference between any two adjacent frames in a video stream
+is often small, it is possible to compress the video by transmitting
+only the differences between adjacent frames. Each frame can also be
+compressed because not all the detail in a picture is readily perceived
+by a human eye. The compressed video does not flow at a constant rate,
+but varies with time according to factors such as the amount of action
+and detail in the picture and the compression algorithm being used.
+Therefore, it is possible to say what the average bandwidth requirement
+will be, but the instantaneous rate may be more or less.</p>
+<p>The key issue is the time interval over which the average is computed.
+Suppose that this example video application can be compressed down to
+the point that it needs only 2&nbsp;Mbps, on average. If it transmits 1
+megabit in a 1-second interval and 3&nbsp;megabits in the following 1-second
+interval, then over the 2-second interval it is transmitting at an
+average rate of 2&nbsp;Mbps; however, this will be of little consolation to a
+channel that was engineered to support no more than 2 megabits in any
+one second. Clearly, just knowing the average bandwidth needs of an
+application will not always suffice.</p>
+<p>Generally, however, it is possible to put an upper bound on how large a
+burst an application like this is likely to transmit. A burst might be
+described by some peak rate that is maintained for some period of time.
+Alternatively, it could be described as the number of bytes that can be
+sent at the peak rate before reverting to the average rate or some lower
+rate. If this peak rate is higher than the available channel capacity,
+then the excess data will have to be buffered somewhere, to be
+transmitted later. Knowing how big of a burst might be sent allows the
+network designer to allocate sufficient buffer capacity to hold the
+burst.</p>
+<p>Analogous to the way an application’s bandwidth needs can be something
+other than “all it can get,” an application’s delay requirements may be
+more complex than simply “as little delay as possible.” In the case of
+delay, it sometimes doesn’t matter so much whether the one-way latency
+of the network is 100&nbsp;ms or 500&nbsp;ms as how much the latency varies from
+packet to packet. The variation in latency is called <em>jitter</em>.</p>
+<p>Consider the situation in which the source sends a packet once every
+33&nbsp;ms, as would be the case for a video application transmitting
+frames 30 times a second. If the packets arrive at the destination
+spaced out exactly 33&nbsp;ms apart, then we can deduce that the delay
+experienced by each packet in the network was exactly the same. If the
+spacing between when packets arrive at the destination—sometimes
+called the <em>inter-packet gap</em>—is variable, however, then the delay
+experienced by the sequence of packets must have also been variable,
+and the network is said to have introduced jitter into the packet
+stream, as shown in <a class="reference internal" href="#fig-jitter"><span class="std std-numref">Figure 20</span></a>. Such variation
+is generally not introduced in a single physical link, but it can
+happen when packets experience different queuing delays in a multihop
+packet-switched network. This queuing delay corresponds to the
+component of latency defined earlier in this section, which varies
+with time.</p>
+<div class="figure align-center" id="id6">
+<span id="fig-jitter"></span><a class="reference internal image-reference" href="../_images/f01-20-9780123850591.png"><img alt="../_images/f01-20-9780123850591.png" src="../_images/f01-20-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 20. </span><span class="caption-text">Network-induced jitter.</span></p>
+</div>
+<p>To understand the relevance of jitter, suppose that the packets being
+transmitted over the network contain video frames, and in order to
+display these frames on the screen the receiver needs to receive a new
+one every 33&nbsp;ms. If a frame arrives early, then it can simply be saved
+by the receiver until it is time to display it. Unfortunately, if a
+frame arrives late, then the receiver will not have the frame it needs
+in time to update the screen, and the video quality will suffer; it will
+not be smooth. Note that it is not necessary to eliminate jitter, only
+to know how bad it is. The reason for this is that if the receiver knows
+the upper and lower bounds on the latency that a packet can experience,
+it can delay the time at which it starts playing back the video (i.e.,
+displays the first frame) long enough to ensure that in the future it
+will always have a frame to display when it needs it. The receiver
+delays the frame, effectively smoothing out the jitter, by storing it in
+a buffer.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="trend.html" class="btn btn-neutral float-right" title="Perspective: Feature Velocity" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="software.html" class="btn btn-neutral float-left" title="1.4 Software" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

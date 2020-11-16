@@ -1,0 +1,268 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter 5: End-to-End Protocols &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem: Getting Processes to Communicate" href="e2e/problem.html" />
+    <link rel="prev" title="Perspective: The Cloud is Eating the Internet" href="scaling/trend.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Chapter 5:  End-to-End Protocols</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="e2e/problem.html">Problem: Getting Processes to Communicate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/udp.html">5.1 Simple Demultiplexor (UDP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html">5.2 Reliable Byte Stream (TCP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rpc.html">5.3 Remote Procedure Call</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rtp.html">5.4 Transport for Real-Time (RTP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/trend.html">Perspective: HTTP is the New Narrow Waist</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Chapter 5:  End-to-End Protocols</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/e2e.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-5-end-to-end-protocols">
+<h1>Chapter 5:  End-to-End Protocols<a class="headerlink" href="#chapter-5-end-to-end-protocols" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>Victory is the beautiful, bright coloured flower. Transport is the
+stem without which it could never have blossomed.</p>
+<p><em>—Winston Churchill</em></p>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="e2e/problem.html">Problem: Getting Processes to Communicate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="e2e/udp.html">5.1 Simple Demultiplexor (UDP)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="e2e/tcp.html">5.2 Reliable Byte Stream (TCP)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#end-to-end-issues">End-to-End Issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#segment-format">Segment Format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#connection-establishment-and-termination">Connection Establishment and Termination</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#sliding-window-revisited">Sliding Window Revisited</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#triggering-transmission">Triggering Transmission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#adaptive-retransmission">Adaptive Retransmission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#record-boundaries">Record Boundaries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#tcp-extensions">TCP Extensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#performance">Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/tcp.html#alternative-design-choices-sctp-quic">Alternative Design Choices (SCTP, QUIC)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="e2e/rpc.html">5.3 Remote Procedure Call</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rpc.html#rpc-fundamentals">RPC Fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rpc.html#rpc-implementations-sunrpc-dce-grpc">RPC Implementations (SunRPC, DCE, gRPC)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="e2e/rtp.html">5.4 Transport for Real-Time (RTP)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rtp.html#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rtp.html#rtp-design">RTP Design</a></li>
+<li class="toctree-l2"><a class="reference internal" href="e2e/rtp.html#control-protocol">Control Protocol</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="e2e/trend.html">Perspective: HTTP is the New Narrow Waist</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="e2e/problem.html" class="btn btn-neutral float-right" title="Problem: Getting Processes to Communicate" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="scaling/trend.html" class="btn btn-neutral float-left" title="Perspective: The Cloud is Eating the Internet" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
