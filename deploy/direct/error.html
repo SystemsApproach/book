@@ -1,0 +1,592 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2.4 Error Detection &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2.5 Reliable Transmission" href="reliable.html" />
+    <link rel="prev" title="2.3 Framing" href="framing.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Connecting to a Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="perspective.html">2.1 Technology Landscape</a></li>
+<li class="toctree-l2"><a class="reference internal" href="encoding.html">2.2 Encoding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="framing.html">2.3 Framing</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">2.4 Error Detection</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#internet-checksum-algorithm">Internet Checksum Algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cyclic-redundancy-check">Cyclic Redundancy Check</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="reliable.html">2.5 Reliable Transmission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">2.6 Multi-Access Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wireless.html">2.7 Wireless Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="access.html">2.8 Access Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Race to the Edge</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../direct.html">Chapter 2:  Direct Links</a> &raquo;</li>
+        
+      <li>2.4 Error Detection</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/direct/error.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="error-detection">
+<h1>2.4 Error Detection<a class="headerlink" href="#error-detection" title="Permalink to this headline">¶</a></h1>
+<p>As discussed in Chapter&nbsp;1, bit errors are sometimes introduced into
+frames. This happens, for example, because of electrical interference or
+thermal noise. Although errors are rare, especially on optical links,
+some mechanism is needed to detect these errors so that corrective
+action can be taken. Otherwise, the end user is left wondering why the C
+program that successfully compiled just a moment ago now suddenly has a
+syntax error in it, when all that happened in the interim is that it was
+copied across a network file system.</p>
+<p>There is a long history of techniques for dealing with bit errors in
+computer systems, dating back to at least the 1940s. Hamming and
+Reed-Solomon codes are two notable examples that were developed for use
+in punch card readers, when storing data on magnetic disks, and in early
+core memories. This section describes some of the error detection
+techniques most commonly used in networking.</p>
+<p>Detecting errors is only one part of the problem. The other part is
+correcting errors once detected. Two basic approaches can be taken when
+the recipient of a message detects an error. One is to notify the sender
+that the message was corrupted so that the sender can retransmit a copy
+of the message. If bit errors are rare, then in all probability the
+retransmitted copy will be error free. Alternatively, some types of
+error detection algorithms allow the recipient to reconstruct the
+correct message even after it has been corrupted; such algorithms rely
+on <em>error-correcting codes</em>, discussed below.</p>
+<p>One of the most common techniques for detecting transmission errors is a
+technique known as the <em>cyclic redundancy check</em> (CRC). It is used in
+nearly all the link-level protocols discussed in this chapter. This
+section outlines the basic CRC algorithm, but before discussing that
+approach, we first describe the simpler <em>checksum</em> scheme used by
+several Internet protocols.</p>
+<p>The basic idea behind any error detection scheme is to add redundant
+information to a frame that can be used to determine if errors have been
+introduced. In the extreme, we could imagine transmitting two complete
+copies of the data. If the two copies are identical at the receiver,
+then it is probably the case that both are correct. If they differ, then
+an error was introduced into one (or both) of them, and they must be
+discarded. This is a rather poor error detection scheme for two reasons.
+First, it sends <span class="math notranslate nohighlight">\(n\)</span> redundant bits for an <span class="math notranslate nohighlight">\(n\)</span>-bit message. Second, many
+errors will go undetected—any error that happens to corrupt the same bit
+positions in the first and second copies of the message. In general, the
+goal of error detecting codes is to provide a high probability of
+detecting errors combined with a relatively low number of redundant
+bits.</p>
+<p>Fortunately, we can do a lot better than this simple scheme. In
+general, we can provide quite strong error detection capability while
+sending only <span class="math notranslate nohighlight">\(k\)</span> redundant bits for an <span class="math notranslate nohighlight">\(n\)</span>-bit message,
+where <span class="math notranslate nohighlight">\(k\)</span> is much smaller than <span class="math notranslate nohighlight">\(n\)</span>. On an Ethernet, for
+example, a frame carrying up to 12,000&nbsp;bits (1500&nbsp;bytes) of data
+requires only a 32-bit CRC code, or as it is commonly expressed, uses
+CRC-32. Such a code will catch the overwhelming majority of errors, as
+we will see below.</p>
+<p>We say that the extra bits we send are redundant because they add no new
+information to the message. Instead, they are derived directly from the
+original message using some well-defined algorithm. Both the sender and
+the receiver know exactly what that algorithm is. The sender applies the
+algorithm to the message to generate the redundant bits. It then
+transmits both the message and those few extra bits. When the receiver
+applies the same algorithm to the received message, it should (in the
+absence of errors) come up with the same result as the sender. It
+compares the result with the one sent to it by the sender. If they
+match, it can conclude (with high likelihood) that no errors were
+introduced in the message during transmission. If they do not match, it
+can be sure that either the message or the redundant bits were
+corrupted, and it must take appropriate action—that is, discarding the
+message or correcting it if that is possible.</p>
+<p>One note on the terminology for these extra bits. In general, they are
+referred to as <em>error-detecting codes</em>. In specific cases, when the
+algorithm to create the code is based on addition, they may be called a
+<em>checksum</em>. We will see that the Internet checksum is appropriately
+named: It is an error check that uses a summing algorithm.
+Unfortunately, the word <em>checksum</em> is often used imprecisely to mean any
+form of error-detecting code, including CRCs. This can be confusing, so
+we urge you to use the word <em>checksum</em> only to apply to codes that
+actually do use addition and to use <em>error-detecting code</em> to refer to
+the general class of codes described in this section.</p>
+<div class="section" id="internet-checksum-algorithm">
+<h2>Internet Checksum Algorithm<a class="headerlink" href="#internet-checksum-algorithm" title="Permalink to this headline">¶</a></h2>
+<p>Our first approach to error detection is exemplified by the Internet
+checksum. Although it is not used at the link level, it nevertheless
+provides the same sort of functionality as CRCs, so we discuss it here.</p>
+<p>The idea behind the Internet checksum is very simple—you add up all the
+words that are transmitted and then transmit the result of that sum. The
+result is the checksum. The receiver performs the same calculation on
+the received data and compares the result with the received checksum. If
+any transmitted data, including the checksum itself, is corrupted, then
+the results will not match, so the receiver knows that an error
+occurred.</p>
+<p>You can imagine many different variations on the basic idea of a
+checksum. The exact scheme used by the Internet protocols works as
+follows. Consider the data being checksummed as a sequence of 16-bit
+integers. Add them together using 16-bit ones’ complement arithmetic
+(explained below) and then take the ones’ complement of the result. That
+16-bit number is the checksum.</p>
+<p>In ones’ complement arithmetic, a negative integer (-x) is represented
+as the complement of x; that is, each bit of x is inverted. When adding
+numbers in ones’ complement arithmetic, a carryout from the most
+significant bit needs to be added to the result. Consider, for example,
+the addition of -5 and -3 in ones’ complement arithmetic on 4-bit
+integers: +5 is 0101, so -5 is 1010; +3 is 0011, so -3 is 1100. If we
+add 1010 and 1100, ignoring the carry, we get 0110. In ones’ complement
+arithmetic, the fact that this operation caused a carry from the most
+significant bit causes us to increment the result, giving 0111, which is
+the ones’ complement representation of -8 (obtained by inverting the
+bits in 1000), as we would expect.</p>
+<p>The following routine gives a straightforward implementation of the
+Internet’s checksum algorithm. The <code class="docutils literal notranslate"><span class="pre">count</span></code> argument gives the length
+of <code class="docutils literal notranslate"><span class="pre">buf</span></code> measured in 16-bit units. The routine assumes that <code class="docutils literal notranslate"><span class="pre">buf</span></code>
+has already been padded with 0s to a 16-bit boundary.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">u_short</span>
+<span class="nf">cksum</span><span class="p">(</span><span class="n">u_short</span> <span class="o">*</span><span class="n">buf</span><span class="p">,</span> <span class="kt">int</span> <span class="n">count</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">register</span> <span class="n">u_long</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">count</span><span class="o">--</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="o">*</span><span class="n">buf</span><span class="o">++</span><span class="p">;</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">sum</span> <span class="o">&amp;</span> <span class="mh">0xFFFF0000</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="cm">/* carry occurred, so wrap around */</span>
+            <span class="n">sum</span> <span class="o">&amp;=</span> <span class="mh">0xFFFF</span><span class="p">;</span>
+            <span class="n">sum</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="o">~</span><span class="p">(</span><span class="n">sum</span> <span class="o">&amp;</span> <span class="mh">0xFFFF</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This code ensures that the calculation uses ones’ complement arithmetic
+rather than the twos’ complement that is used in most machines. Note the
+<code class="docutils literal notranslate"><span class="pre">if</span></code> statement inside the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. If there is a carry into the
+top 16&nbsp;bits of <code class="docutils literal notranslate"><span class="pre">sum</span></code>, then we increment <code class="docutils literal notranslate"><span class="pre">sum</span></code> just as in the
+previous example.</p>
+<p>Compared to our repetition code, this algorithm scores well for using a
+small number of redundant bits—only 16 for a message of any length—but
+it does not score extremely well for strength of error detection. For
+example, a pair of single-bit errors, one of which increments a word and
+one of which decrements another word by the same amount, will go
+undetected. The reason for using an algorithm like this in spite of its
+relatively weak protection against errors (compared to a CRC, for
+example) is simple: This algorithm is much easier to implement in
+software. Experience has suggested that a checksum of this form was
+adequate, but one reason it is adequate is that this checksum is the
+last line of defense in an end-to-end protocol. The majority of errors
+are picked up by stronger error detection algorithms, such as CRCs, at
+the link level.</p>
+</div>
+<div class="section" id="cyclic-redundancy-check">
+<h2>Cyclic Redundancy Check<a class="headerlink" href="#cyclic-redundancy-check" title="Permalink to this headline">¶</a></h2>
+<p>It should be clear by now that a major goal in designing error detection
+algorithms is to maximize the probability of detecting errors using only
+a small number of redundant bits. Cyclic redundancy checks use some
+fairly powerful mathematics to achieve this goal. For example, a 32-bit
+CRC gives strong protection against common bit errors in messages that
+are thousands of bytes long. The theoretical foundation of the cyclic
+redundancy check is rooted in a branch of mathematics called <em>finite
+fields</em>. While this may sound daunting, the basic ideas can be easily
+understood.</p>
+<p>To start, think of an (n+1)-bit message as being represented by an <span class="math notranslate nohighlight">\(n\)</span>
+degree polynomial, that is, a polynomial whose highest-order term is
+<span class="math notranslate nohighlight">\(x^{n}\)</span>. The message is represented by a polynomial by using the
+value of each bit in the message as the coefficient for each term in
+the polynomial, starting with the most significant bit to represent
+the highest-order term. For example, an 8-bit message consisting of
+the bits 10011010 corresponds to the polynomial</p>
+<div class="math notranslate nohighlight">
+\[M(x) = (1 \times x^7) + (0 \times x^6) + (0 \times x^5) + (1 \times
+x^4 )+ (1 \times x^3) + (0 \times x^2) + (1 \times x^1) + (0 \times x^0)\]</div>
+<div class="math notranslate nohighlight">
+\[M(x) = x^7 + x^4 + x^3 + x^1\]</div>
+<p>We can thus think of a sender and a receiver as exchanging polynomials
+with each other.</p>
+<p>For the purposes of calculating a CRC, a sender and receiver have to
+agree on a <em>divisor</em> polynomial, <span class="math notranslate nohighlight">\(C(x)\)</span>. <span class="math notranslate nohighlight">\(C(x)\)</span> is a polynomial of
+degree <span class="math notranslate nohighlight">\(k\)</span>. For example, suppose <span class="math notranslate nohighlight">\(C(x) = x^3 + x^2 + 1\)</span>.
+In this case, <span class="math notranslate nohighlight">\(k=3\)</span>. The answer to the question “Where did <span class="math notranslate nohighlight">\(C(x)\)</span>
+come from?” is, in most
+practical cases, “You look it up in a book.” In fact, the choice of
+<span class="math notranslate nohighlight">\(C(x)\)</span> has a significant impact on what types of errors can be reliably
+detected, as we discuss below. There are a handful of divisor
+polynomials that are very good choices for various environments, and the
+exact choice is normally made as part of the protocol design. For
+example, the Ethernet standard uses a well-known polynomial of
+degree&nbsp;32.</p>
+<p>When a sender wishes to transmit a message <span class="math notranslate nohighlight">\(M(x)\)</span>
+that is n+1&nbsp;bits long, what is actually sent is the (n+1)-bit message
+plus <span class="math notranslate nohighlight">\(k\)</span> bits. We call the complete transmitted message, including the
+redundant bits, <span class="math notranslate nohighlight">\(P(x)\)</span>. What we are going to do is contrive to make the
+polynomial representing <span class="math notranslate nohighlight">\(P(x)\)</span> exactly divisible by <span class="math notranslate nohighlight">\(C(x)\)</span>; we explain
+how this is achieved below. If <span class="math notranslate nohighlight">\(P(x)\)</span> is transmitted over a link and
+there are no errors introduced during transmission, then the receiver
+should be able to divide <span class="math notranslate nohighlight">\(P(x)\)</span> by <span class="math notranslate nohighlight">\(C(x)\)</span> exactly, leaving a remainder
+of zero. On the other hand, if some error is introduced into <span class="math notranslate nohighlight">\(P(x)\)</span>
+during transmission, then in all likelihood the received polynomial will
+no longer be exactly divisible by <span class="math notranslate nohighlight">\(C(x)\)</span>, and thus the receiver will
+obtain a nonzero remainder implying that an error has occurred.</p>
+<p>It will help to understand the following if you know a little about
+polynomial arithmetic; it is just slightly different from normal integer
+arithmetic. We are dealing with a special class of polynomial arithmetic
+here, where coefficients may be only one or zero, and operations on the
+coefficients are performed using modulo&nbsp;2 arithmetic. This is referred
+to as “polynomial arithmetic modulo&nbsp;2.” Since this is a networking book,
+not a mathematics text, let’s focus on the key properties of this type
+of arithmetic for our purposes (which we ask you to accept on faith):</p>
+<ul class="simple">
+<li>Any polynomial <span class="math notranslate nohighlight">\(B(x)\)</span> can be divided by a divisor polynomial
+<span class="math notranslate nohighlight">\(C(x)\)</span> if <span class="math notranslate nohighlight">\(B(x)\)</span> is of higher degree than <span class="math notranslate nohighlight">\(C(x)\)</span>.</li>
+<li>Any polynomial <span class="math notranslate nohighlight">\(B(x)\)</span> can be divided once by a divisor
+polynomial <span class="math notranslate nohighlight">\(C(x)\)</span> if <span class="math notranslate nohighlight">\(B(x)\)</span> is of the same degree as <span class="math notranslate nohighlight">\(C(x)\)</span>.</li>
+<li>The remainder obtained when <span class="math notranslate nohighlight">\(B(x)\)</span> is divided by <span class="math notranslate nohighlight">\(C(x)\)</span> is
+obtained by performing the exclusive OR (XOR) operation on each pair
+of matching coefficients.</li>
+</ul>
+<p>For example, the polynomial <span class="math notranslate nohighlight">\(x^3 + 1\)</span> can be divided by <span class="math notranslate nohighlight">\(x^3 + x^2 + 1\)</span>
+(because they are both of degree 3) and the remainder would be
+<span class="math notranslate nohighlight">\(0 \times x^3 + 1 \times x^2 + 0 \times x^1 + 0 \times x^0 = x^2\)</span>
+(obtained by XORing the coefficients of each term). In terms of
+messages, we could say that 1001 can be divided by 1101 and leaves a
+remainder of 0100. You should be able to see that the remainder is just
+the bitwise exclusive OR of the two messages.</p>
+<p>Now that we know the basic rules for dividing polynomials, we are able
+to do long division, which is necessary to deal with longer messages. An
+example appears below.</p>
+<p>Recall that we wanted to create a polynomial for transmission that is
+derived from the original message <span class="math notranslate nohighlight">\(M(x)\)</span>, is <span class="math notranslate nohighlight">\(k\)</span>&nbsp;bits longer than
+<span class="math notranslate nohighlight">\(M(x)\)</span>, and is exactly divisible by <span class="math notranslate nohighlight">\(C(x)\)</span>. We can do this in the
+following way:</p>
+<ol class="arabic simple">
+<li>Multiply <span class="math notranslate nohighlight">\(M(x)\)</span> by <span class="math notranslate nohighlight">\(x^{k}\)</span>; that is, add <span class="math notranslate nohighlight">\(k\)</span> zeros at the end of the message. Call this zero-extended message <span class="math notranslate nohighlight">\(T(x)\)</span>.</li>
+<li>Divide <span class="math notranslate nohighlight">\(T(x)\)</span> by <span class="math notranslate nohighlight">\(C(x)\)</span> and find the remainder.</li>
+<li>Subtract the remainder from <span class="math notranslate nohighlight">\(T(x)\)</span>.</li>
+</ol>
+<p>It should be obvious that what is left at this point is a message that
+is exactly divisible by <span class="math notranslate nohighlight">\(C(x)\)</span>. We may also note that the
+resulting message consists of <span class="math notranslate nohighlight">\(M(x)\)</span> followed by the remainder
+obtained in step&nbsp;2, because when we subtracted the remainder (which
+can be no more than <span class="math notranslate nohighlight">\(k\)</span>&nbsp;bits long), we were just XORing it with
+the <span class="math notranslate nohighlight">\(k\)</span> zeros added in step&nbsp;1. This part will become clearer
+with an example.</p>
+<p>Consider the message <span class="math notranslate nohighlight">\(x^7 + x^4 + x^3 + x^1\)</span>, or 10011010.  We
+begin by multiplying by <span class="math notranslate nohighlight">\(x^3\)</span>, since our divisor polynomial is
+of degree&nbsp;3. This gives 10011010000.  We divide this by <span class="math notranslate nohighlight">\(C(x)\)</span>,
+which corresponds to 1101 in this case.  <a class="reference internal" href="#fig-crcalc"><span class="std std-numref">Figure 32</span></a> shows the polynomial long-division operation.  Given the
+rules of polynomial arithmetic described above, the long-division
+operation proceeds much as it would if we were dividing
+integers. Thus, in the first step of our example, we see that the
+divisor 1101 divides once into the first four bits of the message
+(1001), since they are of the same degree, and leaves a remainder of
+100 (1101 XOR 1001). The next step is to bring down a digit from the
+message polynomial until we get another polynomial with the same
+degree as <span class="math notranslate nohighlight">\(C(x)\)</span>, in this case 1001. We calculate the remainder
+again (100) and continue until the calculation is complete. Note that
+the “result” of the long division, which appears at the top of the
+calculation, is not really of much interest—it is the remainder at the
+end that matters.</p>
+<p>You can see from the very bottom of <a class="reference internal" href="#fig-crcalc"><span class="std std-numref">Figure 32</span></a> that the
+remainder of the example calculation is 101. So we know that 10011010000
+minus 101 would be exactly divisible by <span class="math notranslate nohighlight">\(C(x)\)</span>, and this is what we
+send. The minus operation in polynomial arithmetic is the logical XOR
+operation, so we actually send 10011010101. As noted above, this turns
+out to be just the original message with the remainder from the long
+division calculation appended to it. The recipient divides the received
+polynomial by <span class="math notranslate nohighlight">\(C(x)\)</span> and, if the result is 0, concludes that there were
+no errors. If the result is nonzero, it may be necessary to discard the
+corrupted message; with some codes, it may be possible to <em>correct</em> a
+small error (e.g., if the error affected only one bit). A code that
+enables error correction is called an <em>error-correcting code</em>&nbsp;(ECC).</p>
+<div class="figure align-center" id="id1">
+<span id="fig-crcalc"></span><a class="reference internal image-reference" href="../_images/f02-15-9780123850591.png"><img alt="../_images/f02-15-9780123850591.png" src="../_images/f02-15-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 32. </span><span class="caption-text">CRC calculation using polynomial long division.</span></p>
+</div>
+<p>Now we will consider the question of where the polynomial <span class="math notranslate nohighlight">\(C(x)\)</span>
+comes from. Intuitively, the idea is to select this polynomial so that
+it is very unlikely to divide evenly into a message that has errors
+introduced into it. If the transmitted message is <span class="math notranslate nohighlight">\(P(x)\)</span>, we may
+think of the introduction of errors as the addition of another
+polynomial <span class="math notranslate nohighlight">\(E(x)\)</span>, so the recipient sees <span class="math notranslate nohighlight">\(P(x) +
+E(x)\)</span>. The only way that an error could slip by undetected would be if
+the received message could be evenly divided by <span class="math notranslate nohighlight">\(C(x)\)</span>, and
+since we know that <span class="math notranslate nohighlight">\(P(x)\)</span> can be evenly divided by <span class="math notranslate nohighlight">\(C(x)\)</span>,
+this could only happen if <span class="math notranslate nohighlight">\(E(x)\)</span> can be divided evenly by
+<span class="math notranslate nohighlight">\(C(x)\)</span>. The trick is to pick <span class="math notranslate nohighlight">\(C(x)\)</span> so that this is very
+unlikely for common types of errors.</p>
+<p>One common type of error is a single-bit error, which can be expressed
+as <span class="math notranslate nohighlight">\(E(x) = x^i\)</span> when it affects bit position <em>i</em>. If we select
+<span class="math notranslate nohighlight">\(C(x)\)</span> such that thefirst and the last term (that is, the <span class="math notranslate nohighlight">\(x^k\)</span>
+and <span class="math notranslate nohighlight">\(x^0\)</span> terms) are nonzero, then we already have a two-term
+polynomial that
+cannot divide evenly into the one term <span class="math notranslate nohighlight">\(E(x)\)</span>. Such a <span class="math notranslate nohighlight">\(C(x)\)</span> can,
+therefore, detect all single-bit errors. In general, it is possible to
+prove that the following types of errors can be detected by a <span class="math notranslate nohighlight">\(C(x)\)</span>
+with the stated properties:</p>
+<ul class="simple">
+<li>All single-bit errors, as long as the <span class="math notranslate nohighlight">\(x^{k}\)</span> and <span class="math notranslate nohighlight">\(x^{0}\)</span> terms have nonzero coefficients</li>
+<li>All double-bit errors, as long as <span class="math notranslate nohighlight">\(C(x)\)</span> has a factor with at least three terms</li>
+<li>Any odd number of errors, as long as <span class="math notranslate nohighlight">\(C(x)\)</span> contains the factor <span class="math notranslate nohighlight">\((x + 1)\)</span></li>
+</ul>
+<p>We have mentioned that it is possible to use codes that not only detect
+the presence of errors but also enable errors to be corrected. Since the
+details of such codes require yet more complex mathematics than that
+required to understand CRCs, we will not dwell on them here. However, it
+is worth considering the merits of correction versus detection.</p>
+<p>At first glance, it would seem that correction is always better, since
+with detection we are forced to throw away the message and, in general,
+ask for another copy to be transmitted. This uses up bandwidth and may
+introduce latency while waiting for the retransmission. However, there
+is a downside to correction, as it generally requires a greater number
+of redundant bits to send an error-correcting code that is as strong
+(that is, able to cope with the same range of errors) as a code that
+only detects errors. Thus, while error detection requires more bits to
+be sent when errors occur, error correction requires more bits to be
+sent <em>all the time</em>. As a result, error correction tends to be most
+useful when (1)&nbsp;errors are quite probable, as they may be, for example,
+in a wireless environment, or (2)&nbsp;the cost of retransmission is too
+high, for example, because of the latency involved retransmitting a
+packet over a satellite link.</p>
+<p>The use of error-correcting codes in networking is sometimes referred to
+as <em>forward error correction</em> (FEC) because the correction of errors is
+handled “in advance” by sending extra information, rather than waiting
+for errors to happen and dealing with them later by retransmission. FEC
+is commonly used in wireless networks such as 802.11.</p>
+<ul class="simple">
+<li>Any “burst” error (i.e., sequence of consecutive errored bits) for
+which the length of the burst is less than <span class="math notranslate nohighlight">\(k\)</span> bits (Most burst
+errors of length greater than <span class="math notranslate nohighlight">\(k\)</span> bits can also be detected.)</li>
+</ul>
+<p>Six versions of <span class="math notranslate nohighlight">\(C(x)\)</span> are widely used in link-level protocols. For
+example, Ethernet uses CRC-32, which is defined as follows:</p>
+<ul class="simple">
+<li>CRC-32 = <span class="math notranslate nohighlight">\(x^{32} + x^{26} + x^{23} + x^{22} + x^{16} +
+x^{12} + x^{11} + x^{10} + x^8 + x^7 + x^5 + x^4 + x^2 + x + 1\)</span></li>
+</ul>
+<p>Finally, we note that the CRC algorithm, while seemingly complex, is
+easily implemented in hardware using a <span class="math notranslate nohighlight">\(k\)</span>-bit shift register
+and XOR gates. The number of bits in the shift register equals the
+degree of the generator polynomial (<span class="math notranslate nohighlight">\(k\)</span>). <a class="reference internal" href="#fig-crc-hard"><span class="std std-numref">Figure 33</span></a> shows the hardware that would be used for the
+generator <span class="math notranslate nohighlight">\(x^3 + x^2 + 1\)</span> from our previous example. The message
+is shifted in from the left, beginning with the most significant bit
+and ending with the string of <span class="math notranslate nohighlight">\(k\)</span> zeros that is attached to the
+message, just as in the long division example. When all the bits have
+been shifted in and appropriately XORed, the register contains the
+remainder—that is, the CRC (most significant bit on the right). The
+position of the XOR gates is determined as follows: If the bits in the
+shift register are labeled 0 through <span class="math notranslate nohighlight">\(k-1\)</span>, left to right, then
+put an XOR gate in front of bit <span class="math notranslate nohighlight">\(n\)</span> if there is a term
+<span class="math notranslate nohighlight">\(x^n\)</span> in the generator polynomial.  Thus, we see an XOR gate in
+front of positions 0 and 2 for the generator <span class="math notranslate nohighlight">\(x^3 + x^2 + x^0\)</span>.</p>
+<div class="figure align-center" id="id2">
+<span id="fig-crc-hard"></span><a class="reference internal image-reference" href="../_images/f02-16-9780123850591.png"><img alt="../_images/f02-16-9780123850591.png" src="../_images/f02-16-9780123850591.png" style="width: 350px;" /></a>
+<p class="caption"><span class="caption-number">Figure 33. </span><span class="caption-text">CRC calculation using shift register.</span></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="reliable.html" class="btn btn-neutral float-right" title="2.5 Reliable Transmission" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="framing.html" class="btn btn-neutral float-left" title="2.3 Framing" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Problem: What Do We Do with the Data? &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.1 Presentation Formatting" href="presentation.html" />
+    <link rel="prev" title="Chapter 7: End-to-End Data" href="../data.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Problem: What Do We Do with the Data?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="presentation.html">7.1 Presentation Formatting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multimedia.html">7.2 Multimedia Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Big Data and Analytics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../data.html">Chapter 7: End-to-End Data</a> &raquo;</li>
+        
+      <li>Problem: What Do We Do with the Data?</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/data/problem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="problem-what-do-we-do-with-the-data">
+<h1>Problem: What Do We Do with the Data?<a class="headerlink" href="#problem-what-do-we-do-with-the-data" title="Permalink to this headline">¶</a></h1>
+<p>From the network’s perspective, application programs send messages to
+each other. Each of these messages is just an uninterpreted string of
+bytes. From the application’s perspective, however, these messages
+contain various kinds of <em>data</em>—arrays of integers, video frames, lines
+of text, digital images, and so on. In other words, these bytes have
+meaning. We now consider the problem of how best to encode the different
+kinds of data that application programs want to exchange into byte
+strings. In many respects, this is similar to the problem of encoding
+byte strings into electromagnetic signals that we saw in an earlier
+chapter.</p>
+<p>Thinking back to our discussion of encoding, there are essentially two
+concerns. The first is that the receiver be able to extract the same
+message from the signal as the transmitter sent; this is the framing
+problem. The second is making the encoding as efficient as possible.
+Both of these concerns are also present when encoding application data
+into network messages.</p>
+<p>In order for the receiver to extract the message sent by the
+transmitter, the two sides need to agree to a message format, often
+called the <em>presentation format</em>. If the sender wants to send the
+receiver an array of integers, for example, then the two sides have to
+agree what each integer looks like (how many bits long it is, what order
+the bytes are arranged in, and whether the most significant bit comes
+first or last, for example) and how many elements are in the array. The
+first section describes various encodings of traditional computer data,
+such as integers, floating-point numbers, character strings, arrays, and
+structures. Well-established formats also exist for multimedia data:
+Video, for example, is typically transmitted in one of the formats
+created by the Moving Picture Experts Group (MPEG), and still images are
+usually transmitted in Joint Photographic Experts Group (JPEG) format.
+The particular issues that arise in the encoding of multimedia data are
+discussed in the next section.</p>
+<p>Multimedia data types require us to think about both presentation and
+<em>compression</em>. The well-known formats for the transmission and storage
+of audio and video deal with both these issues: making sure that what
+was recorded, photographed, or heard at the sender can be interpreted
+correctly by the receiver, and doing so in a way that does not overwhelm
+the network with massive amounts of multimedia data.</p>
+<p>Compression and, more generally, the efficiency of encoding have a rich
+history, dating back to Shannon’s pioneering work on information theory
+in the 1940s. In effect, there are two opposing forces at work here. In
+one direction, you would like as much redundancy in the data as possible
+so that the receiver is able to extract the right data even if errors
+are introduced into the message. The error detection and correcting
+codes we saw in an earlier chapter add redundant information to messages
+for exactly this purpose. In the other direction, we would like to
+remove as much redundancy from the data as possible so that we may
+encode it in as few bits as possible. It turns out the multimedia data
+offers a wealth of opportunities for compression because of the way our
+senses and brains process visual and auditory signals. We don’t hear
+high frequencies as well as lower ones, and we don’t notice fine detail
+as much as the bigger picture in an image, especially if the image is
+moving.</p>
+<p>Compression is important to the designers of networks for many reasons,
+not just because we rarely find ourselves with an abundance of bandwidth
+everywhere in the network. For example, the way we design a compression
+algorithm affects our sensitivity to lost or delayed data and thus may
+influence the design of resource allocation mechanisms and end-to-end
+protocols. Conversely, if the underlying network is unable to guarantee
+a fixed amount of bandwidth for the duration of a videoconference, we
+may choose to design compression algorithms that can adapt to changing
+network conditions.</p>
+<p>Finally, an important aspect of both presentation formatting and data
+compression is that they require the sending and receiving hosts to
+process every byte of data in the message. It is for this reason that
+presentation formatting and compression are sometimes called <em>data
+manipulation</em> functions. This is in contrast to most of the protocols we
+have seen up to this point, which process a message without ever looking
+at its contents. Because of this need to read, compute on, and write
+every byte of data in a message, data manipulations affect end-to-end
+throughput over the network. In some cases, these manipulations can be
+the limiting factor.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="presentation.html" class="btn btn-neutral float-right" title="7.1 Presentation Formatting" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../data.html" class="btn btn-neutral float-left" title="Chapter 7: End-to-End Data" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

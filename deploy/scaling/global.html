@@ -1,0 +1,784 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4.1 Global Internet &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="4.2 IP Version 6" href="ipv6.html" />
+    <link rel="prev" title="Problem: Scaling to Billions" href="problem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Scaling to Billions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">4.1 Global Internet</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#routing-areas">Routing Areas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#interdomain-routing-bgp">Interdomain Routing (BGP)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#challenges-in-interdomain-routing">Challenges in Interdomain Routing</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#basics-of-bgp">Basics of BGP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#common-as-relationships-and-policies">Common AS Relationships and Policies</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#integrating-interdomain-and-intradomain-routing">Integrating Interdomain and Intradomain Routing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="ipv6.html">4.2 IP Version 6</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multicast.html">4.3 Multicast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mpls.html">4.4 Multiprotocol Label Switching</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mobile-ip.html">4.5 Routing Among Mobile Devices</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: The Cloud is Eating the Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../scaling.html">Chapter 4:  Advanced Internetworking</a> &raquo;</li>
+        
+      <li>4.1 Global Internet</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/scaling/global.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="global-internet">
+<h1>4.1 Global Internet<a class="headerlink" href="#global-internet" title="Permalink to this headline">¶</a></h1>
+<p>At this point, we have seen how to connect a heterogeneous collection of
+networks to create an internetwork and how to use the simple hierarchy
+of the IP address to make routing in an internet somewhat scalable. We
+say “somewhat” scalable because, even though each router does not need
+to know about all the hosts connected to the internet, it does, in the
+model described so far, need to know about all the networks connected to
+the internet. Today’s Internet has hundreds of thousands of networks
+connected to it (or more, depending on how you count). Routing protocols
+such as those we have just discussed do not scale to those kinds of
+numbers. This section looks at a variety of techniques that greatly
+improve scalability and that have enabled the Internet to grow as far as
+it has.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-inet-tree"></span><a class="reference internal image-reference" href="../_images/f04-01-9780123850591.png"><img alt="../_images/f04-01-9780123850591.png" src="../_images/f04-01-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 97. </span><span class="caption-text">The tree structure of the Internet in 1990.</span></p>
+</div>
+<p>Before getting to these techniques, we need to have a general picture in
+our heads of what the global Internet looks like. It is not just a
+random interconnection of Ethernets, but instead it takes on a shape
+that reflects the fact that it interconnects many different
+organizations. <a class="reference internal" href="#fig-inet-tree"><span class="std std-numref">Figure 97</span></a> gives a simple depiction of the
+state of the Internet in 1990. Since that time, the Internet’s topology
+has grown much more complex than this figure suggests—we present a
+slightly more accurate picture of the current Internet in a later
+section—but this picture will do for now.</p>
+<p>One of the salient features of this topology is that it consists of
+end-user sites (e.g., Stanford University) that connect to service
+provider networks (e.g., BARRNET was a provider network that served
+sites in the San Francisco Bay Area). In 1990, many providers served a
+limited geographic region and were thus known as <em>regional networks</em>.
+The regional networks were, in turn, connected by a nationwide backbone.
+In 1990, this backbone was funded by the National Science Foundation
+(NSF) and was therefore called the <em>NSFNET backbone</em>.</p>
+<p>NSFNET gave way to Internet2, which still runs a backbone on behalf of
+Research and Education institutions in the US (there are similar R&amp;E
+networks in other countries), but of course most people get their
+Internet connectivity from commercial providers. Although the detail is
+not shown in the figure, today the largest provider networks (they are
+called tier-1) are typically built from dozens of high-end routers
+located in major meteropolitan areas (colloquially referred to as “NFL
+cities”) connected by point-to-point links (often with 100 Gbps
+capacity). Similarly, each end-user site is typically not a single
+network but instead consists of multiple physical networks connected by
+switches and routers.</p>
+<p>Notice that each provider and end-user is likely to be an
+administratively independent entity. This has some significant
+consequences on routing. For example, it is quite likely that different
+providers will have different ideas about the best routing protocol to
+use within their networks and on how metrics should be assigned to links
+in their network. Because of this independence, each provider’s network
+is usually a single <em>autonomous system</em> (AS). We will define this term
+more precisely in a later section, but for now it is adequate to think
+of an AS as a network that is administered independently of other ASs.</p>
+<p>The fact that the Internet has a discernible structure can be used to
+our advantage as we tackle the problem of scalability. In fact, we need
+to deal with two related scaling issues. The first is the scalability of
+routing. We need to find ways to minimize the number of network numbers
+that get carried around in routing protocols and stored in the routing
+tables of routers. The second is address utilization—that is, making
+sure that the IP address space does not get consumed too quickly.</p>
+<p>Throughout this book, we see the principle of hierarchy used again and
+again to improve scalability. We saw in the previous chapter how the
+hierarchical structure of IP addresses, especially with the flexibility
+provided by Classless Interdomain Routing (CIDR) and subnetting, can
+improve the scalability of routing. In the next two sections, we’ll see
+further uses of hierarchy (and its partner, aggregation) to provide
+greater scalability, first in a single domain and then between domains.
+Our final subsection looks at IP version 6, the invention of which was
+largely the result of scalability concerns.</p>
+<div class="section" id="routing-areas">
+<h2>Routing Areas<a class="headerlink" href="#routing-areas" title="Permalink to this headline">¶</a></h2>
+<p>As a first example of using hierarchy to scale up the routing system,
+we’ll examine how link-state routing protocols (such as OSPF and IS-IS)
+can be used to partition a routing domain into subdomains called
+<em>areas</em>. (The terminology varies somewhat among protocols—we use the
+OSPF terminology here.) By adding this extra level of hierarchy, we
+enable single domains to grow larger without overburdening the routing
+protocols or resorting to the more complex interdomain routing protocols
+described later.</p>
+<p>An area is a set of routers that are administratively configured to
+exchange link-state information with each other. There is one special
+area—the backbone area, also known as area&nbsp;0. An example of a routing
+domain divided into areas is shown in <a class="reference internal" href="#fig-ospf-area"><span class="std std-numref">Figure 98</span></a> .
+Routers R1, R2, and R3 are members of the backbone area. They are also
+members of at least one nonbackbone area; R1 is actually a member of
+both area&nbsp;1 and area&nbsp;2. A&nbsp;router that is a member of both the backbone
+area and a nonbackbone area is an area border router (ABR). Note that
+these are distinct from the routers that are at the edge of an AS, which
+are referred to as AS border routers for clarity.</p>
+<div class="figure align-center" id="id2">
+<span id="fig-ospf-area"></span><a class="reference internal image-reference" href="../_images/f04-02-9780123850591.png"><img alt="../_images/f04-02-9780123850591.png" src="../_images/f04-02-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 98. </span><span class="caption-text">A domain divided into areas.</span></p>
+</div>
+<p>Routing within a single area is exactly as described in the previous
+chapter. All the routers in the area send link-state advertisements to
+each other and thus develop a complete, consistent map of the area.
+However, the link-state advertisements of routers that are not area
+border routers do not leave the area in which they originated. This has
+the effect of making the flooding and route calculation processes
+considerably more scalable. For example, router R4 in area&nbsp;3 will never
+see a link-state advertisement from router R8 in area&nbsp;1. As a
+consequence, it will know nothing about the detailed topology of areas
+other than its own.</p>
+<p>How, then, does a router in one area determine the right next hop for a
+packet destined to a network in another area? The answer to this becomes
+clear if we imagine the path of a packet that has to travel from one
+nonbackbone area to another as being split into three parts. First, it
+travels from its source network to the backbone area, then it crosses
+the backbone, then it travels from the backbone to the destination
+network. To make this work, the area border routers summarize routing
+information that they have learned from one area and make it available
+in their advertisements to other areas. For example, R1 receives
+link-state advertisements from all the routers in area&nbsp;1 and can thus
+determine the cost of reaching any network in area 1. When R1 sends
+link-state advertisements into area&nbsp;0, it advertises the costs of
+reaching the networks in area&nbsp;1 much as if all those networks were
+directly connected to R1. This enables all the area&nbsp;0 routers to learn
+the cost to reach all networks in area&nbsp;1. The area border routers then
+summarize this information and advertise it into the nonbackbone areas.
+Thus, all routers learn how to reach all networks in the domain.</p>
+<p>Note that, in the case of area&nbsp;2, there are two ABRs and that routers in
+area&nbsp;2 will thus have to make a choice as to which one they use to reach
+the backbone. This is easy enough, since both R1 and R2 will be
+advertising costs to various networks, so it will become clear which is
+the better choice as the routers in area&nbsp;2 run their shortest-path
+algorithm. For example, it is pretty clear that R1 is going to be a
+better choice than R2 for destinations in area&nbsp;1.</p>
+<p>When dividing a domain into areas, the network administrator makes a
+tradeoff between scalability and optimality of routing. The use of areas
+forces all packets traveling from one area to another to go via the
+backbone area, even if a shorter path might have been available. For
+example, even if R4 and R5 were directly connected, packets would not
+flow between them because they are in different nonbackbone areas. It
+turns out that the need for scalability is often more important than the
+need to use the absolute shortest path.</p>
+<div class="admonition-key-takeaway admonition" id="key-tradeoffs">
+<p class="first admonition-title">Key Takeaway</p>
+<p class="last">This illustrates an important principle in network design. There is
+frequently a trade-off between scalability and some sort of
+optimality. When hierarchy is introduced, information is hidden
+from some nodes in the network, hindering their ability to make
+perfect decisions. However, information hiding is essential to
+scaling a solution, since it saves all nodes from having global
+knowledge. It is invariably true in large networks that scalability
+is a more pressing design goal than selecting the optimal route.
+<a class="reference internal" href="#key-scaling"><span class="std std-ref">[Next]</span></a></p>
+</div>
+<p>Finally, we note that there is a trick by which network administrators
+can more flexibly decide which routers go in area&nbsp;0. This trick uses the
+idea of a <em>virtual link</em> between routers. Such a virtual link is
+obtained by configuring a router that is not directly connected to
+area&nbsp;0 to exchange backbone routing information with a router that is.
+For example, a virtual link could be configured from R8 to R1, thus
+making R8 part of the backbone. R8 would now participate in link-state
+advertisement flooding with the other routers in area&nbsp;0. The cost of the
+virtual link from R8 to R1 is determined by the exchange of routing
+information that takes place in area&nbsp;1. This technique can help to
+improve the optimality of routing.</p>
+</div>
+<div class="section" id="interdomain-routing-bgp">
+<h2>Interdomain Routing (BGP)<a class="headerlink" href="#interdomain-routing-bgp" title="Permalink to this headline">¶</a></h2>
+<p>At the beginning of this chapter, we introduced the notion that the
+Internet is organized as autonomous systems, each of which is under
+the control of a single administrative entity. A corporation’s complex
+internal network might be a single AS, as may the national network of
+any single Internet Service Provider (ISP). <a class="reference internal" href="#fig-autonomous"><span class="std std-numref">Figure 99</span></a> shows a simple network with two autonomous systems.</p>
+<div class="figure align-center" id="id3">
+<span id="fig-autonomous"></span><a class="reference internal image-reference" href="../_images/f04-03-9780123850591.png"><img alt="../_images/f04-03-9780123850591.png" src="../_images/f04-03-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 99. </span><span class="caption-text">A network with two autonomous systems.</span></p>
+</div>
+<p>The basic idea behind autonomous systems is to provide an additional way
+to hierarchically aggregate routing information in a large internet,
+thus improving scalability. We now divide the routing problem into two
+parts: routing within a single autonomous system and routing between
+autonomous systems. Since another name for autonomous systems in the
+Internet is routing <em>domains</em>, we refer to the two parts of the routing
+problem as interdomain routing and intradomain routing. In addition to
+improving scalability, the AS model decouples the intradomain routing
+that takes place in one AS from that taking place in another. Thus, each
+AS can run whatever intradomain routing protocols it chooses. It can
+even use static routes or multiple protocols, if desired. The
+interdomain routing problem is then one of having different ASs share
+reachability information—descriptions of the set of IP addresses that
+can be reached via a given AS—with each other.</p>
+<div class="section" id="challenges-in-interdomain-routing">
+<h3>Challenges in Interdomain Routing<a class="headerlink" href="#challenges-in-interdomain-routing" title="Permalink to this headline">¶</a></h3>
+<p>Perhaps the most important challenge of interdomain routing today is the
+need for each AS to determine its own routing <em>policies</em>. A simple
+example routing policy implemented at a particular AS might look like
+this: “Whenever possible, I prefer to send traffic via AS X than via AS
+Y, but I’ll use AS Y if it is the only path, and I never want to carry
+traffic from AS X to AS Y or <em>vice versa</em>.” Such a policy would be
+typical when I have paid money to both AS X and AS Y to connect my AS to
+the rest of the Internet, and AS X is my preferred provider of
+connectivity, with AS Y being the fallback. Because I view both AS X and
+AS Y as providers (and presumably I paid them to play this role), I
+don’t expect to help them out by carrying traffic between them across my
+network (this is called <em>transit</em> traffic). The more autonomous systems
+I connect to, the more complex policies I&nbsp;might have, especially when
+you consider backbone providers, who may interconnect with dozens of
+other providers and hundreds of customers and have different economic
+arrangements (which affect routing policies) with each one.</p>
+<p>A key design goal of interdomain routing is that policies like the
+example above, and much more complex ones, should be supported by the
+interdomain routing system. To make the problem harder, I need to be
+able to implement such a policy without any help from other autonomous
+systems, and in the face of possible misconfiguration or malicious
+behavior by other autonomous systems. Furthermore, there is often a
+desire to keep the policies <em>private</em>, because the entities that run the
+autonomous systems—mostly ISPs—are often in competition with each other
+and don’t want their economic arrangements made public.</p>
+<p>There have been two major interdomain routing protocols in the history
+of the Internet. The first was the Exterior Gateway Protocol (EGP),
+which had a number of limitations, perhaps the most severe of which was
+that it constrained the topology of the Internet rather significantly.
+EGP was designed when the Internet had a treelike topology, such as that
+illustrated in <a class="reference internal" href="#fig-inet-tree"><span class="std std-numref">Figure 97</span></a>, and did not allow for the
+topology to become more general. Note that in this simple treelike
+structure there is a single backbone, and autonomous systems are
+connected only as parents and children and not as peers.</p>
+<p>The replacement for EGP was the Border Gateway Protocol (BGP), which has
+iterated through four versions (BGP-4). BGP is often regarded as one of
+the more complex parts of the Internet. We’ll cover some of its high
+points here.</p>
+<p>Unlike its predecessor EGP, BGP makes virtually no assumptions about how
+autonomous systems are interconnected—they form an arbitrary graph. This
+model is clearly general enough to accommodate non-tree-structured
+internetworks, like the simplified picture of a multi-provider Internet
+shown in <a class="reference internal" href="#fig-inet-1995"><span class="std std-numref">Figure 100</span></a>. (It turns out there is still some
+sort of structure to the Internet, as we’ll see below, but it’s nothing
+like as simple as a tree, and BGP makes no assumptions about such
+structure.)</p>
+<div class="figure align-center" id="id4">
+<span id="fig-inet-1995"></span><a class="reference internal image-reference" href="../_images/f04-04-9780123850591.png"><img alt="../_images/f04-04-9780123850591.png" src="../_images/f04-04-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 100. </span><span class="caption-text">A simple multi-provider Internet.</span></p>
+</div>
+<p>Unlike the simple tree-structured Internet shown in <a class="reference internal" href="#fig-inet-tree"><span class="std std-numref">Figure
+97</span></a>, or even the fairly simple picture in <a class="reference internal" href="#fig-inet-1995"><span class="std std-numref">Figure
+100</span></a>, today’s Internet consists of a richly interconnected
+set of networks, mostly operated by private companies (ISPs) rather than
+governments. Many Internet Service Providers (ISPs) exist mainly to
+provide service to “consumers” (i.e., individuals with computers in
+their homes), while others offer something more like the old backbone
+service, interconnecting other providers and sometimes larger
+corporations. Often, many providers arrange to interconnect with each
+other at a single <em>peering point</em>.</p>
+<p>To get a better sense of how we might manage routing among this complex
+interconnection of autonomous systems, we can start by defining a few
+terms. We define <em>local traffic</em> as traffic that originates at or
+terminates on nodes within an AS, and <em>transit traffic</em> as traffic that
+passes through an AS. We can classify autonomous systems into three
+broad types:</p>
+<ul class="simple">
+<li>Stub AS—an AS that has only a single connection to one other AS; such
+an AS will only carry local traffic. The small corporation in <a class="reference internal" href="#fig-inet-1995"><span class="std std-numref">Figure
+100</span></a> is an example of a stub AS.</li>
+<li>Multihomed AS—an AS that has connections to more than one other AS
+but that refuses to carry transit traffic, such as the large
+corporation at the top of <a class="reference internal" href="#fig-inet-1995"><span class="std std-numref">Figure 100</span></a>.</li>
+<li>Transit AS—an AS that has connections to more than one other AS and
+that is designed to carry both transit and local traffic, such as the
+backbone providers in <a class="reference internal" href="#fig-inet-1995"><span class="std std-numref">Figure 100</span></a>.</li>
+</ul>
+<p>Whereas the discussion of routing in the previous chapter focused on
+finding optimal paths based on minimizing some sort of link metric, the
+goals of interdomain routing are rather more complex. First, it is
+necessary to find <em>some</em> path to the intended destination that is loop
+free. Second, paths must be compliant with the policies of the various
+autonomous systems along the path—and, as we have already seen, those
+policies might be almost arbitrarily complex. Thus, while intradomain
+focuses on a well-defined problem of optimizing the scalar cost of the
+path, interdomain focuses on finding a non-looping, <em>policy-compliant</em>
+path—a much more complex optimization problem.</p>
+<p>There are additional factors that make interdomain routing hard. The
+first is simply a matter of scale. An Internet backbone router must be
+able to forward any packet destined anywhere in the Internet. That means
+having a routing table that will provide a match for any valid IP
+address. While CIDR has helped to control the number of distinct
+prefixes that are carried in the Internet’s backbone routing, there is
+inevitably a lot of routing information to pass around—roughly 700,000
+prefixes in mid-2018.</p>
+<p>A further challenge in interdomain routing arises from the autonomous
+nature of the domains. Note that each domain may run its own interior
+routing protocols and use any scheme it chooses to assign metrics to
+paths. This means that it is impossible to calculate meaningful path
+costs for a path that crosses multiple autonomous systems. A cost of
+1000 across one provider might imply a great path, but it might mean an
+unacceptably bad one from another provider. As a result, interdomain
+routing advertises only <em>reachability</em>. The concept of reachability is
+basically a statement that “you can reach this network through this AS.”
+This means that for interdomain routing to pick an optimal path is
+essentially impossible.</p>
+<p>The autonomous nature of interdomain raises issue of trust. Provider&nbsp;A
+might be unwilling to believe certain advertisements from provider&nbsp;B for
+fear that provider&nbsp;B will advertise erroneous routing information. For
+example, trusting provider&nbsp;B when he advertises a great route to
+anywhere in the Internet can be a disastrous choice if provider&nbsp;B turns
+out to have made a mistake configuring his routers or to have
+insufficient capacity to carry the traffic.</p>
+<p>The issue of trust is also related to the need to support complex
+policies as noted above. For example, I might be willing to trust a
+particular provider only when he advertises reachability to certain
+prefixes, and thus I would have a policy that says, “Use AS X to reach
+only prefixes <span class="math notranslate nohighlight">\(p\)</span> and <span class="math notranslate nohighlight">\(q\)</span>, if and only if AS X advertises
+reachability to those prefixes.”</p>
+</div>
+<div class="section" id="basics-of-bgp">
+<h3>Basics of BGP<a class="headerlink" href="#basics-of-bgp" title="Permalink to this headline">¶</a></h3>
+<p>Each AS has one or more <em>border routers</em> through which packets enter and
+leave the AS. In our simple example in <a class="reference internal" href="#fig-autonomous"><span class="std std-numref">Figure 99</span></a>,
+routers R2 and R4 would be border routers. (Over the years, routers have
+sometimes also been known as <em>gateways</em>, hence the names of the
+protocols BGP and EGP). A border router is simply an IP router that is
+charged with the task of forwarding packets between autonomous systems.</p>
+<p>Each AS that participates in BGP must also have at least one <em>BGP</em>
+speaker, a router that “speaks” BGP to other BGP speakers in other
+autonomous systems. It is common to find that border routers are also
+BGP speakers, but that does not have to be the case.</p>
+<p>BGP does not belong to either of the two main classes of routing
+protocols, distance-vector or link-state. Unlike these protocols, BGP
+advertises <em>complete paths</em> as an enumerated list of autonomous systems
+to reach a particular network. It is sometimes called a <em>path-vector</em>
+protocol for this reason. The advertisement of complete paths is
+necessary to enable the sorts of policy decisions described above to be
+made in accordance with the wishes of a particular AS. It also enables
+routing loops to be readily detected.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-bgpeg"></span><a class="reference internal image-reference" href="../_images/f04-05-9780123850591.png"><img alt="../_images/f04-05-9780123850591.png" src="../_images/f04-05-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 101. </span><span class="caption-text">Example of a network running BGP.</span></p>
+</div>
+<p>To see how this works, consider the very simple example network in
+<a class="reference internal" href="#fig-bgpeg"><span class="std std-numref">Figure 101</span></a>. Assume that the providers are transit
+networks, while the customer networks are stubs. A BGP speaker for the
+AS of provider&nbsp;A (AS&nbsp;2) would be able to advertise reachability
+information for each of the network numbers assigned to customers P
+and Q. Thus, it would say, in effect, “The networks 128.96, 192.4.153,
+192.4.32, and 192.4.3 can be reached directly from AS&nbsp;2.” The backbone
+network, on receiving this advertisement, can advertise, “The networks
+128.96, 192.4.153, 192.4.32, and 192.4.3 can be reached along the path
+(AS 1,&nbsp;AS 2).” Similarly, it could advertise, “The networks 192.12.69,
+192.4.54, and 192.4.23 can be reached along the path (AS 1,&nbsp;AS 3).”</p>
+<div class="figure align-center" id="id6">
+<span id="fig-aspath"></span><a class="reference internal image-reference" href="../_images/f04-06-9780123850591.png"><img alt="../_images/f04-06-9780123850591.png" src="../_images/f04-06-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 102. </span><span class="caption-text">Example of loop among autonomous systems.</span></p>
+</div>
+<p>An important job of BGP is to prevent the establishment of looping
+paths. For example, consider the network illustrated in
+<a class="reference internal" href="#fig-aspath"><span class="std std-numref">Figure 102</span></a>. It differs from <a class="reference internal" href="#fig-bgpeg"><span class="std std-numref">Figure 101</span></a> only in the addition of an extra link between AS 2 and AS
+3, but the effect now is that the graph of autonomous systems has a
+loop in it. Suppose AS&nbsp;1 learns that it can reach network 128.96
+through AS&nbsp;2, so it advertises this fact to AS&nbsp;3, who in turn
+advertises it back to AS&nbsp;2. In the absence of any loop prevention
+mechanism, AS&nbsp;2 could now decide that AS&nbsp;3 was the preferred route for
+packets destined for 128.96. If AS&nbsp;2 starts sending packets addressed
+to 128.96 to AS&nbsp;3, AS&nbsp;3 would send them to AS&nbsp;1; AS&nbsp;1 would send them
+back to AS&nbsp;2; and they would loop forever.  This is prevented by
+carrying the complete AS path in the routing messages. In this case,
+the advertisement for a path to 128.96 received by AS&nbsp;2 from AS&nbsp;3
+would contain an AS&nbsp;path of (AS&nbsp;3, AS&nbsp;1, AS&nbsp;2, AS&nbsp;4).  AS&nbsp;2 sees
+itself in this path, and thus concludes that this is not a useful path
+for it to use.</p>
+<p>In order for this loop prevention technique to work, the AS numbers
+carried in BGP clearly need to be unique. For example, AS&nbsp;2 can only
+recognize itself in the AS path in the above example if no other AS
+identifies itself in the same way. AS numbers are now 32-bits long, and
+they are assigned by a central authority to assure uniqueness.</p>
+<p>A given AS will only advertise routes that it considers good enough for
+itself. That is, if a BGP speaker has a choice of several different
+routes to a destination, it will choose the best one according to its
+own local policies, and then that will be the route it advertises.
+Furthermore, a BGP speaker is under no obligation to advertise any route
+to a destination, even if it has one. This is how an AS can implement a
+policy of not providing transit—by refusing to advertise routes to
+prefixes that are not contained within that AS, even if it knows how to
+reach them.</p>
+<p>Given that links fail and policies change, BGP speakers need to be
+able to cancel previously advertised paths. This is done with a form
+of negative advertisement known as a <em>withdrawn route</em>. Both positive
+and negative reachability information are carried in a BGP update
+message, the format of which is shown in <a class="reference internal" href="#fig-bgpup"><span class="std std-numref">Figure 103</span></a>. (Note that the fields in this figure are multiples of
+16&nbsp;bits, unlike other packet formats in this chapter.)</p>
+<div class="figure align-center" id="id7">
+<span id="fig-bgpup"></span><a class="reference internal image-reference" href="../_images/f04-07-9780123850591.png"><img alt="../_images/f04-07-9780123850591.png" src="../_images/f04-07-9780123850591.png" style="width: 200px;" /></a>
+<p class="caption"><span class="caption-number">Figure 103. </span><span class="caption-text">BGP-4 update packet format.</span></p>
+</div>
+<p>Unlike the routing protocols described in the previous chapter, BGP is
+defined to run on top of TCP, the reliable transport protocol. Because
+BGP speakers can count on TCP to be reliable, this means that any
+information that has been sent from one speaker to another does not need
+to be sent again. Thus, as long as nothing has changed, a BGP speaker
+can simply send an occasional <em>keepalive</em> message that says, in effect,
+“I’m still here and nothing has changed.” If that router were to crash
+or become disconnected from its peer, it would stop sending the
+keepalives, and the other routers that had learned routes from it would
+assume that those routes were no longer valid.</p>
+</div>
+<div class="section" id="common-as-relationships-and-policies">
+<h3>Common AS Relationships and Policies<a class="headerlink" href="#common-as-relationships-and-policies" title="Permalink to this headline">¶</a></h3>
+<p>Having said that policies may be arbitrarily complex, there turn out
+to be a few common ones, reflecting common relationships between
+autonomous systems. The most common relationships are illustrated in
+<a class="reference internal" href="#fig-as-rels"><span class="std std-numref">Figure 104</span></a>. The three common relationships and
+the policies that go with them are as follows:</p>
+<div class="figure align-center" id="id8">
+<span id="fig-as-rels"></span><a class="reference internal image-reference" href="../_images/f04-08-9780123850591.png"><img alt="../_images/f04-08-9780123850591.png" src="../_images/f04-08-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 104. </span><span class="caption-text">Common AS relationships.</span></p>
+</div>
+<ul class="simple">
+<li><em>Provider-Customer—</em>Providers are in the business of connecting
+their customers to the rest of the Internet. A customer might be
+a&nbsp;corporation, or it might be a smaller ISP (which may have customers
+of its own). So the common policy is to advertise all the routes I
+know about to my customer, and advertise routes I learn from my
+customer to everyone.</li>
+<li><em>Customer-Provider—</em>In the other direction, the customer wants to
+get traffic directed to him (and his customers, if he has them) by
+his provider, and he wants to be able to send traffic to the rest of
+the Internet through his provider. So the common policy in this case
+is&nbsp;to advertise my own prefixes and routes learned from my customers
+to my provider, advertise routes learned from my provider to my
+customers, but don’t advertise routes learned from one provider to
+another provider. That last part is to make sure the customer doesn’t
+find himself in the business of carrying traffic from one provider to
+another, which isn’t in his interests if he is paying the providers
+to carry traffic for him.</li>
+<li><em>Peer—</em>The third option is a symmetrical peering between autonomous
+systems. Two providers who view themselves as equals usually peer so
+that they can get access to each other’s customers without having to
+pay another provider. The typical policy here is to advertise routes
+learned from my customers to my peer, advertise routes learned from
+my peer to my customers, but don’t advertise routes from my peer to
+any provider or <em>vice versa</em>.</li>
+</ul>
+<p>One thing to note about this figure is the way it has brought back some
+structure to the apparently unstructured Internet. At the bottom of
+the&nbsp;hierarchy we have the stub networks that are customers of one or
+more providers, and as we move up the hierarchy we see providers who
+have other providers as their customers. At the top, we have providers
+who have customers and peers but are not customers of anyone. These
+providers are known as the <em>Tier-1</em> providers.</p>
+<div class="admonition-key-takeaway admonition" id="key-scaling">
+<p class="first admonition-title">Key Takeaway</p>
+<p class="last">Let’s return to the real question: How does all this help us to
+build scalable networks? First, the number of nodes participating
+in BGP is on the order of the number of autonomous systems, which
+is much smaller than the number of networks. Second, finding a good
+interdomain route is only a matter of finding a path to the right
+border router, of which there are only a few per AS. Thus, we have
+neatly subdivided the routing problem into manageable parts, once
+again using a new level of hierarchy to increase scalability. The
+complexity of interdomain routing is now on the order of the number
+of autonomous systems, and the complexity of intradomain routing is
+on the order of the number of networks in a single AS. <a class="reference internal" href="../e2e/tcp.html#key-e2e"><span class="std std-ref">[Next]</span></a></p>
+</div>
+</div>
+<div class="section" id="integrating-interdomain-and-intradomain-routing">
+<h3>Integrating Interdomain and Intradomain Routing<a class="headerlink" href="#integrating-interdomain-and-intradomain-routing" title="Permalink to this headline">¶</a></h3>
+<p>While the preceding discussion illustrates how a BGP speaker learns
+interdomain routing information, the question still remains as to how
+all the other routers in a domain get this information. There are
+several ways this problem can be addressed.</p>
+<p>Let’s start with a very simple situation, which is also very common. In
+the case of a stub AS that only connects to other autonomous systems at
+a single point, the border router is clearly the only choice for all
+routes that are outside the AS. Such a router can inject a <em>default
+route</em> into the intradomain routing protocol. In effect, this is a
+statement that any network that has not been explicitly advertised in
+the intradomain protocol is reachable through the border router. Recall
+from the discussion of IP forwarding in the previous chapter that the
+default entry in the forwarding table comes after all the more specific
+entries, and it matches anything that failed to match a specific entry.</p>
+<p>The next step up in complexity is to have the border routers inject
+specific routes they have learned from outside the AS. Consider, for
+example, the border router of a provider&nbsp;AS that connects to a customer
+AS. That router could learn that the network prefix 192.4.54/24 is
+located inside the customer AS, either through BGP or because the
+information is configured into the border router. It could inject a
+route to that prefix into the routing protocol running inside the
+provider&nbsp;AS. This would be an advertisement of the sort, “I have a link
+to 192.4.54/24 of cost X.” This would cause other routers in the
+provider&nbsp;AS to learn that this border router is the place to send
+packets destined for that prefix.</p>
+<p>The final level of complexity comes in backbone networks, which learn so
+much routing information from BGP that it becomes too costly to inject
+it into the intradomain protocol. For example, if a border router wants
+to inject 10,000 prefixes that it learned about from another AS, it will
+have to send very big link-state packets to the other routers in that
+AS, and their shortest-path calculations are going to become very
+complex. For this reason, the routers in a backbone network use a
+variant of BGP called <em>interior BGP</em> (iBGP) to effectively redistribute
+the information that is learned by the BGP speakers at the edges of the
+AS to all the other routers in the AS. (The other variant of BGP,
+discussed above, runs between autonomous systems and is called <em>exterior
+BGP</em>, or eBGP). iBGP enables any router in the AS to learn the best
+border router to use when sending a packet to any address. At the same
+time, each router in the AS keeps track of how to get to each border
+router using a conventional intradomain protocol with no injected
+information. By combining these two sets of information, each router in
+the AS is able to determine the appropriate next hop for all prefixes.</p>
+<div class="figure align-center" id="id9">
+<span id="fig-ibgp"></span><a class="reference internal image-reference" href="../_images/f04-09-9780123850591.png"><img alt="../_images/f04-09-9780123850591.png" src="../_images/f04-09-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 105. </span><span class="caption-text">Example of interdomain and intradomain routing. All
+routers run iBGP and an intradomain routing protocol. Border
+routers A, D, and E also run eBGP to other autonomous
+systems.</span></p>
+</div>
+<p>To see how this all works, consider the simple example network,
+representing a single AS, in <a class="reference internal" href="#fig-ibgp"><span class="std std-numref">Figure 105</span></a>. The three
+border routers, A, D, and E, speak eBGP to other autonomous systems
+and learn how to reach various prefixes. These three border routers
+communicate with other and with the interior routers B and C by
+building a mesh of iBGP sessions among all the routers in the
+AS. Let’s now focus in on how router B builds up its complete view of
+how to forward packets to any prefix. Look at the top left of
+<a class="reference internal" href="#fig-ibgptab"><span class="std std-numref">Figure 106</span></a>, which shows the information that
+router B learns from its iBGP sessions. It learns that some prefixes
+are best reached via router A, some via D, and some via E. At the same
+time, all the routers in the AS are also running some intradomain
+routing protocol such as Routing Information Protocol (RIP) or Open
+Shortest Path First (OSPF). (A generic term for intradomain protocols
+is an interior gateway protocol, or IGP.) From this completely
+separate protocol, B learns how to reach other nodes <em>inside</em> the
+domain, as shown in the top right table. For example, to reach router
+E, B needs to send packets toward router&nbsp;C. Finally, in the bottom
+table, B puts the whole picture together, combining the information
+about external prefixes learned from iBGP with the information about
+interior routes to the border routers learned from the&nbsp;IGP. Thus, if a
+prefix like 18.0/16 is reachable via border router E, and the best
+interior path to E is via C, then it follows that any packet destined
+for 18.0/16 should be forwarded toward C. In this way, any router in
+the AS can build up a complete routing table for any prefix that is
+reachable via some border router of the AS.</p>
+<div class="figure align-center" id="id10">
+<span id="fig-ibgptab"></span><a class="reference internal image-reference" href="../_images/f04-10-9780123850591.png"><img alt="../_images/f04-10-9780123850591.png" src="../_images/f04-10-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 106. </span><span class="caption-text">BGP routing table, IGP routing table, and combined
+table at router B.</span></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ipv6.html" class="btn btn-neutral float-right" title="4.2 IP Version 6" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="problem.html" class="btn btn-neutral float-left" title="Problem: Scaling to Billions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

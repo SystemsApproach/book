@@ -1,0 +1,274 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Problem: Applications Need Their Own Protocols &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="9.1 Traditional Applications" href="traditional.html" />
+    <link rel="prev" title="Chapter 9: Applications" href="../applications.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Problem: Applications Need Their Own Protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="traditional.html">9.1 Traditional Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multimedia.html">9.2 Multimedia Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="infrastructure.html">9.3 Infrastructure Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overlays.html">9.4 Overlay Networks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: The Cloud is the New Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../applications.html">Chapter 9: Applications</a> &raquo;</li>
+        
+      <li>Problem: Applications Need Their Own Protocols</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/applications/problem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="problem-applications-need-their-own-protocols">
+<h1>Problem: Applications Need Their Own Protocols<a class="headerlink" href="#problem-applications-need-their-own-protocols" title="Permalink to this headline">¶</a></h1>
+<p>We started this book by talking about application programs—everything
+from web browsers to videoconferencing tools—that people want to run
+over computer networks. In the intervening chapters, we have developed,
+one building block at a time, the networking infrastructure needed to
+make such applications possible. We have now come full circle, back to
+network applications. These applications are part network protocol (in
+the sense that they exchange messages with their peers on other
+machines) and part traditional application program (in the sense that
+they interact with the windowing system, the file system, and ultimately
+the user). This chapter explores some popular network applications
+available today.</p>
+<p>Looking at applications drives home the <em>systems approach</em> that we have
+emphasized throughout this book. That is, the best way to build
+effective networked applications is to understand the building blocks
+that a network can provide and how those blocks can interact with each
+other. Thus, for example, a particular networked application might need
+to make use of a reliable transport protocol, authentication and privacy
+mechanisms, and resource allocation capabilities of the underlying
+network. Applications often work best when the application developer
+knows how to make the best use of these facilities (and there are also
+plenty of counter-examples of applications making poor use of available
+networking capabilities). Applications typically need their own
+protocols, too, in many cases using the same principles that we have
+seen in our prior examination of lower layer protocols. Thus, our focus
+in this chapter is on how to put together the ideas and techniques
+already described to build effective networked applications. Said
+another way, if you ever imagine yourself writing a network application,
+then you will by definition also become a protocol designer (and
+implementer).</p>
+<p>We proceed by examining a variety of familiar, and not so familiar,
+network applications. These range from exchanging email and surfing the
+Web, to integrating applications across businesses, to multimedia
+applications like videoconferencing, to managing a set of network
+elements, to emerging peer-to-peer and content distribution networks.
+This list is by no means exhaustive, but it does serve to illustrate
+many of the key principles of designing and building applications.
+Applications need to pick and choose the appropriate building blocks
+that are available at other layers either inside the network or in the
+host protocol stacks and then augment those underlying services to
+provide the precise communication service required by the application.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="traditional.html" class="btn btn-neutral float-right" title="9.1 Traditional Applications" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../applications.html" class="btn btn-neutral float-left" title="Chapter 9: Applications" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

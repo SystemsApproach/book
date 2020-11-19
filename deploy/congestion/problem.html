@@ -1,0 +1,289 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Problem: Allocating Resources &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6.1 Issues in Resource Allocation" href="issues.html" />
+    <link rel="prev" title="Chapter 6: Congestion Control" href="../congestion.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Problem: Allocating Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="issues.html">6.1 Issues in Resource Allocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="queuing.html">6.2 Queuing Disciplines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tcpcc.html">6.3 TCP Congestion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="avoidance.html">6.4 Advanced Congestion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qos.html">6.5 Quality of Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Software-Defined Traffic Engineering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../congestion.html">Chapter 6:  Congestion Control</a> &raquo;</li>
+        
+      <li>Problem: Allocating Resources</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/congestion/problem.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="problem-allocating-resources">
+<h1>Problem: Allocating Resources<a class="headerlink" href="#problem-allocating-resources" title="Permalink to this headline">¶</a></h1>
+<p>By now we have seen enough layers of the network protocol hierarchy to
+understand how data can be transferred among processes across
+heterogeneous networks. We now turn to a problem that spans the entire
+protocol stack—how to effectively and fairly allocate resources among a
+collection of competing users. The resources being shared include the
+bandwidth of the links and the buffers on the routers or switches where
+packets are queued&nbsp;awaiting transmission. Packets <em>contend</em> at a router
+for the use of a link, with each contending packet placed in a queue
+waiting its turn to be transmitted over the link. When too many packets
+are contending for the same link, the queue fills and two undesirable
+things happen: packets experience increased end-to-end delay, and in the
+worst case, the queue overflows and packets have to be dropped. When
+long queues persist and drops become common, the network is said to be
+<em>congested</em>. Most networks provide a <em>congestion-control</em> mechanism to
+deal with just such a situation.</p>
+<p>Congestion control and resource allocation are two sides of the same
+coin. On the one hand, if the network takes an active role in allocating
+resources—for example, scheduling which virtual circuit gets to use a
+given physical link during a certain period of time—then congestion may
+be avoided, thereby making congestion control unnecessary. Allocating
+network resources with any precision is difficult, however, because the
+resources in question are distributed throughout the network; multiple
+links connecting a series of routers need to be scheduled. On the other
+hand, you can always let packet sources send as much data as they want
+and then recover from congestion should it occur. This is the easier
+approach, but it can be disruptive because many packets may be discarded
+by the network before congestion can be controlled. Furthermore, it is
+precisely at those times when the network is congested—that is,
+resources have become scarce relative to demand—that the need for
+resource allocation among competing users is most keenly felt. There are
+also solutions in the middle, whereby inexact allocation decisions are
+made, but congestion can still occur and hence some mechanism is still
+needed to recover from it. Whether you call such a mixed solution
+congestion control or resource allocation does not really matter. In
+some sense, it is both.</p>
+<p>Congestion control and resource allocation involve both hosts and
+network elements such as routers. In network elements, various queuing
+disciplines can be used to control the order in which packets get
+transmitted and which packets get dropped. The queuing discipline can
+also segregate traffic to keep one user’s packets from unduly affecting
+another user’s packets. At the end hosts, the congestion-control
+mechanism paces how fast sources are allowed to send packets. This is
+done in an effort to keep congestion from occurring in the first place
+and, should it occur, to help eliminate the congestion.</p>
+<p>This chapter starts with an overview of congestion control and resource
+allocation. We then discuss different queuing disciplines that can be
+implemented on the routers inside the network, followed by a description
+of the congestion-control algorithm provided by TCP on the hosts. The
+fourth section explores various techniques involving both routers and
+hosts that aim to avoid congestion before it becomes a problem. Finally,
+we examine the broad area of <em>quality of service</em>. We consider the needs
+of applications to receive different levels of resource allocation in
+the network and describe a number of ways in which they can request
+these resources and the network can meet the requests.</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="issues.html" class="btn btn-neutral float-right" title="6.1 Issues in Resource Allocation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../congestion.html" class="btn btn-neutral float-left" title="Chapter 6: Congestion Control" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

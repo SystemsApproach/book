@@ -1,0 +1,885 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>7.1 Presentation Formatting &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.2 Multimedia Data" href="multimedia.html" />
+    <link rel="prev" title="Problem: What Do We Do with the Data?" href="problem.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: What Do We Do with the Data?</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">7.1 Presentation Formatting</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#taxonomy">Taxonomy</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#data-types">Data Types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#conversion-strategy">Conversion Strategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tags">Tags</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#stubs">Stubs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#examples-xdr-asn-1-ndr-protobufs">Examples (XDR, ASN.1, NDR, ProtoBufs)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#xdr">XDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asn-1">ASN.1</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ndr">NDR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#protobufs">ProtoBufs</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#markup-languages-xml">Markup Languages (XML)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#xml-namespaces">XML Namespaces</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="multimedia.html">7.2 Multimedia Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Big Data and Analytics</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../data.html">Chapter 7: End-to-End Data</a> &raquo;</li>
+        
+      <li>7.1 Presentation Formatting</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/data/presentation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="presentation-formatting">
+<h1>7.1 Presentation Formatting<a class="headerlink" href="#presentation-formatting" title="Permalink to this headline">¶</a></h1>
+<p>One of the most common transformations of network data is from the
+representation used by the application program into a form that is
+suitable for transmission over a network and <em>vice versa</em>. This
+transformation is typically called <em>presentation formatting</em>. As
+illustrated in <a class="reference internal" href="#fig-marshal1"><span class="std std-numref">Figure 179</span></a>, the sending program
+translates the data it wants to transmit from the representation it
+uses internally into a message that can be transmitted over the
+network; that is, the data is <em>encoded</em> in a message. On the receiving
+side, the application translates this arriving message into a
+representation that it can then process; that is, the message is
+<em>decoded</em>. This process is sometimes called <em>argument marshalling</em> or
+<em>serialization</em>. This terminology comes from the Remote Procedure Call
+(RPC) world, where the client thinks it is invoking a procedure with a
+set of arguments, but these arguments are then “brought together and
+ordered in an appropriate and effective way” to form a network
+message.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-marshal1"></span><a class="reference internal image-reference" href="../_images/f07-01-9780123850591.png"><img alt="../_images/f07-01-9780123850591.png" src="../_images/f07-01-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 179. </span><span class="caption-text">Presentation formatting involves encoding and decoding application data.</span></p>
+</div>
+<p>You might ask what makes this problem challenging. One reason is that
+computers represent data in different ways. For example, some computers
+represent floating-point numbers in IEEE standard 754 format, while some
+older machines still use their own nonstandard format. Even for
+something as simple as integers, different architectures use different
+sizes (e.g., 16-bit, 32-bit, 64-bit). To make matters worse, on some
+machines integers are represented in <em>big-endian</em> form (the most
+significant bit of a word is in the byte with the highest address),
+while on other machines integers are represented in <em>little-endian</em> form
+(the most significant bit is in the byte with the lowest address). For
+example, PowerPC processors are big-endian machines, and the Intel x86
+family is a little-endian architecture. Today, many architectures
+support both representations (and so are called <em>bi-endian</em>), but the
+point is that you can never be sure how the host you are communicating
+with stores integers. The big-endian and little-endian representations
+of the integer 34,677,374 are given in <a class="reference internal" href="#fig-endian"><span class="std std-numref">Figure 180</span></a>.</p>
+<div class="figure align-center" id="id2">
+<span id="fig-endian"></span><a class="reference internal image-reference" href="../_images/f07-02-9780123850591.png"><img alt="../_images/f07-02-9780123850591.png" src="../_images/f07-02-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 180. </span><span class="caption-text">Big-endian and little-endian byte order for the integer 34,677,374</span></p>
+</div>
+<p>Another reason that marshalling is difficult is that application
+programs are written in different languages, and even when you are using
+a single language there may be more than one compiler. For example,
+compilers have a fair amount of latitude in how they lay out structures
+(records) in memory, such as how much padding they put between the
+fields that make up the structure. Thus, you could not simply transmit a
+structure from one machine to another, even if both machines were of the
+same architecture and the program was written in the same language,
+because the compiler on the destination machine might align the fields
+in the structure differently.</p>
+<div class="section" id="taxonomy">
+<h2>Taxonomy<a class="headerlink" href="#taxonomy" title="Permalink to this headline">¶</a></h2>
+<p>Although argument marshalling is not rocket science—it is a small matter
+of bit twiddling—there are a surprising number of design choices that
+you must address. We begin by giving a simple taxonomy for argument
+marshalling systems. The following is by no means the only viable
+taxonomy, but it is sufficient to cover most of the interesting
+alternatives.</p>
+<div class="section" id="data-types">
+<h3>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h3>
+<p>The first question is what data types the system is going to support. In
+general, we can classify the types supported by an argument marshalling
+mechanism at three levels. Each level complicates the task faced by the
+marshalling system.</p>
+<p>At the lowest level, a marshalling system operates on some set of <em>base
+types</em>. Typically, the base types include integers, floating-point
+numbers, and characters. The system might also support ordinal types and
+Booleans. As described above, the implication of the set of base types
+is that the encoding process must be able to convert each base type from
+one representation to another—for example, convert an integer from
+big-endian to little-endian.</p>
+<p>At the next level are <em>flat types</em>—structures and arrays. While flat
+types might at first not appear to complicate argument marshalling, the
+reality is that they do. The problem is that the compilers used to
+compile application programs sometimes insert padding between the fields
+that make up the structure so as to align these fields on word
+boundaries. The marshalling system typically <em>packs</em> structures so that
+they contain no padding.</p>
+<p>At the highest level, the marshalling system might have to deal with
+<em>complex types</em>—those types that are built using pointers. That is, the
+data structure that one program wants to send to another might not be
+contained in a single structure, but might instead involve pointers from
+one structure to another. A tree is a good example of a complex type
+that involves pointers. Clearly, the data encoder must prepare the data
+structure for transmission over the network because pointers are
+implemented by memory addresses, and just because a structure lives at a
+certain memory address on one machine does not mean it will live at the
+same address on another machine. In other words, the marshalling system
+must <em>serialize</em> (flatten) complex data structures.</p>
+<p>In summary, depending on how complicated the type system is, the task
+of argument marshalling usually involves converting the base types,
+packing the structures, and linearizing the complex data structures,
+all to form a contiguous message that can be transmitted over the
+network. <a class="reference internal" href="#fig-marshal2"><span class="std std-numref">Figure 181</span></a> illustrates this task.</p>
+<div class="figure align-center" id="id3">
+<span id="fig-marshal2"></span><a class="reference internal image-reference" href="../_images/f07-03-9780123850591.png"><img alt="../_images/f07-03-9780123850591.png" src="../_images/f07-03-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 181. </span><span class="caption-text">Argument marshalling: converting, packing, and linearizing</span></p>
+</div>
+</div>
+<div class="section" id="conversion-strategy">
+<h3>Conversion Strategy<a class="headerlink" href="#conversion-strategy" title="Permalink to this headline">¶</a></h3>
+<p>Once the type system is established, the next issue is what conversion
+strategy the argument marshaller will use. There are two general
+options: <em>canonical intermediate form</em> and <em>receiver-makes-right</em>. We
+consider each, in turn.</p>
+<p>The idea of canonical intermediate form is to settle on an external
+representation for each type; the sending host translates from its
+internal representation to this external representation before sending
+data, and the receiver translates from this external representation into
+its local representation when receiving data. To illustrate the idea,
+consider integer data; other types are treated in a similar manner. You
+might declare that the big-endian format will be used as the external
+representation for integers. The sending host must translate each
+integer it sends into big-endian form, and the receiving host must
+translate big-endian integers into whatever representation it uses.
+(This is what is done in the Internet for protocol headers.) Of course,
+a given host might already use big-endian form, in which case no
+conversion is necessary.</p>
+<p>The alternative, receiver-makes-right, has the sender transmit data in
+its own internal format; the sender does not convert the base types, but
+usually has to pack and flatten more complex data structures. The
+receiver is then responsible for translating the data from the sender’s
+format into its own local format. The problem with this strategy is that
+every host must be prepared to convert data from all other machine
+architectures. In networking, this is known as an <em>N-by-N solution</em>:
+Each of N machine architectures must be able to handle all N
+architectures. In contrast, in a system that uses a canonical
+intermediate form, each host needs to know only how to convert between
+its own representation and a single other representation—the external
+one.</p>
+<p>Using a common external format is clearly the correct thing to do,
+right? This has certainly been the conventional wisdom in the networking
+community for over 30 years. The answer is not cut and dried, however.
+It turns out that there are not that many different representations for
+the various base classes, or, said another way, N is not that large. In
+addition, the most common case is for two machines of the same type to
+be communicating with each other. In this situation, it seems silly to
+translate data from that architecture’s representation into some foreign
+external representation, only to have to translate the data back into
+the same architecture’s representation on the receiver.</p>
+<p>A third option, although we know of no existing system that exploits it,
+is to use receiver-makes-right if the sender knows that the destination
+has the same architecture; the sender would use some canonical
+intermediate form if the two machines use different architectures. How
+would a sender learn the receiver’s architecture? It could learn this
+information either from a name server or by first using a simple test
+case to see if the appropriate result occurs.</p>
+</div>
+<div class="section" id="tags">
+<h3>Tags<a class="headerlink" href="#tags" title="Permalink to this headline">¶</a></h3>
+<p>The third issue in argument marshalling is how the receiver knows what
+kind of data is contained in the message it receives. There are two
+common approaches: <em>tagged</em> and <em>untagged</em> data. The tagged approach is
+more intuitive, so we describe it first.</p>
+<p>A tag is any additional information included in a message—beyond the
+concrete representation of the base types—that helps the receiver
+decode the message. There are several possible tags that might be
+included in a message. For example, each data item might be augmented
+with a <em>type</em> tag. A type tag indicates that the value that follows is
+an integer, a floating-point number, or whatever. Another example is a
+<em>length</em> tag.  Such a tag is used to indicate the number of elements
+in an array or the size of an integer. A third example is an
+<em>architecture</em> tag, which might be used in conjunction with the
+receiver-makes-right strategy to specify the architecture on which the
+data contained in the message was generated. <a class="reference internal" href="#fig-tags"><span class="std std-numref">Figure 182a</span></a> depicts how a simple 32-bit integer might be encoded in a
+tagged message.</p>
+<div class="figure align-center" id="id4">
+<span id="fig-tags"></span><a class="reference internal image-reference" href="../_images/f07-04-9780123850591.png"><img alt="../_images/f07-04-9780123850591.png" src="../_images/f07-04-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 182. </span><span class="caption-text">A 32-bit integer encoded in a tagged message.</span></p>
+</div>
+<p>The alternative, of course, is not to use tags. How does the receiver
+know how to decode the data in this case? It knows because it was
+programmed to know. In other words, if you call a remote procedure that
+takes two integers and a floating-point number as arguments, then there
+is no reason for the remote procedure to inspect tags to know what it
+has just received. It simply assumes that the message contains two
+integers and a float and decodes it accordingly. Note that, while this
+works for most cases, the one place it breaks down is when sending
+variable-length arrays. In such a case, a length tag is commonly used to
+indicate how long the array is.</p>
+<p>It is also worth noting that the untagged approach means that the
+presentation formatting is truly end to end. It is not possible for some
+intermediate agent to interpret the message unless the data is tagged.
+Why would an intermediate agent need to interpret a message, you might
+ask? Stranger things have happened, mostly resulting from <em>ad hoc</em>
+solutions to unexpected problems that the system was not engineered to
+handle. Poor network design is beyond the scope of this book.</p>
+</div>
+<div class="section" id="stubs">
+<h3>Stubs<a class="headerlink" href="#stubs" title="Permalink to this headline">¶</a></h3>
+<p>A stub is the piece of code that implements argument marshalling. Stubs
+are typically used to support RPC. On the client side, the stub marshals
+the procedure arguments into a message that can be transmitted by means
+of the RPC protocol. On the server side, the stub converts the message
+back into a set of variables that can be used as arguments to call the
+remote procedure. Stubs can either be interpreted or compiled.</p>
+<p>In a compilation-based approach, each procedure has a customized client
+and server stub. While it is possible to write stubs by hand, they are
+typically generated by a stub compiler, based on a description of the
+procedure’s interface. This situation is illustrated in <a class="reference internal" href="#fig-stubs"><span class="std std-numref">Figure
+183</span></a>. Since the stub is compiled, it is usually very efficient.
+In an interpretation-based approach, the system provides generic client
+and server stubs that have their parameters set by a description of the
+procedure’s interface. Because it is easy to change this description,
+interpreted stubs have the advantage of being flexible. Compiled stubs
+are more common in practice.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-stubs"></span><a class="reference internal image-reference" href="../_images/f07-05-9780123850591.png"><img alt="../_images/f07-05-9780123850591.png" src="../_images/f07-05-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 183. </span><span class="caption-text">Stub compiler takes interface description as input and outputs client
+and server stubs.</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="examples-xdr-asn-1-ndr-protobufs">
+<h2>Examples (XDR, ASN.1, NDR, ProtoBufs)<a class="headerlink" href="#examples-xdr-asn-1-ndr-protobufs" title="Permalink to this headline">¶</a></h2>
+<p>We now briefly describe four popular network data representations in
+terms of this taxonomy. We use the integer base type to illustrate how
+each system works.</p>
+<div class="section" id="xdr">
+<h3>XDR<a class="headerlink" href="#xdr" title="Permalink to this headline">¶</a></h3>
+<p>External Data Representation (XDR) is the network format used with
+SunRPC. In the taxonomy just introduced, XDR</p>
+<ul class="simple">
+<li>Supports the entire C-type system with the exception of function
+pointers</li>
+<li>Defines a canonical intermediate form</li>
+<li>Does not use tags (except to indicate array lengths)</li>
+<li>Uses compiled stubs</li>
+</ul>
+<p>An XDR integer is a 32-bit data item that encodes a C integer. It is
+represented in twos’ complement notation, with the most significant byte
+of the C integer in the first byte of the XDR integer and the least
+significant byte of the C integer in the fourth byte of the XDR integer.
+That is, XDR uses big-endian format for integers. XDR supports both
+signed and unsigned integers, just as C does.</p>
+<p>XDR represents variable-length arrays by first specifying an unsigned
+integer (4&nbsp;bytes) that gives the number of elements in the array,
+followed by that many elements of the appropriate type. XDR encodes the
+components of a structure in the order of their declaration in the
+structure. For both arrays and structures, the size of each
+element/component is represented in a multiple of 4&nbsp;bytes. Smaller data
+types are padded out to 4&nbsp;bytes with 0s. The exception to this “pad to
+4&nbsp;bytes” rule is made for characters, which are encoded one per byte.</p>
+<div class="figure align-center" id="id6">
+<span id="fig-xdr"></span><a class="reference internal image-reference" href="../_images/f07-06-9780123850591.png"><img alt="../_images/f07-06-9780123850591.png" src="../_images/f07-06-9780123850591.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 184. </span><span class="caption-text">Example encoding of a structure in XDR.</span></p>
+</div>
+<p>The following code fragment gives an example&nbsp;C structure (<code class="docutils literal notranslate"><span class="pre">item</span></code>) and
+the XDR routine that encodes/decodes this structure (<code class="docutils literal notranslate"><span class="pre">xdr_item</span></code>).
+<a class="reference internal" href="#fig-xdr"><span class="std std-numref">Figure 184</span></a> schematically depicts XDR’s on-the-wire
+representation of this structure when the field <code class="docutils literal notranslate"><span class="pre">name</span></code> is seven
+characters long and the array <code class="docutils literal notranslate"><span class="pre">list</span></code> has three values in it.</p>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">xdr_array</span></code>, <code class="docutils literal notranslate"><span class="pre">xdr_int</span></code>, and <code class="docutils literal notranslate"><span class="pre">xdr_string</span></code> are
+three primitive functions provided by XDR to encode and decode arrays,
+integers, and character strings, respectively. Argument <code class="docutils literal notranslate"><span class="pre">xdrs</span></code> is a
+context variable that XDR uses to keep track of where it is in the
+message being processed; it includes a flag that indicates whether this
+routine is being used to encode or decode the message. In other words,
+routines like <code class="docutils literal notranslate"><span class="pre">xdr_item</span></code> are used on both the client and the server.
+Note that the application programmer can either write the routine
+<code class="docutils literal notranslate"><span class="pre">xdr_item</span></code> by hand or use a stub compiler called <code class="docutils literal notranslate"><span class="pre">rpcgen</span></code> (not
+shown) to generate this encoding/decoding routine. In the latter case,
+<code class="docutils literal notranslate"><span class="pre">rpcgen</span></code> takes the remote procedure that defines the data structure
+<code class="docutils literal notranslate"><span class="pre">item</span></code> as input and outputs the corresponding stub.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#define MAXNAME 256;</span>
+<span class="cp">#define MAXLIST 100;</span>
+
+<span class="k">struct</span> <span class="nc">item</span> <span class="p">{</span>
+   <span class="kt">int</span>     <span class="n">count</span><span class="p">;</span>
+   <span class="kt">char</span>    <span class="n">name</span><span class="p">[</span><span class="n">MAXNAME</span><span class="p">];</span>
+   <span class="kt">int</span>     <span class="n">list</span><span class="p">[</span><span class="n">MAXLIST</span><span class="p">];</span>
+<span class="p">};</span>
+
+<span class="n">bool_t</span>
+<span class="nf">xdr_item</span><span class="p">(</span><span class="n">XDR</span> <span class="o">*</span><span class="n">xdrs</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">item</span> <span class="o">*</span><span class="n">ptr</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span><span class="p">(</span><span class="n">xdr_int</span><span class="p">(</span><span class="n">xdrs</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">count</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+       <span class="n">xdr_string</span><span class="p">(</span><span class="n">xdrs</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span> <span class="n">MAXNAME</span><span class="p">)</span> <span class="o">&amp;&amp;</span>
+       <span class="n">xdr_array</span><span class="p">(</span><span class="n">xdrs</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">list</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">ptr</span><span class="o">-&gt;</span><span class="n">count</span><span class="p">,</span> <span class="n">MAXLIST</span><span class="p">,</span>
+                 <span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">),</span> <span class="n">xdr_int</span><span class="p">));</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Exactly how XDR performs depends, of course, on the complexity of the
+data. In a simple case of an array of integers, where each integer has
+to be converted from one byte order to another, an average of three
+instructions are required for each byte, meaning that converting the
+whole array is likely to be limited by the memory bandwidth of the
+machine. More complex conversions that require significantly more
+instructions per byte will be CPU limited and thus perform at a data
+rate less than the memory bandwidth.</p>
+</div>
+<div class="section" id="asn-1">
+<h3>ASN.1<a class="headerlink" href="#asn-1" title="Permalink to this headline">¶</a></h3>
+<p>Abstract Syntax Notation One (ASN.1) is an ISO standard that defines,
+among other things, a representation for data sent over a network. The
+representation-specific part of ASN.1 is called the <em>Basic Encoding
+Rules</em> (BER). ASN.1 supports the C-type system without function
+pointers, defines a canonical intermediate form, and uses type tags. Its
+stubs can be either interpreted or compiled. One of the claims to fame
+of ASN.1 BER is that it is used by the Internet standard Simple Network
+Management Protocol (SNMP).</p>
+<p>ASN.1 represents each data item with a triple of the form</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">tag</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">tag</span></code> is typically an 8-bit field, although ASN.1 allows for the
+definition of multibyte tags. The <code class="docutils literal notranslate"><span class="pre">length</span></code> field specifies how many
+bytes make up the <code class="docutils literal notranslate"><span class="pre">value</span></code>; we discuss <code class="docutils literal notranslate"><span class="pre">length</span></code> more
+below. Compound data types, such as structures, can be constructed by
+nesting primitive types, as illustrated in <a class="reference internal" href="#fig-ber1"><span class="std std-numref">Figure 185</span></a>.</p>
+<div class="figure align-center" id="id7">
+<span id="fig-ber1"></span><a class="reference internal image-reference" href="../_images/f07-07-9780123850591.png"><img alt="../_images/f07-07-9780123850591.png" src="../_images/f07-07-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 185. </span><span class="caption-text">Compound types created by means of nesting in ASN.1 BER.</span></p>
+</div>
+<div class="figure align-center" id="id8">
+<span id="fig-ber2"></span><a class="reference internal image-reference" href="../_images/f07-08-9780123850591.png"><img alt="../_images/f07-08-9780123850591.png" src="../_images/f07-08-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 186. </span><span class="caption-text">ASN.1 BER representation for a 4-byte integer.</span></p>
+</div>
+<p>If the <code class="docutils literal notranslate"><span class="pre">value</span></code> is 127 or fewer bytes long, then the <code class="docutils literal notranslate"><span class="pre">length</span></code> is
+specified in a single byte. Thus, for example, a 32-bit integer is
+encoded as a 1-byte <code class="docutils literal notranslate"><span class="pre">type</span></code>, a 1-byte <code class="docutils literal notranslate"><span class="pre">length</span></code>, and the 4&nbsp;bytes that
+encode the integer, as illustrated in <a class="reference internal" href="#fig-ber2"><span class="std std-numref">Figure 186</span></a>. The
+<code class="docutils literal notranslate"><span class="pre">value</span></code> itself, in the case of an integer, is represented in twos’
+complement notation and big-endian form, just as in XDR. Keep in mind
+that, even though the <code class="docutils literal notranslate"><span class="pre">value</span></code> of the integer is represented in exactly
+the same way in both XDR and ASN.1, the XDR representation has neither
+the <code class="docutils literal notranslate"><span class="pre">type</span></code> nor the <code class="docutils literal notranslate"><span class="pre">length</span></code> tags associated with that integer. These
+two tags both take up space in the message and, more importantly,
+require processing during marshalling and unmarshalling. This is one
+reason why ASN.1 is not as efficient as XDR. Another is that the very
+fact that each data value is preceded by a <code class="docutils literal notranslate"><span class="pre">length</span></code> field means that
+the data value is unlikely to fall on a natural byte boundary (e.g., an
+integer beginning on a word boundary). This complicates the
+encoding/decoding process.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">value</span></code> is 128 or more bytes long, then multiple bytes are
+used to specify its <code class="docutils literal notranslate"><span class="pre">length</span></code>. At this point you may be asking why a
+byte can specify a length of up to 127&nbsp;bytes rather than 256. The
+reason is that 1&nbsp;bit of the <code class="docutils literal notranslate"><span class="pre">length</span></code> field is used to denote how
+long the <code class="docutils literal notranslate"><span class="pre">length</span></code> field is. A 0 in the eighth bit indicates a 1-byte
+<code class="docutils literal notranslate"><span class="pre">length</span></code> field. To specify a longer <code class="docutils literal notranslate"><span class="pre">length</span></code>, the eighth bit is
+set to 1, and the other 7&nbsp;bits indicate how many additional bytes make
+up the <code class="docutils literal notranslate"><span class="pre">length</span></code>. <a class="reference internal" href="#fig-ber3"><span class="std std-numref">Figure 187</span></a> illustrates a simple
+1-byte <code class="docutils literal notranslate"><span class="pre">length</span></code> and a multibyte <code class="docutils literal notranslate"><span class="pre">length</span></code>.</p>
+<div class="figure align-center" id="id9">
+<span id="fig-ber3"></span><a class="reference internal image-reference" href="../_images/f07-09-9780123850591.png"><img alt="../_images/f07-09-9780123850591.png" src="../_images/f07-09-9780123850591.png" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Figure 187. </span><span class="caption-text">ASN.1 BER representation for length: (a)&nbsp;1 byte; (b)&nbsp;multibyte.</span></p>
+</div>
+</div>
+<div class="section" id="ndr">
+<h3>NDR<a class="headerlink" href="#ndr" title="Permalink to this headline">¶</a></h3>
+<p>Network Data Representation (NDR) is the data-encoding standard used in
+the Distributed Computing Environment (DCE). Unlike XDR and ASN.1, NDR
+uses receiver-makes-right. It does this by inserting an architecture tag
+at the front of each message; individual data items are untagged. NDR
+uses a compiler to generate stubs. This compiler takes a description of
+a program written in the Interface Definition&nbsp;Language (IDL) and
+generates the necessary stubs. IDL looks pretty much like C, and so
+essentially supports the C-type system.</p>
+<div class="figure align-center" id="id10">
+<span id="fig-ndr"></span><a class="reference internal image-reference" href="../_images/f07-10-9780123850591.png"><img alt="../_images/f07-10-9780123850591.png" src="../_images/f07-10-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 188. </span><span class="caption-text">NDR’s architecture tag.</span></p>
+</div>
+<p><a class="reference internal" href="#fig-ndr"><span class="std std-numref">Figure 188</span></a> illustrates the 4-byte architecture
+definition tag that is included at the front of each NDR-encoded
+message. The first byte contains two 4-bit fields. The first field,
+<code class="docutils literal notranslate"><span class="pre">IntegrRep</span></code>, defines the format for all integers contained in the
+message. A 0 in this field indicates big-endian integers, and a 1
+indicates little-endian integers.  The <code class="docutils literal notranslate"><span class="pre">CharRep</span></code> field indicates
+what character format is used: 0 means ASCII (American Standard Code
+for Information Interchange) and 1 means EBCDIC (an older, IBM-defined
+alternative to ASCII). Next, the <code class="docutils literal notranslate"><span class="pre">FloatRep</span></code> byte defines which
+floating-point representation is being used: 0 means IEEE 754, 1 means
+VAX, 2 means Cray, and 3 means IBM. The final 2&nbsp;bytes are reserved for
+future use. Note that, in simple cases such as arrays of integers, NDR
+does the same amount of work as XDR, and so it is able to achieve the
+same performance.</p>
+</div>
+<div class="section" id="protobufs">
+<h3>ProtoBufs<a class="headerlink" href="#protobufs" title="Permalink to this headline">¶</a></h3>
+<p>Protocol Buffers (Protobufs, for short) provide a language-neutral and
+platform-neutral way of serializing structured data, commonly used with
+gRPC. They use a tagged strategy with a canonical intermediate form,
+where the stub on both sides is generated from a shared <code class="docutils literal notranslate"><span class="pre">.proto</span></code> file.
+This specification uses a simple C-like syntax, as the following example
+illustrates:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="n">Person</span> <span class="p">{</span>
+    <span class="n">required</span> <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">required</span> <span class="n">int32</span> <span class="n">id</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">optional</span> <span class="n">string</span> <span class="n">email</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+    <span class="k">enum</span> <span class="n">PhoneType</span> <span class="p">{</span>
+        <span class="n">MOBILE</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="n">HOME</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">WORK</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">message</span> <span class="n">PhoneNumber</span> <span class="p">{</span>
+        <span class="n">required</span> <span class="n">string</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="n">optional</span> <span class="n">PhoneType</span> <span class="n">type</span> <span class="o">=</span> <span class="mi">2</span> <span class="p">[</span><span class="k">default</span> <span class="o">=</span> <span class="n">HOME</span><span class="p">];</span>
+    <span class="p">}</span>
+
+    <span class="n">required</span> <span class="n">PhoneNumber</span> <span class="n">phone</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">message</span></code> could roughly be interpreted as equivalent to
+<code class="docutils literal notranslate"><span class="pre">typedef</span> <span class="pre">struct</span></code> in C. The rest of the example is fairly intuitive,
+except that every field is given a numeric identifier to ensure
+uniqueness should the specification change over time, and each field can
+be annotated as being either <code class="docutils literal notranslate"><span class="pre">required</span></code> or <code class="docutils literal notranslate"><span class="pre">optional</span></code>.</p>
+<p>The way Protobufs encode integers is novel. They use a technique called
+<em>varints</em> (variable length integers) in which each 8-bit byte uses the
+most significant bit to indicate whether there are more bytes in the
+integer, and the lower seven bits to encode the two’s complement
+representation of the next group of seven bits in the value. The least
+significant group is first in the serialization.</p>
+<p>This means a small integer (less than 128) can be encoded in a single
+byte (e.g., the integer 2 is encoded as <code class="docutils literal notranslate"><span class="pre">0000</span> <span class="pre">0010</span></code>), while for an
+integer bigger than 128, more bytes are needed. For example, 365 would
+be encoded as</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1110</span> <span class="mi">1101</span> <span class="mi">0000</span> <span class="mi">0010</span>
+</pre></div>
+</div>
+<p>To see this, first drop the most significant bit from each byte, as it
+is there to tell us whether we’ve reached the end of the integer. In
+this example, the <code class="docutils literal notranslate"><span class="pre">1</span></code> in the most significant bit of the first byte
+indicates there is more than one byte in the varint:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>1110 1101 0000 0010
+→ 110 1101  000 0010
+</pre></div>
+</div>
+<p>Since varints store numbers with the least significant group first, you
+next reverse the two groups of seven bits. Then you concatenate them to
+get your final value:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>000 0010  110 1101
+→  000 0010 || 110 1101
+→  101101101
+→  256 + 64 + 32 + 8 + 4 + 1 = 365
+</pre></div>
+</div>
+<p>For the larger message specification, you can think of the serialized
+byte stream as a collection of key/value pairs, where the key (i.e.,
+tag) has two sub-parts: the unique identifier for the field (i.e., those
+extra numbers in the example <code class="docutils literal notranslate"><span class="pre">.proto</span></code> file) and the <em>wire type</em> of the
+value (e.g., <code class="docutils literal notranslate"><span class="pre">Varint</span></code> is the one example wire type we have seen so
+far). Other supported wire types include <code class="docutils literal notranslate"><span class="pre">32-bit</span></code> and <code class="docutils literal notranslate"><span class="pre">64-bit</span></code> (for
+fixed-length integers), and <code class="docutils literal notranslate"><span class="pre">length-delimited</span></code> (for strings and
+embedded messages). The latter tells you how many bytes long the
+embedded message (structure) is, but it’s another <code class="docutils literal notranslate"><span class="pre">message</span></code>
+specification in the <code class="docutils literal notranslate"><span class="pre">.proto</span></code> file that tells you how to interpret
+those bytes.</p>
+</div>
+</div>
+<div class="section" id="markup-languages-xml">
+<h2>Markup Languages (XML)<a class="headerlink" href="#markup-languages-xml" title="Permalink to this headline">¶</a></h2>
+<p>Although we have been discussing the presentation formatting problem
+from the perspective of RPC—that is, how does one encode primitive data
+types and compound data structures so they can be sent from a client
+program to a server program—the same basic problem occurs in other
+settings. For example, how does a web server describe a Web page so that
+any number of different browsers know what to display on the screen? In
+this specific case, the answer is the HyperText Markup Language (HTML),
+which indicates that certain character strings should be displayed in
+bold or italics, what font type and size should be used, and where
+images should be positioned.</p>
+<p>The availability of all sorts of Web applications and data have also
+created a situation in which different Web applications need to
+communicate with each other and understand each other’s data. For
+example, an e-commerce website might need to talk to a shipping
+company’s website to allow a customer to track a package without ever
+leaving the e-commerce website. This quickly starts to look a lot like
+RPC, and the approach taken in the Web today to enable such
+communication among web servers is based on the <em>Extensible Markup
+Language</em> (XML)—a way to describe the data being exchanged between Web
+apps.</p>
+<p>Markup languages, of which HTML and XML are both examples, take the
+tagged data approach to the extreme. Data is represented as text, and
+text tags known as <em>markup</em> are intermingled with the data text to
+express information about the data. In the case of HTML, markup
+indicates how the text should be displayed; other markup languages like
+XML can express the type and structure of the data.</p>
+<p>XML is actually a framework for defining different markup languages for
+different kinds of data. For example, XML has been used to define a
+markup language that is roughly equivalent to HTML called <em>Extensible
+HyperText Markup Language</em> (XHTML). XML defines a basic syntax for
+mixing markup with data text, but the designer of a specific markup
+language has to name and define its markup. It is common practice to
+refer to individual XML-based languages simply as XML, but we will
+emphasize the distinction in this introductory material.</p>
+<p>XML syntax looks much like HTML. For example, an employee record in a
+hypothetical XML-based language might look like the following XML
+<em>document</em>, which might be stored in a file named <code class="docutils literal notranslate"><span class="pre">employee.xml</span></code>. The
+first line indicates the version of XML being used, and the remaining
+lines represent four fields that make up the employee record, the last
+of which (<code class="docutils literal notranslate"><span class="pre">hiredate</span></code>) contains three subfields. In other words, XML
+syntax provides for a nested structure of tag/value pairs, which is
+equivalent to a tree structure for the represented data (with
+<code class="docutils literal notranslate"><span class="pre">employee</span></code> as the root). This is similar to XDR, ASN.1, and NDR’s
+ability to represent compound types, but in a format that can be both
+processed by programs and read by humans. More importantly, programs
+such as parsers can be used across different XML-based languages,
+because the definitions of those languages are themselves expressed as
+machine-readable data that can be input to the programs.</p>
+<div class="code xml highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;employee&gt;
+   &lt;name&gt;John Doe&lt;/name&gt;
+   &lt;title&gt;Head Bottle Washer&lt;/title&gt;
+   &lt;id&gt;123456789&lt;/id&gt;
+   &lt;hiredate&gt;
+      &lt;day&gt;5&lt;/day&gt;
+      &lt;month&gt;June&lt;/month&gt;
+      &lt;year&gt;1986&lt;/year&gt;
+   &lt;/hiredate&gt;
+&lt;/employee&gt;
+</pre></div>
+</div>
+<p>Although the markup and the data in this document are highly suggestive
+to the human reader, it is the definition of the employee record
+language that actually determines what tags are legal, what they mean,
+and what data types they imply. Without some formal definition of the
+tags, a human reader (or a computer) can’t tell whether <code class="docutils literal notranslate"><span class="pre">1986</span></code> in the
+<code class="docutils literal notranslate"><span class="pre">year</span></code> field, for example, is a string, an integer, an unsigned
+integer, or a floating point number.</p>
+<p>The definition of a specific XML-based language is given by a <em>schema</em>,
+which is a database term for a specification of how to interpret a
+collection of data. Several schema languages have been defined for XML;
+we will focus here on the leading standard, known by the
+none-too-surprising name <em>XML Schema</em>. An individual schema defined
+using XML Schema is known as an <em>XML Schema Document</em> (XSD). The
+following is an XSD specification for the example; in other words, it
+defines the language to which the example document conforms. It might be
+stored in a file named <code class="docutils literal notranslate"><span class="pre">employee.xsd</span></code>.</p>
+<div class="code xml highlight-default notranslate"><div class="highlight"><pre><span></span>&lt;?xml version=&quot;1.0&quot;?&gt;
+&lt;schema xmlns=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;
+  &lt;element name=&quot;employee&quot;&gt;
+    &lt;complexType&gt;
+      &lt;sequence&gt;
+        &lt;element name=&quot;name&quot; type=&quot;string&quot;/&gt;
+        &lt;element name=&quot;title&quot; type=&quot;string&quot;/&gt;
+        &lt;element name=&quot;id&quot; type=&quot;string&quot;/&gt;
+        &lt;element name=&quot;hiredate&quot;&gt;
+          &lt;complexType&gt;
+            &lt;sequence&gt;
+              &lt;element name=&quot;day&quot; type=&quot;integer&quot;/&gt;
+              &lt;element name=&quot;month&quot; type=&quot;string&quot;/&gt;
+              &lt;element name=&quot;year&quot; type=&quot;integer&quot;/&gt;
+            &lt;/sequence&gt;
+          &lt;/complexType&gt;
+        &lt;/element&gt;
+      &lt;/sequence&gt;
+    &lt;/complexType&gt;
+  &lt;/element&gt;
+&lt;/schema&gt;
+</pre></div>
+</div>
+<p>This XSD looks superficially similar to our example document
+<code class="docutils literal notranslate"><span class="pre">employee.xml</span></code>, and for good reason: XML Schema is itself an XML-based
+language. There is an obvious relationship between this XSD and the
+document defined above. For example,</p>
+<div class="code xml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">element</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;title&quot;</span> <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;string&quot;</span><span class="o">/&gt;</span>
+</pre></div>
+</div>
+<p>indicates that the value bracketed by the markup <code class="docutils literal notranslate"><span class="pre">title</span></code> is to be
+interpreted as a string. The sequence and nesting of that line in the
+XSD indicate that a <code class="docutils literal notranslate"><span class="pre">title</span></code> field must be the second item in an
+employee record.</p>
+<p>Unlike some schema languages, XML Schema provides datatypes such as
+string, integer, decimal, and Boolean. It allows the datatypes to be
+combined in sequences or nested, as in <code class="docutils literal notranslate"><span class="pre">employee.xsd</span></code>, to create
+compound data types. So an XSD defines more than a syntax; it defines
+its own abstract data model. A document that conforms to the XSD
+represents a collection of data that conforms to the data model.</p>
+<p>The significance of an XSD defining an abstract data model and not just
+a syntax is that there can be other ways besides XML of representing
+data that conforms to the model. And XML does, after all, have some
+shortcomings as an on-the-wire representation: it is not as compact as
+other data representations, and it is relatively slow to parse. A number
+of alternative representations described as binary are in use. The
+International Standards Organization (ISO) has published one called
+<em>Fast Infoset</em>, while the World Wide Web Consortium (W3C) has produced
+the <em>Efficient XML Interchange</em> (EXI) proposal. Binary representations
+sacrifice human readability for greater compactness and faster parsing.</p>
+<div class="section" id="xml-namespaces">
+<h3>XML Namespaces<a class="headerlink" href="#xml-namespaces" title="Permalink to this headline">¶</a></h3>
+<p>XML has to solve a common problem, that of name clashes. The problem
+arises because schema languages such as XML Schema support modularity in
+the sense that a schema can be reused as part of another schema. Suppose
+two XSDs are defined independently, and both happen to define the markup
+name <em>idNumber</em>. Perhaps one XSD uses that name to identify employees of
+a company, and the other XSD uses it to identify laptop computers owned
+by the company. We might like to reuse those two XSDs in a third XSD for
+describing which assets are associated with which employees, but to do
+that we need some mechanism for distinguishing employees’ idNumbers from
+laptop idNumbers.</p>
+<p>XML’s solution to this problem is <em>XML namespaces</em>. A namespace is a
+collection of names. Each XML namespace is identified by a Uniform
+Resource Identifier (URI). URIs will be described in some detail in a
+later chapter; for now, all you really need to know is that URIs are a
+form of globally unique identifier. (An HTTP URL is a particular type of
+UNI.) A simple markup name like <em>idNumber</em> can be added to a namespace
+as long as it is unique within that namespace. Since the namespace is
+globally unique and the simple name is unique within the namespace, the
+combination of the two is a globally unique <em>qualified name</em> that cannot
+clash.</p>
+<p>An XSD usually specifies a <em>target namespace</em> with a line like the
+following:</p>
+<div class="code xml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">targetNamespace</span><span class="o">=</span><span class="s2">&quot;http://www.example.com/employee&quot;</span>
+</pre></div>
+</div>
+<p>is a Uniform Resource Identifier, identifying a made-up namespace. All
+the new markup defined in that XSD will belong to that namespace.</p>
+<p>Now, if an XSD wants to reference names that have been defined in other
+XSDs, it can do so by qualifying those names with a namespace prefix.
+This prefix is a short abbreviation for the full URI that actually
+identifies the namespace. For example, the following line assigns
+<code class="docutils literal notranslate"><span class="pre">emp</span></code> as the namespace prefix for the employee namespace:</p>
+<div class="code xml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">xmlns</span><span class="p">:</span><span class="n">emp</span><span class="o">=</span><span class="s2">&quot;http://www.example.com/employee&quot;</span>
+</pre></div>
+</div>
+<p>Any markup from that namespace would be qualified by prefixing it with
+<code class="docutils literal notranslate"><span class="pre">emp:</span></code> , as is <code class="docutils literal notranslate"><span class="pre">title</span></code> in the following line:</p>
+<div class="code xml highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">emp</span><span class="p">:</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Head</span> <span class="n">Bottle</span> <span class="n">Washer</span><span class="o">&lt;/</span><span class="n">emp</span><span class="p">:</span><span class="n">title</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In other words, <code class="docutils literal notranslate"><span class="pre">emp:title</span></code> is a qualified name, which will not clash
+with the name <code class="docutils literal notranslate"><span class="pre">title</span></code> from some other namespace.</p>
+<p>It is remarkable how widely XML is now used in applications that range
+from RPC-style communication among Web-based services to office
+productivity tools to instant messaging. It is certainly one of the core
+protocols on which the upper layers of the Internet now depend.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="multimedia.html" class="btn btn-neutral float-right" title="7.2 Multimedia Data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="problem.html" class="btn btn-neutral float-left" title="Problem: What Do We Do with the Data?" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

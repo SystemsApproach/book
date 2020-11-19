@@ -1,0 +1,338 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Perspective: Virtual Networks All the Way Down &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Chapter 4: Advanced Internetworking" href="../scaling.html" />
+    <link rel="prev" title="3.5 Implementation" href="impl.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Not All Networks are Directly Connected</a></li>
+<li class="toctree-l2"><a class="reference internal" href="switching.html">3.1 Switching Basics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ethernet.html">3.2 Switched Ethernet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="basic-ip.html">3.3 Internet (IP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">3.4 Routing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="impl.html">3.5 Implementation</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Perspective: Virtual Networks All the Way Down</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../internetworking.html">Chapter 3:  Internetworking</a> &raquo;</li>
+        
+      <li>Perspective: Virtual Networks All the Way Down</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/internetworking/trend.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="perspective-virtual-networks-all-the-way-down">
+<h1>Perspective: Virtual Networks All the Way Down<a class="headerlink" href="#perspective-virtual-networks-all-the-way-down" title="Permalink to this headline">¶</a></h1>
+<p>For almost as long as there have been packet-switched networks, there
+have been ideas about how to virtualize them, starting with virtual
+circuits. But what exactly does it mean to virtualize a network?</p>
+<p>Virtual memory is a helpful example. Virtual memory creates an
+abstraction of a large and private pool of memory, even though the
+underlying physical memory may be shared by many applications and
+considerably smaller that the apparent pool of virtual memory. This
+abstraction enables programmers to operate under the illusion that there
+is plenty of memory and that no-one else is using it, while under the
+covers the memory management system takes care of things like mapping
+the virtual memory to physical resources and avoiding conflict between
+users.</p>
+<p>Similarly, server virtualization presents the abstraction of a virtual
+machine (VM), which has all the features of a physical machine. Again,
+there may be many VMs supported on a single physical server, and the
+operating system and users on the virtual machine are happily unaware
+that the VM is being mapped onto physical resources.</p>
+<p>A key point is the virtualization of computing resources preserves the
+abstractions and interfaces that existed before they were virtualized.
+This is important because it means that users of those abstractions
+don’t need to change—they see a faithful reproduction of the resource
+being virtualized. Virtualization also means that the different users
+(sometimes called <em>tenants</em>) cannot interfere with each other. So what
+happens when we try to virtualize a network?</p>
+<p>VPNs, as described in <a class="reference internal" href="basic-ip.html#internet-ip"><span class="std std-ref">Section 3.3</span></a>,
+were one early success for virtual networking. They allowed carriers
+to present corporate customers with the illusion that they had their
+own private network, even though in reality they were sharing
+underlying links and switches with many other users. VPNs, however,
+only virtualize a few resources, notably addressing and routing
+tables. Network virtualization as commonly understood today goes
+further, virtualizing every aspect of networking. That means that a
+virtual network should support all the basic abstractions of a
+physical network. In this sense, they are analogous to the virtual
+machine, with its support of all the resources of a server: CPU,
+storage, I/O, and so on.</p>
+<p>To this end, VLANS, as described in <a class="reference internal" href="ethernet.html#switched-ethernet"><span class="std std-ref">Section 3.2</span></a>, are how we typically virtualize an L2 network. VLANs
+proved to be quite useful to enterprises that wanted to isolate
+different internal groups (e.g., departments, labs), giving each of
+them the appearance of having their own private LAN. VLANs were also
+seen as a promising way to virtualize L2 networks in cloud
+datacenters, making it possible to give each tenant their own L2
+network so as to isolate their traffic from the traffic of all other
+tenants. But there was a problem: the 4096 possible VLANs was not
+sufficient to account for all the tenants that a cloud might host, and
+to complicate matters, in a cloud the network needs to connect
+<em>virtual machines</em> rather than the physical machines that those VMs
+run on.</p>
+<p>To address this problem, another standard called <em>Virtual Extensible
+LAN</em> (VXLAN) was introduced. Unlike the original approach, which
+effectively encapsulated a virtualized ethernet frame inside another
+ethernet frame, VXLAN encapsulates a virtual ethernet frame inside a UDP
+packet. This means a VXLAN-based virtual network (which is often
+referred to as an <em>overlay network</em>) runs on top of an IP-based network,
+which in turn runs on an underlying ethernet (or perhaps in just one
+VLAN of the underlying ethernet). VXLAN also makes it possible for one
+cloud tenant to have multiple VLANs of their own, which allows them to
+segregate their own internal traffic. This means it is ultimately
+possible to have a VLAN encapsulated in a VXLAN overlay encapsulated in
+a VLAN.</p>
+<p>The powerful thing about virtualization is that when done right, it
+should be possible to nest one virtualized resource inside another
+virtualized resource, since after all, a virtual resource should behave
+just like a physical resources and we know how to virtualize physical
+resources! Said another way, being able to virtualize a virtual resource
+is the best proof that you have done a good job of virtualizing the
+original physical resource. To re-purpose the mythology of the World
+Turtle: It’s virtual networks all the way down.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-vxlan"></span><a class="reference internal image-reference" href="../_images/Slide8.png"><img alt="../_images/Slide8.png" src="../_images/Slide8.png" style="width: 500px;" /></a>
+<p class="caption"><span class="caption-number">Figure 96. </span><span class="caption-text">VXLAN Header encapsulated in a UDP/IP packet.</span></p>
+</div>
+<p>The actual VXLAN header is simple, as shown in <a class="reference internal" href="#fig-vxlan"><span class="std std-numref">Figure 96</span></a>. It includes a 24-bit <em>Virtual Network Id</em> (VNI), plus
+some flag and reserved bits. It also implies a particular setting of
+the UDP source and destination port fields (see <a class="reference internal" href="../e2e/udp.html#simple-demultiplexor-udp"><span class="std std-ref">Section 5.1</span></a>), with the destination port 4789
+officially reserved for VXLANs. Figuring out how to uniquely identify
+virtual LANs (VLAN tags) and virtual networks (VXLAN VIDs) is the easy
+part. This is because encapsulation is the fundamental cornerstone of
+virtualization; all you need to add is an identifier that tells you
+which of many possible users this encapsulated packet belongs to.</p>
+<p>The hard part is grappling with the idea of virtual networks being
+nested (encapsulated) inside virtual networks, which is networking’s
+version of recursion. The other challenge is understanding how to
+automate the creation, management, migration, and deletion of virtual
+networks, and on this front there is still a lot of room for
+improvement. Mastering this challenge will be at the heart of networking
+in the next decade, and while some of this work will undoubtedly happen
+in proprietary settings, there are open source network virtualization
+platforms (e.g., the Linux Foundation’s <em>Tungsten Fabric</em> project)
+leading the way.</p>
+<div class="admonition-broader-perspective admonition">
+<p class="first admonition-title">Broader Perspective</p>
+<p>To continue reading about the cloudification of the Internet, see
+<a class="reference internal" href="../scaling/trend.html#perspective-the-cloud-is-eating-the-internet"><span class="std std-ref">Perspective: The Cloud is Eating the Internet</span></a>.</p>
+<dl class="last docutils">
+<dt>To learn more about the maturation of virtual networks, we recommend:</dt>
+<dd><ul class="first last simple">
+<li><a class="reference external" href="https://networkheresy.com/2012/05/31/network-virtualization/">Network Heresy</a>,  2012.</li>
+<li><a class="reference external" href="https://tungstenfabric.github.io/website/">Tungsten Fabric</a>, 2018.</li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../scaling.html" class="btn btn-neutral float-right" title="Chapter 4: Advanced Internetworking" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="impl.html" class="btn btn-neutral float-left" title="3.5 Implementation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

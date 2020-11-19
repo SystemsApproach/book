@@ -1,0 +1,273 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Chapter 6: Congestion Control &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="static/documentation_options.js"></script>
+        <script type="text/javascript" src="static/jquery.js"></script>
+        <script type="text/javascript" src="static/underscore.js"></script>
+        <script type="text/javascript" src="static/doctools.js"></script>
+        <script type="text/javascript" src="static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Problem: Allocating Resources" href="congestion/problem.html" />
+    <link rel="prev" title="Perspective: HTTP is the New Narrow Waist" href="e2e/trend.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Chapter 6:  Congestion Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="congestion/problem.html">Problem: Allocating Resources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/issues.html">6.1 Issues in Resource Allocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/queuing.html">6.2 Queuing Disciplines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/tcpcc.html">6.3 TCP Congestion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/avoidance.html">6.4 Advanced Congestion Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/qos.html">6.5 Quality of Service</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/trend.html">Perspective: Software-Defined Traffic Engineering</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>Chapter 6:  Congestion Control</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/congestion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="chapter-6-congestion-control">
+<h1>Chapter 6:  Congestion Control<a class="headerlink" href="#chapter-6-congestion-control" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><p>The hand that hath made you fair hath made you good.</p>
+<p><em>—William Shakespeare</em></p>
+</div></blockquote>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="congestion/problem.html">Problem: Allocating Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="congestion/issues.html">6.1 Issues in Resource Allocation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="congestion/issues.html#network-model">Network Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/issues.html#taxonomy">Taxonomy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/issues.html#evaluation-criteria">Evaluation Criteria</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="congestion/queuing.html">6.2 Queuing Disciplines</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="congestion/queuing.html#fifo">FIFO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/queuing.html#fair-queuing">Fair Queuing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="congestion/tcpcc.html">6.3 TCP Congestion Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="congestion/tcpcc.html#additive-increase-multiplicative-decrease">Additive Increase/Multiplicative Decrease</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/tcpcc.html#slow-start">Slow Start</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/tcpcc.html#fast-retransmit-and-fast-recovery">Fast Retransmit and Fast Recovery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/tcpcc.html#tcp-cubic">TCP CUBIC</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="congestion/avoidance.html">6.4 Advanced Congestion Control</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="congestion/avoidance.html#active-queue-management-decbit-red-ecn">Active Queue Management (DECbit, RED, ECN)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/avoidance.html#source-based-approaches-vegas-bbr-dctcp">Source-Based Approaches (Vegas, BBR, DCTCP)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="congestion/qos.html">6.5 Quality of Service</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="congestion/qos.html#application-requirements">Application Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/qos.html#integrated-services-rsvp">Integrated Services (RSVP)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/qos.html#differentiated-services-ef-af">Differentiated Services (EF, AF)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="congestion/qos.html#equation-based-congestion-control">Equation-Based Congestion Control</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="congestion/trend.html">Perspective: Software-Defined Traffic Engineering</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="congestion/problem.html" class="btn btn-neutral float-right" title="Problem: Allocating Resources" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="e2e/trend.html" class="btn btn-neutral float-left" title="Perspective: HTTP is the New Narrow Waist" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

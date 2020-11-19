@@ -1,0 +1,566 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1.4 Software &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="1.5 Performance" href="performance.html" />
+    <link rel="prev" title="1.3 Architecture" href="architecture.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Building a Network</a></li>
+<li class="toctree-l2"><a class="reference internal" href="applications.html">1.1 Applications</a></li>
+<li class="toctree-l2"><a class="reference internal" href="requirements.html">1.2 Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="architecture.html">1.3 Architecture</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1.4 Software</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#application-programming-interface-sockets">Application Programming Interface (Sockets)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-application">Example Application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#client">Client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#server">Server</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="performance.html">1.5 Performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Feature Velocity</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../foundation.html">Chapter 1:  Foundation</a> &raquo;</li>
+        
+      <li>1.4 Software</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/foundation/software.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="software">
+<h1>1.4 Software<a class="headerlink" href="#software" title="Permalink to this headline">¶</a></h1>
+<p>Network architectures and protocol specifications are essential
+things, but a good blueprint is not enough to explain the phenomenal
+success of the Internet: The number of computers connected to the
+Internet has grown exponentially for over three decades (although
+precise numbers are hard to come by). The number of users of the
+Internet was estimated to be around 4.1 billion by the end of
+2018—roughly half of the world’s population.</p>
+<p>What explains the success of the Internet? There are certainly many
+contributing factors (including a good architecture), but one thing that
+has made the Internet such a runaway success is the fact that so much of
+its functionality is provided by software running on general-purpose
+computers. The significance of this is that new functionality can be
+added readily with “just a small matter of programming.” As a result,
+new applications and services have been showing up at an incredible
+pace.</p>
+<p>A related factor is the massive increase in computing power available
+in commodity machines. Although computer networks have always been
+capable in principle of transporting any kind of information, such as
+digital voice samples, digitized images, and so on, this potential was
+not particularly interesting if the computers sending and receiving
+that data were too slow to do anything useful with the
+information. Virtually all of today’s computers are capable of playing
+back digitized audio and video at a speed and resolution that are
+quite usable.</p>
+<p>In the years since the first edition of this book appeared, the
+writing of networked applications has become a mainstream activity and
+not a job just for a few specialists. Many factors have played into
+this, including better tools to make the job easier and the opening up
+of new markets such as applications for smartphones.</p>
+<p>The point to note is that knowing how to implement network software is
+an essential part of understanding computer networks, and while the odds
+are you will not be tasked to implement a low-level protocol like IP,
+there is a good chance you will find reason to implement an
+application-level protocol—the elusive “killer app” that will lead to
+unimaginable fame and fortune. To get you started, this section
+introduces some of the issues involved in implementing a network
+application on top of the Internet. Typically, such programs are
+simultaneously an application (i.e., designed to interact with users)
+and a protocol (i.e., communicates with peers across the network).</p>
+<div class="section" id="application-programming-interface-sockets">
+<h2>Application Programming Interface (Sockets)<a class="headerlink" href="#application-programming-interface-sockets" title="Permalink to this headline">¶</a></h2>
+<p>The place to start when implementing a network application is the
+interface exported by the network. Since most network protocols are in
+software (especially those high in the protocol stack), and nearly all
+computer systems implement their network protocols as part of the
+operating system, when we refer to the interface “exported by the
+network,” we are generally referring to the interface that the OS
+provides to its networking subsystem. This interface is often called the
+network <em>application programming interface</em> (API).</p>
+<p>Although each operating system is free to define its own network API
+(and most have), over time certain of these APIs have become widely
+supported; that is, they have been ported to operating systems other
+than their native system. This is what has happened with the <em>socket
+interface</em> originally provided by the Berkeley distribution of Unix,
+which is now supported in virtually all popular operating systems, and
+is the foundation of language-specific interfaces, such as the Java or
+Python socket library. We use Linux and C for all code examples in
+this book, Linux because it is open source and C because it remains
+the language of choice for network internals. (C also has the
+advantage of exposing all the low-level details, which is helpful in
+understanding the underlying ideas.)</p>
+<div class="sidebar">
+<p class="first sidebar-title">Sockets Enabled Application Explosion</p>
+<p>It is hard to overstate the importance of the Socket
+API. It defines the demarcation point between the
+applications running on top of the Internet, and the
+details of how the Internet is implemented. As a
+consequence of Sockets providing a well-defined and
+stable interface, writing Internet applications exploded
+into a multi-billion dollar industry. Starting from the
+humble beginnings of the client/server paradigm and a
+handful of simple application programs like email, file
+transfer, and remote login, everyone now has access to an
+never-ending supply of cloud applications from their
+smartphones.</p>
+<p class="last">This section lays the foundation by revisiting the
+simplicity of a client program opening a socket so it can
+exchange messages with a server program, but today a rich
+software ecosystem is layered on top of the Socket
+API. This layer includes a plethora of cloud-based tools
+that lower the barrier for implementing scalable
+applications. We return to the interplay between the
+cloud and the network in every chapter, starting with the
+<em>Perspective</em> section at the end of Chapter 1.</p>
+</div>
+<p>Before describing the socket interface, it is important to keep two
+concerns separate in your mind. Each protocol provides a certain set of
+<em>services</em>, and the API provides a <em>syntax</em> by which those services can
+be invoked on a particular computer system. The implementation is then
+responsible for mapping the tangible set of operations and objects
+defined by the API onto the abstract set of services defined by the
+protocol. If you have done a good job of defining the interface, then it
+will be possible to use the syntax of the interface to invoke the
+services of many different protocols. Such generality was certainly a
+goal of the socket interface, although it’s far from perfect.</p>
+<p>The main abstraction of the socket interface, not surprisingly, is the
+<em>socket</em>. A good way to think of a socket is as the point where a local
+application process attaches to the network. The interface defines
+operations for creating a socket, attaching the socket to the network,
+sending/receiving messages through the socket, and closing the socket.
+To simplify the discussion, we will limit ourselves to showing how
+sockets are used with&nbsp;TCP.</p>
+<p>The first step is to create a socket, which is done with the following
+operation:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">socket</span><span class="p">(</span><span class="kt">int</span> <span class="n">domain</span><span class="p">,</span> <span class="kt">int</span> <span class="n">type</span><span class="p">,</span> <span class="kt">int</span> <span class="n">protocol</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The reason that this operation takes three arguments is that the socket
+interface was designed to be general enough to support any underlying
+protocol suite. Specifically, the <code class="docutils literal notranslate"><span class="pre">domain</span></code> argument specifies the
+protocol <em>family</em> that is going to be used: <code class="docutils literal notranslate"><span class="pre">PF_INET</span></code> denotes the
+Internet family, <code class="docutils literal notranslate"><span class="pre">PF_UNIX</span></code> denotes the Unix pipe facility, and
+<code class="docutils literal notranslate"><span class="pre">PF_PACKET</span></code> denotes direct access to the network interface (i.e., it
+bypasses the TCP/IP protocol stack). The <code class="docutils literal notranslate"><span class="pre">type</span></code> argument indicates the
+semantics of the communication. <code class="docutils literal notranslate"><span class="pre">SOCK_STREAM</span></code> is used to denote a byte
+stream. <code class="docutils literal notranslate"><span class="pre">SOCK_DGRAM</span></code> is an alternative that denotes a message-oriented
+service, such as that provided by UDP. The <code class="docutils literal notranslate"><span class="pre">protocol</span></code> argument
+identifies the specific protocol that is going to be used. In our case,
+this argument is <code class="docutils literal notranslate"><span class="pre">UNSPEC</span></code> because the combination of <code class="docutils literal notranslate"><span class="pre">PF_INET</span></code> and
+<code class="docutils literal notranslate"><span class="pre">SOCK_STREAM</span></code> implies TCP. Finally, the return value from <code class="docutils literal notranslate"><span class="pre">socket</span></code>
+is a <em>handle</em> for the newly created socket—that is, an identifier by
+which we can refer to the socket in the future. It is given as an
+argument to subsequent operations on this socket.</p>
+<p>The next step depends on whether you are a client or a server. On a
+server machine, the application process performs a <em>passive</em> open—the
+server says that it is prepared to accept connections, but it does not
+actually establish a connection. The server does this by invoking the
+following three operations:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">bind</span><span class="p">(</span><span class="kt">int</span> <span class="n">socket</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="o">*</span><span class="n">address</span><span class="p">,</span> <span class="kt">int</span> <span class="n">addr_len</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">listen</span><span class="p">(</span><span class="kt">int</span> <span class="n">socket</span><span class="p">,</span> <span class="kt">int</span> <span class="n">backlog</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">accept</span><span class="p">(</span><span class="kt">int</span> <span class="n">socket</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="o">*</span><span class="n">address</span><span class="p">,</span> <span class="kt">int</span> <span class="o">*</span><span class="n">addr_len</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">bind</span></code> operation, as its name suggests, binds the newly created
+<code class="docutils literal notranslate"><span class="pre">socket</span></code> to the specified <code class="docutils literal notranslate"><span class="pre">address</span></code>. This is the network address of
+the <em>local</em> participant—the server. Note that, when used with the
+Internet protocols, <code class="docutils literal notranslate"><span class="pre">address</span></code> is a data structure that includes both
+the IP address of the server and a TCP port number. Ports are used to
+indirectly identify processes. They are a form of <em>demux keys</em>. The port
+number is usually some well-known number specific to the service being
+offered; for example, web servers commonly accept connections on port
+80.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">listen</span></code> operation then defines how many connections can be
+pending on the specified <code class="docutils literal notranslate"><span class="pre">socket</span></code>. Finally, the <code class="docutils literal notranslate"><span class="pre">accept</span></code> operation
+carries out the passive open. It is a blocking operation that does not
+return until a remote participant has established a connection, and when
+it does complete it returns a <em>new</em> socket that corresponds to this
+just-established connection, and the <code class="docutils literal notranslate"><span class="pre">address</span></code> argument contains the
+<em>remote</em> participant’s address. Note that when <code class="docutils literal notranslate"><span class="pre">accept</span></code> returns, the
+original socket that was given as an argument still exists and still
+corresponds to the passive open; it is used in future invocations of
+<code class="docutils literal notranslate"><span class="pre">accept</span></code>.</p>
+<p>On the client machine, the application process performs an <em>active</em>
+open; that is, it says who it wants to communicate with by invoking the
+following single operation:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">connect</span><span class="p">(</span><span class="kt">int</span> <span class="n">socket</span><span class="p">,</span> <span class="k">struct</span> <span class="nc">sockaddr</span> <span class="o">*</span><span class="n">address</span><span class="p">,</span> <span class="kt">int</span> <span class="n">addr_len</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>This operation does not return until TCP has successfully established a
+connection, at which time the application is free to begin sending data.
+In this case, <code class="docutils literal notranslate"><span class="pre">address</span></code> contains the remote participant’s address. In
+practice, the client usually specifies only the remote participant’s
+address and lets the system fill in the local information. Whereas a
+server usually listens for messages on a well-known port, a client
+typically does not care which port it uses for itself; the OS simply
+selects an unused one.</p>
+<p>Once a connection is established, the application processes invoke the
+following two operations to send and receive data:</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span> <span class="nf">send</span><span class="p">(</span><span class="kt">int</span> <span class="n">socket</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">message</span><span class="p">,</span> <span class="kt">int</span> <span class="n">msg_len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">recv</span><span class="p">(</span><span class="kt">int</span> <span class="n">socket</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">buffer</span><span class="p">,</span> <span class="kt">int</span> <span class="n">buf_len</span><span class="p">,</span> <span class="kt">int</span> <span class="n">flags</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>The first operation sends the given <code class="docutils literal notranslate"><span class="pre">message</span></code> over the specified
+<code class="docutils literal notranslate"><span class="pre">socket</span></code>, while the second operation receives a message from the
+specified <code class="docutils literal notranslate"><span class="pre">socket</span></code> into the given <code class="docutils literal notranslate"><span class="pre">buffer</span></code>. Both operations take a
+set of <code class="docutils literal notranslate"><span class="pre">flags</span></code> that control certain details of the operation.</p>
+</div>
+<div class="section" id="example-application">
+<h2>Example Application<a class="headerlink" href="#example-application" title="Permalink to this headline">¶</a></h2>
+<p>We now show the implementation of a simple client/server program that
+uses the socket interface to send messages over a TCP connection. The
+program also uses other Linux networking utilities, which we introduce as
+we go. Our application allows a user on one machine to type in and send
+text to a user on another machine. It is a simplified version of the
+Linux <code class="docutils literal notranslate"><span class="pre">talk</span></code> program, which is similar to the program at the core of
+instant messaging applications.</p>
+<div class="section" id="client">
+<h3>Client<a class="headerlink" href="#client" title="Permalink to this headline">¶</a></h3>
+<p>We start with the client side, which takes the name of the remote
+machine as an argument. It calls the Linux utility to translate this name
+into the remote host’s IP address. The next step is to construct the
+address data structure (<code class="docutils literal notranslate"><span class="pre">sin</span></code>) expected by the socket interface.
+Notice that this data structure specifies that we’ll be using the socket
+to connect to the Internet (<code class="docutils literal notranslate"><span class="pre">AF_INET</span></code>). In our example, we use TCP
+port 5432 as the well-known server port; this happens to be a port that
+has not been assigned to any other Internet service. The final step in
+setting up the connection is to call <code class="docutils literal notranslate"><span class="pre">socket</span></code> and <code class="docutils literal notranslate"><span class="pre">connect</span></code>. Once
+the operation returns, the connection is established and the client
+program enters its main loop, which reads text from standard input and
+sends it over the socket.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define SERVER_PORT 5432</span>
+<span class="cp">#define MAX_LINE 256</span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+  <span class="kt">FILE</span> <span class="o">*</span><span class="n">fp</span><span class="p">;</span>
+  <span class="k">struct</span> <span class="nc">hostent</span> <span class="o">*</span><span class="n">hp</span><span class="p">;</span>
+  <span class="k">struct</span> <span class="nc">sockaddr_in</span> <span class="n">sin</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="o">*</span><span class="n">host</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">MAX_LINE</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">s</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">len</span><span class="p">;</span>
+
+  <span class="k">if</span> <span class="p">(</span><span class="n">argc</span><span class="o">==</span><span class="mi">2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">host</span> <span class="o">=</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">else</span> <span class="p">{</span>
+    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;usage: simplex-talk host</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* translate host name into peer&#39;s IP address */</span>
+  <span class="n">hp</span> <span class="o">=</span> <span class="n">gethostbyname</span><span class="p">(</span><span class="n">host</span><span class="p">);</span>
+  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">hp</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">&quot;simplex-talk: unknown host: %s</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">host</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+
+  <span class="cm">/* build address data structure */</span>
+  <span class="n">bzero</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sin</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sin</span><span class="p">));</span>
+  <span class="n">sin</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
+  <span class="n">bcopy</span><span class="p">(</span><span class="n">hp</span><span class="o">-&gt;</span><span class="n">h_addr</span><span class="p">,</span> <span class="p">(</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sin</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">,</span> <span class="n">hp</span><span class="o">-&gt;</span><span class="n">h_length</span><span class="p">);</span>
+  <span class="n">sin</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">SERVER_PORT</span><span class="p">);</span>
+
+  <span class="cm">/* active open */</span>
+  <span class="k">if</span> <span class="p">((</span><span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">&quot;simplex-talk: socket&quot;</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">(</span><span class="n">connect</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="nc">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sin</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sin</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">&quot;simplex-talk: connect&quot;</span><span class="p">);</span>
+    <span class="n">close</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="cm">/* main loop: get and send lines of text */</span>
+  <span class="k">while</span> <span class="p">(</span><span class="n">fgets</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buf</span><span class="p">),</span> <span class="n">stdin</span><span class="p">))</span> <span class="p">{</span>
+    <span class="n">buf</span><span class="p">[</span><span class="n">MAX_LINE</span><span class="mi">-1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+    <span class="n">len</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">buf</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">send</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="n">len</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="server">
+<h3>Server<a class="headerlink" href="#server" title="Permalink to this headline">¶</a></h3>
+<p>The server is equally simple. It first constructs the address data
+structure by filling in its own port number (<code class="docutils literal notranslate"><span class="pre">SERVER_PORT</span></code>). By not
+specifying an IP address, the application program is willing to accept
+connections on any of the local host’s IP addresses. Next, the server
+performs the preliminary steps involved in a passive open; it creates
+the socket, binds it to the local address, and sets the maximum number
+of pending connections to be allowed. Finally, the main loop waits for a
+remote host to try to connect, and when one does, it receives and prints
+out the characters that arrive on the connection.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;sys/socket.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netinet/in.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;netdb.h&gt;</span><span class="cp"></span>
+
+<span class="cp">#define SERVER_PORT  5432</span>
+<span class="cp">#define MAX_PENDING  5</span>
+<span class="cp">#define MAX_LINE     256</span>
+
+<span class="kt">int</span>
+<span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+  <span class="k">struct</span> <span class="nc">sockaddr_in</span> <span class="n">sin</span><span class="p">;</span>
+  <span class="kt">char</span> <span class="n">buf</span><span class="p">[</span><span class="n">MAX_LINE</span><span class="p">];</span>
+  <span class="kt">int</span> <span class="n">buf_len</span><span class="p">,</span> <span class="n">addr_len</span><span class="p">;</span>
+  <span class="kt">int</span> <span class="n">s</span><span class="p">,</span> <span class="n">new_s</span><span class="p">;</span>
+
+  <span class="cm">/* build address data structure */</span>
+  <span class="n">bzero</span><span class="p">((</span><span class="kt">char</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sin</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sin</span><span class="p">));</span>
+  <span class="n">sin</span><span class="p">.</span><span class="n">sin_family</span> <span class="o">=</span> <span class="n">AF_INET</span><span class="p">;</span>
+  <span class="n">sin</span><span class="p">.</span><span class="n">sin_addr</span><span class="p">.</span><span class="n">s_addr</span> <span class="o">=</span> <span class="n">INADDR_ANY</span><span class="p">;</span>
+  <span class="n">sin</span><span class="p">.</span><span class="n">sin_port</span> <span class="o">=</span> <span class="n">htons</span><span class="p">(</span><span class="n">SERVER_PORT</span><span class="p">);</span>
+
+  <span class="cm">/* setup passive open */</span>
+  <span class="k">if</span> <span class="p">((</span><span class="n">s</span> <span class="o">=</span> <span class="n">socket</span><span class="p">(</span><span class="n">PF_INET</span><span class="p">,</span> <span class="n">SOCK_STREAM</span><span class="p">,</span> <span class="mi">0</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">&quot;simplex-talk: socket&quot;</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="k">if</span> <span class="p">((</span><span class="n">bind</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="nc">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sin</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">sin</span><span class="p">)))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">perror</span><span class="p">(</span><span class="s">&quot;simplex-talk: bind&quot;</span><span class="p">);</span>
+    <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+  <span class="p">}</span>
+  <span class="n">listen</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">MAX_PENDING</span><span class="p">);</span>
+
+ <span class="cm">/* wait for connection, then receive and print text */</span>
+  <span class="k">while</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">((</span><span class="n">new_s</span> <span class="o">=</span> <span class="n">accept</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="p">(</span><span class="k">struct</span> <span class="nc">sockaddr</span> <span class="o">*</span><span class="p">)</span><span class="o">&amp;</span><span class="n">sin</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">addr_len</span><span class="p">))</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">perror</span><span class="p">(</span><span class="s">&quot;simplex-talk: accept&quot;</span><span class="p">);</span>
+      <span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">buf_len</span> <span class="o">=</span> <span class="n">recv</span><span class="p">(</span><span class="n">new_s</span><span class="p">,</span> <span class="n">buf</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">buf</span><span class="p">),</span> <span class="mi">0</span><span class="p">))</span>
+      <span class="n">fputs</span><span class="p">(</span><span class="n">buf</span><span class="p">,</span> <span class="n">stdout</span><span class="p">);</span>
+    <span class="n">close</span><span class="p">(</span><span class="n">new_s</span><span class="p">);</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="performance.html" class="btn btn-neutral float-right" title="1.5 Performance" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="architecture.html" class="btn btn-neutral float-left" title="1.3 Architecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,610 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>8.3 Key Predistribution &mdash; Computer Networks: A Systems Approach Version 6.2-dev documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../static/bridge.ico"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../static/documentation_options.js"></script>
+        <script type="text/javascript" src="../static/jquery.js"></script>
+        <script type="text/javascript" src="../static/underscore.js"></script>
+        <script type="text/javascript" src="../static/doctools.js"></script>
+        <script type="text/javascript" src="../static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../static/css/rtd_theme_mods.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="8.4 Authentication Protocols" href="authentication.html" />
+    <link rel="prev" title="8.2 Cryptographic Building Blocks" href="crypto.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Computer Networks: A Systems Approach
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                Version 6.2-dev
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Table of Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../foreword.html">Foreword</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foreword_1e.html">Foreword to the First Edition</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../preface.html">Preface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../foundation.html">Chapter 1:  Foundation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../direct.html">Chapter 2:  Direct Links</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../internetworking.html">Chapter 3:  Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scaling.html">Chapter 4:  Advanced Internetworking</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../e2e.html">Chapter 5:  End-to-End Protocols</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../congestion.html">Chapter 6:  Congestion Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../data.html">Chapter 7: End-to-End Data</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../security.html">Chapter 8: Network Security</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="problem.html">Problem: Security Attacks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trust.html">8.1 Trust and Threats</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crypto.html">8.2 Cryptographic Building Blocks</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">8.3 Key Predistribution</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#predistribution-of-public-keys">Predistribution of Public Keys</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#certification-authorities">Certification Authorities</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#web-of-trust">Web of Trust</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#certificate-revocation">Certificate Revocation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#predistribution-of-secret-keys">Predistribution of Secret Keys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#diffie-hellman-key-exchange">Diffie-Hellman Key Exchange</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="authentication.html">8.4 Authentication Protocols</a></li>
+<li class="toctree-l2"><a class="reference internal" href="systems.html">8.5 Example Systems</a></li>
+<li class="toctree-l2"><a class="reference internal" href="trend.html">Perspective: Blockchain and a Decentralized Internet</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../applications.html">Chapter 9: Applications</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../supplements.html">Emerging Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README.html">About This Book</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Computer Networks: A Systems Approach</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../security.html">Chapter 8: Network Security</a> &raquo;</li>
+        
+      <li>8.3 Key Predistribution</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/security/key-distro.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="key-predistribution">
+<h1>8.3 Key Predistribution<a class="headerlink" href="#key-predistribution" title="Permalink to this headline">¶</a></h1>
+<p>To use ciphers and authenticators, the communicating participants need
+to know what keys to use. In the case of a secret-key cipher, how does a
+pair of participants obtain the key they share? In the case of a
+public-key cipher, how do participants know what public key belongs to a
+certain participant? The answer differs depending on whether the keys
+are short-lived <em>session keys</em> or longer-lived <em>predistributed keys</em>.</p>
+<p>A session key is a key used to secure a single, relatively short episode
+of communication: a session. Each distinct session between a pair of
+participants uses a new session key, which is always a secret key for
+speed. The participants determine what session key to use by means of a
+protocol—a session key establishment protocol. A session key
+establishment protocol needs its own security (so that, for example, an
+adversary cannot learn the new session key); that security is based on
+the longer-lived predistributed keys.</p>
+<p>There are two primary motivations for this division of labor between
+session keys and predistributed keys:</p>
+<ul class="simple">
+<li>Limiting the amount of time a key is used results in less time for
+computationally intensive attacks, less ciphertext for cryptanalysis,
+and less information exposed should the key be broken.</li>
+<li>Public key ciphers are generally superior for authentication and
+session key establishment but too slow to use for encrypting entire
+messages for confidentiality.</li>
+</ul>
+<p>This section explains how predistributed keys are distributed, and the
+next section will explain how session keys are then established. We
+henceforth use “Alice” and “Bob” to designate participants, as is common
+in the cryptography literature. Bear in mind that although we tend to
+refer to participants in anthropomorphic terms, we are more frequently
+concerned with the communication between software or hardware entities
+such as clients and servers that often have no direct relationship with
+any particular person.</p>
+<div class="section" id="predistribution-of-public-keys">
+<h2>Predistribution of Public Keys<a class="headerlink" href="#predistribution-of-public-keys" title="Permalink to this headline">¶</a></h2>
+<p>The algorithms to generate a matched pair of public and private keys are
+publicly known, and software that does it is widely available. So, if
+Alice wanted to use a public-key cipher, she could generate her own pair
+of public and private keys, keep the private key hidden, and publicize
+the public key. But, how can she publicize her public key—assert that it
+belongs to her—in such a way that other participants can be sure it
+really belongs to her? Not via email or Web, because an adversary could
+forge an equally plausible claim that key <em>x</em> belongs to Alice when <em>x</em>
+really belongs to the adversary.</p>
+<p>A complete scheme for certifying bindings between public keys and
+identities—what key belongs to whom—is called a <em>Public Key
+Infrastructure</em> (PKI). A PKI starts with the ability to verify
+identities and bind them to keys out of band. By “out of band,” we mean
+something outside the network and the computers that comprise it, such
+as in the following If Alice and Bob are individuals who know each
+other, then they could get together in the same room and Alice could
+give her public key to Bob directly, perhaps on a business card. If Bob
+is an organization, Alice the individual could present conventional
+identification, perhaps involving a photograph or fingerprints. If Alice
+and Bob are computers owned by the same company, then a system
+administrator could configure Bob with Alice’s public key.</p>
+<p>Establishing keys out of band doesn’t sound like it would scale well,
+but it suffices to bootstrap a PKI. Bob’s knowledge that Alice’s key is
+<em>x</em> can be widely, scalably disseminated using a combination of digital
+signatures and a concept of trust. For example, suppose that you have
+received Bob’s public key out of band and that you know enough about Bob
+to trust him on matters of keys and identities. Then Bob could send you
+a message asserting that Alice’s key is <em>x</em> and—since you already know
+Bob’s public key—you could authenticate the message as having come from
+Bob. (Remember that to digitally sign the statement Bob would append a
+cryptographic hash of it that has been encrypted using his private key.)
+Since you trust Bob to tell the truth, you would now know that Alice’s
+key is <em>x</em>, even though you had never met her or exchanged a single
+message with her. Using digital signatures, Bob wouldn’t even have to
+send you a message; he could simply create and publish a digitally
+signed statement that Alice’s key is <em>x</em>. Such a digitally signed
+statement of a public key binding is called a <em>public key certificate</em>,
+or simply a certificate. Bob could send Alice a copy of the certificate,
+or post it on a website. If and when someone needs to verify Alice’s
+public key, they could do so by getting a copy of the certificate,
+perhaps directly from Alice—as long as they trust Bob and know his
+public key. You can see how starting from a very small number of keys
+(in this case, just Bob’s) you could build up a large set of trusted
+keys over time. Bob in this case is playing the role often referred to
+as a <em>certification authority</em> (CA), and much of today’s Internet
+security depends on CAs. VeriSign is one well-known commercial CA. We
+return to this topic below.</p>
+<p>One of the major standards for certificates is known as X.509. This
+standard leaves a lot of details open, but specifies a basic structure.
+A certificate clearly must include:</p>
+<ul class="simple">
+<li>The identity of the entity being certified</li>
+<li>The public key of the entity being certified</li>
+<li>The identity of the signer</li>
+<li>The digital signature</li>
+<li>A digital signature algorithm identifier (which cryptographic hash
+and which cipher)</li>
+</ul>
+<p>An optional component is an expiration time for the certificate. We will
+see a particular use of this feature below.</p>
+<p>Since a certificate creates a binding between an identity and a public
+key, we should look more closely at what we mean by “identity.” For
+example, a certificate that says, “This public key belongs to John
+Smith,” may not be terribly useful if you can’t tell which of the
+thousands of John Smiths is being identified. Thus, certificates must
+use a well-defined name space for the identities being certified; for
+example, certificates are often issued for email addresses and DNS
+domains.</p>
+<p>There are different ways a PKI could formalize the notion of trust. We
+discuss the two main approaches.</p>
+<div class="section" id="certification-authorities">
+<h3>Certification Authorities<a class="headerlink" href="#certification-authorities" title="Permalink to this headline">¶</a></h3>
+<p>In this model of trust, trust is binary; you either trust someone
+completely or not at all. Together with certificates, this allows the
+building of <em>chains of trust</em>. If X certifies that a certain public key
+belongs to&nbsp;Y, and then Y goes on to certify that another public key
+belongs to&nbsp;Z, then there exists a chain of certificates from X to&nbsp;Z,
+even though X and Z may have never met. If you know X’s key—and you
+trust X and Y—then you can believe the certificate that gives Z’s key.
+In other words, all you need is a chain of certificates, all signed by
+entities you trust, as long as it leads back to an entity whose key you
+already know.</p>
+<p>A <em>certification authority</em> or <em>certificate authority</em> (CA) is an entity
+claimed (by someone) to be trustworthy for verifying identities and
+issuing public key certificates. There are commercial CAs, governmental
+CAs, and even free CAs. To use a CA, you must know its own key. You can
+learn that CA’s key, however, if you can obtain a chain of CA-signed
+certificates that starts with a CA whose key you already know. Then you
+can believe any certificate signed by that new CA.</p>
+<p>A common way to build such chains is to arrange them in a
+tree-structured hierarchy, as shown in <a class="reference internal" href="#fig-pem-tree"><span class="std std-numref">Figure 200</span></a>. If everyone has the public key of the root CA, then
+any participant can provide a chain of certificates to another
+participant and know that it will be sufficient to build a chain of
+trust for that participant.</p>
+<div class="figure align-center" id="id1">
+<span id="fig-pem-tree"></span><a class="reference internal image-reference" href="../_images/f08-06-9780123850591.png"><img alt="../_images/f08-06-9780123850591.png" src="../_images/f08-06-9780123850591.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Figure 200. </span><span class="caption-text">Tree-structured certification authority hierarchy.</span></p>
+</div>
+<p>There are some significant issues with building chains of trust. Most
+importantly, even if you are certain that you have the public key of the
+root CA, you need to be sure that every CA from the root on down is
+doing its job properly. If just one CA in the chain is willing to issue
+certificates to entities without verifying their identities, then what
+looks like a valid chain of certificates becomes meaningless. For
+example, a root CA might issue a certificate to a second-tier CA and
+thoroughly verify that the name on the certificate matches the business
+name of the CA, but that second-tier CA might be willing to sell
+certificates to anyone who asks, without verifying their identity. This
+problem gets worse the longer the chain of trust. X.509 certificates
+provide the option of restricting the set of entities that the subject
+of a certificate is, in turn, trusted to certify.</p>
+<p>There can be more than one root to a certification tree, and this is
+common in securing Web transactions today, for example. Web browsers
+such as Firefox and Internet Explorer come pre-equipped with
+certificates for a set of CAs; in effect, the browser’s producer has
+decided these CAs and their keys can be trusted. A user can also add CAs
+to those that their browser recognizes as trusted. These certificates
+are accepted by Secure Socket Layer (SSL)/Transport Layer Security
+(TLS), the protocol most often used to secure Web transactions, which we
+discuss in a later section. (If you are curious, you can poke around in
+the preferences settings for your browser and find the “view
+certificates” option to see how many CAs your browser is configured to
+trust.)</p>
+</div>
+<div class="section" id="web-of-trust">
+<h3>Web of Trust<a class="headerlink" href="#web-of-trust" title="Permalink to this headline">¶</a></h3>
+<p>An alternative model of trust is the <em>web of trust</em> exemplified by
+Pretty Good Privacy (PGP), which is further discussed in a later
+section. PGP is a security system for email, so email addresses are the
+identities to which keys are bound and by which certificates are signed.
+In keeping with PGP’s roots as protection against government intrusion,
+there are no CAs. Instead, every individual decides whom they trust and
+how much they trust them—in this model, trust is a matter of degree. In
+addition, a public key certificate can include a confidence level
+indicating how confident the signer is of the key binding claimed in the
+certificate, so a given user may have to have several certificates
+attesting to the same key binding before he is willing to trust it.</p>
+<p>For example, suppose you have a certificate for Bob provided by Alice;
+you can assign a moderate level of trust to that certificate. However,
+if you have additional certificates for Bob that were provided by C and
+D, each of whom is also moderately trustworthy, that might considerably
+increase your level of confidence that the public key you have for Bob
+is valid. In short, PGP recognizes that the problem of establishing
+trust is quite a personal matter and gives users the raw material to
+make their own decisions, rather than assuming that they are all willing
+to trust in a single hierarchical structure of CAs. To quote Phil
+Zimmerman, the developer of PGP, “PGP is for people who prefer to pack
+their own parachutes.”</p>
+<p>PGP has become quite popular in the networking community, and PGP
+key-signing parties are a regular feature of various networking events,
+such as IETF meetings. At these gatherings, an individual can</p>
+<ul class="simple">
+<li>Collect public keys from others whose identity he knows.</li>
+<li>Provide his public key to others.</li>
+<li>Get his public key signed by others, thus collecting certificates
+that will be persuasive to an increasingly large set of people.</li>
+<li>Sign the public key of other individuals, thus helping them build up
+their set of certificates that they can use to distribute their
+public keys.</li>
+<li>Collect certificates from other individuals whom he trusts enough to
+sign keys.</li>
+</ul>
+<p>Thus, over time, a user will collect a set of certificates with varying
+degrees of trust.</p>
+</div>
+<div class="section" id="certificate-revocation">
+<h3>Certificate Revocation<a class="headerlink" href="#certificate-revocation" title="Permalink to this headline">¶</a></h3>
+<p>One issue that arises with certificates is how to revoke, or undo, a
+certificate. Why is this important? Suppose that you suspect that
+someone has discovered your private key. There may be any number of
+certificates in the universe that assert that you are the owner of the
+public key corresponding to that private key. The person who discovered
+your private key thus has everything he needs to impersonate you: valid
+certificates and your private key. To solve this problem, it would be
+nice to be able to revoke the certificates that bind your old,
+compromised key to your identity, so that the impersonator will no
+longer be able to persuade other people that he is you.</p>
+<p>The basic solution to the problem is simple enough. Each CA can issue a
+<em>certificate revocation list</em> (CRL), which is a digitally signed list of
+certificates that have been revoked. The CRL is periodically updated and
+made publicly available. Because it is digitally signed, it can just be
+posted on a website. Now, when Alice receives a certificate for Bob that
+she wants to verify, she will first consult the latest CRL issued by the
+CA. As long as the certificate has not been revoked, it is valid. Note
+that, if all certificates have unlimited life spans, the CRL would
+always be getting longer, since you could never take a certificate off
+the CRL for fear that some copy of the revoked certificate might be
+used. For this reason, it is common to attach an expiration date to a
+certificate when it is issued. Thus, we can limit the length of time
+that a revoked certificate needs to stay on a CRL. As soon as its
+original expiration date is passed, it can be removed from the&nbsp;CRL.</p>
+</div>
+</div>
+<div class="section" id="predistribution-of-secret-keys">
+<h2>Predistribution of Secret Keys<a class="headerlink" href="#predistribution-of-secret-keys" title="Permalink to this headline">¶</a></h2>
+<p>If Alice wants to use a secret-key cipher to communicate with Bob, she
+can’t just pick a key and send it to him because, without already having
+a key, they can’t encrypt this key to keep it confidential and they
+can’t authenticate each other. As with public keys, some predistribution
+scheme is needed. Predistribution is harder for secret keys than for
+public keys for two obvious reasons:</p>
+<ul class="simple">
+<li>While only one public key per entity is sufficient for authentication
+and confidentiality, there must be a secret key for each pair of
+entities who wish to communicate. If there are N entities, that means
+N(N-1)/2 keys.</li>
+<li>Unlike public keys, secret keys must be kept secret.</li>
+</ul>
+<p>In summary, there are a lot more keys to distribute, and you can’t use
+certificates that everyone can read.</p>
+<p>The most common solution is to use a <em>Key Distribution Center</em> (KDC). A
+KDC is a trusted entity that shares a secret key with each other entity.
+This brings the number of keys down to a more manageable N-1, few enough
+to establish out of band for some applications. When Alice wishes to
+communicate with Bob, that communication does not travel via the KDC.
+Rather, the KDC participates in a protocol that authenticates Alice and
+Bob—using the keys that the KDC already shares with each of them—and
+generates a new session key for them to use. Then Alice and Bob
+communicate directly using their session key. Kerberos is a widely used
+system based on this approach. We describe Kerberos (which also provides
+authentication) in the next section. The following subsection describes
+a powerful alternative.</p>
+</div>
+<div class="section" id="diffie-hellman-key-exchange">
+<h2>Diffie-Hellman Key Exchange<a class="headerlink" href="#diffie-hellman-key-exchange" title="Permalink to this headline">¶</a></h2>
+<p>Another approach to establishing a shared secret key is to use the
+Diffie-Hellman key exchange protocol, which works without using any
+predistributed keys. The messages exchanged between Alice and Bob can be
+read by anyone able to eavesdrop, and yet the eavesdropper won’t know
+the secret key that Alice and Bob end up with.</p>
+<p>Diffie-Hellman doesn’t authenticate the participants. Since it is rarely
+useful to communicate securely without being sure whom you’re
+communicating with, Diffie-Hellman is usually augmented in some way to
+provide authentication. One of the main uses of Diffie-Hellman is in the
+Internet Key Exchange (IKE) protocol, a central part of the IP Security
+(IPsec) architecture.</p>
+<p>The Diffie-Hellman protocol has two parameters, <em>p</em> and <em>g</em>, both of
+which are public and may be used by all the users in a particular
+system. Parameter <em>p</em> must be a prime number. The integers
+<span class="math notranslate nohighlight">\(\bmod p\)</span> (short for modulo <em>p</em>) are <span class="math notranslate nohighlight">\(0\)</span> through <em>p-1</em>,
+since <span class="math notranslate nohighlight">\(x \bmod p\)</span> is the remainder after <em>x</em> is divided by <em>p</em>,
+and form what mathematicians call a <em>group</em> under
+multiplication. Parameter <em>g</em> (usually called a generator) must be a
+<em>primitive root</em> of <em>p</em>: For every number <em>n</em> from 1 through <em>p-1</em>
+there must be some value <em>k</em> such that <span class="math notranslate nohighlight">\(n = g^k \bmod p\)</span>. For
+example, if <em>p</em> were the prime number 5 (a real system would use a
+much larger number), then we might choose 2 to be the generator <em>g</em>
+since:</p>
+<div class="math notranslate nohighlight">
+\[1 = 2^0 \bmod p\]</div>
+<div class="math notranslate nohighlight">
+\[2 = 2^1 \bmod p\]</div>
+<div class="math notranslate nohighlight">
+\[3 = 2^3 \bmod p\]</div>
+<div class="math notranslate nohighlight">
+\[4 = 2^2 \bmod p\]</div>
+<p>Suppose Alice and Bob want to agree on a shared secret key. Alice and
+Bob, and everyone else, already know the values of <em>p</em> and <em>g</em>. Alice
+generates a random private value <em>a</em> and Bob generates a random
+private value&nbsp;<em>b</em>. Both <em>a</em> and <em>b</em> are drawn from the set of
+integers <span class="math notranslate nohighlight">\(\{1,\dots{}, p-1\}\)</span>. Alice and Bob derive their
+corresponding public values—the values they will send to each other
+unencrypted—as follows. Alice’s public value is</p>
+<div class="math notranslate nohighlight">
+\[g^a \bmod p\]</div>
+<p>and Bob’s public value is</p>
+<div class="math notranslate nohighlight">
+\[g^b \bmod p\]</div>
+<p>They then exchange their public values. Finally, Alice computes</p>
+<div class="math notranslate nohighlight">
+\[g^{ab} \bmod p = (g^b \bmod p)^a \bmod p\]</div>
+<p>and Bob computes</p>
+<div class="math notranslate nohighlight">
+\[g^{ba} \bmod p = (g^a \bmod p)^b \bmod p.\]</div>
+<p>Alice and Bob now have <span class="math notranslate nohighlight">\(g^{ab} \bmod p\)</span> (which is equal to
+<span class="math notranslate nohighlight">\(g^{ba} \bmod p)\)</span> as their shared secret key.</p>
+<p>Any eavesdropper would know <em>p, g</em>, and the two public values
+<span class="math notranslate nohighlight">\(g^a \bmod p\)</span> and <span class="math notranslate nohighlight">\(g^b \bmod p\)</span>.
+If only the eavesdropper could determine <em>a</em> or <em>b</em>, she could easily
+compute the resulting key. Determining <em>a</em> or <em>b</em> from that information
+is, however, computationally infeasible for suitably large <em>p,a,</em> and
+<em>b</em>; it is known as the <em>discrete logarithm problem</em>.</p>
+<p>For example, using <em>p = 5</em> and <em>g = 2</em> from above, suppose Alice picks
+the random number <em>a = 3</em> and Bob picks the random number <em>b = 4</em>.
+Then Alice sends Bob the public value</p>
+<div class="math notranslate nohighlight">
+\[2^3 \bmod 5 = 3\]</div>
+<p>and Bob sends Alice the public value</p>
+<div class="math notranslate nohighlight">
+\[2^4 \bmod 5 = 1\]</div>
+<p>Alice is then able to compute</p>
+<div class="math notranslate nohighlight">
+\[g^{ab} \bmod p = (2^b \bmod 5)^3 \bmod 5 = (1)^3 \bmod 5 = 1\]</div>
+<p>by substituting Bob’s public value for <span class="math notranslate nohighlight">\((2^b \bmod 5)\)</span>. Similarly,
+Bob is able to compute</p>
+<div class="math notranslate nohighlight">
+\[g^{ba} \bmod p = (g^a \bmod 5)^4 \bmod 5 = (3)^4 \bmod 5 = 1.\]</div>
+<p>by substituting Alice’s public value for <span class="math notranslate nohighlight">\((2^a \bmod 5)\)</span>.
+Both Alice and Bob now agree that the secret key is <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>There is the problem of Diffie-Hellman’s lack of authentication. One
+attack that can take advantage of this is the <em>man-in-the-middle
+attack</em>. Suppose Mallory is an adversary with the ability to intercept
+messages. Mallory already knows <em>p</em> and <em>g</em> since they are public, and
+she generates random private values <span class="math notranslate nohighlight">\(c\)</span> and <span class="math notranslate nohighlight">\(d\)</span> to use
+with Alice and Bob, respectively. When Alice and Bob send their public
+values to each other, Mallory intercepts them and sends her own public
+values, as in <a class="reference internal" href="#fig-maninthemiddle"><span class="std std-numref">Figure 201</span></a>. The result is
+that Alice and Bob each end up unknowingly sharing a key with Mallory
+instead of each other.</p>
+<div class="figure align-center" id="id2">
+<span id="fig-maninthemiddle"></span><a class="reference internal image-reference" href="../_images/f08-12-9780123850591.png"><img alt="../_images/f08-12-9780123850591.png" src="../_images/f08-12-9780123850591.png" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-number">Figure 201. </span><span class="caption-text">A man-in-the-middle attack.</span></p>
+</div>
+<p>A variant of Diffie-Hellman sometimes called <em>fixed Diffie-Hellman</em>
+supports authentication of one or both participants. It relies on
+certificates that are similar to public key certificates but instead
+certify the Diffie-Hellman public parameters of an entity. For example,
+such a certificate would state that Alice’s Diffie-Hellman parameters
+are <em>p, g</em>, and <span class="math notranslate nohighlight">\(g^a \bmod p\)</span>
+(note that the value of <em>a</em> would still be known only to Alice). Such
+a certificate would assure Bob that the other participant in
+Diffie-Hellman is Alice—or else the other participant won’t be able to
+compute the secret key, because she won’t know <em>a</em>. If both participants
+have certificates for their Diffie-Hellman parameters, they can
+authenticate each other. If just one has a certificate, then just that
+one can be authenticated. This is useful in some situations; for
+example, when one participant is a web server and the other is an
+arbitrary client, the client can authenticate the web server and
+establish a secret key for confidentiality before sending a credit card
+number to the web server.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="authentication.html" class="btn btn-neutral float-right" title="8.4 Authentication Protocols" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="crypto.html" class="btn btn-neutral float-left" title="8.2 Cryptographic Building Blocks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
