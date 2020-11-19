@@ -6,6 +6,7 @@ _book/
 *.sh
 private/
 scripts/
+systemsapproach.github.io/
 _build/
 _static/
 doc_venv/
