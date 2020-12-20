@@ -1,9 +1,6 @@
 [submodule "congestion"]
 	path = congestion
 	url = https://github.com/SystemsApproach/congestion
-[submodule "security"]
-	path = security
-	url = https://github.com/SystemsApproach/security
 [submodule "applications"]
 	path = applications
 	url = https://github.com/SystemsApproach/applications
