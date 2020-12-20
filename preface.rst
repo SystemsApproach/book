@@ -167,8 +167,8 @@ helpful comments and suggestions. Their impact was significant.
 Open Source
 -----------
 
-Source for this book is available on
-https://github.com/SystemsApproach, and is available under terms of
+Source for this book is available at
+https://github.com/SystemsApproach/book, and is available under terms of
 the Creative Commons (CC BY 4.0) license. The community is invited to
 contribute corrections, improvements, updates, and new material under
 the same terms.  Like many open source software projects, this one has
@@ -185,7 +185,7 @@ should include the following information:
 |  Title: *Computer Networks: A Systems Approach*
 |  Authors: Larry Peterson and Bruce Davie
 |  Copyright: Elsevier, 2012
-|  Source: https://github.com/SystemsApproach
+|  Source: https://github.com/SystemsApproach/book
 |  License: `CC BY  4.0 <https://creativecommons.org/licenses/by/4.0>`__
 
 

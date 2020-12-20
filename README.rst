@@ -1,7 +1,7 @@
 About This Book
 ===============
 
-This `site <https://github.com/SystemsApproach>`__
+This `repo <https://github.com/SystemsApproach/book>`__
 contains source text for *Computer Networks: A Systems
 Approach*, now available under terms of the `Creative Commons (CC BY
 4.0) <https://creativecommons.org/licenses/by/4.0>`__ license. The
@@ -25,7 +25,7 @@ following information:
 |  Title: *Computer Networks: A Systems Approach*
 |  Authors: Larry Peterson and Bruce Davie
 |  Copyright: Elsevier, 2012
-|  Source: https://github.com/SystemsApproach
+|  Source: https://github.com/SystemsApproach/book
 |  License: `CC BY  4.0 <https://creativecommons.org/licenses/by/4.0>`__
 
 Read the Book
@@ -71,12 +71,6 @@ are also generated with every minor release.
 Build the Book
 --------------
 
-The source content is organized as a git repository per chapter, each of
-which focuses on a major networking topic (e.g., *Internetworking*,
-*Congestion Control*). A “root” repo (`this
-one <https://github.com/SystemsApproach/book>`__) contains the
-top-level files needed to assemble a full book.
-
 To build a web-viewable version, you first need to download the source:
 
 .. code:: shell
@@ -85,16 +79,12 @@ To build a web-viewable version, you first need to download the source:
    cd ~/systemsapproach
    git clone https://github.com/systemsapproach/book.git
    cd book
-   git submodule init
-   git submodule update
 
 The build process is stored in the ``Makefile`` and requires Python be 
 installed. The ``Makefile`` will create a virtualenv (``doc_venv``) which 
 installs the documentation generation toolset. 
 
 To generate HTML in ``_build/html``,  run ``make html``.
-
-To get a live reload in your browser (refreshes on file save), run ``make reload``.
 
 To check the formatting of the book, run ``make lint``.
 
