@@ -138,7 +138,9 @@ contributions and bug fixes:
    -  Andy Bavier
    -  Manuel Berfelde
    -  Brian Bohe
+   -  John Craton      
    -  Peter DeLong
+   -  Aaron Gember-Jacobson
    -  Chris Goldsworthy
    -  John Hartman
    -  Ethan Lam
