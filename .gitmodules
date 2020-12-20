@@ -1,6 +1,3 @@
-[submodule "scaling"]
-	path = scaling
-	url = https://github.com/SystemsApproach/scaling
 [submodule "e2e"]
 	path = e2e
 	url = https://github.com/SystemsApproach/e2e
