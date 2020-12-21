@@ -57,16 +57,14 @@ In general, ``master`` contains a coherent and internally consistent
 version of the material. (If it were code, the book would build and
 run.) New content under development is checked into branches until it
 can be merged into ``master`` without breaking self-consistency. The web
-version of the book available at https://book.systemsapproach.org is
-periodically generated from ``master``, and corresponds to a typical
-maintenance release, although we do not bother to tag it as such (e.g.,
-6.0.1).
+version of the book available at https://book.systemsapproach.org is then
+continuously generated from ``master``, corresponding to a typical
+maintenance release (although we do not bother to tag it as such).
 
 Minor releases (e.g., v6.1) are tagged whenever there is sufficient new
 content to justify the effort. This happens quarterly, give-or-take, and
 is primarily to create a snapshot so that everyone in a course can know
-they are using the same version. The off-line formats (e.g., pdf, epub)
-are also generated with every minor release.
+they are using the same version. 
 
 Build the Book
 --------------
