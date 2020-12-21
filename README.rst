@@ -101,7 +101,7 @@ into GitHub.
 
 If you do want to contribute either patches or new material, you will
 need to sign a `Contributor Licensing Agreement
-(CLA) <https://github.com/SystemsApproach/book/blob/master/CLA.md>`__.
+(CLA) <https://github.com/SystemsApproach/book/blob/master/CLA.rst>`__.
 You’ll be prompted to sign the CLA the first time you make a pull
 request.
 
