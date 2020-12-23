@@ -276,19 +276,20 @@ high-bandwidth flows.
 .. _key-red:
 .. admonition:: Key Takeaway
 
-   Note that a fair amount of analysis has gone into setting the various
-   RED parameters—for example, and ``Weight``—all in the name of
+   Note that a fair amount of analysis has gone into setting the
+   various RED parameters—for example, ``MaxThreshold``,
+   ``MinThreshold``, ``MaxP`` and ``Weight``—all in the name of
    optimizing the power function (throughput-to-delay ratio). The
    performance of these parameters has also been confirmed through
    simulation, and the algorithm has been shown not to be overly
-   sensitive to them. It is important to keep in mind, however, that all
-   of this analysis and simulation hinges on a particular
+   sensitive to them. It is important to keep in mind, however, that
+   all of this analysis and simulation hinges on a particular
    characterization of the network workload. The real contribution of
-   RED is a mechanism by which the router can more accurately manage its
-   queue length. Defining precisely what constitutes an optimal queue
-   length depends on the traffic mix and is still a subject of research,
-   with real information now being gathered from operational deployment
-   of RED in the Internet. :ref:`[Next] <key-layering>`
+   RED is a mechanism by which the router can more accurately manage
+   its queue length. Defining precisely what constitutes an optimal
+   queue length depends on the traffic mix and is still a subject of
+   research, with real information now being gathered from operational
+   deployment of RED in the Internet. :ref:`[Next] <key-layering>`
 
 Consider the setting of the two thresholds, ``MinThreshold`` and
 ``MaxThreshold``. If the traffic is fairly bursty, then ``MinThreshold``
