@@ -374,7 +374,7 @@ These questions are still unanswered.
    possible to build a virtual network from abstract (logical) resources
    on top of a physical network constructed from physical resources.
    Moreover, it is possible to stack these virtualized networks on top
-   of each other and for multiple virtual network to coexist at the same
+   of each other and for multiple virtual networks to coexist at the same
    level. Each virtual network, in turn, provides new capabilities that
    are of value to some set of users, applications, or higher-level
    networks. :ref:`[Next] <key-nested>`
