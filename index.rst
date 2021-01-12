@@ -2,9 +2,17 @@
    :width: 300px
    :align: center
    :target: https://systemsapproach.org		   
+	    
+|
 
 Computer Networks: A Systems Approach
 ======================================
+
+Larry Peterson and Bruce Davie
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+|
+
 
 .. toctree::
    :maxdepth: 2
