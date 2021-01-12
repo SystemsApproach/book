@@ -146,9 +146,9 @@ applications that can be built on top of the Internet and hint at the
 complexity of the Internet’s design. Later in the book we will develop a
 more complete taxonomy of application types to help guide our discussion
 of key design decisions as we seek to build, operate, and use networks
-that such a wide range of applications. The book concludes by revisiting
-these two specific applications, as well as several others that
-illustrate the breadth of what is possible on today’s Internet.
+that support such a wide range of applications. The book concludes by 
+revisiting these two specific applications, as well as several others
+that illustrate the breadth of what is possible on today’s Internet.
 
 For now, this quick look at a few typical applications will suffice to
 enable us to start looking at the problems that must be addressed if we
