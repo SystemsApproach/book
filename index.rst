@@ -1,4 +1,4 @@
-.. image:: bridge.jpg
+.. image:: SystemsApproachLogowURL.png
    :width: 300px
    :align: center
    :target: https://systemsapproach.org		   

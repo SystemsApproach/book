@@ -24,6 +24,14 @@
   white-space: normal;
 }
 
+/* Colors for navigation */
+
+.wy-side-nav-search, .wy-nav-top {
+    background: #2F5597;
+}
+
+.wy-menu-vertical header,.wy-menu-vertical p.caption{color:#2F5597}
+
 /* Headings */
 h1, h2 {
   margin-bottom: .5rem;
