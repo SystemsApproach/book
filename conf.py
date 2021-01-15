@@ -125,9 +125,9 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {
-  'analytics_id': 'G-9C6ZHKMTSM'
-}
+#html_theme_options = {
+#  'analytics_id': 'G-9C6ZHKMTSM'
+#}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -253,6 +253,14 @@ todo_include_todos = True
 import recommonmark
 from recommonmark.transform import AutoStructify
 
+GA_INVOKE_JS = """
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8NK2HCPFQ5');
+"""
+
 def setup(app):
 
     app.add_css_file('css/rtd_theme_mods.css')
@@ -262,3 +270,6 @@ def setup(app):
             }, True)
 
     app.add_transform(AutoStructify)
+
+    app.add_js_file('https://www.googletagmanager.com/gtag/js?id=G-8NK2HCPFQ5')
+    app.add_js_file(None, body=GA_INVOKE_JS)
