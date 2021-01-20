@@ -338,6 +338,16 @@ with the stated properties:
 
 - Any odd number of errors, as long as :math:`C(x)` contains the factor :math:`(x + 1)`
 
+- Any “burst” error (i.e., sequence of consecutive errored bits) for
+  which the length of the burst is less than :math:`k` bits (Most burst
+  errors of length greater than :math:`k` bits can also be detected.)
+
+Six versions of :math:`C(x)` are widely used in link-level protocols. For
+example, Ethernet uses CRC-32, which is defined as follows:
+
+-  CRC-32 = :math:`x^{32} + x^{26} + x^{23} + x^{22} + x^{16} +
+   x^{12} + x^{11} + x^{10} + x^8 + x^7 + x^5 + x^4 + x^2 + x + 1`
+
 We have mentioned that it is possible to use codes that not only detect
 the presence of errors but also enable errors to be corrected. Since the
 details of such codes require yet more complex mathematics than that
@@ -364,16 +374,6 @@ as *forward error correction* (FEC) because the correction of errors is
 handled “in advance” by sending extra information, rather than waiting
 for errors to happen and dealing with them later by retransmission. FEC
 is commonly used in wireless networks such as 802.11.
-
--  Any “burst” error (i.e., sequence of consecutive errored bits) for
-   which the length of the burst is less than :math:`k` bits (Most burst
-   errors of length greater than :math:`k` bits can also be detected.)
-
-Six versions of :math:`C(x)` are widely used in link-level protocols. For
-example, Ethernet uses CRC-32, which is defined as follows:
-
--  CRC-32 = :math:`x^{32} + x^{26} + x^{23} + x^{22} + x^{16} +
-   x^{12} + x^{11} + x^{10} + x^8 + x^7 + x^5 + x^4 + x^2 + x + 1`
 
 Finally, we note that the CRC algorithm, while seemingly complex, is
 easily implemented in hardware using a :math:`k`\ -bit shift register
