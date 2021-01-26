@@ -1,4 +1,4 @@
-.. image:: SystemsApproachLogowURL.png
+.. image:: SystemsApproachLogoURL.png
    :width: 300px
    :align: center
    :target: https://systemsapproach.org		   
