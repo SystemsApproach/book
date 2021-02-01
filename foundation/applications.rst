@@ -55,13 +55,13 @@ that can be viewed from your web browser. For example,
 
 .. code-block:: html
 
-   http://www.cs.princeton.edu/llp/index.html
+   http://www.cs.princeton.edu/~llp/index.html
 
 is the URL for a page providing information about one of this book’s
 authors: the string ``http`` indicates that the Hypertext Transfer
 Protocol (HTTP) should be used to download the page,
 ``www.cs.princeton.edu`` is the name of the machine that serves the
-page, and ``/llp/index.html`` uniquely identifies Larry’s home page at
+page, and ``/~llp/index.html`` uniquely identifies Larry’s home page at
 this site.
 
 What most web users are not aware of, however, is that by clicking on
