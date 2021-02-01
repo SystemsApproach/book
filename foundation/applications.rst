@@ -140,15 +140,15 @@ all problems that network and protocol designers have to worry
 about. We’ll look at these and many other issues related to multimedia
 applications later in the book.
 
-Although they are just two examples, downloading pages from the web and
-participating in a videoconference demonstrate the diversity of
+Although they are just two examples, downloading pages from the web
+and participating in a videoconference demonstrate the diversity of
 applications that can be built on top of the Internet and hint at the
-complexity of the Internet’s design. Later in the book we will develop a
-more complete taxonomy of application types to help guide our discussion
-of key design decisions as we seek to build, operate, and use networks
-that such a wide range of applications. The book concludes by revisiting
-these two specific applications, as well as several others that
-illustrate the breadth of what is possible on today’s Internet.
+complexity of the Internet’s design. Later in the book we will develop
+a more complete taxonomy of application types to help guide our
+discussion of key design decisions as we seek to build, operate, and
+use networks. The book concludes by revisiting these two specific
+applications, as well as several others that illustrate the breadth of
+what is possible on today’s Internet.
 
 For now, this quick look at a few typical applications will suffice to
 enable us to start looking at the problems that must be addressed if we
