@@ -634,7 +634,7 @@ a network includes upgrading equipment as the network grows to carry
 more traffic or reach more users, troubleshooting the network when
 things go wrong or performance isn’t as desired, and adding new features
 in support of new applications. Network management has historically
-been a human-intensive aspect of networking, and while it is ulikely
+been a human-intensive aspect of networking, and while it is unlikely
 we'll get people entirely out of the loop, it is increasingly being
 addressed by automation and self-healing designs.
 
