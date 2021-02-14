@@ -198,22 +198,22 @@ things we need to explain about the mechanics of protocol layering.
 Encapsulation
 -------------
 
-Consider what happens in when one of the application programs sends a
-message to its peer by passing the message to RRP. From RRP’s
-perspective, the message it is given by the application is an
-uninterpreted string of bytes. RRP does not care that these bytes
-represent an array of integers, an email message, a digital image, or
-whatever; it is simply charged with sending them to its peer. However,
-RRP must communicate control information to its peer, instructing it how
-to handle the message when it is received. RRP does this by attaching a
-*header* to the message. Generally speaking, a header is a small data
-structure—from a few bytes to a few dozen bytes—that is used among peers
-to communicate with each other. As the name suggests, headers are
-usually attached to the front of a message. In some cases, however, this
-peer-to-peer control information is sent at the end of the message, in
-which case it is called a *trailer*. The exact format for the header
-attached by RRP is defined by its protocol specification. The rest of
-the message—that is, the data being transmitted on behalf of the
+Consider what happens in :numref:`Figure %s <fig-protgraph>` when one
+of the application programs sends a message to its peer by passing the
+message to RRP. From RRP’s perspective, the message it is given by the
+application is an uninterpreted string of bytes. RRP does not care that
+these bytes represent an array of integers, an email message, a digital
+image, or whatever; it is simply charged with sending them to its peer.
+However, RRP must communicate control information to its peer, 
+instructing it how to handle the message when it is received. RRP does
+this by attaching a *header* to the message. Generally speaking, a header
+is a small data structure—from a few bytes to a few dozen bytes—that is
+used among peers to communicate with each other. As the name suggests,
+headers are usually attached to the front of a message. In some cases,
+however, this peer-to-peer control information is sent at the end of the
+message, in which case it is called a *trailer*. The exact format for the
+header attached by RRP is defined by its protocol specification. The rest
+of the message—that is, the data being transmitted on behalf of the
 application—is called the message’s *body* or *payload*. We say that the
 application’s data is *encapsulated* in the new message created by RRP.
 
@@ -295,11 +295,12 @@ way to connect computers. Their architecture, called the *Open Systems
 Interconnection* (OSI) architecture and illustrated in :numref:`Figure
 %s <fig-osi>`, defines a partitioning of network functionality into
 seven layers, where one or more protocols implement the functionality
-assigned to a given layer. In this sense, the schematic given in is
-not a protocol graph, *per se*, but rather a *reference model* for a
-protocol graph. It is often referred to as the 7-layer model.  While
-there is no OSI-based network running today, the terminology it
-defined is still widely used, so it is still worth a cursory look.
+assigned to a given layer. In this sense, the schematic given in
+:numref:`Figure %s <fig-osi>` is not a protocol graph, *per se*, but
+rather a *reference model* for a protocol graph. It is often referred
+to as the 7-layer model.  While there is no OSI-based network running
+today, the terminology it defined is still widely used, so it is still
+worth a cursory look.
 
 .. _fig-osi:
 .. figure:: figures/f01-13-9780123850591.png
