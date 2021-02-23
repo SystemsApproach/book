@@ -44,6 +44,24 @@ edition in four main ways:
   surrounding text. Pedagogically, these takeaways correspond to the
   high-level *learning objectives* for the book.
 
+What is "A Systems Approach"?
+------------------------------
+
+The "Systems Approach" refers to the field of design and
+implementation of computer systems. The term is used commonly by
+computer science researchers and practitioners who study the issues
+that arise when building complex computing systems such as operating
+systems, networks, distributed applications, etc. The key to the
+systems approach is a "big picture" view: you need to look at how the
+components of a system interact with each other to achieve an overall
+result, rather than simply optimizing each component. In the
+networking context, that often means going beyond the traditional
+layered view to see how an issue is best tackled in a way that might
+touch several layers. The Systems Approach has a strong focus on
+real-world implementation, with the Internet being the obvious example
+of a widely-deployed, complex networking system. 
+
+
 New Material in the Sixth Edition
 ---------------------------------
   
