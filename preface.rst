@@ -57,7 +57,10 @@ components of a system interact with each other to achieve an overall
 result, rather than simply optimizing each component. In the
 networking context, that often means going beyond the traditional
 layered view to see how an issue is best tackled in a way that might
-touch several layers. The Systems Approach has a strong focus on
+touch several layers. A good example of this is congestion control,
+which touches multiple layers and affects both end systems and network
+devices. We treat congestion, a system-wide issue, in its own chapter rather than trying to
+shoehorn it into the transport layer, for example. The Systems Approach has a strong focus on
 real-world implementation, with the Internet being the obvious example
 of a widely-deployed, complex networking system. 
 
