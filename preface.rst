@@ -37,7 +37,7 @@ edition in four main ways:
   Internet’s continuous evolution, and the opportunity for innovation
   this represents.
   
-- We distil the important principles of network design in a series
+- We distill the important principles of network design in a series
   of *Key Takeaways* throughout the book. Each takeaway is a concise
   statement of either a general system design rule or a fundamental
   networking concept, drawing on the examples presented in the
@@ -76,7 +76,7 @@ More specifically, the sixth edition includes the following major changes:
 -  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes virtual network
-   ovelays, *VXLAN*, and the
+   overlays, *VXLAN*, and the
    role of overlays in the Cloud.
 -  Refactored topics across Sections 4.1 (*Global Internet*) and 4.2
    (*IP Version 6*).   
@@ -132,7 +132,7 @@ then explores TCP congestion control (6.3), and concludes with
 optional advanced material (6.4-6.5).
 
 
-Acknowledgements
+Acknowledgments
 ----------------
 
 We would like to acknowledge the following people for their help with
