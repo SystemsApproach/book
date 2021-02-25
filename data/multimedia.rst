@@ -444,7 +444,7 @@ The basic quantization equation is
 
 ::
 
-   QuantizedValue(i,j) = IntegerRound(DCT(i,j), Quantum(i,j))
+   QuantizedValue(i,j) = IntegerRound(DCT(i,j)/Quantum(i,j))
 
 where
 
