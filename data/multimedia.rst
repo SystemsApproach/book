@@ -902,7 +902,10 @@ standard for compressing audio. This standard can be used to compress
 the audio portion of a movie (in which case the MPEG standard defines
 how the compressed audio is interleaved with the compressed video in a
 single MPEG stream) or it can be used to compress stand-alone audio (for
-example, an audio CD).
+example, an audio CD). The MPEG audio compression standard is just one
+of many for audio compression, but the pivotal role it played means
+that MP3 (which stands for MPEG Layer III—see below) has become almost
+synonymous with audio compression.   
 
 To understand audio compression, we need to begin with the data.
 CD-quality audio, which is the *de facto* digital representation for
@@ -912,20 +915,25 @@ means that a stereo (2-channel) audio stream results in a bit rate of
 
 .. centered:: 2 × 44.1 × 1000 × 16 = 1.41 *Mbps*
 
-By comparison, telephone-quality voice is sampled at a rate of 8 KHz,
+By comparison, traditional telephone-quality voice is sampled at a rate of 8 KHz,
 with 8-bit samples, resulting in a bit rate of 64 kbps.
 
 Clearly, some amount of compression is going to be required to transmit
-CD-quality audio over, say, the 128-kbps capacity of an ISDN data/voice
-line pair. To make matters worse, synchronization and error correction
-overhead require that 49 bits be used to encode each 16-bit sample,
-resulting in an actual bit rate of
+CD-quality audio over a network of limited bandwidth. (Consider the
+fact that MP3 audio streaming became popular in an era when 1.5Mbps home
+Internet connections were a novelty).  To make matters
+worse, synchronization and error correction overheads inflated the
+number of bits stored on a CD by a factor of three, so if you just
+read the data from the CD and sent it over the network, you would need
+4.32 Mbps.
 
-.. centered:: 49/16 × 1.41 *Mbps*  = 4.32 *Mbps*
-
-MPEG addresses this need by defining three levels of compression, as
+Just like video, there is lots of redundancy in audio, and 
+compression takes advantage of this. The 
+MPEG standards define three levels of compression, as
 enumerated in :numref:`Table %s <tab-mp3>`. Of these, Layer III, which is more
-widely known as MP3, is the most commonly used.
+widely known as MP3, was for many years the most commonly used. In
+recent years, higher bandwidth codecs have proliferated as streaming
+audio has become the dominant way many people consume music.
 
 .. _tab-mp3:
 .. table:: MP3 Compression Rates. 
