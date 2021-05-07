@@ -1109,7 +1109,7 @@ TCP. The first is that it is possible to implement the calculation for
 ``EstimatedRTT`` and ``Deviation`` without using floating-point
 arithmetic. Instead, the whole calculation is scaled by 2\ :sup:`n`, 
 with delta selected to be 1/2\ :sup:`n`. This allows us to do integer 
-arithmetic, implementing multiplicationand division using shifts, 
+arithmetic, implementing multiplication and division using shifts, 
 thereby achieving higher performance. The resulting calculation is given 
 by the following code fragment, where n=3
 (i.e., ``delta = 1/8``). Note that ``EstimatedRTT`` and ``Deviation`` are
