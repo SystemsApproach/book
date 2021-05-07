@@ -431,7 +431,7 @@ takes advantage of.
 The final thing to notice about the diagram is the arcs that are not
 shown. Specifically, most of the states that involve sending a segment
 to the other side also schedule a timeout that eventually causes the
-segment to be present if the expected response does not happen. These
+segment to be resent if the expected response does not happen. These
 retransmissions are not depicted in the state-transition diagram. If
 after several tries the expected response does not arrive, TCP gives up
 and returns to the CLOSED state.
