@@ -956,7 +956,7 @@ RTT. Some segments will contain a single byte, while others will contain
 as many bytes as the user was able to type in one round-trip time.
 Because some applications cannot afford such a delay for each write it
 does to a TCP connection, the socket interface allows the application to
-turn off Nagel’s algorithm by setting the ``TCP_NODELAY`` option.
+turn off Nagle’s algorithm by setting the ``TCP_NODELAY`` option.
 Setting this option means that data is transmitted as soon as possible.
 
 Adaptive Retransmission
