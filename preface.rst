@@ -37,12 +37,33 @@ edition in four main ways:
   Internet’s continuous evolution, and the opportunity for innovation
   this represents.
   
-- We distil the important principles of network design in a series
+- We distill the important principles of network design in a series
   of *Key Takeaways* throughout the book. Each takeaway is a concise
   statement of either a general system design rule or a fundamental
   networking concept, drawing on the examples presented in the
   surrounding text. Pedagogically, these takeaways correspond to the
   high-level *learning objectives* for the book.
+
+What is "A Systems Approach"?
+------------------------------
+
+The "Systems Approach" refers to the field of design and
+implementation of computer systems. The term is used commonly by
+computer science researchers and practitioners who study the issues
+that arise when building complex computing systems such as operating
+systems, networks, distributed applications, etc. The key to the
+systems approach is a "big picture" view: you need to look at how the
+components of a system interact with each other to achieve an overall
+result, rather than simply optimizing each component. In the
+networking context, that often means going beyond the traditional
+layered view to see how an issue is best tackled in a way that might
+touch several layers. A good example of this is congestion control,
+which touches multiple layers and affects both end systems and network
+devices. We treat congestion, a system-wide issue, in its own chapter rather than trying to
+shoehorn it into the transport layer, for example. The Systems Approach has a strong focus on
+real-world implementation, with the Internet being the obvious example
+of a widely-deployed, complex networking system. 
+
 
 New Material in the Sixth Edition
 ---------------------------------
@@ -58,7 +79,7 @@ More specifically, the sixth edition includes the following major changes:
 -  Section 3.5 updated to include descriptions of *White-Box Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes virtual network
-   ovelays, *VXLAN*, and the
+   overlays, *VXLAN*, and the
    role of overlays in the Cloud.
 -  Refactored topics across Sections 4.1 (*Global Internet*) and 4.2
    (*IP Version 6*).   
@@ -114,7 +135,7 @@ then explores TCP congestion control (6.3), and concludes with
 optional advanced material (6.4-6.5).
 
 
-Acknowledgements
+Acknowledgments
 ----------------
 
 We would like to acknowledge the following people for their help with

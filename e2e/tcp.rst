@@ -431,7 +431,7 @@ takes advantage of.
 The final thing to notice about the diagram is the arcs that are not
 shown. Specifically, most of the states that involve sending a segment
 to the other side also schedule a timeout that eventually causes the
-segment to be present if the expected response does not happen. These
+segment to be resent if the expected response does not happen. These
 retransmissions are not depicted in the state-transition diagram. If
 after several tries the expected response does not arrive, TCP gives up
 and returns to the CLOSED state.
@@ -956,7 +956,7 @@ RTT. Some segments will contain a single byte, while others will contain
 as many bytes as the user was able to type in one round-trip time.
 Because some applications cannot afford such a delay for each write it
 does to a TCP connection, the socket interface allows the application to
-turn off Nagel’s algorithm by setting the ``TCP_NODELAY`` option.
+turn off Nagle’s algorithm by setting the ``TCP_NODELAY`` option.
 Setting this option means that data is transmitted as soon as possible.
 
 Adaptive Retransmission
@@ -1109,7 +1109,7 @@ TCP. The first is that it is possible to implement the calculation for
 ``EstimatedRTT`` and ``Deviation`` without using floating-point
 arithmetic. Instead, the whole calculation is scaled by 2\ :sup:`n`, 
 with delta selected to be 1/2\ :sup:`n`. This allows us to do integer 
-arithmetic, implementing multiplicationand division using shifts, 
+arithmetic, implementing multiplication and division using shifts, 
 thereby achieving higher performance. The resulting calculation is given 
 by the following code fragment, where n=3
 (i.e., ``delta = 1/8``). Note that ``EstimatedRTT`` and ``Deviation`` are

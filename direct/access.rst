@@ -78,7 +78,7 @@ wavelength, with each ONU periodically getting a turn to transmit.
 Because the ONUs are distributed over a fairly wide area (measured in
 kilometers) and at different distances from the OLT, it is not practical
 for them to transmit based on synchronized clocks, as in SONET. Instead,
-the ONT transmits *grants* to the individual ONUs, giving them a time
+the OLT transmits *grants* to the individual ONUs, giving them a time
 interval during which they can transmit. In other words, the single OLT
 is responsible for centrally implementing the round-robin sharing of the
 shared PON. This includes the possibility that the OLT can grant each
