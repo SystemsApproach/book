@@ -40,7 +40,7 @@ the project on
 `Facebook <https://www.facebook.com/Computer-Networks-A-Systems-Approach-110933578952503/>`__
 and `Twitter <https://twitter.com/SystemsAppr>`__. To read a running
 commentary on how the Internet is evolving, follow the `Systems Approach
-Blog <https://www.systemsapproach.org/blog>`__.
+on Substack <https://systemsapproach.substack.com>`__.
 
 Releases and Editions
 ---------------------
