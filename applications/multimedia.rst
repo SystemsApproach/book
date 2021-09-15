@@ -524,7 +524,7 @@ loss-sensitive applications.
    :width: 500px
    :align: center
 
-   Differentiated Services applied to a VOIP application. DiffServ queueing
+   Differentiated Services applied to a VOIP application. DiffServ queuing
    is applied only on the upstream link from customer router to ISP.
 
 While DiffServ is appealing for its simplicity, it is clear that it
@@ -532,8 +532,8 @@ cannot meet the needs of applications under all conditions. For example,
 suppose the upstream bandwidth in :numref:`Figure %s <fig-ds-bb>` is only
 100 kbps, and the customer attempts to place two VOIP calls, each with a
 64-kbps codec. Clearly the upstream link is now more than 100% loaded,
-which will lead to large queueing delays and lost packets. No amount of
-clever queueing in the customer’s router can fix that.
+which will lead to large queuing delays and lost packets. No amount of
+clever queuing in the customer’s router can fix that.
 
 The characteristics of many multimedia applications are such that,
 rather than try to squeeze too many calls into a too-narrow pipe, it
@@ -575,7 +575,7 @@ deal with the possibility that a particular IP phone might be making
 multiple calls at the same time and that different codec speeds might
 be used. However, this scheme will work only if no other device can
 overload the link without first talking to the gatekeeper or
-proxy. DiffServ queueing can be used to ensure that, for example, a PC
+proxy. DiffServ queuing can be used to ensure that, for example, a PC
 engaged in a file transfer doesn’t interfere with the VOIP calls. But,
 suppose some VOIP application that doesn’t first talk to the
 gatekeeper or proxy is enabled in the remote office. Such an
