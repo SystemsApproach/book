@@ -593,7 +593,7 @@ control signals.
 BBR also introduces new mechanisms to improve performance, including
 packet pacing, bandwidth probing, and RTT probing. Packet pacing spaces
 the packets based on the estimate of the available bandwidth. This
-eliminates bursts and unnecessary queueing, which results in a better
+eliminates bursts and unnecessary queuing, which results in a better
 feedback signal. BBR also periodically increases its rate, thereby
 probing the available bandwidth. Similarly, BBR periodically decreases
 its rate, thereby probing for a new minimum RTT. The RTT probing
