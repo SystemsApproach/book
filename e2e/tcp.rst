@@ -1548,7 +1548,7 @@ QUIC
 ~~~~
 
 QUIC, *Quick UDP Internet Connections*, originated at Google in 2012
-and, at the time of writing, is still undergoing standardization at
+and was the developed as a proposed standard at
 the IETF. It has already seen a moderate amount of deployment (in some
 Web browsers and quite a number of popular Web sites). The fact that
 it has been successful to this degree is in itself an interesting part
