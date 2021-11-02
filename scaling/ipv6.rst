@@ -160,7 +160,7 @@ address. An example would be
 
 ::
 
-   47CD:1234:4422:ACO2:0022:1234:A456:0124
+   47CD:1234:4422:AC02:0022:1234:A456:0124
 
 Any IPv6 address can be written using this notation. Since there are a
 few special types of IPv6 addresses, there are some special notations
