@@ -717,7 +717,7 @@ A loose source route can be thought of as a set of waypoints rather than
 a completely specified route. The loose option can be helpful to limit
 the amount of information that a source must obtain to create a source
 route. In any reasonably large network, it is likely to be hard for a
-host to get the complete path information it needs to construct correct
+host to get the complete path information it needs to construct correctly
 a strict source route to any destination. But both types of source
 routes do find application in certain scenarios, as we will see in later
 chapters.
