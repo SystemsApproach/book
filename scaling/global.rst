@@ -591,7 +591,7 @@ To see how this all works, consider the simple example network,
 representing a single AS, in :numref:`Figure %s <fig-ibgp>`. The three
 border routers, A, D, and E, speak eBGP to other autonomous systems
 and learn how to reach various prefixes. These three border routers
-communicate with other and with the interior routers B and C by
+communicate with each other and with the interior routers B and C by
 building a mesh of iBGP sessions among all the routers in the
 AS. Let’s now focus in on how router B builds up its complete view of
 how to forward packets to any prefix. Look at the top left of
