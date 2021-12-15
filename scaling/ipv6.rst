@@ -434,7 +434,7 @@ The first part turns out to be rather easy, since every host on a link
 must have a unique link-level address. For example, all hosts on an
 Ethernet have a unique 48-bit Ethernet address. This can be turned
 into a valid link-local use address by adding the appropriate prefix
-from :numref"`Table %s <fig-v6tab>` (``1111 1110 10``) followed by
+from :numref:`Table %s <tab-v6tab>` (``1111 1110 10``) followed by
 enough 0s to make up 128 bits. For some devices—for example, printers
 or hosts on a small routerless network that do not connect to any
 other networks—this address may be perfectly adequate. Those devices
