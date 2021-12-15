@@ -1638,7 +1638,7 @@ suggest, as the next two subsections also illustrate.
 
 QUIC implements fast connection establishment with encryption and
 authentication in the first RTT. It provides a connection identifier
-than persists across changes in the underlying network. It supports the
+that persists across changes in the underlying network. It supports the
 multiplexing of several streams onto a single transport connection, to
 avoid the head-of-line blocking that may arise when a single packet is
 dropped while other useful data continues to arrive. And it preserves
