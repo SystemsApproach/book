@@ -113,7 +113,7 @@ Two functions that must be performed by any RPC protocol are:
 -  Match each reply message to the corresponding request message.
 
 The first problem has some similarities to the problem of identifying
-nodes in a network, something IP addresses do, for example). One of the
+nodes in a network (something IP addresses do, for example). One of the
 design choices when identifying things is whether to make this name
 space flat or hierarchical. A flat name space would simply assign a
 unique, unstructured identifier (e.g., an integer) to each procedure,
