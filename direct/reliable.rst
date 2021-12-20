@@ -363,7 +363,7 @@ have been performed to raise the value of the semaphore above 0.
 
 For the receiving side of the protocol, the state includes the variable
 ``NFE``. This is the *next frame expected*, the frame with a sequence
-number one more that the last frame received (LFR), described earlier in
+number one more than the last frame received (LFR), described earlier in
 this section. There is also a queue that holds frames that have been
 received out of order (``recvQ``). Finally, although not shown, the
 sender and receiver sliding window sizes are defined by constants
