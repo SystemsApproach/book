@@ -155,7 +155,7 @@ subscriber-related information, and the Gateway pair processes and
 forwards packets between the RAN and the Internet (it forms the EPC’s
 *user plane*). We say “one possible configuration” because the
 cellular standards allow wide variability in how many S/PGWs a given
-MME is responsible for, making is possible for a single MME to manage
+MME is responsible for, making it possible for a single MME to manage
 mobility across a wide geographic area that is served by multiple
 Central Offices. Finally, while not explicitly spelled out in
 :numref:`Figure %s <fig-ran>`, it is sometimes the case that the ISP’s
