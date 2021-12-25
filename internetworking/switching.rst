@@ -42,7 +42,7 @@ support many hosts at full speed.
 
 .. sidebar:: Dense Wavelength Division Multiplexing
 
-   Our focus on packet-switched networks obsures the fact that,
+   Our focus on packet-switched networks obscures the fact that,
    especially in wide-area networks, the underlying physical transport
    is all-optical: there are no packets. At this layer, commercially
    available DWDM (*Dense Wavelength Division Multiplexing*) equipment
