@@ -433,7 +433,7 @@ layer is layer 3, and the link or subnet layer below IP is layer 2.
    interoperability. One example is the IANA (Internet Assigned
    Numbers Authority), which as its name impies, is responsible for
    handing out the unique identifiers needed to make the protocols
-   work. IANA, in turn, is a department within the ICANN (Internt
+   work. IANA, in turn, is a department within the ICANN (Internet
    Corporation for Assigned Names and Numbers), a non-profit
    organization that's responsible for the overall stewardship of the
    Internet.
