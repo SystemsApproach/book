@@ -25,8 +25,8 @@ Cellular access networks are anchored in these facilities.\ [#]_
        are also terminated in Telco Central Offices, but we do not
        describe this technology since it is being phased out.
 
-Passive Optical Network
------------------------
+2.8.1 Passive Optical Network
+-----------------------------
 
 PON is the technology most commonly used to deliver fiber-based
 broadband to homes and businesses. PON adopts a point-to-multipoint
@@ -91,8 +91,8 @@ bandwidths. G-PON (Gigabit-PON) is the most widely deployed today,
 supporting a bandwidth of 2.25-Gbps. XGS-PON (10 Gigabit-PON) is just
 now starting to be deployed.
 
-Cellular Network
-----------------
+2.8.2 Cellular Network
+----------------------
 
 While cellular telephone technology had its roots in analog voice
 communication, data services based on cellular standards are now the

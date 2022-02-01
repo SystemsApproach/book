@@ -48,8 +48,8 @@ There is a core set of techniques used to ensure originality and
 timeliness in authentication protocols. We describe those techniques
 before moving on to particular protocols.
 
-Originality and Timeliness Techniques
--------------------------------------
+8.4.1 Originality and Timeliness Techniques
+-------------------------------------------
 
 We have seen that authenticators alone do not enable us to detect
 messages that are not original or timely. One approach is to include a
@@ -102,8 +102,8 @@ necessary to encrypt the never before seen timestamp or nonce.
 Timestamps or nonces are used in most of the authentication protocols
 that follow.
 
-Public-Key Authentication Protocols
------------------------------------
+8.4.2 Public-Key Authentication Protocols
+-----------------------------------------
 
 In the following discussion, we assume that Alice and Bob’s public keys
 have been predistributed to each other via some means such as a PKI. We
@@ -155,8 +155,8 @@ protocol could use nonces instead.
    and likewise for Bob.
 
 
-Secret-Key Authentication Protocols
------------------------------------
+8.4.3 Secret-Key Authentication Protocols
+-----------------------------------------
 
 Only in fairly small systems is it practical to predistribute secret
 keys to every pair of entities. We focus here on larger systems, where

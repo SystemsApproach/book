@@ -80,8 +80,8 @@ greater scalability, first in a single domain and then between domains.
 Our final subsection looks at IP version 6, the invention of which was
 largely the result of scalability concerns.
 
-Routing Areas
--------------
+4.1.1 Routing Areas
+-------------------
 
 As a first example of using hierarchy to scale up the routing system,
 we’ll examine how link-state routing protocols (such as OSPF and IS-IS)
@@ -181,8 +181,8 @@ virtual link from R8 to R1 is determined by the exchange of routing
 information that takes place in area 1. This technique can help to
 improve the optimality of routing.
 
-Interdomain Routing (BGP)
--------------------------
+4.1.2 Interdomain Routing (BGP)
+-------------------------------
 
 At the beginning of this chapter, we introduced the notion that the
 Internet is organized as autonomous systems, each of which is under

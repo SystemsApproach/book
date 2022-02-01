@@ -29,8 +29,8 @@ space. Note that while we discuss framing in the context of
 point-to-point links, the problem is a fundamental one that must also be
 addressed in multiple-access networks like Ethernet and Wi-Fi.
 
-Byte-Oriented Protocols (PPP)
------------------------------
+2.3.1 Byte-Oriented Protocols (PPP)
+-----------------------------------
 
 One of the oldest approaches to framing—it has its roots in connecting
 terminals to mainframes—is to view each frame as a collection of bytes
@@ -113,8 +113,8 @@ communication over the link is possible (e.g., when each optical
 receiver detects an incoming signal from the fiber to which it
 connects).
 
-Bit-Oriented Protocols (HDLC)
------------------------------
+2.3.2 Bit-Oriented Protocols (HDLC)
+-----------------------------------
 
 Unlike byte-oriented protocols, a bit-oriented protocol is not concerned
 with byte boundaries—it simply views the frame as a collection of bits.
@@ -174,8 +174,8 @@ consider what happens if the last byte of a frame’s body is the ETX
 character.) A form of framing that ensures that all frames are the same
 size is described in the next subsection.
 
-Clock-Based Framing (SONET)
----------------------------
+2.3.3 Clock-Based Framing (SONET)
+---------------------------------
 
 A third approach to framing is exemplified by the Synchronous Optical
 Network (SONET) standard. For lack of a widely accepted generic term, we

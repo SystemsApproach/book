@@ -79,8 +79,8 @@ multicast group when it should (after a crash or other failure, for
 example), the router periodically polls the network to determine which
 groups are still of interest to the attached hosts.
 
-Multicast Addresses
--------------------
+4.3.1 Multicast Addresses
+-------------------------
 
 IP has a subrange of its address space reserved for multicast addresses.
 In IPv4, these addresses are assigned in the class D address space, and
@@ -128,8 +128,8 @@ multicast addresses to use in the first place. This is normally handled
 by out-of-band means, and there are some quite sophisticated tools to
 enable group addresses to be advertised on the Internet.
 
-Multicast Routing (DVMRP, PIM, MSDP)
-------------------------------------
+4.3.2 Multicast Routing (DVMRP, PIM, MSDP)
+------------------------------------------
 
 A router’s unicast forwarding tables indicate, for any IP address, which
 link to use to forward the unicast packet. To support multicast, a

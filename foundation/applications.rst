@@ -34,8 +34,8 @@ applications. So, before we start figuring out how to build a network,
 let’s look more closely at the types of applications that today’s
 networks support.
 
-Classes of Applications
------------------------
+1.1.1 Classes of Applications
+-----------------------------
 
 The World Wide Web is the Internet application that catapulted the
 Internet from a somewhat obscure tool used mostly by scientists and

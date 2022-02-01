@@ -17,8 +17,8 @@ invented. It is our experience that once you understand the fundamental
 ideas, any new protocol that you are confronted with will be relatively
 easy to digest.
 
-Stakeholders
-============
+1.2.1 Stakeholders
+-----------------------
 
 As we noted above, a student of networks can take several perspectives.
 When we wrote the first edition of this book, the majority of the
@@ -56,8 +56,8 @@ stakeholders into a high-level introduction to the major considerations
 that drive network design and, in doing so, identify the challenges
 addressed throughout the rest of this book.
 
-Scalable Connectivity
-=====================
+1.2.2 Scalable Connectivity
+----------------------------------
 
 Starting with the obvious, a network must provide connectivity among a
 set of computers. Sometimes it is enough to build a limited network that
@@ -228,8 +228,8 @@ addresses.
   physical), and the use of such addresses to forward messages toward
   the appropriate destination node(s). :ref:`[Next] <key-stat-mux>`
 
-Cost-Effective Resource Sharing
-===============================
+1.2.3 Cost-Effective Resource Sharing
+----------------------------------------------
 
 As stated above, this book focuses on packet-switched networks. This
 section explains the key requirement of computer
@@ -393,8 +393,8 @@ this state, it is said to be *congested*.
   the key challenges of statistical multiplexing. :ref:`[Next]
   <key-semantic-gap>`
 
-Support for Common Services
-===========================
+1.2.4 Support for Common Services
+------------------------------------------
 
 The previous discussion focused on the challenges involved in providing
 cost-effective connectivity among a group of hosts, but it is overly
@@ -457,7 +457,7 @@ rest of this section illustrates the thinking involved in defining
 useful channels.
 
 Identify Common Communication Patterns
---------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Designing abstract channels involves first understanding the
 communication needs of a representative collection of applications, then
@@ -551,7 +551,7 @@ partitioned between the packet switches and the end hosts (devices) as a
 recurring issue in network design.
 
 Reliable Message Delivery
--------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 As suggested by the examples just considered, reliable message delivery
 is one of the most important functions that a network can provide. It is
@@ -625,8 +625,8 @@ introducing a high number of bit errors.
    This is sometimes called the *semantic gap.*  :ref:`[Next]
    <key-hourglass>`
    
-Manageability
-=============
+1.2.5 Manageability
+------------------------
 
 A final requirement, which seems to be neglected or left till last all
 too often (as we do here), is that networks need to be managed. Managing

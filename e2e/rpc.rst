@@ -29,8 +29,8 @@ of transport protocol, called *Remote Procedure Call* (RPC), that more
 closely matches the needs of an application involved in a request/reply
 message exchange.
 
-RPC Fundamentals
-----------------
+5.3.1 RPC Fundamentals
+----------------------
 
 RPC is not technically a protocol—it is better thought of as a general
 mechanism for structuring distributed systems. RPC is popular because it
@@ -334,8 +334,8 @@ machine, but returns before the sender’s peer on that machine has
 actually processed and responded to it. This is sometimes called a
 *reliable datagram protocol*.
 
-RPC Implementations (SunRPC, DCE, gRPC)
----------------------------------------
+5.3.2 RPC Implementations (SunRPC, DCE, gRPC)
+---------------------------------------------
 
 We now turn our discussion to some example implementations of RPC
 protocols. These will serve to highlight some of the different design

@@ -12,8 +12,8 @@ increasingly in other forms, such as drones. In this section, we will
 look at some of the challenges posed by the appearance of mobile devices
 and some of the current approaches to accommodating them.
 
-Challenges for Mobile Networking
---------------------------------
+4.5.1 Challenges for Mobile Networking
+--------------------------------------
 
 It is easy enough today to turn up in a wireless hotspot, connect to the
 Internet using 802.11 or some other wireless networking protocol, and
@@ -119,8 +119,8 @@ mechanisms specific to 802.11, and cellular networks also have ways to
 handle mobility, of course, but in large heterogeneous systems like
 the Internet we need to support mobility more broadly across networks.
 
-Routing to Mobile Hosts (Mobile IP)
------------------------------------
+4.5.2 Routing to Mobile Hosts (Mobile IP)
+-----------------------------------------
 
 Mobile IP is the primary mechanism in today’s Internet architecture to
 tackle the problem of routing packets to mobile hosts. It introduces a

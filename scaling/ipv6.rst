@@ -15,8 +15,8 @@ more than traditional computers, including smart phones, televisions,
 household appliances, and drones. With the clarity of 20/20 hindsight,
 a 32-bit address space is quite small.
 
-Historical Perspective
-----------------------
+4.2.1 Historical Perspective
+----------------------------
 
 The IETF began looking at the problem of expanding the IP address space
 in 1991, and several alternatives were proposed. Since the IP address is
@@ -71,8 +71,8 @@ IPv4 only, some will run IPv4 and IPv6, and some will run IPv6
 only. It is doubtful they anticipated that transition period would be
 approaching its 30th anniversary.
 
-Addresses and Routing
----------------------
+4.2.2 Addresses and Routing
+---------------------------
 
 First and foremost, IPv6 provides a 128-bit address space, as opposed
 to the 32 bits of version 4. Thus, while version 4 can potentially
@@ -294,8 +294,8 @@ common is for them to have three prefixes between them: one for
 subscribers of X only, one for subscribers of Y only, and one for the
 sites that are subscribers of both X and Y.
 
-Packet Format
--------------
+4.2.3 Packet Format
+-------------------
 
 Despite the fact that IPv6 extends IPv4 in several ways, its header
 format is actually simpler. This simplicity is due to a concerted effort
@@ -385,8 +385,8 @@ in ``NextHeader`` containing the value \ ``6``, just as the
 followed by, say, an authentication header, then the fragmentation
 header’s ``NextHeader`` field would contain the value \ ``51``.
 
-Advanced Capabilities 
----------------------
+4.2.4 Advanced Capabilities 
+---------------------------
 
 As mentioned at the beginning of this section, the primary motivation 
 behind the development of IPv6 was to support the continued growth of 

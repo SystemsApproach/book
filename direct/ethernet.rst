@@ -43,8 +43,8 @@ the basis for IEEE standard 802.3, which additionally defines a much
 wider collection of physical media over which an Ethernet can operate,
 including 100-Mbps, 1-Gbps, 10-Gbps, 40-Gbps, and 100-Gbps versions.
 
-Physical Properties
--------------------
+2.6.1 Physical Properties
+-------------------------
 
 Ethernet segments were originally implemented using coaxial cable of
 length up to 500 m. (Modern Ethernets use twisted copper pairs, usually
@@ -103,8 +103,8 @@ said to be in the same *collision domain*. The multi-access part of the
 Ethernet is all about dealing with the competition for the link that
 arises in a collision domain.
 
-Access Protocol
----------------
+2.6.2 Access Protocol
+---------------------
 
 We now turn our attention to the algorithm that controls access to a
 shared Ethernet link. This algorithm is commonly called the Ethernet’s
@@ -317,8 +317,8 @@ and reports a transmit error to the host. Adaptors typically retry up to
 16 times, although the backoff algorithm caps *n* in the above formula
 at 10.
 
-Longevity of Ethernet
----------------------
+2.6.3 Longevity of Ethernet
+---------------------------
 
 Ethernet has been the dominant local area network technology for over 30
 years. Today it is typically deployed point-to-point rather than tapping

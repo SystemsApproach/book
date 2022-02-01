@@ -12,8 +12,8 @@ into protocols that provide secure communication between participants
 who possess the correct keys. A final section then examines several
 complete security protocols and systems in current use.
 
-Principles of Ciphers
----------------------
+8.2.1 Principles of Ciphers
+---------------------------
 
 Encryption transforms a message in such a way that it becomes
 unintelligible to any party that does not have the secret of how to
@@ -131,8 +131,8 @@ blocks of plaintext.
 
    Cipher Block Chaining.
 
-Secret-Key Ciphers
-------------------
+8.2.2 Secret-Key Ciphers
+------------------------
 
 In a secret-key cipher, both participants in a communication share the
 same key.\ [#]_ In other words, if a message is encrypted using a particular
@@ -204,8 +204,8 @@ small mobile devices. AES has some mathematically proven security
 properties and, as of the time of writing, has not suffered from any
 significant successful attacks.
 
-Public-Key Ciphers
-------------------
+8.2.3 Public-Key Ciphers
+------------------------
 
 An alternative to secret-key ciphers is public-key, ciphers. Instead of
 a single key shared by two participants, a public-key cipher uses a pair
@@ -302,8 +302,8 @@ slower than secret-key ciphers. Consequently, secret-key ciphers are
 used for the vast majority of encryption, while public-key ciphers are
 reserved for use in authentication and session key establishment.
 
-Authenticators
---------------
+8.2.4 Authenticators
+--------------------
 
 Encryption alone does not provide data integrity. For example, just
 randomly modifying a ciphertext message could turn it into something

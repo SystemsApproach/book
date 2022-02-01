@@ -77,8 +77,8 @@ demultiplexing function to UDP.
 
    Protocol stack for multimedia applications using RTP.
 
-Requirements
-------------
+5.4.1 Requirements
+------------------
 
 The most basic requirement for a general-purpose multimedia protocol is
 that it allows similar applications to interoperate with each other. For
@@ -179,8 +179,8 @@ putting a timestamping mechanism into RTP, we save every developer of a
 real-time application from inventing his own. We also increase the
 chances that two different real-time applications might interoperate.
 
-RTP Design
-----------
+5.4.2 RTP Design
+----------------
 
 Now that we have seen the rather long list of requirements for our
 transport protocol for multimedia, we turn to the details of the
@@ -380,8 +380,8 @@ audio stream. In this case, the mixer lists itself as the
 synchronization source but also lists the contributing sources—the SSRC
 values of the speakers who contributed to the packet in question.
 
-Control Protocol
-----------------
+5.4.3 Control Protocol
+----------------------
 
 RTCP provides a control stream that is associated with a data stream for
 a multimedia application. This control stream provides three main

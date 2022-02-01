@@ -60,8 +60,8 @@ same architecture and the program was written in the same language,
 because the compiler on the destination machine might align the fields
 in the structure differently.
 
-Taxonomy
---------
+7.1.1 Taxonomy
+---------------
 
 Although argument marshalling is not rocket science—it is a small matter
 of bit twiddling—there are a surprising number of design choices that
@@ -250,8 +250,8 @@ are more common in practice.
    Stub compiler takes interface description as input and outputs client
    and server stubs.
 
-Examples (XDR, ASN.1, NDR, ProtoBufs)
--------------------------------------
+7.1.2 Examples (XDR, ASN.1, NDR, ProtoBufs)
+-------------------------------------------
 
 We now briefly describe four popular network data representations in
 terms of this taxonomy. We use the integer base type to illustrate how
@@ -535,8 +535,8 @@ embedded message (structure) is, but it’s another ``message``
 specification in the ``.proto`` file that tells you how to interpret
 those bytes.
 
-Markup Languages (XML)
-----------------------
+7.1.3 Markup Languages (XML)
+----------------------------
 
 Although we have been discussing the presentation formatting problem
 from the perspective of RPC—that is, how does one encode primitive data

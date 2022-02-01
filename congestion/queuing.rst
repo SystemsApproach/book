@@ -12,8 +12,8 @@ This section introduces two common queuing algorithms—first-in,
 first-out (FIFO) and fair queuing (FQ)—and identifies several variations
 that have been proposed.
 
-FIFO
-----
+6.2.1 FIFO
+----------
 
 The idea of FIFO queuing, also called first-come, first-served (FCFS)
 queuing, is simple: The first packet that arrives at a router is the
@@ -89,8 +89,8 @@ by the Differentiated Services Code Point (formerly the TOS field) in
 the IP header. This is in fact a simple case of the idea of
 “Differentiated Services.”
 
-Fair Queuing
-------------
+6.2.2 Fair Queuing
+------------------
 
 The main problem with FIFO queuing is that it does not discriminate
 between different traffic sources, or, in the language introduced in the

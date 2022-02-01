@@ -41,8 +41,8 @@ intended to keep a set of senders from sending too much data *into the
 network* because of lack of resources at some point. These two concepts
 are often confused; as we will see, they also share some mechanisms.
 
-Network Model
--------------
+6.1.1 Network Model
+-------------------
 
 We begin by defining three salient features of the network architecture.
 For the most part, this is a summary of material presented in the
@@ -195,8 +195,8 @@ of QoS. One of the greatest challenges is to define a service model that
 meets the needs of a wide range of applications and even allows for the
 applications that will be invented in the future.
 
-Taxonomy
---------
+6.1.2 Taxonomy
+---------------
 
 There are countless ways in which resource allocation mechanisms differ,
 so creating a thorough taxonomy is a difficult proposition. For now, we
@@ -323,8 +323,8 @@ is natural to express such reservations in terms of rate, since windows
 are only indirectly related to how much bandwidth a user needs from the
 network. We discuss this topic in a later section.
 
-Evaluation Criteria
--------------------
+6.1.3 Evaluation Criteria
+-------------------------
 
 The final issue is one of knowing whether a resource allocation
 mechanism is good or not. Recall that in the problem statement at the

@@ -18,8 +18,8 @@ considered one of the hard problems of networking and continues to be
 the focus of much innovation. We’ll look at some of the issues and
 approaches to the problem below.
 
-Name Service (DNS)
-------------------
+9.3.1 Name Service (DNS)
+------------------------
 
 In most of this book, we have been using addresses to identify hosts.
 While perfectly suited for processing by routers, addresses are not
@@ -414,8 +414,8 @@ names before sending out a query.
    router. Frames sent over the physical network have these physical
    addresses in their headers. :ref:`[Next] <key-virtualization>`
 
-Network Management (SNMP, OpenConfig)
--------------------------------------
+9.3.2 Network Management (SNMP, OpenConfig)
+-------------------------------------------
 
 A network is a complex system, both in terms of the number of nodes that
 are involved and in terms of the suite of protocols that can be running

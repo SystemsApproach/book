@@ -12,8 +12,8 @@ global internetwork in the next chapter, but for now we’ll explore the
 basics. We start by considering more carefully what the word
 *internetwork* means.
 
-What Is an Internetwork?
-------------------------
+3.3.1 What Is an Internetwork?
+------------------------------
 
 We use the term *internetwork*, or sometimes just *internet* with a
 lowercase *i*, to refer to an arbitrary collection of networks
@@ -113,8 +113,8 @@ best case study of a scalable internetworking protocol.
    this duality, you will have cleared a major hurdle in mastering
    modern packet-switched networks.
 	     
-Service Model
--------------
+3.3.2 Service Model
+-------------------
 
 A good place to start when you build an internetwork is to define its
 *service model*, that is, the host-to-host services you want to provide.
@@ -410,8 +410,8 @@ a good thing to avoid. Hosts are now strongly encouraged to perform
 sending packets that are small enough to traverse the link with the
 smallest MTU in the path from sender to receiver.
 
-Global Addresses
-----------------
+3.3.3 Global Addresses
+----------------------
 
 In the above discussion of the IP service model, we mentioned that one
 of the things that it provides is an addressing scheme. After all, if
@@ -513,8 +513,8 @@ about IP addresses is that they are what is carried in the headers of IP
 packets, and it is those addresses that are used in IP routers to make
 forwarding decisions.
 
-Datagram Forwarding in IP
--------------------------
+3.3.4 Datagram Forwarding in IP
+-------------------------------
 
 We are now ready to look at the basic mechanism by which IP routers
 forward datagrams in an internetwork. Recall from an earlier section
@@ -689,8 +689,8 @@ by no means the last) in achieving scalability.
    datagram to any node on a given network is represented by a single
    aggregated piece of information. :ref:`[Next] <key-best-effort>`
 
-Subnetting and Classless Addressing
------------------------------------
+3.3.5 Subnetting and Classless Addressing
+-----------------------------------------
 
 The original intent of IP addresses was that the network part would
 uniquely identify exactly one physical network. It turns out that this
@@ -996,8 +996,8 @@ fruitful field of research for many years. The most well-known algorithm
 uses an approach known as a *PATRICIA tree*, which was actually
 developed well in advance of CIDR.
 
-Address Translation (ARP)
--------------------------
+3.3.6 Address Translation (ARP)
+-------------------------------
 
 In the previous section we talked about how to get IP datagrams to the
 right physical network but glossed over the issue of how to get a
@@ -1121,8 +1121,8 @@ to place on the packet to send it to R1.
    network and then delivered to the correct host on that network.
    :ref:`[Next] <key-dhcp>`
 
-Host Configuration (DHCP)
--------------------------
+3.3.7 Host Configuration (DHCP)
+-------------------------------
 
 Ethernet addresses are configured into the network adaptor by the
 manufacturer, and this process is managed in such a way to ensure that
@@ -1268,8 +1268,8 @@ addresses much more dynamic. This may make the network manager’s job
 more difficult if, for example, it becomes necessary to locate a
 malfunctioning host.
 
-Error Reporting (ICMP)
-----------------------
+3.3.8 Error Reporting (ICMP)
+----------------------------
 
 The next issue is how the Internet treats errors. While IP is perfectly
 willing to drop datagrams when the going gets tough—for example, when a
@@ -1304,8 +1304,8 @@ slightly non-intuitive technique to determine the set of routers along
 the path to a destination, which is the topic for one of the exercises
 at the end of this chapter.
 
-Virtual Networks and Tunnels
-----------------------------
+3.3.9 Virtual Networks and Tunnels
+----------------------------------
 
 We conclude our introduction to IP by considering an issue you might
 not have anticipated, but one that is increasingly important. Our

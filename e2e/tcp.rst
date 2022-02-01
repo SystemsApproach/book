@@ -39,8 +39,8 @@ causing switches or links to become overloaded. Thus, flow control is an
 end-to-end issue, while congestion control is concerned with how hosts
 and networks interact.
 
-End-to-End Issues
------------------
+5.2.1 End-to-End Issues
+-----------------------
 
 At the heart of TCP is the sliding window algorithm. Even though this is
 the same basic algorithm as is often used at the link level, because TCP
@@ -173,8 +173,8 @@ the system also implement that functionality.
    packet across one hop is preferable to having to retransmit an entire
    file end-to-end.  :ref:`[Next] <key-dumb-receiver>`
 
-Segment Format
---------------
+5.2.2 Segment Format
+--------------------
 
 TCP is a byte-oriented protocol, which means that the sender writes
 bytes into a TCP connection and the receiver reads bytes out of the
@@ -280,8 +280,8 @@ length (options can be attached after the mandatory fields), a
 measures the offset from the start of the packet to the start of the
 data.
 
-Connection Establishment and Termination
-----------------------------------------
+5.2.3 Connection Establishment and Termination
+------------------------------------------------
 
 A TCP connection begins with a client (caller) doing an active open to a
 server (callee). Assuming that the server had earlier done a passive
@@ -474,8 +474,8 @@ numbers), and the delayed FIN segment from the earlier incarnation of
 the connection would immediately initiate the termination of the later
 incarnation of that connection.
 
-Sliding Window Revisited
-------------------------
+5.2.4 Sliding Window Revisited
+------------------------------
 
 We are now ready to discuss TCP’s variant of the sliding window
 algorithm, which serves several purposes: (1) it guarantees the reliable
@@ -821,8 +821,8 @@ allows us to advertise a window of only 64 KB. The very same TCP
 extension mentioned above provides a mechanism for effectively
 increasing the size of the advertised window.
 
-Triggering Transmission
------------------------
+5.2.5 Triggering Transmission
+-----------------------------
 
 We next consider a surprisingly subtle issue: how TCP decides to
 transmit a segment. As described earlier, TCP supports a byte-stream
@@ -959,8 +959,8 @@ does to a TCP connection, the socket interface allows the application to
 turn off Nagle’s algorithm by setting the ``TCP_NODELAY`` option.
 Setting this option means that data is transmitted as soon as possible.
 
-Adaptive Retransmission
------------------------
+5.2.6 Adaptive Retransmission
+-----------------------------
 
 Because TCP guarantees the reliable delivery of data, it retransmits
 each segment if an ACK is not received in a certain period of time. TCP
@@ -1173,8 +1173,8 @@ section.
    seeing open source software grow in importance as open standards
    receed in importance. :ref:`[Next] <key-micro-service>`
 
-Record Boundaries
------------------
+5.2.7 Record Boundaries
+-----------------------
 
 Since TCP is a byte-stream protocol, the number of bytes written by the
 sender are not necessarily the same as the number of bytes read by the
@@ -1228,8 +1228,8 @@ boundaries without any assistance from TCP. For example, it can send a
 field that indicates the length of a record that is to follow, or it can
 insert its own record boundary markers into the data stream.
 
-TCP Extensions
---------------
+5.2.8 TCP Extensions
+--------------------
 
 We have mentioned at four different points in this section that there
 are now extensions to TCP that help to mitigate some problem that TCP
@@ -1321,8 +1321,8 @@ of all the options that are defined for TCP (and for many other Internet
 protocols). See the references at the end of the chapter for a link to
 IANA’s protocol number registry.
 
-Performance
------------
+5.2.9 Performance
+-----------------
 
 Recall that Chapter 1 introduced the two quantitative metrics by which
 network performance is evaluated: latency and throughput. As mentioned
@@ -1429,8 +1429,8 @@ well as network speeds increase, and when it runs up against some limit
 both), researchers rush in to find solutions. We’ve seen some of those
 in this chapter, and we’ll see some more in the next.
 
-Alternative Design Choices (SCTP, QUIC)
----------------------------------------
+5.2.10 Alternative Design Choices (SCTP, QUIC)
+------------------------------------------------
 
 Although TCP has proven to be a robust protocol that satisfies the needs
 of a wide range of applications, the design space for transport

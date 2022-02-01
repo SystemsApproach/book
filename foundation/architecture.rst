@@ -20,8 +20,8 @@ central ideas that are common to all network architectures. It also
 introduces two of the most widely referenced architectures—the OSI (or
 7-layer) architecture and the Internet architecture.
 
-Layering and Protocols
-----------------------
+1.3.1 Layering and Protocols
+----------------------------
 
 Abstraction—the hiding of implementation details behind a well-defined
 interface—is the fundamental tool used by system designers to manage
@@ -195,8 +195,8 @@ in their respective architectures. We briefly describe the architectures
 defined by the IETF and ISO shortly, but first there are two additional
 things we need to explain about the mechanics of protocol layering.
 
-Encapsulation
--------------
+1.3.2 Encapsulation
+-------------------
 
 Consider what happens in :numref:`Figure %s <fig-protgraph>` when one
 of the application programs sends a message to its peer by passing the
@@ -253,8 +253,8 @@ entire body of the message, including both the original application’s
 data and all the headers attached to that data by higher-level
 protocols.
 
-Multiplexing and Demultiplexing
--------------------------------
+1.3.3 Multiplexing and Demultiplexing
+-------------------------------------
 
 Recall that a fundamental idea of packet switching is to multiplex
 multiple flows of data over a single physical link. This same idea
@@ -287,8 +287,8 @@ latter case each side uses a different key to identify the high-level
 protocol (or application program) to which the message is to be
 delivered.
 
-7-Layer OSI Model
------------------
+1.3.4 OSI Model
+---------------
 
 The ISO was one of the first organizations to formally define a common
 way to connect computers. Their architecture, called the *Open Systems
@@ -341,8 +341,8 @@ streams that are part of a single application. For example, it might
 manage an audio stream and a video stream that are being combined in a
 teleconferencing application.
 
-Internet Architecture
----------------------
+1.3.5 Internet Architecture
+---------------------------
 
 The Internet architecture, which is also sometimes called the TCP/IP
 architecture after its two main protocols, is depicted in

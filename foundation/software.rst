@@ -45,8 +45,8 @@ application on top of the Internet. Typically, such programs are
 simultaneously an application (i.e., designed to interact with users)
 and a protocol (i.e., communicates with peers across the network).
 
-Application Programming Interface (Sockets)
--------------------------------------------
+1.4.1 Socket API
+-----------------
 
 The place to start when implementing a network application is the
 interface exported by the network. Since most network protocols are in
@@ -201,8 +201,8 @@ The first operation sends the given ``message`` over the specified
 specified ``socket`` into the given ``buffer``. Both operations take a
 set of ``flags`` that control certain details of the operation.
 
-Example Application
--------------------
+1.4.2 Example Client/Server
+---------------------------
 
 We now show the implementation of a simple client/server program that
 uses the socket interface to send messages over a TCP connection. The

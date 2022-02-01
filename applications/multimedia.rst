@@ -39,8 +39,8 @@ are examples of protocols that address the issues of session control; we
 begin our discussion of multimedia applications by examining these
 protocols.
 
-Session Control and Call Control (SDP, SIP, H.323)
---------------------------------------------------
+9.2.1 Session Control and Call Control (SDP, SIP, H.323)
+--------------------------------------------------------
 
 To understand some of the issues of session control, consider the
 following problem. Suppose you want to hold a videoconference at a
@@ -456,8 +456,8 @@ Once this is accomplished, the call can proceed, with RTP being used to
 transport the media streams and RTCP carrying the relevant control
 information.
 
-Resource Allocation for Multimedia Applications
------------------------------------------------
+9.2.2 Resource Allocation for Multimedia Applications
+-----------------------------------------------------
 
 As we have just seen, session control protocols like SIP and H.323 can
 be used to initiate and control communication in multimedia

@@ -68,8 +68,8 @@ might be an experimental 128-bit address. In fact, the overlay need
 not use conventional addresses at all but may route based on URLs,
 domain names, an XML query, or even the content of the packet.
 
-Routing Overlays
-----------------
+9.4.1 Routing Overlays
+----------------------
 
 The simplest kind of overlay is one that exists purely to support an
 alternative routing strategy; no additional application-level processing
@@ -379,8 +379,8 @@ These questions are still unanswered.
    are of value to some set of users, applications, or higher-level
    networks. :ref:`[Next] <key-nested>`
 
-Peer-to-Peer Networks
----------------------
+9.4.2 Peer-to-Peer Networks
+---------------------------
 
 Music-sharing applications like Napster and KaZaA introduced the term
 “peer-to-peer” into the popular vernacular. But what exactly does it
@@ -899,8 +899,8 @@ limit the number of its active BitTorrent connections, to maintain good
 TCP performance. There are many possible choking algorithms, and
 devising a good one is an art.
 
-Content Distribution Networks
------------------------------
+9.4.3 Content Distribution Networks
+-----------------------------------
 
 We have already seen how HTTP running over TCP allows web browsers to
 retrieve pages from web servers. However, anyone who has waited an

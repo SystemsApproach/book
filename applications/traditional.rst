@@ -64,8 +64,8 @@ architecture, with general RPC mechanisms built *on top of HTTP* rather
 than the other way around. More on this topic at the end of this
 section.
 
-Electronic Mail (SMTP, MIME, IMAP)
-----------------------------------
+9.1.1 Electronic Mail (SMTP, MIME, IMAP)
+----------------------------------------
 
 Email is one of the oldest network applications. After all, what could
 be more natural than wanting to send a message to the user at the other
@@ -412,8 +412,8 @@ the mail server using IMAP, but it instead uses SMTP. This means that
 the user’s mail server is effectively the first mail gateway traversed
 along the path from the desktop to the recipient’s mailbox.
 
-World Wide Web (HTTP)
----------------------
+9.1.2 World Wide Web (HTTP)
+---------------------------
 
 The World Wide Web has been so successful and has made the Internet
 accessible to so many people that sometimes it seems to be synonymous
@@ -823,8 +823,8 @@ whether or not a document can be cached, how long it can be cached, how
 fresh a document must be, and so on. We’ll look at the related issue of
 CDNs—which are effectively distributed caches—in a later section.
 
-Web Services
-------------
+9.1.3 Web Services
+------------------
 
 So far we have focused on interactions between a human and a web server.
 For example, a human uses a web browser to interact with a server, and

@@ -83,8 +83,8 @@ we urge you to use the word *checksum* only to apply to codes that
 actually do use addition and to use *error-detecting code* to refer to
 the general class of codes described in this section.
 
-Internet Checksum Algorithm
----------------------------
+2.4.1 Internet Checksum Algorithm
+---------------------------------
 
 Our first approach to error detection is exemplified by the Internet
 checksum. Although it is not used at the link level, it nevertheless
@@ -162,8 +162,8 @@ last line of defense in an end-to-end protocol. The majority of errors
 are picked up by stronger error detection algorithms, such as CRCs, at
 the link level.
 
-Cyclic Redundancy Check
------------------------
+2.4.2 Cyclic Redundancy Check
+-----------------------------
 
 It should be clear by now that a major goal in designing error detection
 algorithms is to maximize the probability of detecting errors using only

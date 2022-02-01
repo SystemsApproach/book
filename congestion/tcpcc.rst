@@ -40,8 +40,8 @@ variants of TCP congestion control in use today, and researchers
 continue to explore new approaches to addressing this problem. Some of
 these new approaches are discussed below.
 
-Additive Increase/Multiplicative Decrease
------------------------------------------
+6.3.1 Additive Increase/Multiplicative Decrease
+-----------------------------------------------
 
 TCP maintains a new state variable for each connection, called
 ``CongestionWindow``, which is used by the source to limit how much data
@@ -166,8 +166,8 @@ to the cost of measuring each transmission with an accurate clock, TCP
 only samples the round-trip time once per RTT (rather than once per
 packet) using a coarse-grained (500-ms) clock.
 
-Slow Start
-----------
+6.3.2 Slow Start
+----------------
 
 The additive increase mechanism just described is the right approach to
 use when the source is operating close to the available capacity of the
@@ -377,8 +377,8 @@ could be a long time before these types of enhancements could make it
 into the Internet; for now, they are more likely to be used in
 controlled network environments (e.g., research networks).
 
-Fast Retransmit and Fast Recovery
----------------------------------
+6.3.3 Fast Retransmit and Fast Recovery
+---------------------------------------
 
 The mechanisms described so far were part of the original proposal to
 add congestion control to TCP. It was soon discovered, however, that the
@@ -470,8 +470,8 @@ coarse-grained timeout occurs. At all other times, the congestion
 window is following a pure additive increase/multiplicative decrease
 pattern.
 
-TCP CUBIC
----------
+6.3.4 TCP CUBIC
+---------------
 
 A variant of the standard TCP algorithm just described, called CUBIC, is
 the default congestion control algorithm distributed with Linux. CUBIC’s

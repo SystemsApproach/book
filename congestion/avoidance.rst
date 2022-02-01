@@ -23,8 +23,8 @@ approach attempts to avoid congestion purely from the end hosts. This
 approach is implemented in TCP, making it variant of the congestion
 control mechanisms described in the previous section.
 
-Active Queue Management (DECbit, RED, ECN)
-------------------------------------------
+6.4.1 Active Queue Management (DECbit, RED, ECN)
+------------------------------------------------
 
 The first approach requires changes to routers, which has never been the
 Internet’s preferred way of introducing new features, but nonetheless,
@@ -378,8 +378,8 @@ where the TCP congestion control algorithm and AQM algorithm are
 designed to work in concert: the datacenter. We return to this use case
 at the end of this section.
 
-Source-Based Approaches (Vegas, BBR, DCTCP)
--------------------------------------------
+6.4.2 Source-Based Approaches (Vegas, BBR, DCTCP)
+-------------------------------------------------
 
 Unlike the previous congestion-avoidance schemes, which depended on
 cooperation from routers, we now describe a strategy for detecting the

@@ -37,8 +37,8 @@ concerned with the communication between software or hardware entities
 such as clients and servers that often have no direct relationship with
 any particular person.
 
-Predistribution of Public Keys
-------------------------------
+8.3.1 Predistribution of Public Keys
+------------------------------------
 
 The algorithms to generate a matched pair of public and private keys are
 publicly known, and software that does it is widely available. So, if
@@ -260,8 +260,8 @@ certificate when it is issued. Thus, we can limit the length of time
 that a revoked certificate needs to stay on a CRL. As soon as its
 original expiration date is passed, it can be removed from the CRL.
 
-Predistribution of Secret Keys
-------------------------------
+8.3.2 Predistribution of Secret Keys
+------------------------------------
 
 If Alice wants to use a secret-key cipher to communicate with Bob, she
 can’t just pick a key and send it to him because, without already having
@@ -293,8 +293,8 @@ system based on this approach. We describe Kerberos (which also provides
 authentication) in the next section. The following subsection describes
 a powerful alternative.
 
-Diffie-Hellman Key Exchange
----------------------------
+8.3.3 Diffie-Hellman Key Exchange
+---------------------------------
 
 Another approach to establishing a shared secret key is to use the
 Diffie-Hellman key exchange protocol, which works without using any

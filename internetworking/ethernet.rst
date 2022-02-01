@@ -43,8 +43,8 @@ we’ll see below. A number of refinements were added over the years
 to make bridges an effective mechanism for interconnecting a set of
 LANs. The rest of this section fills in the more interesting details.
 
-Learning Bridges
-----------------
+3.2.1 Learning Bridges
+----------------------
 
 The first optimization we can make to a bridge is to observe that it
 need not forward all frames that it receives. Consider the bridge in
@@ -114,8 +114,8 @@ forwards the frame out on all the other ports. In other words, this
 table is simply an optimization that filters out some frames; it is not
 required for correctness.
 
-Implementation
---------------
+3.2.2 Implementation
+--------------------
 
 The code that implements the learning bridge algorithm is quite
 simple, and we sketch it here. Structure ``BridgeEntry`` defines a
@@ -192,8 +192,8 @@ replacement algorithm on finding the table full; for example, we might
 locate and remove the entry with the smallest TTL to accommodate the new
 entry.
 
-Spanning Tree Algorithm
------------------------
+3.2.3 Spanning Tree Algorithm
+-----------------------------
 
 The preceding strategy works just fine until the network has a loop in
 it, in which case it fails in a horrible way—frames potentially get
@@ -418,8 +418,8 @@ reconfigure the spanning tree whenever a switch fails, it is not able to
 forward frames over alternative paths for the sake of routing around a
 congested switch.
 
-Broadcast and Multicast
------------------------
+3.2.4 Broadcast and Multicast
+-----------------------------
 
 The preceding discussion focuses on how switches forward unicast
 frames from one port to another. Since the goal of a switch is to
@@ -454,8 +454,8 @@ Although the multicast extension just described was once proposed, it
 was not widely adopted. Instead, multicast is implemented in exactly the
 same way as broadcast.
 
-Virtual LANs (VLANs)
---------------------
+3.2.5 Virtual LANs (VLANs)
+--------------------------
 
 One limitation of switches is that they do not scale. It is not
 realistic to connect more than a few switches, where in practice *few*

@@ -101,8 +101,8 @@ two sensible ways to identify ports: One is to number each port, and the
 other is to identify the port by the name of the node (switch or host)
 to which it leads. For now, we use numbering of the ports.
 
-Datagrams
----------
+3.1.1 Datagrams
+---------------
 
 The idea behind datagrams is incredibly simple: You just include in
 every packet enough information to enable any switch to decide how to
@@ -188,8 +188,8 @@ at meeting this goal. Since datagram-based networks are the dominant
 technology discussed in this book, we postpone illustrative examples
 for the following sections, and move on to the two main alternatives.
 
-Virtual Circuit Switching
--------------------------
+3.1.2 Virtual Circuit Switching
+-------------------------------
 
 A second technique for packet switching uses the concept of a *virtual
 circuit* (VC). This approach, which is also referred to as a
@@ -620,8 +620,8 @@ compromise. There were good arguments for both larger and smaller cells,
 and 48 made almost no one happy—a power of two would certainly have been
 better for computers to process.
 
-Source Routing
---------------
+3.1.3 Source Routing
+--------------------
 
 A third approach to switching that uses neither virtual circuits nor
 conventional datagrams is known as *source routing*. The name derives

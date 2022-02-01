@@ -101,8 +101,8 @@ protocols. For now, the important thing to keep in mind is that we are
 considering the problem of routing in the context of small to midsized
 networks, not for a network the size of the Internet.
 
-Network as a Graph
-------------------
+3.4.1 Network as a Graph
+------------------------
 
 Routing is, in essence, a problem of graph theory. :numref:`Figure %s
 <fig-graph-route>` shows a graph representing a network. The nodes of
@@ -168,8 +168,8 @@ known. We will examine the two main classes of routing protocols:
 *distance vector* and *link state*. In a later section, we return to the
 problem of calculating edge costs in a meaningful way.
 
-Distance-Vector (RIP)
----------------------
+3.4 2 Distance-Vector (RIP)
+---------------------------
 
 The idea behind the distance-vector algorithm is suggested by its name.
 (The other common name for this class of algorithm is Bellman-Ford,
@@ -558,8 +558,8 @@ distances are 1 through 15, with 16 representing infinity. This also
 limits RIP to running on fairly small networks—those with no paths
 longer than 15 hops.
 
-Link State (OSPF)
------------------
+3.4.3 Link State (OSPF)
+-----------------------
 
 Link-state routing is the second major class of intradomain routing
 protocol. The starting assumptions for link-state routing are rather
@@ -1016,8 +1016,8 @@ shortest path for those packets that had their TOS field set to that
 value. It is worth noting that, at the time of writing, this capability
 has not been widely deployed.
 
-Metrics
--------
+3.4.4 Metrics
+-------------
 
 The preceding discussion assumes that link costs, or metrics, are known
 when we execute the routing algorithm. In this section, we look at some

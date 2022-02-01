@@ -38,8 +38,8 @@ reliable delivery is sometimes called *automatic repeat request*
 using generic language; that is, we do not give detailed information
 about a particular protocol’s header fields.
 
-Stop-and-Wait
--------------
+2.5.1 Stop-and-Wait
+-------------------
 
 The simplest ARQ scheme is the *stop-and-wait* algorithm. The idea of
 stop-and-wait is straightforward: After transmitting one frame, the
@@ -129,8 +129,8 @@ having to wait for an acknowledgment.
    *keeping the pipe full*. The algorithms presented in the following
    two subsections do exactly this. :ref:`[Next] <key-separate-concerns>`
 
-Sliding Window
---------------
+2.5.2 Sliding Window
+--------------------
 
 Consider again the scenario in which the link has a delay × bandwidth
 product of 8 KB and frames are 1 KB in size. We would like the sender to
@@ -615,8 +615,8 @@ into the sliding window protocol.
    window protocol, and we should ask ourselves if this is the right
    thing to do at the link level. :ref:`[Next] <key-aggregation>`
 
-Concurrent Logical Channels
----------------------------
+2.5.3 Concurrent Logical Channels
+---------------------------------
 
 The data link protocol used in the original ARPANET provides an
 interesting alternative to the sliding window protocol, in that it is

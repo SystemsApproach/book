@@ -64,8 +64,8 @@ concepts come up in discussions of wireless networks, we’re going to use
 the term *data rate* to describe the number of bits per second that can
 be sent over the link, as in :numref:`Table %s <tab-wireless-tech>`.
 
-Basic Issues
-------------
+2.7.1 Basic Issues
+------------------
 
 Because wireless links all share the same medium, the challenge is to
 share that medium efficiently, without unduly interfering with each
@@ -212,8 +212,8 @@ often form wireless meshes.
 Now that we have covered some of the common wireless issues, let’s take
 a look at the details of two common wireless technologies.
 
-802.11/Wi-Fi
-------------
+2.7.2 Wi-Fi (802.11)
+--------------------
 
 Most readers will have used a wireless network based on the IEEE 802.11
 standards, often referred to as *Wi-Fi*. Wi-Fi is technically a
@@ -531,8 +531,8 @@ mechanism to control access to both the link itself and the transmitted
 data. These mechanisms are often categorized as *wireless security.* The
 widely adopted WPA2 is described in Chapter 8.
 
-Bluetooth (802.15.1)
---------------------
+2.7.3 Bluetooth (802.15.1)
+--------------------------
 
 Bluetooth fills the niche of very short range communication between
 mobile phones, PDAs, notebook computers, and other personal or

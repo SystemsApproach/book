@@ -38,8 +38,8 @@ The best way to understand how MPLS works is to look at some examples of
 its use. In the next three sections, we will look at examples to
 illustrate the three applications of MPLS mentioned above.
 
-Destination-Based Forwarding
-----------------------------
+4.4.1 Destination-Based Forwarding
+----------------------------------
 
 One of the earliest publications to introduce the idea of attaching
 labels to IP packets was a paper by Chandranmenon and Vargese that
@@ -243,8 +243,8 @@ of an optical network, just as in the ATM case. Even more important was
 the fact that there were no standard protocols for controlling optical
 devices, so MPLS proved to be a natural fit for that job.
 
-Explicit Routing
-----------------
+4.4.2 Explicit Routing
+----------------------
 
 IP has a source routing option, but it is not widely used for several
 reasons, including the fact that only a limited number of hops can be
@@ -324,8 +324,8 @@ find a path from R1 to R7 that could carry an offered load of 100 Mbps,
 we could say that the constraint is that each link must have at least
 100 Mbps of available capacity. CSPF addresses this sort of problem.
 
-Virtual Private Networks and Tunnels
-------------------------------------
+4.4.3 Virtual Private Networks and Tunnels
+------------------------------------------
 
 One way to build virtual private networks (VPNs) is to use tunnels. It
 turns out that MPLS can be thought of as a way to build tunnels, and

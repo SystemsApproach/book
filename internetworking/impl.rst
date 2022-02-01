@@ -30,8 +30,8 @@ we’ll use the word *switch* to cover both variants throughout this
 section, avoiding the tedium of saying “switch or router” all the time.
 We’ll call out the differences between the two when appropriate.
 
-Software Switch
----------------
+3.5.1 Software Switch
+---------------------
 
 :numref:`Figure %s <fig-softswitch>` shows a software switch built
 using a general-purpose processor with four network interface cards
@@ -130,8 +130,8 @@ forwarding table.
    specifying a well-defined interface between the control and data
    planes. :ref:`[Next] <key-sdn>`
 
-Hardware Switch
----------------
+3.5.2 Hardware Switch
+---------------------
 
 Throughout much of the Internet’s history, high-performance switches and
 routers have been specialized devices, built with Application-Specific
@@ -253,8 +253,8 @@ key takeaway is that the networking industry is just now entering into
 the same commoditized world that the computing industry has enjoyed
 for the last two decades.
 
-Software Defined Networks
--------------------------
+3.5.3 Software Defined Networks
+-------------------------------
 
 With switches becoming increasingly commoditized, attention is
 rightfully shifting to the software that controls them. This puts us

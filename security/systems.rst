@@ -42,8 +42,8 @@ change keys without changing the algorithm; if one of your cryptographic
 algorithms turns out to be flawed, it would be great if your entire
 security architecture didn’t need an immediate redesign.
 
-Pretty Good Privacy (PGP)
--------------------------
+8.5.1 Pretty Good Privacy (PGP)
+-------------------------------
 
 Pretty Good Privacy (PGP) is a widely used approach to providing
 security for electronic mail. It provides authentication,
@@ -112,8 +112,8 @@ the application works can you make the right choices about which attacks
 to defend against (like forged email) versus which to ignore (like
 delayed or replayed email).
 
-Secure Shell (SSH)
-------------------
+8.5.2 Secure Shell (SSH)
+------------------------
 
 The Secure Shell (SSH) protocol is used to provide a remote login
 service, replacing the less secure Telnet used in the early days of the
@@ -239,8 +239,8 @@ which in this case happens to provide confidentiality and
 authentication. It’s possible to provide a form of virtual private
 network (VPN) using SSH tunnels in this way.
 
-Transport Layer Security (TLS, SSL, HTTPS)
-------------------------------------------
+8.5.3 Transport Layer Security (TLS, SSL, HTTPS)
+------------------------------------------------
 
 To understand the design goals and requirements for the Transport Layer
 Security (TLS) standard and the Secure Socket Layer (SSL) on which TLS
@@ -469,8 +469,8 @@ key exchange upon resumption.
    as the network evolves—where a holistic/cross-layer analysis is
    required to get the design right. :ref:`[Next] <key-naming>`
 
-IP Security (IPsec)
--------------------
+8.5.4 IP Security (IPsec)
+-------------------------
 
 Probably the most ambitious of all the efforts to integrate security
 into the Internet happens at the IP layer. Support for IPsec, as the
@@ -583,8 +583,8 @@ between particular endpoints. A network of such tunnels can be used to
 implement an entire virtual private network. Hosts communicating over a
 VPN need not even be aware that it exists.
 
-Wireless Security (802.11i)
----------------------------
+8.5.5 Wireless Security (802.11i)
+---------------------------------
 
 Wireless links are particularly exposed to security threats due to the
 lack of any physical security on the medium. While the convenience of
@@ -689,8 +689,8 @@ is subsequently encrypted along with the plaintext in order to prevent
 birthday attacks, which depend on finding different messages with the
 same authenticator.
 
-Firewalls
----------
+8.5.6 Firewalls
+---------------
 
 Whereas much of this chapter has focused on the uses of cryptography to
 provide such security features as authentication and confidentiality,

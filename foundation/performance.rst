@@ -11,8 +11,8 @@ remains true, in networking it is often necessary to “design for
 performance.” It is therefore important to understand the various
 factors that impact network performance.
 
-Bandwidth and Latency
----------------------
+1.5.1 Bandwidth and Latency
+----------------------------
 
 Network performance is measured in two fundamental ways: *bandwidth*
 (also called *throughput*) and *latency* (also called *delay*). The
@@ -185,8 +185,8 @@ has forfeited the ability to execute 10 billion instructions, or 2
 million instructions per mile. It had better have been worth going over
 the network to justify this waste.
 
-Delay × Bandwidth Product
--------------------------
+1.5.2 Delay × Bandwidth Product
+-------------------------------
 
 It is also useful to talk about the product of these two metrics, often
 called the *delay × bandwidth product*. Intuitively, if we think of a
@@ -254,8 +254,8 @@ some typical network links.
    | Cross-country fiber | 10 Gbps   | 4,000 km         | 40 ms   | 400 Mb          |
    +---------------------+-----------+------------------+---------+-----------------+
 
-High-Speed Networks
--------------------
+1.5.3 High-Speed Networks
+-------------------------
 
 The seeming continual increase in bandwidth causes network designers to
 start thinking about what happens in the limit or, stated another way,
@@ -334,8 +334,8 @@ network bandwidth. On the other hand, having to endure more than
 throughput for any transfer of finite size and will be most noticeable
 for small transfers.
 
-Application Performance Needs
------------------------------
+1.5.4 Application Requirements
+-----------------------------------
 
 The discussion in this section has taken a network-centric view of
 performance; that is, we have talked in terms of what a given link or

@@ -54,8 +54,8 @@ also have an important role to play, however.  Indeed, most of the
 lossy techniques include some steps that are lossless, so we begin our
 discussion with an overview of lossless compression.
 
-Lossless Compression Techniques
--------------------------------
+7.2.1 Lossless Compression Techniques
+-------------------------------------
 
 In many ways, compression is inseparable from data encoding. When
 thinking about how to encode a piece of data in a set of bits, we might
@@ -166,8 +166,8 @@ data so that the decompression half of the algorithm can do its job.
 Exactly how you build an adaptive dictionary has been a subject of
 extensive research.
 
-Image Representation and Compression (GIF, JPEG)
-------------------------------------------------
+7.2.2 Image Representation and Compression (GIF, JPEG)
+------------------------------------------------------
 
 Given the ubiquitous use of digital imagery—this use was spawned by the
 invention of graphical displays, not high-speed networks—the need for
@@ -507,8 +507,8 @@ achieved with JPEG. Ratios of 30:1 are common, and higher ratios are
 certainly possible, but *artifacts* (noticeable distortion due to
 compression) become more severe at higher ratios.
 
-Video Compression (MPEG)
-------------------------
+7.2.3 Video Compression (MPEG)
+------------------------------
 
 We now turn our attention to the MPEG format, named after the Moving
 Picture Experts Group that defined it. To a first approximation, a
@@ -717,8 +717,8 @@ Today, a partnership between the ITU-T and the MPEG group has lead to
 the joint H.264/MPEG-4 standard, which is used for both Blu-ray Discs
 and by many popular streaming sources (e.g., YouTube, Vimeo).
 
-Transmitting MPEG over a Network
---------------------------------
+7.2.4 Transmitting MPEG over a Network
+--------------------------------------
 
 As we’ve noted, MPEG and JPEG are not just compression standards but
 also definitions of the format of video and images, respectively.
@@ -894,8 +894,8 @@ although it has been standardized in slightly different ways by
 various organizations, most notably MPEG’s DASH (*Dynamic Adaptive
 Streaming over HTTP*) and Apple’s HLS (*HTTP Live Streaming*).
 
-Audio Compression (MP3)
------------------------
+7.2.5 Audio Compression (MP3)
+-----------------------------
 
 Not only does MPEG define how video is compressed, but it also defines a
 standard for compressing audio. This standard can be used to compress

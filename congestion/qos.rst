@@ -44,8 +44,8 @@ is not done in the best-effort model. A network that can provide these
 different levels of service is often said to support quality of
 service (QoS).
 
-Application Requirements
-------------------------
+6.5.1 Application Requirements
+------------------------------
 
 Before looking at the various protocols and mechanisms that may be used
 to provide quality of service to applications, we should try to
@@ -267,8 +267,8 @@ revisiting what the end-host might do to better support real-time
 streams, independent of how widely deployed QoS mechanisms like
 Integrated or Differentiated Services become.
 
-Integrated Services (RSVP)
---------------------------
+6.5.2 Integrated Services (RSVP)
+--------------------------------
 
 The term *Integrated Services* (often called IntServ for short) refers
 to a body of work that was produced by the IETF around 1995-97. The
@@ -721,8 +721,8 @@ IntServ. Because of these concerns, other approaches that do not require
 so much “per-flow” state have been developed. The next section discusses
 a number of such approaches.
 
-Differentiated Services (EF, AF)
---------------------------------
+6.5.3 Differentiated Services (EF, AF)
+--------------------------------------
 
 Whereas the Integrated Services architecture allocates resources to
 individual flows, the Differentiated Services model (often called
@@ -922,8 +922,8 @@ example, with 12 code points we can have four queues with different
 weights, each of which has three drop preferences. This is exactly what
 the IETF has done in the definition of “assured service.”
 
-Equation-Based Congestion Control
----------------------------------
+6.5.4 Equation-Based Congestion Control
+---------------------------------------
 
 We conclude our discussion of QoS by returning full circle to TCP
 congestion control, but this time in the context of real-time
