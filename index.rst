@@ -30,5 +30,5 @@ Larry Peterson and Bruce Davie
    data.rst
    security.rst
    applications.rst
-   supplements.rst
    README.rst
+   latest.rst
