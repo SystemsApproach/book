@@ -3,14 +3,14 @@
 :pop:`Read the Latest!`
 ========================
 
-`Subscribe to Substack <https://systemsapproach.substack.com/>`__:
-Stay up-to-date with the latest developments by following the authors
-on `Substack <https://systemsapproach.substack.com/>`__, where they
-connect the lessons in this book to what's happening in the Internet
-today.
+`Substack Newsletter: <https://systemsapproach.substack.com/>`__ Stay
+up-to-date with the latest developments by following the authors on
+`Substack <https://systemsapproach.substack.com/>`__, where they
+connect the concepts and lessons in this book to what's happening in
+the Internet today.
 
-`Book Series <https://systemsapproach.org/books/>`__: Also check out
-our companion books that cover emerging topics:
+`Book Series: <https://systemsapproach.org/books/>`__ Also check out
+our companion books that cover emerging topics in more depth.
 
 * `5G Mobile Networks: A Systems Approach <https://5G.systemsapproach.org>`__
 

@@ -32,7 +32,7 @@
 
 /* .wy-menu-vertical header,.wy-menu-vertical p.caption{color:#2F5597} */
 
-.wy-menu-vertical header,.wy-menu-vertical p.caption{color:#18A3FF}
+.wy-menu-vertical header,.wy-menu-vertical p.caption{color:#6AB0DE}
 
 /* Headings */
 h1, h2 {
@@ -67,7 +67,7 @@ h3 {
 }
 
 .pop {
-    color: #18A3FF;
+    color: #6AB0DE;
     font-style: italic;
     font-weight: bold;
 }
