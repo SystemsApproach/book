@@ -352,7 +352,7 @@ sourced, based on an RPC mechanism that they have been using internally
 to implement cloud services in their datacenters.
 
 These three examples represent interesting alternative design choices in
-the RPC solution space, but least you think they are the only options,
+the RPC solution space, but lest you think they are the only options,
 we describe three other RPC-like mechanisms (WSDL, SOAP, and REST) in
 the context of web services in Chapter 9.
 
