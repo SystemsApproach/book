@@ -858,7 +858,7 @@ become a security vulnerability. If their security is not as good as
 yours, then an adversary could penetrate your security by penetrating
 their security.
 
-On of the most serious problems for firewalls is their vulnerability to
+One of the most serious problems for firewalls is their vulnerability to
 the exploitation of bugs in machines inside the firewall. Such bugs are
 discovered regularly, so a system administrator has to constantly
 monitor announcements of them. Administrators frequently fail to do so,
