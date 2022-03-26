@@ -380,7 +380,7 @@ or she wants to access. This can be represented by the simple state
 transition diagram shown in :numref:`Figure %s <fig-imap>`. In this
 diagram, ``LOGIN`` and ``LOGOUT`` are example commands that the client
 can issue, while ``OK`` is one possible server response. Other common
-commands include and ``EXPUNGE``, with the obvious
+commands include ``FETCH`` and ``EXPUNGE``, with the obvious
 meanings. Additional server responses include ``NO`` (client does not
 have permission to perform that operation) and ``BAD`` (command is ill
 formed).
