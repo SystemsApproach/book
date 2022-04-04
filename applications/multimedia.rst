@@ -97,8 +97,8 @@ following information:
    to be used, the port numbers, the encoding scheme)
 
 SDP provides this information formatted in ASCII using a sequence of
-lines of text, each of the form “.” An example of an SDP message will
-illustrate the main points.
+lines of text, each of the form ``<type>=<value>``. An example of an SDP
+message will illustrate the main points.
 
 ::
 
