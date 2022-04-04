@@ -160,7 +160,7 @@ session. Next we see the start and end times for the session (encoded as
 integers according to the Network Time Protocol). Finally, we get to the
 information about the media for this session. This session has three
 media types available—audio, video, and a shared whiteboard application
-known as “``wb``.” For each media type there is one line of information
+known as “``wb``”. For each media type there is one line of information
 formatted as follows:
 
 ::
@@ -170,7 +170,7 @@ formatted as follows:
 The media types are self-explanatory, and the port numbers in each case
 are UDP ports. When we look at the “transport” field, we can see that
 the ``wb`` application runs directly over UDP, while the audio and video
-are transported using “RTP/AVP.” This means that they run over RTP and
+are transported using “RTP/AVP”. This means that they run over RTP and
 use the *application profile* known as *AVP*. That application profile
 defines a number of different encoding schemes for audio and video; we
 can see in this case that the audio is using encoding 0 (which is an
@@ -198,7 +198,7 @@ about the video content on each TV channel.
 SDP also plays an important role in conjunction with the Session
 Initiation Protocol (SIP). With the widespread adoption of Voice over IP
 (i.e., the support of telephony-like applications over IP networks) and
-IP-based video conferencing, SIP is now one of the more important
+IP-based video conferencing, SIP is now one of the most important
 members of the Internet protocol suite.
 
 SIP
@@ -334,7 +334,7 @@ The first response message in this figure is the provisional response
 error by the caller’s proxy. Once the ``invite`` is delivered to Larry’s
 phone, it alerts Larry and responds with a ``180 ringing`` message. The
 arrival of this message at Bruce’s computer is a sign that it can
-generate a “ringtone.” Assuming Larry is willing and able to communicate
+generate a “ringtone”. Assuming Larry is willing and able to communicate
 with Bruce, he could pick up his phone, causing the message ``200 OK``
 to be sent. Bruce’s computer responds with an ``ACK``, and media (e.g.,
 an RTP-encapsulated audio stream) can now begin to flow between the two
@@ -373,7 +373,7 @@ option is to use the *registration* capabilities of SIP.
 A user can register with a location service by sending a SIP
 ``register`` message to the “registrar” for his domain. This message
 creates a binding between an “address of record” and a “contact
-address.” An “address of record” is likely to be a SIP URI that is the
+address”. An “address of record” is likely to be a SIP URI that is the
 well-known address for the user (e.g., ``sip:larry@princeton.edu``) and
 the “contact address” will be the address at which the user can
 currently be found (e.g., ``sip:larry@llp-ph.cs.princeton.edu``). This
@@ -473,7 +473,7 @@ resource allocation capabilities of the network?
 
 It is worth noting that many multimedia applications run successfully
 over “best-effort” networks, such as the public Internet. The wide array
-of commercial VOIP services (such as Skype) are a testimony to the fact
+of commercial VoIP services (such as Skype) are a testimony to the fact
 that you only have to worry about resource allocation when resources are
 not abundant—and in many parts of today’s Internet, resource abundance
 is the norm.
@@ -509,7 +509,7 @@ the DSCP. In general, routers in the public Internet ignore the DSCP,
 providing best-effort service to all packets. However, enterprise or
 corporate networks have the ability to use DiffServ for their internal
 multimedia traffic, and frequently do so. Also, even residential users
-of the Internet can often improve the quality of VOIP or other
+of the Internet can often improve the quality of VoIP or other
 multimedia applications just by using DiffServ on the outbound
 direction of their Internet connections, as illustrated in
 :numref:`Figure %s <fig-ds-bb>`.  This is effective because of the
@@ -524,13 +524,13 @@ loss-sensitive applications.
    :width: 500px
    :align: center
 
-   Differentiated Services applied to a VOIP application. DiffServ queuing
+   Differentiated Services applied to a VoIP application. DiffServ queuing
    is applied only on the upstream link from customer router to ISP.
 
 While DiffServ is appealing for its simplicity, it is clear that it
 cannot meet the needs of applications under all conditions. For example,
 suppose the upstream bandwidth in :numref:`Figure %s <fig-ds-bb>` is only
-100 kbps, and the customer attempts to place two VOIP calls, each with a
+100 kbps, and the customer attempts to place two VoIP calls, each with a
 64-kbps codec. Clearly the upstream link is now more than 100% loaded,
 which will lead to large queuing delays and lost packets. No amount of
 clever queuing in the customer’s router can fix that.
@@ -565,7 +565,7 @@ call for which sufficient resources are not available.
 
 As an example, consider the network in :numref:`Figure %s
 <fig-cm-cac>`. Suppose the wide area link from the branch office to
-the head office has enough bandwidth to accommodate three VOIP calls
+the head office has enough bandwidth to accommodate three VoIP calls
 simultaneously using 64-kbps codecs. Each phone already needs to
 communicate with the local SIP proxy or H.323 gatekeeper when it
 begins to place a call, so it is easy enough for the proxy/gatekeeper
@@ -576,11 +576,11 @@ multiple calls at the same time and that different codec speeds might
 be used. However, this scheme will work only if no other device can
 overload the link without first talking to the gatekeeper or
 proxy. DiffServ queuing can be used to ensure that, for example, a PC
-engaged in a file transfer doesn’t interfere with the VOIP calls. But,
-suppose some VOIP application that doesn’t first talk to the
+engaged in a file transfer doesn’t interfere with the VoIP calls. But,
+suppose some VoIP application that doesn’t first talk to the
 gatekeeper or proxy is enabled in the remote office. Such an
 application, if it can get its packets marked appropriately and in the
-same queue as the existing VOIP traffic, can clearly drive the link to
+same queue as the existing VoIP traffic, can clearly drive the link to
 the point of overload with no feedback from the proxy or gatekeeper.
 
 .. _fig-cm-cac:
@@ -644,7 +644,7 @@ call.
 
 We begin with an initial exchange of codec information in the first two
 SIP messages (recall that SDP is used to list available codecs, among
-other things). ``PRACK`` is a “provisional acknowledgment.” Once these
+other things). ``PRACK`` is a “provisional acknowledgment”. Once these
 messages have been exchanged, RSVP ``PATH`` messages, which contain a
 description of the amount of resources that will be required, can be
 sent as the first step in reserving resources in both directions of the
