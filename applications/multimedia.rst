@@ -160,7 +160,7 @@ session. Next we see the start and end times for the session (encoded as
 integers according to the Network Time Protocol). Finally, we get to the
 information about the media for this session. This session has three
 media types available—audio, video, and a shared whiteboard application
-known as “``wb``”. For each media type there is one line of information
+known as ``wb``. For each media type there is one line of information
 formatted as follows:
 
 ::
@@ -198,7 +198,7 @@ about the video content on each TV channel.
 SDP also plays an important role in conjunction with the Session
 Initiation Protocol (SIP). With the widespread adoption of Voice over IP
 (i.e., the support of telephony-like applications over IP networks) and
-IP-based video conferencing, SIP is now one of the most important
+IP-based video conferencing, SIP is now one of the more important
 members of the Internet protocol suite.
 
 SIP
