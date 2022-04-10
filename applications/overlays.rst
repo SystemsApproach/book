@@ -610,7 +610,7 @@ nothing with the object’s, but you know of a node that shares at least
 the prefix ``d``. That node is closer than you in the 128-bit ID space,
 so you forward the message to it. (We do not give the format of the
 message being forwarded, but you can think of it as saying “locate
-object ``d46a1c``.”) Assuming node ``d13da3`` knows of another node that
+object ``d46a1c``”.) Assuming node ``d13da3`` knows of another node that
 shares an even longer prefix with the object, it forwards the message
 on. This process of moving closer in ID-space continues until you reach
 a node that knows of no closer node. This node is, by definition, the
