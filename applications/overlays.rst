@@ -1127,7 +1127,7 @@ Protocol (CARP) and is shown in pseudocode below.
        for each server s in decreasing order of weight
            if Load(s) < threshold then
                return s
-          return server with highest weight
+       return server with lowest weight
 
 As the load increases, this scheme changes from using only the first
 server on the sorted list to spreading requests across several servers.
