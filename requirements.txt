@@ -1,4 +1,4 @@
-Sphinx~=1.8.5
+Sphinx~=4.2.0
 actdiag~=0.5.4
 blockdiag~=1.5.4
 livereload~=2.6.1
