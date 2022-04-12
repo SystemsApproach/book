@@ -1122,12 +1122,12 @@ Protocol (CARP) and is shown in pseudocode below.
 
    SelectServer(URL, S)
        for each server s in server set S
-           weight[s] = hash(URL, address[s])
-       sort weight
-       for each server s in decreasing order of weight
+           score[s] = hash(URL, address[s])
+       sort score
+       for each server s in decreasing order of score
            if Load(s) < threshold then
                return s
-       return server with lowest weight
+       return server with highest score
 
 As the load increases, this scheme changes from using only the first
 server on the sorted list to spreading requests across several servers.
