@@ -843,4 +843,4 @@ the actual functions being called (see :numref:`Figure %s
    applies the “built from small parts” strategy to entire cloud
    applications (e.g., Uber, Lyft, Netflix, Yelp, Spotify), where gRPC
    is often the communication mechanism used by those small pieces to
-   exchange messages with each other. :ref:`[Next] <key-alf>`
+   exchange messages with each other.
