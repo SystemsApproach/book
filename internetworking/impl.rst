@@ -179,7 +179,7 @@ GPUs that have an architecture optimized for rendering computer
 graphics, but in this case, the NPU is optimized for parsing packet
 headers and making a forwarding decision. NPUs are able to process
 packets (input, make a forwarding decision, and output) at rates
-measured in Terabits-per-second (Tbps), easily fast enough to keep up
+measured in Terabits per second (Tbps), easily fast enough to keep up
 with 32x100-Gbps ports, or the 48x40-Gbps ports shown in the diagram.
 
 .. sidebar:: Network Processing Units

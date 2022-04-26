@@ -190,8 +190,8 @@ There have been multiple generations of protocols implementing the
 cellular network, colloquially known as 1G, 2G, 3G, and so on. The first
 two generations supported only voice, with 3G defining the transition to
 broadband access, supporting data rates measured in hundreds of
-kilobits-per-second. Today, the industry is at 4G (supporting data rates
-typically measured in the few megabits-per-second) and is in the process
+kilobits per second. Today, the industry is at 4G (supporting data rates
+typically measured in the few megabits per second) and is in the process
 of transitioning to 5G (with the promise of a tenfold increase in data
 rates).
 
