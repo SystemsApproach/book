@@ -92,3 +92,7 @@ increasingly becoming the norm.
    Globally Deployed Software Defined
    WAN <https://cseweb.ucsd.edu/~vahdat/papers/b4-sigcomm13.pdf>`__,
    August 2013.
+
+   For a more comprehensive view of congestion control, including some
+   of the newer developments related to TCP, see our companion book:
+   `TCP Congestion Control: A Systems Approach <https://tcpcc.systemsapproach.org>`__.
