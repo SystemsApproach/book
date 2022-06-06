@@ -79,7 +79,7 @@ To build a web-viewable version, you first need to download the source:
    cd book
 
 The build process is stored in the ``Makefile`` and requires Python be 
-installed. The ``Makefile`` will create a virtualenv (``doc_venv``) which 
+installed. The ``Makefile`` will create a virtualenv (``venv-docs``) which 
 installs the documentation generation toolset. 
 
 To generate HTML in ``_build/html``,  run ``make html``.

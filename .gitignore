@@ -8,5 +8,5 @@ private/
 scripts/
 systemsapproach.github.io/
 _build/
-doc_venv/
+venv-docs/
 cover.docx

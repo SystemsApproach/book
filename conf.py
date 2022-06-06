@@ -1,17 +1,3 @@
-# Copyright 2019-present Open Networking Foundation
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-# http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-
 # -*- coding: utf-8 -*-
 #
 # Configuration file for the Sphinx documentation builder.
@@ -32,21 +18,29 @@
 
 import os
 
+from subprocess import check_output, CalledProcessError
+
 def get_version():
-    with open("VERSION") as f:
-        return f.read().strip()
+
+    try:
+        version = check_output(['cat', 'VERSION'],
+                               universal_newlines=True)
+    except CalledProcessError:
+        return 'unknown version'
+
+    return version.rstrip()
+
+# "version" is used for html build
+version = get_version()
+# "release" is used for LaTeX build
+release = version
+
 
 # -- Project information -----------------------------------------------------
 
 project = u'Computer Networks: A Systems Approach'
 copyright = u'2019'
 author = u'Larry Peterson and Bruce Davie'
-
-# The short X.Y version
-version = get_version()
-
-# The full version, including alpha/beta/rc tags
-release = get_version()
 
 # -- General configuration ---------------------------------------------------
 
@@ -61,19 +55,19 @@ warning_is_error = True
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones. ***Replace "mathjax" with "imgmath" for epub output.***
 extensions = [
-    'recommonmark',
+    'sphinx.ext.autosectionlabel',
     'sphinx.ext.coverage',
+    'sphinx.ext.graphviz',
     'sphinx.ext.ifconfig',
+    'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',
     'sphinx.ext.todo',
-    'sphinx.ext.autosectionlabel',
-    'sphinxcontrib.actdiag',
-    'sphinxcontrib.blockdiag',
-    'sphinxcontrib.nwdiag',
-    'sphinxcontrib.packetdiag',
-    'sphinxcontrib.rackdiag',
-    'sphinxcontrib.seqdiag',
+    'sphinxcontrib.spelling',
+    "sphinx_multiversion",
 ]
+
+# Text files with lists of words that shouldn't fail the spellchecker:
+spelling_word_list_filename=['dict.txt', ]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -82,7 +76,7 @@ templates_path = ['_templates']
 # You can specify multiple suffix as a list of string:
 #
 # source_suffix = ['.rst', '.md']
-source_suffix = ['.rst', '.md']
+source_suffix = '.rst'
 
 # The master toctree document.
 master_doc = 'index'
@@ -97,7 +91,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = [u'_build', '*/_build', 'doc_venv', '*/doc_venv', 'requirements.txt', 'Thumbs.db', '.DS_Store', 'repos', '*/vendor', 'sidebars', 'private', 'status.rst', '*/README.rst', 'CONTRIBUTING.rst', 'CLA.rst', 'CLA.md']
+exclude_patterns = [u'_build', 'venv-docs', 'requirements.txt', 'Thumbs.db', 'private', '.DS_Store', '*/README.rst', 'sidebars', 'status.rst', 'CLA.rst', 'CONTRIBUTING.rst']
 
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = None
@@ -111,7 +105,7 @@ numfig_format = {
 
 # Ignore link check for the following websites
 # linkcheck_ignore = [
-#     'https://book.systemspproach.org/',
+#     'https://SDN.systemspproach.org/',
 # ]
 
 # -- Options for HTML output -------------------------------------------------
@@ -125,9 +119,9 @@ html_theme = 'sphinx_rtd_theme'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-#html_theme_options = {
-#  'analytics_id': 'G-9C6ZHKMTSM'
-#}
+html_theme_options = {
+  'prev_next_buttons_location': 'both'
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -135,7 +129,10 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # HTML Favicon
-html_favicon = 'bridge.ico'
+html_favicon = '_static/bridge.ico'
+
+# HTML Index
+html_use_index = False
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -155,6 +152,7 @@ htmlhelp_basename = 'SystemsApproach'
 
 
 # -- Options for LaTeX output ------------------------------------------------
+#latex_engine = 'xelatex'
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
@@ -165,13 +163,13 @@ latex_elements = {
     #
     'pointsize': '11pt',
 
-    # Additional stuff for the LaTeX preamble.
+    # Get unicode to work
     #
-    # 'preamble': '',
+    'fontenc': '\\usepackage[LGR,T1]{fontenc}',
 
     # Latex figure (float) alignment
     #
-    'figure_align': 'htbp',
+    'figure_align': 'ht',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
@@ -208,9 +206,11 @@ texinfo_documents = [
 
 
 # -- Options for Epub output -------------------------------------------------
-
-# Bibliographic Dublin Core info.
 epub_title = project
+epub_description = 'Building a Cloud Management Platform'
+epub_cover = ('_static/cover.jpg', '')
+epub_show_urls = 'False'
+epub_use_index = False
 
 # The unique identifier of the text. This can be a ISBN number
 # or the project homepage.
@@ -227,31 +227,24 @@ epub_exclude_files = ['search.html']
 
 # -- Extension configuration -------------------------------------------------
 
-# blockdiag/etc. config
+# -- options for Intersphinx extension ---------------------------------------
 
-rackdiag_antialias = True
-rackdiag_html_image_format = "SVG"
-rackdiag_fontpath = [
-    "_static/fonts/Inconsolata-Regular.ttf",
-    "_static/fonts/Inconsolata-Bold.ttf",
-]
-
-nwdiag_antialias = True
-nwdiag_html_image_format = "SVG"
-nwdiag_fontpath = [
-    "_static/fonts/Inconsolata-Regular.ttf",
-    "_static/fonts/Inconsolata-Bold.ttf",
-]
+intersphinx_mapping = {
+    'sphinx': ('https://www.sphinx-doc.org/en/master', None),
+    'sysapproach5g': ('https://5g.systemsapproach.org/', None),
+    'sysapproachnet': ('https://ops.systemsapproach.org/', None),
+    'sysapproachnet': ('https://tcpcc.systemsapproach.org/', None),
+    'sysapproachsdn': ('https://sdn.systemsapproach.org/', None),
+    }
 
 # -- Options for todo extension ----------------------------------------------
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-# -- Configure recommonmark to use AutoStructify -----------------------------
-# Docs: https://recommonmark.readthedocs.io/en/latest/auto_structify.html
 
-import recommonmark
-from recommonmark.transform import AutoStructify
+# -- Set up Google Analytics
+# -- using approach at https://stackoverflow.com/questions/9444342/adding-a-javascript-script-tag-some-place-so-that-it-works-for-every-file-in-sph/41885884#41885884
+
 
 GA_INVOKE_JS = """
   window.dataLayer = window.dataLayer || [];
@@ -265,11 +258,6 @@ def setup(app):
 
     app.add_css_file('css/rtd_theme_mods.css')
 
-    app.add_config_value('recommonmark_config', {
-            'auto_toc_tree_section': 'Contents',
-            }, True)
-
-    app.add_transform(AutoStructify)
 
     app.add_js_file('https://www.googletagmanager.com/gtag/js?id=G-8NK2HCPFQ5')
     app.add_js_file(None, body=GA_INVOKE_JS)
