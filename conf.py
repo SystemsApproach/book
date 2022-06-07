@@ -207,7 +207,7 @@ texinfo_documents = [
 
 # -- Options for Epub output -------------------------------------------------
 epub_title = project
-epub_description = 'Building a Cloud Management Platform'
+epub_description = 'Computer Networks: A Systems Approach'
 epub_cover = ('_static/cover.jpg', '')
 epub_show_urls = 'False'
 epub_use_index = False
