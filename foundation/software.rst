@@ -235,6 +235,9 @@ sends it over the socket.
    #include <sys/socket.h>
    #include <netinet/in.h>
    #include <netdb.h>
+   #include <stdlib.h>
+   #include <unistd.h>
+   #include <string.h>   
 
    #define SERVER_PORT 5432
    #define MAX_LINE 256
@@ -310,6 +313,9 @@ out the characters that arrive on the connection.
    #include <sys/socket.h>
    #include <netinet/in.h>
    #include <netdb.h>
+   #include <stdlib.h>
+   #include <unistd.h>
+   #include <string.h>   
 
    #define SERVER_PORT  5432
    #define MAX_PENDING  5
@@ -339,7 +345,7 @@ out the characters that arrive on the connection.
        exit(1);
      }
      listen(s, MAX_PENDING);
-     
+
     /* wait for connection, then receive and print text */
      while(1) {
        if ((new_s = accept(s, (struct sockaddr *)&sin, &addr_len)) < 0) {
