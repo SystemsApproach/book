@@ -338,12 +338,12 @@ that indicates whether the frame is an ACK or carries data.
 
 .. code-block:: c
 
-   typedef u_char SwpSeqno;
+   typedef uint8_t SwpSeqno;
 
    typedef struct {
        SwpSeqno   SeqNum;   /* sequence number of this frame */
        SwpSeqno   AckNum;   /* ack of received frame */
-       u_char     Flags;           /* up to 8 bits worth of flags */
+       uint8_t     Flags;   /* up to 8 bits worth of flags */
    } SwpHdr;
 
 Next, the state of the sliding window algorithm has the following
