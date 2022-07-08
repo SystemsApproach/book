@@ -42,7 +42,7 @@ physical network. In this sense, they are analogous to the virtual
 machine, with its support of all the resources of a server: CPU,
 storage, I/O, and so on.
 
-To this end, VLANS, as described in :ref:`Section 3.2 <3.2 Switched
+To this end, VLANs, as described in :ref:`Section 3.2 <3.2 Switched
 Ethernet>`, are how we typically virtualize an L2 network. VLANs
 proved to be quite useful to enterprises that wanted to isolate
 different internal groups (e.g., departments, labs), giving each of
