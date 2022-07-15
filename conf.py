@@ -49,7 +49,7 @@ author = u'Larry Peterson and Bruce Davie'
 # needs_sphinx = '1.0'
 
 # make all warnings errors
-warning_is_error = True
+warning_is_error = False
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -57,7 +57,6 @@ warning_is_error = True
 extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx.ext.coverage',
-    'sphinx.ext.graphviz',
     'sphinx.ext.ifconfig',
     'sphinx.ext.intersphinx',
     'sphinx.ext.mathjax',

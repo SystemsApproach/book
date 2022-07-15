@@ -1,12 +1,14 @@
 About This Book
 ===============
 
-This `repo <https://github.com/SystemsApproach/book>`__
-contains source text for *Computer Networks: A Systems
-Approach*, now available under terms of the `Creative Commons (CC BY
-4.0) <https://creativecommons.org/licenses/by/4.0>`__ license. The
+Source for *Computer Networks: A Systems Approach* is available on
+GitHub under terms of the `Creative Commons (CC BY 4.0)
+<https://creativecommons.org/licenses/by/4.0>`__ license. The
 community is invited to contribute corrections, improvements, updates,
-and new material under the same terms.
+and new material under the same terms.  While this license does not
+automatically grant the right to make derivative works, we are keen to
+discuss derivative works (such as translations) with interested
+parties. Please reach out to discuss@systemsapproach.org.
 
 Like many open source software projects, this one has been seeded with
 once restricted content: the 5th edition of *Peterson and Davie*,
@@ -15,11 +17,7 @@ will both make it widely available and serve as an attractor for new
 content: updating what’s already there, expanding it to cover new
 topics, and augmenting the text with additional teaching collateral.
 
-We will initially play an editorial role (curating and wordsmithing) for
-contributions that come back, but our plan is to share ownership of the
-project with others committed to its success.
-
-And if you make use of this work, the attribution should include the
+If you make use of this work, the attribution should include the
 following information:
 
 |  Title: *Computer Networks: A Systems Approach*
@@ -69,22 +67,29 @@ they are using the same version.
 Build the Book
 --------------
 
-To build a web-viewable version, you first need to download the source:
+To build a web-viewable version, you first need to download the
+source:
 
 .. code:: shell
 
-   mkdir ~/systemsapproach
-   cd ~/systemsapproach
-   git clone https://github.com/systemsapproach/book.git
-   cd book
+   $ mkdir ~/systemsapproach 
+   $ cd ~/systemsapproach 
+   $ git clone https://github.com/systemsapproach/book.git 
+   $ cd book
 
 The build process is stored in the ``Makefile`` and requires Python be 
 installed. The ``Makefile`` will create a virtualenv (``venv-docs``) which 
-installs the documentation generation toolset. 
+installs the documentation generation toolset.  You may also need to
+install the ``enchant`` C library using your system’s package manager
+for the spelling checker to function properly.
 
 To generate HTML in ``_build/html``,  run ``make html``.
 
 To check the formatting of the book, run ``make lint``.
+
+To check spelling, run ``make spelling``. If there are additional
+words, names, or acronyms that are correctly spelled but not in the dictionary,
+please add them to the ``dict.txt`` file.
 
 To see the other available output formats, run ``make``.
 
