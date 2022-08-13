@@ -431,7 +431,7 @@ MD5 or SHA-1) to the concatenation of the plaintext message and the
 secret value, as illustrated in :numref:`Figure %s
 <fig-macAndHmac>`. The resulting digest is called a *hashed message
 authentication code* (HMAC) since it is essentially a MAC. The HMAC,
-but not the secret value, is appended to the plaintext Only a receiver
+but not the secret value, is appended to the plaintext. Only a receiver
 who knows the secret value can compute the correct HMAC to compare
 with the received HMAC. If it weren’t for the one-way property of the
 hash, an adversary might be able to find the input that generated the
