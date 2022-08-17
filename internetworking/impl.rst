@@ -157,20 +157,21 @@ but just as Linux is available to run on your home-built PC, there are
 now open source L2 and L3 stacks available on GitHub to run on your
 home-built switch. Alternatively, you can simply buy a pre-built switch
 from a commodity switch manufacturer and then load your own software
-onto it. The following describes these open *white-box switches*, so
-called to contrast them with closed “black-box” devices that have
+onto it. The following describes these open *bare-metal switches*, so
+called to contrast them with closed devices, in which hardware and
+software are tightly bundled, that have
 historically dominated the industry.
 
-.. _fig-whitebox:
+.. _fig-baremetal:
 .. figure:: figures/impl/Slide2.png
    :width: 500px
    :align: center
 
-   White-box switch using a Network Processing
+   Bare-metal switch using a Network Processing
    Unit.
 
-:numref:`Figure %s <fig-whitebox>` is a simplified depiction of a
-white-box switch. The key difference from the earlier implementation
+:numref:`Figure %s <fig-baremetal>` is a simplified depiction of a
+bare-metal switch. The key difference from the earlier implementation
 on a general-purpose processor is the addition of a Network Processor
 Unit (NPU), a domain-specific processor with an architecture and
 instruction set that has been optimized for processing packet headers
@@ -197,8 +198,9 @@ with 32x100-Gbps ports, or the 48x40-Gbps ports shown in the diagram.
 	     programmable domain-specific processors, including GPUs
 	     for graphics and TPUs (Tensor Processing Units) for AI.
 	     
-The beauty of this new switch design is that a given white-box can now
-be programmed to be an L2 switch, and L3 router, or a combination of
+The beauty of this new switch design is that a given bare-metal switch
+can now
+be programmed to be an L2 switch, an L3 router, or a combination of
 both, just by a matter of programming. The exact same control plane
 software stack used in a software switch still runs on the control CPU,
 but in addition, data plane “programs” are loaded onto the NPU to
@@ -240,9 +242,9 @@ multi-stage pipeline adds a little end-to-end latency to each packet
 processed at the same time. For example, Stage 2 can be making a second
 lookup on packet A while Stage 1 is doing an initial lookup on packet B,
 and so on. This means the NPU as a whole is able to keep up with line
-speeds. As of this writing, the state-of-the-art is 12.8 Tbps.
+speeds. As of this writing, the state of the art is 25.6 Tbps.
 
-Finally, :numref:`Figure %s <fig-whitebox>` includes other commodity
+Finally, :numref:`Figure %s <fig-baremetal>` includes other commodity
 components that make this all practical. In particular, it is now
 possible to buy pluggable *transceiver* modules that take care of all
 the media access details—be it Gigabit Ethernet, 10-Gigabit Ethernet,
@@ -261,14 +263,14 @@ rightfully shifting to the software that controls them. This puts us
 squarely in the middle of a trend to build *Software Defined Networks*
 (SDN), an idea that started to germinate about ten years ago. In fact,
 it was the early stages of SDN that triggered the networking industry to
-move towards white-box switches.
+move towards bare-metal switches.
 
 The fundamental idea of SDN is one we’ve already discussed: to
 decouple the network control plane (i.e., where routing algorithms
 like RIP, OSPF, and BGP run) from the network data plane (i.e., where
 packet forwarding decisions get made), with the former moved into
 software running on commodity servers and the latter implemented by
-white-box switches. The key enabling idea behind SDN was to take this
+bare-metal switches. The key enabling idea behind SDN was to take this
 decoupling a step further, and to define a standard interface between
 the control plane and the data plane. Doing so allows any
 implementation of the control plane to talk to any implementation of

@@ -300,10 +300,10 @@ allocation mechanism.
    Finally, we observe that this whole discussion of queue management
    illustrates an important system design principle known as
    *separating policy and mechanism*. The idea is to view each
-   mechanism as a black box that provides a multifaceted service that
+   mechanism as an opaque box that provides a multifaceted service that
    can be controlled by a set of knobs. A policy specifies a
    particular setting of those knobs but does not know (or care) about
-   how the black box is implemented.  In this case, the mechanism in
+   how the policy is implemented.  In this case, the mechanism in
    question is the queuing discipline, and the policy is a particular
    setting of which flow gets what level of service (e.g., priority or
    weight). We discuss some policies that can be used with the WFQ

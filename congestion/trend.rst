@@ -42,7 +42,7 @@ and “instantly” can, for all practical purposes, be truly instantaneous.
 This is effectively what cloud providers do with the private backbones
 they build to interconnect their datacenters. For example, Google has
 publicly described their private WAN, called B4, which is built entirely
-using white-box switches and SDN. B4 does not add/drop wavelengths to
+using bare-metal switches and SDN. B4 does not add/drop wavelengths to
 adjust inter-node bandwidth—it dynamically builds end-to-end tunnels
 using a technique called *Equal-Cost Multipath* (ECMP), an alternative
 to CSPF introduced in :ref:`Section 4.4 <4.4 Multiprotocol Label

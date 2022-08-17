@@ -76,7 +76,7 @@ More specifically, the sixth edition includes the following major changes:
    Optical Networks (PON) and 5G’s Radio Access Networks (RAN).
 -  Refactored topics across Sections 3.1 (*Switching Basics*) and 3.2
    (*Switched Ethernet*), including expanded coverage of VLANs.
--  Section 3.5 updated to include descriptions of *White-Box Switches*
+-  Section 3.5 updated to include descriptions of *Bare-Metal Switches*
    and *Software-Defined Networks* (SDN).
 -  New Perspective Section in Chapter 3 describes virtual network
    overlays, *VXLAN*, and the
@@ -142,8 +142,8 @@ We would like to acknowledge the following people for their help with
 new content:
 
 -  Larry Brakmo: TCP Congestion Control
--  Carmelo Cascone: White-Box Switches
--  Charles Chan: White-Box Switches
+-  Carmelo Cascone: Bare-Metal Switches
+-  Charles Chan: Bare-Metal Switches
 -  Jude Nelson: Decentralized Identity
 -  Oguz Sunay: Cellular Networks
 -  Thomas Vachuska: Network Management
