@@ -134,6 +134,18 @@ covers the specifics of Switched Ethernet and the IP Internet
 then explores TCP congestion control (6.3), and concludes with
 optional advanced material (6.4-6.5).
 
+Code Examples
+-------------
+
+Since the first edition of this book, we have used code examples to
+illustrate how various protocols and algorithms might be
+implemented. Originally, the code came from the $x$-kernel, a
+framework for protocol implementation and research developed in the
+1990s, and you could compile and run every code fragment in the
+book. As the $x$-kernel code is no longer maintained, we no longer
+check that all the code in the book compiles or runs. At this point
+the code should only be used as a guide to assist the reader in
+understanding the topic at hand.
 
 Acknowledgments
 ----------------
