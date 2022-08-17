@@ -176,6 +176,8 @@ contributions and bug fixes:
    -  Xtao (vertextao)
    -  Joep (joepeding) 
    -  Seth (springbov)      
+   -  miluchen (miluchen)
+   -  Takashi Idobe (Takashiidobe)
 
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
