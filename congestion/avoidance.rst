@@ -620,8 +620,8 @@ ECN: in cloud datacenters. The combination is called DCTCP, which stands
 for *Data Center TCP*. The situation is unique in that a datacenter is
 self-contained, and so it is possible to deploy a tailor-made version of
 TCP that does not need to worry about treating other TCP flows fairly.
-Datacenters are also unique in that they are built using low-cost
-white-box switches, and because there is no need to worry about long-fat
+Datacenters are also unique in that they are built using commodity
+switches, and because there is no need to worry about long-fat
 pipes spanning a continent, the switches are typically provisioned
 without an excess of buffers.
 
