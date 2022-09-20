@@ -610,7 +610,9 @@ gRPC
 
 Despite its origins in Google, gRPC does not stand for Google RPC. The
 “g” stands for something different in each release. For version 1.10 it
-stood for “glamorous” and for 1.18 it stood for “goose”. Googlers are
+stood for “glamorous” and for 1.18 it stood for “goose”. According to
+the official gRPC FAQ, it is now a recursive acronym: gRPC means  “gRPC
+Remote Procedure Call”. Googlers are
 wild and crazy people. Nonetheless, gRPC is popular because it makes
 available to everyone—as open source—a decade’s worth of experience
 within Google using RPC to build scalable cloud services.
