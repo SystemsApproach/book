@@ -32,3 +32,4 @@ Larry Peterson and Bruce Davie
    applications.rst
    README.rst
    latest.rst
+   print.rst
