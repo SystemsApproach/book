@@ -401,7 +401,7 @@ unfold as follows:
    path to the root.
 
 This leaves S3 with active ports as shown in :numref:`Figure %s <fig-elan4>`.
-Note that Hosts A an B are not able to communication over the shortest
+Note that Hosts A and B are not able to communicate over the shortest
 path (via S5) because frames have to “flow up the tree and back down,”
 but that’s the price you pay to avoid loops.
 
