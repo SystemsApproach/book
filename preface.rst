@@ -190,6 +190,8 @@ contributions and bug fixes:
    -  Seth (springbov)      
    -  miluchen (miluchen)
    -  Takashi Idobe (Takashiidobe)
+   -  Beth (Innominata88)
+   -  Mohit Mayank (cueo)
 
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
