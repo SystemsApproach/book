@@ -287,7 +287,7 @@ forwards frames out over all of its ports. Next, each switch computes
 the shortest path to the root and notes which of its ports is on this
 path. This port is also selected as the switch’s preferred path to the
 root. Finally, to account for the possibility there could be another
-switch connected to its ports, the switch elect a single *designated*
+switch connected to its ports, the switch elects a single *designated*
 switch that will be responsible for forwarding frames toward the root.
 Each designated switch is the one that is closest to the root. If two or
 more switches are equally close to the root, then the switches’
@@ -401,7 +401,7 @@ unfold as follows:
    path to the root.
 
 This leaves S3 with active ports as shown in :numref:`Figure %s <fig-elan4>`.
-Note that Hosts A an B are not able to communication over the shortest
+Note that Hosts A and B are not able to communicate over the shortest
 path (via S5) because frames have to “flow up the tree and back down,”
 but that’s the price you pay to avoid loops.
 
