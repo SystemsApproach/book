@@ -1013,7 +1013,7 @@ that promises to forward the datagram toward the ultimate destination.
 
 One simple way to map an IP address into a physical network address is
 to encode a host’s physical address in the host part of its IP address.
-For example, a host with physical address ``00100001 01001001`` (which
+For example, a host with physical address ``00100001 01010001`` (which
 has the decimal value 33 in the upper byte and 81 in the lower byte)
 might be given the IP address ``128.96.33.81``. While this solution has
 been used on some networks, it is limited in that the network’s physical
