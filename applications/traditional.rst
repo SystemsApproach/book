@@ -121,7 +121,7 @@ message), and (how the data in the message body is encoded).
 The second piece is definitions for a set of content types (and
 subtypes). For example, MIME defines several different image types,
 including ``image/gif`` and ``image/jpeg``, each with the obvious
-meaning. As another example, ``text/plane`` refers to simple text you
+meaning. As another example, ``text/plain`` refers to simple text you
 might find in a vanilla 822-style message, while ``text/richtext``
 denotes a message that contains “marked up” text (text using special
 fonts, italics, etc.). As a third example, MIME defines an
