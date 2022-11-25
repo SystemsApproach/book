@@ -213,7 +213,7 @@ devices) to instead calling them L2 switches (connecting point-to-point
 links that reach just one other device). To keep the example managable,
 we include just three hosts. In practice, switches typically have 16,
 24, or 48 ports, meaning they are able to connect to that many hosts
-(and other swiches).
+(and other switches).
 
 In our example switched network, suppose that a packet enters switch S4
 from Host C and that the destination address is one not yet in any
