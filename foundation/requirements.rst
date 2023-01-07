@@ -158,8 +158,8 @@ think of it as a placeholder for any of the networking technologies
 covered in this book.\ [#]_
 
 .. [#] The use of clouds to represent networks predates the term
-       *cloud computing* by at least a couple of decades, but there an
-       increasingly rich connection between these two usages, which
+       *cloud computing* by at least a couple of decades, but there is
+       an increasingly rich connection between these two usages, which
        we explore in the *Perspective* discussion at the end of each
        chapter.
 
