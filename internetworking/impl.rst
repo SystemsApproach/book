@@ -148,7 +148,7 @@ performance of ASICs and the agility of software.
 Fortunately, recent advances in domain specific processors (and other
 commodity components) have made this possible. Just as importantly, the
 full architectural specification for switches that take advantage of
-these new processors is now available on-line—the hardware equivalent of
+these new processors is now available online—the hardware equivalent of
 *open source software*. This means anyone can build a high-performance
 switch by pulling the blueprint off the web (see the Open Compute
 Project, OCP, for examples) in the same way it is possible to build your
