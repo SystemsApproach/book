@@ -12,7 +12,7 @@ the Internet today.
 `Book Series: <https://systemsapproach.org/books/>`__ Also check out
 our companion books that cover emerging topics in more depth.
 
-* `5G Mobile Networks: A Systems Approach <https://5G.systemsapproach.org>`__
+* `Private 5G: A Systems Approach <https://5G.systemsapproach.org>`__
 
 * `Software-Defined Networks: A Systems Approach <https://sdn.systemsapproach.org>`__
 
