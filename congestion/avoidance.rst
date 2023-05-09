@@ -528,7 +528,7 @@ network, which implies that the sending rate should be reduced. The
 actual throughput rate gets too close to the expected throughput, the
 connection is in danger of not utilizing the available bandwidth. The
 *α* threshold triggers this increase. The overall goal is to keep
-between\ *α* and *β* extra bytes in the network.
+between *α* and *β* extra bytes in the network.
 
 .. _fig-vegas:
 .. figure:: figures/f06-19-9780123850591.png
