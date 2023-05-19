@@ -16,6 +16,6 @@ our companion books that cover emerging topics in more depth.
 
 * `Edge Cloud Operations: A Systems Approach <https://amzn.to/3MfvK13>`__
 
-* `5G Mobile Networks: A Systems Approach <https://amzn.to/3EjwMH0>`__
+* `Private 5G: A Systems Approach <https://amzn.to/3BBAQA6>`__
 
 As participants in the Amazon Associate program we may earn income from qualifying purchases using the links above.
