@@ -287,7 +287,7 @@ other at a single *peering point*.
 
 To get a better sense of how we might manage routing among this complex
 interconnection of autonomous systems, we can start by defining a few
-terms. We define *local traffic* as traffic that originates at or
+terms. We define *local traffic* as traffic that originates at and
 terminates on nodes within an AS, and *transit traffic* as traffic that
 passes through an AS. We can classify autonomous systems into three
 broad types:
