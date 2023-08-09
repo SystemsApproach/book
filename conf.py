@@ -143,6 +143,8 @@ html_use_index = False
 #
 # html_sidebars = {}
 
+#extra HTML files
+html_extra_path = ['_extra']
 
 # -- Options for HTMLHelp output ---------------------------------------------
 
@@ -221,7 +223,7 @@ epub_use_index = False
 # epub_uid = ''
 
 # A list of files that should not be packed into the epub file.
-epub_exclude_files = ['search.html']
+epub_exclude_files = ['search.html','robots.txt']
 
 
 # -- Extension configuration -------------------------------------------------
