@@ -210,14 +210,14 @@ forwarded forever. This is easy to see in the example depicted in
 Note that we are now making the shift from calling the each forwarding
 device a bridge (connecting segments that might reach multiple other
 devices) to instead calling them L2 switches (connecting point-to-point
-links that reach just one other device). To keep the example managable,
+links that reach just one other device). To keep the example manageable,
 we include just three hosts. In practice, switches typically have 16,
 24, or 48 ports, meaning they are able to connect to that many hosts
 (and other switches).
 
 In our example switched network, suppose that a packet enters switch S4
 from Host C and that the destination address is one not yet in any
-switches’s forwarding table: S4 sends a copy of the packet out its two
+switch's forwarding table: S4 sends a copy of the packet out its two
 other ports: to switches S1 and S6. Switch S6 forwards the packet onto
 S1 (and meanwhile, S1 forwards the packet onto S6), both of which in
 turn forward their packets back to S4. Switch S4 still doesn’t have this
