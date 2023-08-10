@@ -8,7 +8,7 @@ referred to as *L2 switches*, are widely used in campus and enterprise
 networks. Historically, they were more commonly referred to as
 *bridges* because they were used to “bridge” ethernet segments to
 build an *extended LAN*. But today most networks deploy Ethernet in a
-point-to-point configuration, with these links interconneted by L2
+point-to-point configuration, with these links interconnected by L2
 switches to form a switched Ethernet.
 
 The following starts with the historical perspective (using bridges to
