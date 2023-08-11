@@ -2,7 +2,7 @@
 =================================
 
 In the early days of packet switching, most applications were
-concerned with transfering files, although as early as 1981,
+concerned with transferring files, although as early as 1981,
 experiments were under way to carry real-time traffic, such as
 digitized voice samples. We call an application “real-time” when it
 has strong requirements for the timely delivery of information. Voice

@@ -17,7 +17,7 @@ processes to *directly* identify each other with an OS-assigned process
 id (pid), such an approach is only practical in a closed distributed
 system in which a single OS runs on all hosts and assigns each process a
 unique id. A more common approach, and the one used by UDP, is for
-processes to *indirectly* identify each other using an abstract locater,
+processes to *indirectly* identify each other using an abstract locator,
 usually called a *port*. The basic idea is for a source process to send
 a message to a port and for the destination process to receive the
 message from a port.

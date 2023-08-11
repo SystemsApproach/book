@@ -1171,7 +1171,7 @@ section.
    necessarily a bad thing as long as the reference implementation is
    available as open source software. More generally, the industry is
    seeing open source software grow in importance as open standards
-   receed in importance. :ref:`[Next] <key-micro-service>`
+   recede in importance. :ref:`[Next] <key-micro-service>`
 
 5.2.7 Record Boundaries
 -----------------------
