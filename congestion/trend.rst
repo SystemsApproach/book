@@ -34,7 +34,7 @@ of the L2/L3 network topology, Boston and San Francisco are connected by
 a direct link.) This dramatically lowers the time-to-availability, but
 reconfiguring hardware still requires manual intervention, and so our
 definition of “instantly” is still measured in days, if not weeks.
-Afterall, there are requisition forms to be filled out, in triplicate!
+After all, there are requisition forms to be filled out, in triplicate!
 
 But as we have seen again and again, once you provide the right
 programmatic interfaces, software can be brought to bear on the problem,

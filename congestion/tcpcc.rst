@@ -495,7 +495,7 @@ short-RTT flows, which will have ACKs arriving more frequently.
    :width: 500px
    :align: center
 
-   Generic cubic function illustrsting the change in the congestion 
+   Generic cubic function illustrating the change in the congestion 
    window as a function of time.
 
 The second important aspect of CUBIC is its use of a cubic function to

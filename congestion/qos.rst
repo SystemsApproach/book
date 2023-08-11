@@ -529,7 +529,7 @@ Another important characteristic of RSVP is that it aims to support
 multicast flows just as effectively as unicast flows. This is not
 surprising, since many of the first applications that could benefit
 from improved quality of service were also multicast
-applications—video conferenceing tools, for example. One of the
+applications—video conferencing tools, for example. One of the
 insights of RSVP’s designers is that most multicast applications have
 many more receivers than senders, as typified by the large audience
 and one speaker for a lecture. Also, receivers may have different
