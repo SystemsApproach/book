@@ -654,7 +654,7 @@ protocols for communicating configuration information to network
 devices. OpenConfig works with NETCONF, but our reading of the tea
 leaves points to gNMI as the future.
 
-We conclude by emphasizing that a seachange is underway. While listing
+We conclude by emphasizing that a sea change is underway. While listing
 SNMP and OpenConfig in the title to this section suggests they are
 equivalent, it is more accurate to say that each is “what we call” these
 two approaches, but the approaches are quite different. On the one hand,
