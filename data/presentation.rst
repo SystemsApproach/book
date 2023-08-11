@@ -191,7 +191,7 @@ an integer, a floating-point number, or whatever. Another example is a
 in an array or the size of an integer. A third example is an
 *architecture* tag, which might be used in conjunction with the
 receiver-makes-right strategy to specify the architecture on which the
-data contained in the message was generated. :numref:`Figure %sa
+data contained in the message was generated. :numref:`Figure %s
 <fig-tags>` depicts how a simple 32-bit integer might be encoded in a
 tagged message.
 
