@@ -431,7 +431,7 @@ layer is layer 3, and the link or subnet layer below IP is layer 2.
    In addition to defining architectures and specifying protocols,
    there are yet other organizations that support the larger goal of
    interoperability. One example is the IANA (Internet Assigned
-   Numbers Authority), which as its name impies, is responsible for
+   Numbers Authority), which as its name implies, is responsible for
    handing out the unique identifiers needed to make the protocols
    work. IANA, in turn, is a department within the ICANN (Internet
    Corporation for Assigned Names and Numbers), a non-profit

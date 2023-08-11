@@ -11,7 +11,7 @@ considerations, also influence how networks are designed and built.
 
 Of these, the marketplace is the most influential, and corresponds to
 the interplay between network operators (e.g., AT&T, Comcast, Verizon,
-DT, NTT, China Unicom), network equipment venders (e.g., Cisco, Juniper,
+DT, NTT, China Unicom), network equipment vendors (e.g., Cisco, Juniper,
 Ericsson, Nokia, Huawei, NEC), application and service providers (e.g.,
 Facebook, Google, Amazon, Microsoft, Apple, Netflix, Spotify), and of
 course, subscribers and customers (i.e., individuals, but also

@@ -440,7 +440,7 @@ the other end of the pipe.
 
 Like any abstraction, logical process-to-process channels are
 implemented on top of a collection of physical host-to-host
-channels. This is the essense of layering, the cornerstone of network
+channels. This is the essence of layering, the cornerstone of network
 architectures discussed in the next section.
 
 The challenge is to recognize what functionality the channels should
