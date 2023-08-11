@@ -42,7 +42,7 @@ illustrate the three applications of MPLS mentioned above.
 ----------------------------------
 
 One of the earliest publications to introduce the idea of attaching
-labels to IP packets was a paper by Chandranmenon and Vargese that
+labels to IP packets was a paper by Chandranmenon and Varghese that
 described an idea called *threaded indices*. A very similar idea is now
 implemented in MPLS-enabled routers. The following example shows how
 this idea works.

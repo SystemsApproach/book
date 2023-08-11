@@ -45,7 +45,7 @@ users interact with applications running in the Cloud, which looks
 more like :numref:`Figure %s <fig-cloud>`. (One important detail that
 the figure does not convey is that Cloud providers do not typically
 build a WAN by laying their own fiber, but they instead lease fiber
-from servicer providers, meaning that the private cloud backbone and
+from service providers, meaning that the private cloud backbone and
 the service provider backbones often share the same physical
 infrastructure.)
 

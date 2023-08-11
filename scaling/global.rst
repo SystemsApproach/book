@@ -46,7 +46,7 @@ networks in other countries), but of course most people get their
 Internet connectivity from commercial providers. Although the detail is
 not shown in the figure, today the largest provider networks (they are
 called tier-1) are typically built from dozens of high-end routers
-located in major meteropolitan areas (colloquially referred to as “NFL
+located in major metropolitan areas (colloquially referred to as “NFL
 cities”) connected by point-to-point links (often with 100 Gbps
 capacity). Similarly, each end-user site is typically not a single
 network but instead consists of multiple physical networks connected by
