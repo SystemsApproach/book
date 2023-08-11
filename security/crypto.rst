@@ -141,8 +141,8 @@ cipher illustrated in :numref:`Figure %s <fig-genericCrypto>` were a
 secret-key cipher, then the encryption and decryption keys would be
 identical. Secret-key ciphers are also known as symmetric-key ciphers
 since the secret is shared with both participants. We’ll take a look
-at the alternative, public-key ciphers, shortly. (Public-key cipers
-are known as also asymmetric-key ciphers, since as we’ll soon se, the
+at the alternative, public-key ciphers, shortly. (Public-key ciphers
+are known as also asymmetric-key ciphers, since as we’ll soon see, the
 two participants use different keys.)
 
 .. [#] We use the term *participant* for the parties involved in a

@@ -413,7 +413,7 @@ sequence number in order.
 
 Another interesting feature of the TLS protocol is the ability to resume
 a session. To understand the original motivation for this, it is helpful
-to understand how HTTP originally mades use of TCP connections. (The
+to understand how HTTP originally made use of TCP connections. (The
 details of HTTP are presented in the next chapter.) Each HTTP operation,
 such as getting a page from a server, required a new TCP connection to
 be opened. Retrieving a single page with a number of embedded graphical
@@ -438,7 +438,7 @@ session state cached at the server, or if resumption was not allowed for
 the session, then the server will fall back to the normal handshake
 process.
 
-The reason the preceeding discussion emphasized the *original*
+The reason the preceding discussion emphasized the *original*
 motivation is that having to do a TCP handshake for every embedded
 object in a web page led to so much overhead, independent of TLS, that
 HTTP was eventually optimized to support *persistent connections* (also
