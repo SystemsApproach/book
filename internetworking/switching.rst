@@ -659,7 +659,7 @@ contains the list of ports (3, 0, 1), where we assume that each switch
 reads the rightmost element of the list. To make sure that the next
 switch gets the appropriate information, each switch rotates the list
 after it has read its own entry. Thus, the packet header as it leaves
-switch 1 enroute to switch 2 is now (1, 3, 0); switch 2 performs another
+switch 1 en route to switch 2 is now (1, 3, 0); switch 2 performs another
 rotation and sends out a packet with (0, 1, 3) in the header. Although
 not shown, switch 3 performs yet another rotation, restoring the header
 to what it was when host A sent it.

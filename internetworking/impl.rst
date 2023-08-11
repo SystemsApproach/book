@@ -193,7 +193,7 @@ with 32x100-Gbps ports, or the 48x40-Gbps ports shown in the diagram.
 	     the NPUs we’re discussing here; nor were they as
 	     high-performance. It seems likely that the current
 	     approach will make purpose-built network processors
-	     obsolete, but in any case, we prefer the NPU nomenclator
+	     obsolete, but in any case, we prefer the NPU nomenclature
 	     because it is consistent with the trend to build
 	     programmable domain-specific processors, including GPUs
 	     for graphics and TPUs (Tensor Processing Units) for AI.
@@ -345,7 +345,7 @@ providers that have embraced this approach confirms this advantage.
    to the control apps.  From the control application's perspective,
    all the information it needs to compute the forwarding table is
    locally available.  Keeping in mind that the SDN Controller is
-   logically centralized but physically replicated on multple
+   logically centralized but physically replicated on multiple
    servers—for both scalable performance and high availability—it is
    still a hotly contested question whether the centralized or
    distributed approach is best. :ref:`[Next] <key-tradeoffs>`
