@@ -1547,22 +1547,18 @@ chapter.
 QUIC
 ~~~~
 
-QUIC originated at Google in 2012 
-and was subsequently developed as a proposed standard at
-the IETF. It has already seen a moderate amount of deployment (in some
-Web browsers and quite a number of popular Web sites). The fact that
-it has been successful to this degree is in itself an interesting part
-of the QUIC story, and indeed deployability was a key consideration
-for the designers of the protocol.
-
-The motivation for QUIC comes directly from the points we noted above
-about TCP: certain design decisions have turned out to be non-optimal
-for a range of applications that run over TCP, with HTTP (Web) traffic
-being a particularly notable example. These issues have become more
+QUIC originated at Google in 2012 and was subsequently developed as a
+proposed standard at the IETF. Unlike many other efforts to add to the
+set of transport protocols in the Internet, QUIC has achieved
+widespread deployment. As discussed further in :ref:`Chapter 9
+<Chapter 9: Applications>`, QUIC was motivated in large part by the
+challenges of matching the request/response semantics of HTTP to the
+stream-oriented nature of TCP.  These issues have become more
 noticeable over time, due to factors such as the rise of high-latency
 wireless networks, the availability of multiple networks for a single
 device (e.g., Wi-Fi and cellular), and the increasing use of
-encrypted, authenticated connections on the Web. While a full
+encrypted, authenticated connections on the Web (as discussed in
+:ref:`Chapter 8 <Chapter 8: Network Security>`). While a full
 description of QUIC is beyond our scope, some of the key design
 decisions are worth discussing.
 
@@ -1599,11 +1595,11 @@ decisions are worth discussing.
 	     so is a great way to make sure your basic understanding
 	     of TCP is sound.
 	     
-If network latency is high—in the hundreds of milliseconds—then a few
+If network latency is high—say 100 milliseconds or more—then a few
 RTTs can quickly add up to a visible annoyance for an end
 user. Establishing an HTTP session over TCP with Transport Layer
 Security (:ref:`Section 8.5 <8.5 Example Systems>`) would typically
-take three round trips (one for TCP session establishment and two for
+take at least three round trips (one for TCP session establishment and two for
 setting up the encryption parameters) before the first HTTP message
 could be sent. The designers of QUIC recognized that this delay—the
 direct result of a layered approach to protocol design—could be
@@ -1623,7 +1619,14 @@ and page rendering could begin before they have all arrived. While
 one workaround for this would be to open multiple TCP connections in
 parallel, this approach (which was used in the early days of the Web)
 has its own set of drawbacks, notably on congestion control (see
-:ref:`Chapter 6 <Chapter 6: Congestion Control>`).
+:ref:`Chapter 6 <Chapter 6: Congestion Control>`). Specifically, each
+connection runs its own congestion control loop, so the experience of
+congestion on one connection is not apparent to the other connections,
+and each connection tries to figure out the appropriate amount of
+bandwidth to consume on its own. QUIC introduced the idea of streams
+within a connection, so that objects could be delivered out-of-order
+while maintaining a holistic view of congestion across all the
+streams. 
 
 Interestingly, by the time QUIC emerged, many design decisions had
 been made that presented challenges for the deployment of a new
@@ -1634,7 +1637,9 @@ UDP) that they can't be relied upon to pass a new transport
 protocol. As a result, QUIC actually rides on top of UDP. In other
 words, it is a transport protocol running on top of a transport
 protocol. This is not as uncommon as our focus on layering might
-suggest, as the next two subsections also illustrate.
+suggest, as the next two subsections also illustrate. This choice was
+made in the interests of making QUIC deployable on the Internet as it
+exists, and has been quite successful.
 
 QUIC implements fast connection establishment with encryption and
 authentication in the first RTT. It provides a connection identifier
@@ -1642,9 +1647,17 @@ that persists across changes in the underlying network. It supports the
 multiplexing of several streams onto a single transport connection, to
 avoid the head-of-line blocking that may arise when a single packet is
 dropped while other useful data continues to arrive. And it preserves
+(and in some ways improves on)
 the congestion avoidance properties of TCP, an important aspect of
 transport protocols that we return to in :ref:`Chapter 6 <Chapter 6:
 Congestion Control>`.
+
+HTTP went through a number of versions (1.0, 1.1, 2.0, discussed in
+:ref:`Section 9.1 <9.1 Traditional Applications>`) in an effort to map its
+requirements more cleanly onto the capabilities of TCP. With the
+arrival of QUIC, HTTP/3 is now able to leverage a transport layer that
+was explicitly designed to meet the application requirements of
+the Web.
 
 QUIC is a most interesting development in the world of transport
 protocols. Many of the limitations of TCP have been known for decades,
@@ -1654,3 +1667,5 @@ inspired by experience with HTTP and the Web—which arose long after
 TCP was well established in the Internet—it presents a fascinating
 case study in the unforeseen consequences of layered designs and in
 the evolution of the Internet.
+
+

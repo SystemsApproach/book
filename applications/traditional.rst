@@ -12,7 +12,7 @@ that predated it). By contrast, later sections will look at a class of
 applications that have become popular more recently: streaming
 applications (e.g., multimedia applications like video and audio) and
 various overlay-based applications. (Note that there is a bit of a
-blurring between these classes, as you can of course get access to
+blurring between these classes, as we increasingly access 
 streaming multimedia data over the Web, but for now we’ll focus on the
 general usage of the Web to request pages, images, etc.)
 
@@ -42,7 +42,7 @@ protocols:
 Second, we observe that many application layer protocols, including HTTP
 and SMTP, have a companion protocol that specifies the format of the
 data that can be exchanged. This is one reason WHY these protocols are
-relatively simple: Much of the complexity is managed in this companion
+relatively simple: much of the complexity is managed in this companion
 standard. For example, SMTP is a protocol for exchanging electronic mail
 messages, but RFC 822 and Multipurpose Internet Mail Extensions (MIME)
 define the format of email messages. Similarly, HTTP is a protocol for
@@ -53,7 +53,7 @@ Finally, since the application protocols described in this section
 follow the same request/reply communication pattern, you might expect
 that they would be built on top of a Remote Procedure Call (RPC)
 transport protocol. This is not the case, however, as they are instead
-implemented on top of TCP. In effect, each protocol reinvents a simple
+implemented on top of TCP [#]_. In effect, each protocol reinvents a simple
 RPC-like mechanism on top of a reliable transport protocol (TCP). We say
 “simple” because each protocol is not designed to support arbitrary
 remote procedure calls of the sort discussed in an earlier chapter, but
@@ -63,6 +63,9 @@ powerful, which has led to it being adopted widely by the *Web Services*
 architecture, with general RPC mechanisms built *on top of HTTP* rather
 than the other way around. More on this topic at the end of this
 section.
+
+.. [#] This is starting to change for the Web with HTTP/3 as we discuss later in
+       the chapter.
 
 9.1.1 Electronic Mail (SMTP, MIME, IMAP)
 ----------------------------------------
@@ -170,7 +173,7 @@ JPEG image, and a PostScript file would look something like this:
    MIME-Version: 1.0
    Content-Type: multipart/mixed;
    boundary="-------417CA6E2DE4ABCAFBC5"
-   From: Alice Smith <Alice@cisco.com>
+   From: Alice Smith <Alice@systemsapproach.org>
    To: Bob@cs.Princeton.edu
    Subject: promised material
    Date: Mon, 07 Sep 1998 19:45:19 -0400
@@ -288,8 +291,8 @@ keyboard to pretend to be an SMTP client program.
 
 SMTP is best understood by a simple example. The following is an
 exchange between sending host ``cs.princeton.edu`` and receiving host
-``cisco.com`` . In this case, user Bob at Princeton is trying to send
-mail to users Alice and Tom at Cisco. Extra blank lines have been added
+``systemsapproach.org`` . In this case, user Bob at Princeton is trying to send
+mail to users Alice and Tom at Systems Approach. Extra blank lines have been added
 to make the dialog more readable.
 
 .. code-block:: shell
@@ -300,10 +303,10 @@ to make the dialog more readable.
    MAIL FROM:<Bob@cs.princeton.edu>
    250 OK
 
-   RCPT TO:<Alice@cisco.com>
+   RCPT TO:<Alice@systemsapproach.org>
    250 OK
 
-   RCPT TO:<Tom@cisco.com>
+   RCPT TO:<Tom@systemsapproach.org>
    550 No such user here
 
    DATA
@@ -342,7 +345,7 @@ user.
 
 The only other point of interest is the arguments to the ``MAIL`` and
 ``RCPT`` operations; for example, ``FROM:<Bob@cs.princeton.edu>`` and
-``TO:<Alice@cisco.com>``, respectively. These look a lot like 822 header
+``TO:<Alice@systemsapproach.org>``, respectively. These look a lot like 822 header
 fields, and in some sense they are. What actually happens is that the
 mail daemon parses the message to extract the information it needs to
 run SMTP. The information it extracts is said to form an *envelope* for
@@ -433,7 +436,7 @@ were designed to meet that goal.
 One helpful way to think of the Web is as a set of cooperating clients
 and servers, all of whom speak the same language: HTTP. Most people are
 exposed to the Web through a graphical client program or web browser
-like Safari, Chrome, Firefox, or Internet Explorer. :numref:`Figure %s
+such as Safari, Chrome, Firefox, or Internet Explorer. :numref:`Figure %s
 <fig-netscape>` shows the Safari browser in use, displaying a page of
 information from Princeton University.
 
@@ -444,10 +447,9 @@ information from Princeton University.
 
    The Safari web browser.
 
-Clearly, if you want to organize information into a system of linked
-documents or objects, you need to be able to retrieve one document to
-get started. Hence, any web browser has a function that allows the user
-to obtain an object by opening a URL. Uniform Resource Locators (URLs)
+If you want to organize information into a system of linked
+documents or objects, there needs to be a way to identify documents so
+you can link to them. Uniform Resource Locators (URLs)
 are so familiar to most of us by now that it’s easy to forget that they
 haven’t been around forever. They provide information that allows
 objects on the Web to be located, and they look like the following:
@@ -464,19 +466,19 @@ and many have other objects such as audio and video clips, pieces of
 code, etc. They also frequently include URLs that point to other files
 that may be located on other machines, which is the core of the
 “hypertext” part of HTTP and HTML. A web browser has some way in which
-you can recognize URLs (often by highlighting or underlining some text)
-and then you can ask the browser to open them. These embedded URLs are
-called *hypertext links*. When you ask your web browser to open one of
-these embedded URLs (e.g., by pointing and clicking on it with a mouse),
-it will open a new connection and retrieve and display a new file. This
-is called *following a link*. It thus becomes very easy to hop from one
-machine to another around the network, following links to all sorts of
+you can recognize URLs (often by highlighting or underlining some
+text) and then you can ask the browser to open them. These embedded
+URLs are an example of *hypertext links*. When you ask your web browser to
+open one of these embedded URLs (e.g., by pointing and clicking on it
+with a mouse), it will retrieve and display
+the named file. It thus becomes very easy to hop from one machine to
+another around the network, following links to all sorts of
 information. Once you have a means to embed a link in a document and
 allow a user to follow that link to get another document, you have the
 basis of a hypertext system.
 
 When you ask your browser to view a page, your browser (the client)
-fetches the page from the server using HTTP running over TCP. Like SMTP,
+fetches the page from the server using HTTP, which traditionally runs over TCP. Like SMTP,
 HTTP is a text-oriented protocol. At its core, HTTP is a
 request/response protocol, where every message has the general form
 
@@ -504,14 +506,14 @@ the contents of the requested message (``MESSAGE_BODY``); this part of
 the message is where a server would place the requested page when
 responding to a request, and it is typically empty for request messages.
 
-Why does HTTP run over TCP? The designers didn’t have to do it that way,
-but TCP does provide a pretty good match to what HTTP needs,
-particularly by providing reliable delivery (who wants a Web page with
-missing data?), flow control, and congestion control. However, as we’ll
-see below, there are a few issues that can arise from building a
-request/response protocol on top of TCP, especially if you ignore the
-subtleties of the interactions between the application and transport
-layer protocols.
+Why was HTTP designed to run over TCP? The designers didn’t have to do it that
+way, but TCP provides numerous services that HTTP needs: reliable
+delivery (who wants a Web page with missing data?), flow control, and
+congestion control. However, as we’ll see below, there are a few
+issues that arose from building a request/response protocol on top of
+TCP, that become more apparent as you consider the details of the interactions
+between the application and transport layer protocols. This has led to
+new versions of HTTP and a new underlying transport, QUIC, discussed below.
 
 Request Messages
 ~~~~~~~~~~~~~~~~
@@ -708,7 +710,7 @@ and termination.
 To overcome this situation, HTTP version 1.1 introduced *persistent
 connections*—the client and server can exchange multiple
 request/response messages over the same TCP connection. Persistent
-connections have many advantages. First, they obviously eliminate the
+connections have many advantages. First, they eliminate the
 connection setup overhead, thereby reducing the load on the server,
 the load on the network caused by the additional TCP packets, and the
 delay perceived by the user. Second, because a client can send
@@ -742,7 +744,7 @@ be one reason why persistent connections were not used from the outset,
 but today it is widely accepted that the benefits of persistent
 connections more than offset the drawbacks.
 
-While 1.1 is still widely supported, a new version (2.0) was formally
+While 1.1 is still widely supported, version 2.0 was formally
 approved by the IETF in 2015. Known as HTTP/2, the new version is
 backwards compatible with 1.1 (i.e,. it adopts the same syntax for
 header fields, status codes, and URIs), but it adds two new features.
@@ -770,6 +772,42 @@ other. The way HTTP/2 does this should sound familiar: it defines a
 *streams*), permits multiple concurrent streams to be active at a
 given time (each labeled with a unique *stream id*), and limits each
 stream to one active request/reply exchange at a time.
+
+HTTP/3 and QUIC
+~~~~~~~~~~~~~~~
+As the preceding discussion illustrates, the history of HTTP has
+included a series of incremental changes to make better use of TCP as
+the underlying transport. But there is a fundamental issue that can't
+be fully resolved: TCP provides a byte-stream abstraction, while HTTP
+is a request/response protocol. The natural solution would be to adopt
+a more suitable transport, but as we saw in
+:ref:`Chapter 5 <Chapter 5: End-to-End Protocols>`, there is no
+standard RPC protocol that enjoys the widespread acceptance of TCP.
+
+Ultimately, the solution to this mismatch was to create a new
+transport protocol in QUIC. QUIC was explicitly designed to provide a
+good match to the requirements of HTTP, and HTTP/3 takes advantage of
+the improved underlying transport. For example, QUIC explicitly
+supports stream multiplexing at the transport layer. Thus, a single
+packet loss only impacts the delivery of the stream that suffered the
+loss, rather than causing a stall in the entire TCP connection while
+waiting for that lost packet to be retransmitted. At the same time,
+that lost packet provides a congestion signal that is applied to all
+streams in the QUIC connection. We cover QUIC in more detail in
+:ref:`Section 5.2 <5.2 Reliable Byte Stream (TCP)>`.
+
+Another significant advantage of QUIC compared to TCP is the way it
+handles the steps required to secure an HTTP connection. Whereas the
+exchange of certificates and encryption keys follows the establishment
+of a TCP session, QUIC handles these steps as part of session
+establishment, leading to a considerable reduction in the number of
+round-trips needed to establish a secure connection before the first
+content is delivered. 
+
+HTTP/3 is implemented in the majority of browsers and is incrementally
+being deployed on servers across the Internet. There remain
+plenty of servers running HTTP/2 and even some HTTP/1.1 as well, so version negotiation is
+likely to be part of HTTP implementations for the foreseeable future. 
 
 Caching
 ~~~~~~~
