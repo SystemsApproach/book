@@ -560,17 +560,16 @@ For example, the ``START_LINE``
 
 ::
 
-   GET http://www.cs.princeton.edu/index.html
-   HTTP/1.1
+   GET http://www.cs.princeton.edu/index.html HTTP/1.1
 
 says that the client wants the server on host to return the page named
-``index.html``.  This particular example uses an *absolute* URL. It is
-also possible to use a *relative* identifier and specify the host name
+``index.html``.  This particular example uses an absolute URL. It is
+also possible to request a path in the ``START_LINE` and specify the host name
 in one of the ``MESSAGE_HEADER`` lines; for example,
 
 .. code-block:: http
 
-   GET index.html HTTP/1.1
+   GET /index.html HTTP/1.1
    Host: www.cs.princeton.edu
 
 Here, ``Host`` is one of the possible ``MESSAGE_HEADER`` fields. One
