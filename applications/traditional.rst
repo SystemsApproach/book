@@ -564,7 +564,7 @@ For example, the ``START_LINE``
 
 says that the client wants the server on host to return the page named
 ``index.html``.  This particular example uses an absolute URL. It is
-also possible to request a path in the ``START_LINE` and specify the host name
+also possible to request a path in the ``START_LINE`` and specify the host name
 in one of the ``MESSAGE_HEADER`` lines; for example,
 
 .. code-block:: http
