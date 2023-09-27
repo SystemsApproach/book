@@ -178,7 +178,7 @@ contributions and bug fixes:
    -  John Hartman
    -  Ethan Lam
    -  Diego López León
-   -  Matteo Scandolo
+   -  Matteo Scandolo (teone)
    -  Mike Wawrzoniak
    -  罗泽轩 (spacewander)
    -  Arnaud (arvdrpoo)
@@ -191,7 +191,17 @@ contributions and bug fixes:
    -  miluchen (miluchen)
    -  Takashi Idobe (Takashiidobe)
    -  Beth (Innominata88)
-   -  Mohit Mayank (cueo)
+   -  Mohit Mayank (mmynk)
+   -  Mark Liffiton (liffiton)
+   -  Junhao Zhang (junhaoim)
+   -  Cooper Vandiver (CooperVandiver)
+   -  Waheed Hafez (WaheedHafez)
+   -  Benjamin Levy (BenjaminLevy)
+   -  Takashi Idobe (Takashiidobe)
+   -  Kirby Linvill (klinvill)
+   -  Osman Karaketir (karaketir16)
+   -  Anderson Adon (Anderson-A)
+   -  李俊康 (lijunkang12)
 
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
