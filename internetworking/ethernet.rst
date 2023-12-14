@@ -22,7 +22,7 @@ To begin, suppose you have a pair of Ethernets that you want to
 interconnect. One approach you might try is to put a repeater between
 them. This would not be a workable solution, however, if doing so
 exceeded the physical limitations of the Ethernet. (Recall that no more
-than two repeaters between any pair of hosts and no more than a total of
+than four repeaters between any pair of hosts and no more than a total of
 2500 m in length are allowed.) An alternative would be to put a node
 with a pair of Ethernet adaptors between the two Ethernets and have the
 node forward frames from one Ethernet to the other. This node would
