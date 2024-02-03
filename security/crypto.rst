@@ -207,7 +207,7 @@ significant successful attacks.
 8.2.3 Public-Key Ciphers
 ------------------------
 
-An alternative to secret-key ciphers is public-key, ciphers. Instead of
+An alternative to secret-key ciphers is public-key ciphers. Instead of
 a single key shared by two participants, a public-key cipher uses a pair
 of related keys, one for encryption and a different one for decryption.
 The pair of keys is “owned” by just one participant. The owner keeps the
