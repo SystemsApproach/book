@@ -3,9 +3,10 @@
 :pop:`Read the Latest!`
 ========================
 
-`Substack Newsletter: <https://systemsapproach.substack.com/>`__ Stay
-up-to-date with the latest developments by following the authors on
-`Substack <https://systemsapproach.substack.com/>`__, where they
+`Systems Approach Newsletter: <https://systemsapproach.org/newsletter>`__ Stay
+up to date with the latest developments by subscribing to the
+`Systems Approach Newsletter
+<https://systemsapproach.org/newsletter>`__, where the authors
 connect the concepts and lessons in this book to what's happening in
 the Internet today.
 

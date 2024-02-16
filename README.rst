@@ -35,10 +35,9 @@ at https://book.systemsapproach.org.
 
 To track progress and receive notices about new versions, you can follow
 the project on
-`Facebook <https://www.facebook.com/Computer-Networks-A-Systems-Approach-110933578952503/>`__
-and `Mastodon <https://discuss.systems/@SystemsAppr>`__. To read a running
-commentary on how the Internet is evolving, follow the `Systems Approach
-on Substack <https://systemsapproach.substack.com>`__.
+`Mastodon <https://discuss.systems/@SystemsAppr>`__. To read a running
+commentary on how the Internet is evolving, and for updates on our writing projects, you can sign up for the
+`Systems Approach newsletter <https://systemsapproach.org/newsletter/>`__.
 
 Releases and Editions
 ---------------------
