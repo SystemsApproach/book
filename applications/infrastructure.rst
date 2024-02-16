@@ -293,7 +293,7 @@ change everyone’s email address.
 
    (penguins.cs.princeton.edu, 128.112.155.166, A, IN)
    (www.cs.princeton.edu, coreweb.cs.princeton.edu, CNAME, IN)
-   coreweb.cs.princeton.edu, 128.112.136.35, A, IN)
+   (coreweb.cs.princeton.edu, 128.112.136.35, A, IN)
    (cs.princeton.edu, mail.cs.princeton.edu, MX, IN)
    (mail.cs.princeton.edu, 128.112.136.72, A, IN)
    ...
