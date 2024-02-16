@@ -85,7 +85,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -126,6 +126,10 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+html_css_files = [
+    'css/rtd_theme_mods.css',
+    ]
 
 # HTML Favicon
 html_favicon = '_static/bridge.ico'
@@ -230,14 +234,6 @@ epub_exclude_files = ['search.html','robots.txt']
 
 # -- options for Intersphinx extension ---------------------------------------
 
-intersphinx_mapping = {
-    'sphinx': ('https://www.sphinx-doc.org/en/master', None),
-    'sysapproach5g': ('https://5g.systemsapproach.org/', None),
-    'sysapproachnet': ('https://ops.systemsapproach.org/', None),
-    'sysapproachnet': ('https://tcpcc.systemsapproach.org/', None),
-    'sysapproachsdn': ('https://sdn.systemsapproach.org/', None),
-    }
-
 # -- Options for todo extension ----------------------------------------------
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
@@ -257,8 +253,5 @@ GA_INVOKE_JS = """
 
 def setup(app):
 
-    app.add_css_file('css/rtd_theme_mods.css')
-
-
-    app.add_js_file('https://www.googletagmanager.com/gtag/js?id=G-8NK2HCPFQ5')
+    app.add_js_file('https://www.googletagmanager.com/gtag/js?id=G-8NK2HCPFQ5', loading_method="async")
     app.add_js_file(None, body=GA_INVOKE_JS)
