@@ -45,7 +45,7 @@ Releases and Editions
 We release ever-changing open source content rather than publish fixed
 books, although you can roughly equate v6.0 with a 6th Edition. Read the
 `Preface <preface.html>`__ to find out what’s new in this version. Note
-that Morgan Kaufmann (Elsevier) plans to publish a 6th edition of their
+that Morgan Kaufmann (Elsevier)  published the 6th edition of the
 textbook based on a fork of v6.0, but going forward, open source
 releases found here will not necessarily stay in sync with any future
 published editions.
