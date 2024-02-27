@@ -93,6 +93,6 @@ it is signed by the name’s public key (Step 2).
    :ref:`Perspective: The Cloud is the New Internet`.
 
    To learn more about Blockstack and decentralizing the Internet, we
-   recommend: `Blockstack: A New Internet for Decentralized
-   Applications <https://blockstack.org/whitepaper.pdf>`__, October
+   recommend: `Blockstack Whitepaper: A New Decentralized Internet
+   <https://blog.blockstack.org/blockstack-whitepaper-part-1>`__, May
    2017.

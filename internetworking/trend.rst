@@ -113,6 +113,6 @@ leading the way.
    :ref:`Perspective: The Cloud is Eating the Internet`.
 
    To learn more about the maturation of virtual networks, we recommend:
-    * `Network Heresy <https://networkheresy.com/2012/05/31/network-virtualization/>`__,  2012.
+    * `Network Virtualiztion Revisited <https://systemsapproach.org/2023/10/16/network-virtualization-revisited/>`__,  2023.
 
     * `Tungsten Fabric <https://tungstenfabric.github.io/website/>`__, 2018.
