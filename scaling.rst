@@ -6,13 +6,13 @@ Chapter 4:  Advanced Internetworking
   *—Mason Cooley*
 
 .. toctree::
-   :maxdepth: 2 
+   :maxdepth: 2
 
-   scaling/problem.rst 
+   scaling/problem.rst
    scaling/global.rst
    scaling/ipv6.rst
-   scaling/multicast.rst   
+   scaling/multicast.rst
    scaling/mpls.rst
-   scaling/mobile-ip.rst   
+   scaling/mobile-ip.rst
    scaling/trend.rst
-   
+

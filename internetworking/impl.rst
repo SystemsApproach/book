@@ -18,7 +18,7 @@ and software.
 .. [#] This is also how the very first Internet routers, often called
        *gateways* at the time, were implemented in the early days of
        the Internet.
-       
+
 This section gives an overview of both software-centric and
 hardware-centric designs, but it is worth noting that on the question of
 switches versus routers, the distinction isn’t such a big deal. It turns
@@ -46,13 +46,13 @@ memory using DMA. The important take-away is that the packet is
 buffered in main memory (this is the “store” half of
 store-and-forward), with the CPU reading only the necessary header
 fields into its internal registers for processing.
- 
+
 .. _fig-softswitch:
 .. figure:: figures/impl/Slide1.png
    :width: 300px
    :align: center
 
-   A general-purpose processor used as a software 
+   A general-purpose processor used as a software
    switch.
 
 There are two potential bottlenecks with this approach, one or both of
@@ -96,7 +96,7 @@ with an average data rate of about 1 Gbps on each port.\ [#]_
        maximum throughput rate that highly tuned software running on a
        high-end server could achieve, but they are indicative of
        limits one ultimately faces in pursuing this approach.
-       
+
 One final consideration is important to understand when evaluating
 switch implementations. The non-trivial algorithms discussed in this
 chapter—the spanning tree algorithm used by learning bridges, the
@@ -185,19 +185,19 @@ with 32x100-Gbps ports, or the 48x40-Gbps ports shown in the diagram.
 
 .. sidebar:: Network Processing Units
 
-	     Our use of the term NPU is a bit
-	     non-standard. Historically, NPU was the name given more
-	     narrowly-defined network processing chips used, for
-	     example, to implement intelligent firewalls or deep
-	     packet inspection. They were not as general-purpose as
-	     the NPUs we’re discussing here; nor were they as
-	     high-performance. It seems likely that the current
-	     approach will make purpose-built network processors
-	     obsolete, but in any case, we prefer the NPU nomenclature
-	     because it is consistent with the trend to build
-	     programmable domain-specific processors, including GPUs
-	     for graphics and TPUs (Tensor Processing Units) for AI.
-	     
+          Our use of the term NPU is a bit
+          non-standard. Historically, NPU was the name given more
+          narrowly-defined network processing chips used, for
+          example, to implement intelligent firewalls or deep
+          packet inspection. They were not as general-purpose as
+          the NPUs we’re discussing here; nor were they as
+          high-performance. It seems likely that the current
+          approach will make purpose-built network processors
+          obsolete, but in any case, we prefer the NPU nomenclature
+          because it is consistent with the trend to build
+          programmable domain-specific processors, including GPUs
+          for graphics and TPUs (Tensor Processing Units) for AI.
+
 The beauty of this new switch design is that a given bare-metal switch
 can now
 be programmed to be an L2 switch, an L3 router, or a combination of
@@ -307,8 +307,8 @@ past the number of physical ports in 2012.
    :width: 500px
    :align: center
 
-   Network Operating System (NOS) hosting a set of 
-   control applications and providing a logically centralized point 
+   Network Operating System (NOS) hosting a set of
+   control applications and providing a logically centralized point
    of control for an underlying network data plane.
 
 One of other key enablers for SDN’s success, as depicted in

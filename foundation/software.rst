@@ -72,28 +72,28 @@ understanding the underlying ideas.)
 
 .. sidebar:: Sockets Enabled Application Explosion
 
-	     It is hard to overstate the importance of the Socket
-	     API. It defines the demarcation point between the
-	     applications running on top of the Internet, and the
-	     details of how the Internet is implemented. As a
-	     consequence of Sockets providing a well-defined and
-	     stable interface, writing Internet applications exploded
-	     into a multi-billion dollar industry. Starting from the
-	     humble beginnings of the client/server paradigm and a
-	     handful of simple application programs like email, file
-	     transfer, and remote login, everyone now has access to an
-	     never-ending supply of cloud applications from their
-	     smartphones.
+          It is hard to overstate the importance of the Socket
+          API. It defines the demarcation point between the
+          applications running on top of the Internet, and the
+          details of how the Internet is implemented. As a
+          consequence of Sockets providing a well-defined and
+          stable interface, writing Internet applications exploded
+          into a multi-billion dollar industry. Starting from the
+          humble beginnings of the client/server paradigm and a
+          handful of simple application programs like email, file
+          transfer, and remote login, everyone now has access to an
+          never-ending supply of cloud applications from their
+          smartphones.
 
-	     This section lays the foundation by revisiting the
-	     simplicity of a client program opening a socket so it can
-	     exchange messages with a server program, but today a rich
-	     software ecosystem is layered on top of the Socket
-	     API. This layer includes a plethora of cloud-based tools
-	     that lower the barrier for implementing scalable
-	     applications. We return to the interplay between the
-	     cloud and the network in every chapter, starting with the
-	     *Perspective* section at the end of Chapter 1.
+          This section lays the foundation by revisiting the
+          simplicity of a client program opening a socket so it can
+          exchange messages with a server program, but today a rich
+          software ecosystem is layered on top of the Socket
+          API. This layer includes a plethora of cloud-based tools
+          that lower the barrier for implementing scalable
+          applications. We return to the interplay between the
+          cloud and the network in every chapter, starting with the
+          *Perspective* section at the end of Chapter 1.
 
 Before describing the socket interface, it is important to keep two
 concerns separate in your mind. Each protocol provides a certain set of
@@ -237,7 +237,7 @@ sends it over the socket.
    #include <netdb.h>
    #include <stdlib.h>
    #include <unistd.h>
-   #include <string.h>   
+   #include <string.h>
 
    #define SERVER_PORT 5432
    #define MAX_LINE 256
@@ -315,7 +315,7 @@ out the characters that arrive on the connection.
    #include <netdb.h>
    #include <stdlib.h>
    #include <unistd.h>
-   #include <string.h>   
+   #include <string.h>
 
    #define SERVER_PORT  5432
    #define MAX_PENDING  5

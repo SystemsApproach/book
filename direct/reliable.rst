@@ -51,7 +51,7 @@ the sender times out and retransmits the original frame.
 .. figure:: figures/f02-17-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Timeline showing four different scenarios for the
    stop-and-wait algorithm. (a) The ACK is received before the timer
    expires; (b) the original frame is lost; (c) the ACK is lost;
@@ -101,7 +101,7 @@ case the first ACK was lost).
 .. figure:: figures/f02-18-9780123850591.png
    :width: 250px
    :align: center
-   
+
    Timeline for stop-and-wait with 1-bit sequence
    number.
 
@@ -138,12 +138,12 @@ be ready to transmit the ninth frame at pretty much the same moment that
 the ACK for the first frame arrives. The algorithm that allows us to do
 this is called *sliding window*, and an illustrative timeline is given
 in :numref:`Figure %s <fig-slide-win>`.
- 
+
 .. _fig-slide-win:
 .. figure:: figures/f02-19-9780123850591.png
    :width: 250px
    :align: center
-   
+
    Timeline for the sliding window algorithm.
 
 The Sliding Window Algorithm
@@ -161,7 +161,7 @@ number of the *last frame sent*. The sender also maintains the following
 invariant:
 
 ::
-		
+
    LFS - LAR <= SWS
 
 This situation is illustrated in :numref:`Figure %s <fig-sw-sender>`.
@@ -170,7 +170,7 @@ This situation is illustrated in :numref:`Figure %s <fig-sw-sender>`.
 .. figure:: figures/f02-20-9780123850591.png
    :width: 400px
    :align: center
-   
+
    Sliding window on sender.
 
 When an acknowledgment arrives, the sender moves ``LAR`` to the right,
@@ -188,7 +188,7 @@ denotes the sequence number of the *largest acceptable frame*; and
 receiver also maintains the following invariant:
 
 ::
-		
+
    LAF - LFR <= RWS
 
 This situation is illustrated in :numref:`Figure %s <fig-sw-rcvr>`.
@@ -197,7 +197,7 @@ This situation is illustrated in :numref:`Figure %s <fig-sw-rcvr>`.
 .. figure:: figures/f02-21-9780123850591.png
    :width: 400px
    :align: center
-   
+
    Sliding window on receiver.
 
 When a frame with sequence number ``SeqNum`` arrives, the receiver takes
@@ -300,7 +300,7 @@ big as the number of available sequence numbers when ``RWS = SWS``, or
 stated more precisely,
 
 ::
-		
+
    SWS < (MaxSeqNum + 1)/ 2
 
 Intuitively, what this is saying is that the sliding window protocol
@@ -420,8 +420,8 @@ this count, thus unblocking any waiting sender.
 
 .. code-block:: c
 
-   static int 
-   sendSWP(SwpState *state, Msg *frame) 
+   static int
+   sendSWP(SwpState *state, Msg *frame)
    {
        struct sendQ_slot *slot;
        hbuf[HLEN];
@@ -489,20 +489,20 @@ the prose description given earlier in this section).
 
 .. code-block:: c
 
-   static int 
-   deliverSWP(SwpState state, Msg *frame) 
+   static int
+   deliverSWP(SwpState state, Msg *frame)
    {
        SwpHdr   hdr;
        char     *hbuf;
 
        hbuf = msgStripHdr(frame, HLEN);
-       load_swp_hdr(&hdr, hbuf) 
-       if (hdr->Flags & FLAG_ACK_VALID) 
+       load_swp_hdr(&hdr, hbuf)
+       if (hdr->Flags & FLAG_ACK_VALID)
        {
            /* received an acknowledgment—do SENDER side */
-           if (swpInWindow(hdr.AckNum, state->LAR + 1, state->LFS)) 
+           if (swpInWindow(hdr.AckNum, state->LAR + 1, state->LFS))
            {
-               do 
+               do
                {
                    struct sendQ_slot *slot;
 
@@ -514,24 +514,24 @@ the prose description given earlier in this section).
            }
        }
 
-       if (hdr.Flags & FLAG_HAS_DATA) 
+       if (hdr.Flags & FLAG_HAS_DATA)
        {
            struct recvQ_slot *slot;
 
            /* received data packet—do RECEIVER side */
            slot = &state->recvQ[hdr.SeqNum % RWS];
-           if (!swpInWindow(hdr.SeqNum, state->NFE, state->NFE + RWS - 1)) 
+           if (!swpInWindow(hdr.SeqNum, state->NFE, state->NFE + RWS - 1))
            {
                /* drop the message */
                return SUCCESS;
            }
            msgSaveCopy(&slot->msg, frame);
            slot->received = TRUE;
-           if (hdr.SeqNum == state->NFE) 
+           if (hdr.SeqNum == state->NFE)
            {
                Msg m;
 
-               while (slot->received) 
+               while (slot->received)
                {
                    deliver(HLP, &slot->msg);
                    msgDestroy(&slot->msg);
@@ -553,8 +553,8 @@ number.
 
 .. code-block:: c
 
-   static bool 
-   swpInWindow(SwpSeqno seqno, SwpSeqno min, SwpSeqno max) 
+   static bool
+   swpInWindow(SwpSeqno seqno, SwpSeqno min, SwpSeqno max)
    {
        SwpSeqno pos, maxpos;
 

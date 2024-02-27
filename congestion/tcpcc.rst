@@ -47,7 +47,7 @@ TCP maintains a new state variable for each connection, called
 ``CongestionWindow``, which is used by the source to limit how much data
 it is allowed to have in transit at a given time. The congestion window
 is congestion control’s counterpart to flow control’s advertised window.
-TCP is modified such that the maximum number of bytes of unacknowledged 
+TCP is modified such that the maximum number of bytes of unacknowledged
 data allowed is now the minimum of the congestion window and the
 advertised window. Thus, using the variables defined in the previous
 chapter, TCP’s effective window is revised as follows:
@@ -102,7 +102,7 @@ segment size* .
    :width: 200px
    :align: center
 
-   Packets in transit during additive increase, with one 
+   Packets in transit during additive increase, with one
    packet being added each RTT.
 
 A congestion-control strategy that only decreases the window size is
@@ -430,10 +430,10 @@ including packet 6 back to the source.
    :width: 600px
    :align: center
 
-   Trace of TCP with fast retransmit. Colored line 
-   = CongestionWindow; solid bullet = timeout; hash marks = time 
-   when each packet is transmitted; vertical bars = time when a 
-   packet that was eventually retransmitted was first 
+   Trace of TCP with fast retransmit. Colored line
+   = CongestionWindow; solid bullet = timeout; hash marks = time
+   when each packet is transmitted; vertical bars = time when a
+   packet that was eventually retransmitted was first
    transmitted.
 
 :numref:`Figure %s <fig-trace2>` illustrates the behavior of a version
@@ -495,7 +495,7 @@ short-RTT flows, which will have ACKs arriving more frequently.
    :width: 500px
    :align: center
 
-   Generic cubic function illustrating the change in the congestion 
+   Generic cubic function illustrating the change in the congestion
    window as a function of time.
 
 The second important aspect of CUBIC is its use of a cubic function to

@@ -37,7 +37,7 @@ an encoding scheme called, cryptically enough, *non-return to zero*
 (NRZ).  For example, :numref:`Figure %s <fig-nrz>` schematically
 depicts the NRZ-encoded signal (bottom) that corresponds to the
 transmission of a particular sequence of bits (top).
- 
+
 .. _fig-nrz:
 .. figure:: figures/f02-04-9780123850591.png
    :width: 400px
@@ -146,10 +146,10 @@ only concerned about consecutive 0s—NRZI already solves the problem of
 consecutive 1s. Note that the 4B/5B encoding results in 80% efficiency.
 
 .. _tab-4b5b:
-.. table:: 4B/5B encoding.  
+.. table:: 4B/5B encoding.
    :align: center
    :widths: auto
-	    
+
    +-------------------+------------+
    | 4-bit Data Symbol | 5-bit Code |
    +===================+============+

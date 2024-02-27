@@ -441,7 +441,7 @@ wants to talk to the NFS program.\ [#]_
 .. [#] In practice, NFS is such an important program that it has been
        given its own well-known UDP port, but for the purposes of
        illustration we’re pretending that’s not the case.
-       
+
 To match up a reply message with the corresponding request, so that
 the result of the RPC can be returned to the correct caller, both
 request and reply message headers include a ``XID`` (transaction ID)
@@ -695,13 +695,13 @@ HTTP response. The full gRPC stack is depicted in :numref:`Figure
 (One strength of gRPC is the wide set of programming languages it
 supports, with only a small subset shown in :numref:`Figure
 %s <fig-grpc-stack>`.)
-  
+
 .. _fig-grpc-stack:
 .. figure:: figures/rpc/Slide2.png
    :width: 400px
    :align: center
 
-   gRPC core stacked on top of HTTP, TLS, and TCP and 
+   gRPC core stacked on top of HTTP, TLS, and TCP and
    supporting a collection of languages.
 
 We discuss TLS in Chapter 8 (in the context of a broad range of security

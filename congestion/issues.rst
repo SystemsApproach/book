@@ -109,7 +109,7 @@ reserved for a particular circuit are not available for use by other
 traffic even if they were not currently being used by that circuit. The
 focus of this chapter is on resource allocation approaches that apply in
 an internetwork, and thus we focus mainly on connectionless networks.
-   
+
 .. _fig-congestion:
 .. figure:: figures/f06-01-9780123850591.png
    :width: 500px
@@ -139,14 +139,14 @@ reason we introduce a new term is that a flow is visible to the
 routers inside the network, whereas a channel is an end-to-end
 abstraction. :numref:`Figure %s <fig-flow>` illustrates several flows
 passing through a series of routers.
-   
+
 .. _fig-flow:
 .. figure:: figures/f06-02-9780123850591.png
    :width: 500px
    :align: center
 
    Multiple flows passing through a set of routers.
-   
+
 Because multiple related packets flow through each router, it sometimes
 makes sense to maintain some state information for each flow,
 information that can be used to make resource allocation decisions about
@@ -391,7 +391,7 @@ improves as more jobs are admitted into the system, until it reaches a
 point when there are so many jobs running that the system begins to
 thrash (spends all of its time swapping memory pages) and the throughput
 begins to drop.
-   
+
 .. _fig-power:
 .. figure:: figures/f06-03-9780123850591.png
    :width: 350px
@@ -435,7 +435,7 @@ fair shares.  Should we also consider the length of the paths being
 compared? For example, as illustrated in :numref:`Figure %s
 <fig-path-len>`, what is fair when one four-hop flow is competing with
 three one-hop flows?
-   
+
 .. _fig-path-len:
 .. figure:: figures/f06-04-9780123850591.png
    :width: 600px
@@ -470,7 +470,7 @@ case is
 
    \frac{n^2}{n \times n} = 1
 
-Now, suppose one flow receives a throughput of :math:`1 + \Delta`. 
+Now, suppose one flow receives a throughput of :math:`1 + \Delta`.
 Now the fairness index is
 
 .. math::
@@ -480,7 +480,7 @@ Now the fairness index is
 
 Note that the denominator exceeds the numerator by :math:`(n-1)\Delta^2`.
 Thus, whether the odd flow out was getting more or less than all the
-other flows (positive or negative :math:`\Delta`), the fairness index has 
+other flows (positive or negative :math:`\Delta`), the fairness index has
 now dropped below one. Another simple case to
 consider is where only *k* of the *n* flows receive equal throughput,
 and the remaining *n-k* users receive zero throughput, in which case the

@@ -190,7 +190,7 @@ this buffer at its leisure.  This situation is illustrated in
 data flowing in only one direction. Remember that, in general, a
 single TCP connection supports byte streams flowing in both
 directions.
- 
+
 .. _fig-tcp-stream:
 .. figure:: figures/f05-03-9780123850591.png
    :width: 500px
@@ -448,11 +448,17 @@ side invokes close and then, at some later time, the other side invokes
 close. Thus, on any one side there are three combinations of transitions
 that get a connection from the ESTABLISHED state to the CLOSED state:
 
--  This side closes first: ESTABLISHED :math:`\rightarrow` FIN_WAIT_1 :math:`\rightarrow` FIN_WAIT_2 :math:`\rightarrow` TIME_WAIT :math:`\rightarrow` CLOSED.
-	       
--  The other side closes first: ESTABLISHED :math:`\rightarrow` CLOSE_WAIT :math:`\rightarrow` LAST_ACK :math:`\rightarrow` CLOSED.
+-  This side closes first:
+   ESTABLISHED :math:`\rightarrow`
+   FIN_WAIT_1 :math:`\rightarrow` FIN_WAIT_2 :math:`\rightarrow` TIME_WAIT :math:`\rightarrow` CLOSED.
 
--  Both sides close at the same time: ESTABLISHED :math:`\rightarrow` FIN_WAIT_1 :math:`\rightarrow` CLOSING :math:`\rightarrow` TIME_WAIT :math:`\rightarrow` CLOSED.
+-  The other side closes first:
+   ESTABLISHED :math:`\rightarrow`
+   CLOSE_WAIT :math:`\rightarrow` LAST_ACK :math:`\rightarrow` CLOSED.
+
+-  Both sides close at the same time:
+   ESTABLISHED :math:`\rightarrow`
+   FIN_WAIT_1 :math:`\rightarrow` CLOSING :math:`\rightarrow` TIME_WAIT :math:`\rightarrow` CLOSED.
 
 There is actually a fourth, although rare, sequence of transitions that
 leads to the CLOSED state; it follows the arc from FIN_WAIT_1 to
@@ -794,7 +800,7 @@ product for several network technologies.
 .. _tab-adv-win:
 .. table::  Required Window Size for 100-ms RTT
    :align: center
-   :widths: auto   
+   :widths: auto
 
    +--------------------------+---------------------------+
    | Bandwidth                | Delay × Bandwidth Product |
@@ -1107,10 +1113,10 @@ Implementation
 There are two items of note regarding the implementation of timeouts in
 TCP. The first is that it is possible to implement the calculation for
 ``EstimatedRTT`` and ``Deviation`` without using floating-point
-arithmetic. Instead, the whole calculation is scaled by 2\ :sup:`n`, 
-with delta selected to be 1/2\ :sup:`n`. This allows us to do integer 
-arithmetic, implementing multiplication and division using shifts, 
-thereby achieving higher performance. The resulting calculation is given 
+arithmetic. Instead, the whole calculation is scaled by 2\ :sup:`n`,
+with delta selected to be 1/2\ :sup:`n`. This allows us to do integer
+arithmetic, implementing multiplication and division using shifts,
+thereby achieving higher performance. The resulting calculation is given
 by the following code fragment, where n=3
 (i.e., ``delta = 1/8``). Note that ``EstimatedRTT`` and ``Deviation`` are
 stored in their scaled-up forms, while the value of ``SampleRTT`` at the
@@ -1564,37 +1570,37 @@ decisions are worth discussing.
 
 .. sidebar:: Multipath TCP
 
-	     It isn't always necessary to define a new protocol if you
-	     find an existing protocol does not adequately serve a
-	     particular use case. Sometimes it's possible to make
-	     substantial changes in how an existing protocol is
-	     implemented, yet remain true to the original spec.
-	     Multipath TCP is an example of such a situation.
+          It isn't always necessary to define a new protocol if you
+          find an existing protocol does not adequately serve a
+          particular use case. Sometimes it's possible to make
+          substantial changes in how an existing protocol is
+          implemented, yet remain true to the original spec.
+          Multipath TCP is an example of such a situation.
 
-	     The idea of Multipath TCP is to steer packets over
-	     multiple paths through the Internet, for example, by
-	     using two different IP addresses for one of the
-	     end-points.  This can be especially helpful when
-	     delivering data to a mobile device that is connected to
-	     both Wi-Fi and the cellular network (and hence, has two
-	     unique IP addresses). Being wireless, both networks can
-	     experience significant packet-loss, so being able to use
-	     both to carry packets can dramatically improve the user
-	     experience.  The key is for the receiving side of TCP to
-	     reconstruct the original, in-order byte stream before
-	     passing data up to the application, which remains unaware
-	     it is sitting on top of Multipath TCP. (This is in
-	     contrast to applications that purposely open two or more
-	     TCP connections to get better performance.)
+          The idea of Multipath TCP is to steer packets over
+          multiple paths through the Internet, for example, by
+          using two different IP addresses for one of the
+          end-points.  This can be especially helpful when
+          delivering data to a mobile device that is connected to
+          both Wi-Fi and the cellular network (and hence, has two
+          unique IP addresses). Being wireless, both networks can
+          experience significant packet-loss, so being able to use
+          both to carry packets can dramatically improve the user
+          experience.  The key is for the receiving side of TCP to
+          reconstruct the original, in-order byte stream before
+          passing data up to the application, which remains unaware
+          it is sitting on top of Multipath TCP. (This is in
+          contrast to applications that purposely open two or more
+          TCP connections to get better performance.)
 
-	     As simple as Multipath TCP sounds, it is incredibly
-	     difficult to get right because it breaks many assumptions
-	     about how TCP flow control, in-order segment reassembly,
-	     and congestion control are implemented. We leave it as an
-	     exercise for the reader to explore these subtleties. Doing
-	     so is a great way to make sure your basic understanding
-	     of TCP is sound.
-	     
+          As simple as Multipath TCP sounds, it is incredibly
+          difficult to get right because it breaks many assumptions
+          about how TCP flow control, in-order segment reassembly,
+          and congestion control are implemented. We leave it as an
+          exercise for the reader to explore these subtleties. Doing
+          so is a great way to make sure your basic understanding
+          of TCP is sound.
+
 If network latency is high—say 100 milliseconds or more—then a few
 RTTs can quickly add up to a visible annoyance for an end
 user. Establishing an HTTP session over TCP with Transport Layer
@@ -1626,7 +1632,7 @@ and each connection tries to figure out the appropriate amount of
 bandwidth to consume on its own. QUIC introduced the idea of streams
 within a connection, so that objects could be delivered out-of-order
 while maintaining a holistic view of congestion across all the
-streams. 
+streams.
 
 Interestingly, by the time QUIC emerged, many design decisions had
 been made that presented challenges for the deployment of a new

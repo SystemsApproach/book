@@ -154,15 +154,15 @@ can be reached is updated to reflect the most recently received packet.
 
 .. code-block:: c
 
-   void 
-   updateTable (MacAddr src, int inif) 
+   void
+   updateTable (MacAddr src, int inif)
    {
        BridgeEntry       *b;
 
-       if (mapResolve(bridgeMap, &src, (void **)&b) == FALSE ) 
+       if (mapResolve(bridgeMap, &src, (void **)&b) == FALSE )
        {
            /* this address is not in the table, so try to add it */
-           if (numEntries < BRIDGE_TAB_SIZE) 
+           if (numEntries < BRIDGE_TAB_SIZE)
            {
                b = NEW(BridgeEntry);
                b->binding = mapBind( bridgeMap, &src, b);
@@ -170,7 +170,7 @@ can be reached is updated to reflect the most recently received packet.
                b->destination = src;
                numEntries++;
            }
-           else 
+           else
            {
                /* can't fit this address in the table now, so give up */
                return;
@@ -531,7 +531,7 @@ networks onto a single physical LAN.
    :width: 500px
    :align: center
 
-   802.1Q VLAN tag embedded within an Ethernet (802.1) 
+   802.1Q VLAN tag embedded within an Ethernet (802.1)
    header.
 
 We conclude this discussion by observing there is another limitation

@@ -203,7 +203,7 @@ capabilities such as circuit emulation and virtual circuit services.
    :width: 400px
    :align: center
 
-   (a) Routers connect to each other using an overlay of 
+   (a) Routers connect to each other using an overlay of
    virtual circuits. (b) Routers peer directly with LSRs.
 
 In an overlay network, each router would potentially be connected to

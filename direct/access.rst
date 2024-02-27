@@ -53,13 +53,13 @@ that, among many other things, meters Internet traffic for the sake of
 billing. As its name implies, the BNG is effectively the gateway between
 the access network (everything to the left of the BNG) and the Internet
 (everything to the right of the BNG).
-  
+
 .. _fig-pon:
 .. figure:: figures/access/Slide1.png
    :width: 600px
    :align: center
 
-   An example PON that connects OLTs in the Central Office 
+   An example PON that connects OLTs in the Central Office
    to ONUs in homes and businesses.
 
 Because the splitters are passive, PON has to implement some form of
@@ -110,7 +110,7 @@ new/next-generation technologies, each of which occupies a different
 frequency band. The high-level summary is that traditional cellular
 technologies range from 700-MHz to 2400-MHz, with new mid-spectrum
 allocations now happening at 6-GHz and millimeter-wave (mmWave)
-allocations opening above 24-GHz. 
+allocations opening above 24-GHz.
 
 .. sidebar:: Citizens Broadband Radio Service (CBRS)
 
@@ -167,7 +167,7 @@ Office.
    :width: 600px
    :align: center
 
-   A Radio Access Network (RAN) connecting a set of cellular devices 
+   A Radio Access Network (RAN) connecting a set of cellular devices
    (UEs) to an Evolved Packet Core (EPC) hosted in a Central Office.
 
 The geographic area served by a BBU’s antenna is called a *cell*. A BBU
@@ -237,7 +237,7 @@ number of bits that can be encoded in each symbol depends on the
 modulation rate, so for example using Quadrature Amplitude Modulation
 (QAM), 16-QAM yields 4 bits per symbol and 64-QAM yields 6 bits per
 symbol.
- 
+
 .. _fig-ofdma:
 .. figure:: figures/access/Slide4.png
    :width: 800px
@@ -283,7 +283,7 @@ coverage.
 .. [#] A waveform is the frequency, amplitude, and phase-shift
        independent property (shape) of a signal. A sine wave is an
        example waveform.
-       
+
 These different waveforms affect the scheduling and subcarrier intervals
 (i.e., the “size” of the Resource Elements just described).
 

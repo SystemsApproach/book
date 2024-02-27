@@ -63,7 +63,7 @@ support many hosts at full speed.
    Ethernet as the framing protocol. The reconfigurability feature of
    ROADMs means that it is possible to change these underlying
    end-to-end wavelengths, effectively creating a new topology at the
-   packet-switching layer. 
+   packet-switching layer.
 
 A switch is connected to a set of links and, for each of these links,
 runs the appropriate data link protocol to communicate with the node at

@@ -25,7 +25,7 @@ stack. This chapter examines those strategies.
 .. figure:: figures/f02-01-9780123850591.png
    :width: 650px
    :align: center
-   
+
    An end-user's view of the Internet.
 
 :numref:`Figure %s <fig-isp-access>` illustrates various types of
@@ -82,7 +82,7 @@ through copper would have a wavelength of
 .. centered:: SpeedOfLightInCopper / Frequency
 
 .. centered:: = 2/3 × 3 × 10\ :sup:`8` / 300
-   
+
 .. centered:: = 667 × 10\ :sup:`3` *meters*
 
 Generally, electromagnetic waves span a much wider range of
@@ -90,12 +90,12 @@ frequencies, ranging from radio waves, to infrared light, to visible
 light, to x-rays and gamma rays. :numref:`Figure %s <fig-spectrum>`
 depicts the electromagnetic spectrum and shows which media are
 commonly used to carry which frequency bands.
- 
+
 .. _fig-spectrum:
 .. figure:: figures/f02-02-9780123850591.png
    :width: 600px
    :align: center
-   
+
    Electromagnetic spectrum.
 
 What :numref:`Figure %s <fig-spectrum>` doesn't show is where the
@@ -147,10 +147,10 @@ is a newer technology that is commonly used to connect homes and
 businesses over recently deployed fiber.
 
 .. _tab-home:
-.. table::  Common services available for the last-mile connection to your home. 
+.. table::  Common services available for the last-mile connection to your home.
    :widths: auto
    :align: center
-	   
+
    +-----------------+----------------+
    | Service         | Bandwidth      |
    +=================+================+

@@ -124,15 +124,15 @@ has already been padded with 0s to a 16-bit boundary.
 
 .. code-block:: c
 
-   u_short 
-   cksum(u_short *buf, int count) 
+   u_short
+   cksum(u_short *buf, int count)
    {
        register u_long sum = 0;
 
-       while (count--) 
+       while (count--)
        {
            sum += *buf++;
-           if (sum & 0xFFFF0000) 
+           if (sum & 0xFFFF0000)
            {
                /* carry occurred, so wrap around */
                sum &= 0xFFFF;
@@ -176,7 +176,7 @@ fields*. While this may sound daunting, the basic ideas can be easily
 understood.
 
 To start, think of an (n+1)-bit message as being represented by an :math:`n`
-degree polynomial, that is, a polynomial whose highest-order term is 
+degree polynomial, that is, a polynomial whose highest-order term is
 :math:`x^{n}`. The message is represented by a polynomial by using the
 value of each bit in the message as the coefficient for each term in
 the polynomial, starting with the most significant bit to represent
@@ -197,7 +197,7 @@ with each other.
 
 For the purposes of calculating a CRC, a sender and receiver have to
 agree on a *divisor* polynomial, :math:`C(x)`. :math:`C(x)` is a polynomial of
-degree :math:`k`. For example, suppose :math:`C(x) = x^3 + x^2 + 1`. 
+degree :math:`k`. For example, suppose :math:`C(x) = x^3 + x^2 + 1`.
 In this case, :math:`k=3`. The answer to the question “Where did :math:`C(x)`
 come from?” is, in most
 practical cases, “You look it up in a book.” In fact, the choice of
@@ -232,17 +232,17 @@ of arithmetic for our purposes (which we ask you to accept on faith):
 
 - Any polynomial :math:`B(x)` can be divided by a divisor polynomial
   :math:`C(x)` if :math:`B(x)` is of higher degree than :math:`C(x)`.
-  
+
 - Any polynomial :math:`B(x)` can be divided once by a divisor
   polynomial :math:`C(x)` if :math:`B(x)` is of the same degree as :math:`C(x)`.
 
 - The remainder obtained when :math:`B(x)` is divided by :math:`C(x)` is
   obtained by performing the exclusive OR (XOR) operation on each pair
   of matching coefficients.
-  
-For example, the polynomial :math:`x^3 + 1` can be divided by :math:`x^3 + x^2 + 1` 
-(because they are both of degree 3) and the remainder would be 
-:math:`0 \times x^3 + 1 \times x^2 + 0 \times x^1 + 0 \times x^0 = x^2` 
+
+For example, the polynomial :math:`x^3 + 1` can be divided by :math:`x^3 + x^2 + 1`
+(because they are both of degree 3) and the remainder would be
+:math:`0 \times x^3 + 1 \times x^2 + 0 \times x^1 + 0 \times x^0 = x^2`
 (obtained by XORing the coefficients of each term). In terms of
 messages, we could say that 1001 can be divided by 1101 and leaves a
 remainder of 0100. You should be able to see that the remainder is just
@@ -253,11 +253,12 @@ to do long division, which is necessary to deal with longer messages. An
 example appears below.
 
 Recall that we wanted to create a polynomial for transmission that is
-derived from the original message :math:`M(x)`, is :math:`k` bits longer than 
-:math:`M(x)`, and is exactly divisible by :math:`C(x)`. We can do this in the 
+derived from the original message :math:`M(x)`, is :math:`k` bits longer than
+:math:`M(x)`, and is exactly divisible by :math:`C(x)`. We can do this in the
 following way:
 
-1. Multiply :math:`M(x)` by :math:`x^{k}`; that is, add :math:`k` zeros at the end of the message. Call this zero-extended message :math:`T(x)`.
+1. Multiply :math:`M(x)` by :math:`x^{k}`;
+   that is, add :math:`k` zeros at the end of the message. Call this zero-extended message :math:`T(x)`.
 
 2. Divide :math:`T(x)` by :math:`C(x)` and find the remainder.
 
@@ -323,8 +324,8 @@ this could only happen if :math:`E(x)` can be divided evenly by
 unlikely for common types of errors.
 
 One common type of error is a single-bit error, which can be expressed
-as :math:`E(x) = x^i` when it affects bit position *i*. If we select 
-:math:`C(x)` such that the first and the last term (that is, the :math:`x^k` 
+as :math:`E(x) = x^i` when it affects bit position *i*. If we select
+:math:`C(x)` such that the first and the last term (that is, the :math:`x^k`
 and :math:`x^0` terms) are nonzero, then we already have a two-term
 polynomial that
 cannot divide evenly into the one term :math:`E(x)`. Such a :math:`C(x)` can,

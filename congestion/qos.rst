@@ -404,9 +404,9 @@ time. One way to describe the bandwidth characteristics of sources is
 called a *token bucket* filter. Such a filter is described by two
 parameters: a token rate *r*, and a bucket depth *B*. It works as
 follows. To be able to send a byte, I must have a token. To send a
-packet of length *n*, I need *n* tokens. I start with no 
-tokens and I accumulate them at a rate of *r* 
-per second. I can accumulate no more than *B* tokens. What this means is 
+packet of length *n*, I need *n* tokens. I start with no
+tokens and I accumulate them at a rate of *r*
+per second. I can accumulate no more than *B* tokens. What this means is
 that I can send a burst of as many as *B* bytes into the network as fast
 as I want, but over a sufficiently long interval I can’t send more than
 *r* bytes per second. It turns out that this information is very helpful
@@ -633,7 +633,7 @@ and no more. Calculating the correct overall TSpec from all of the
 sender TSpecs is clearly application specific. Also, we may only be
 interested in hearing from a subset of all possible speakers; RSVP has
 different reservation styles to deal with such options as “Reserve
-resources for all speakers,” “Reserve resources for any :math:`n` 
+resources for all speakers,” “Reserve resources for any :math:`n`
 speakers,” and “Reserve resources for speakers A and B only.”
 
 Packet Classifying and Scheduling
@@ -843,11 +843,11 @@ of another network service provider. The customer and the network
 service provider agree on some sort of profile for the assured service
 (and perhaps the customer pays the network service provider for this
 profile). The profile might be something like “Customer X is allowed to
-send up to :math:`y` Mbps of assured traffic,” 
+send up to :math:`y` Mbps of assured traffic,”
 or it could be significantly more complex.
 Whatever the profile is, the edge router can clearly mark the packets
 that arrive from this customer as being either in or out of profile. In
-the example just mentioned, as long as the customer sends less than 
+the example just mentioned, as long as the customer sends less than
 :math:`y` Mbps, all his packets will be marked “in,” but once he exceeds that
 rate the excess packets will be marked “out.”
 
@@ -896,7 +896,7 @@ queue a weight of 4, that ensures that the bandwidth available to
 premium packets is
 
 .. centered:: B\ :sub:`premium` = W\ :sub:`premium` / (W\ :sub:`premium`
-		   + W\ :sub:`best-effort`\ ) = 1/(1 + 4) = 0.2
+              + W\ :sub:`best-effort`\ ) = 1/(1 + 4) = 0.2
 
 That is, we have effectively reserved 20% of the link for premium
 packets, so if the offered load of premium traffic is only 10% of the

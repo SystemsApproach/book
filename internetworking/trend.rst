@@ -83,7 +83,7 @@ Turtle: It’s virtual networks all the way down.
    :width: 500px
    :align: center
 
-   VXLAN Header encapsulated in a UDP/IP packet. 
+   VXLAN Header encapsulated in a UDP/IP packet.
 
 The actual VXLAN header is simple, as shown in :numref:`Figure %s
 <fig-vxlan>`. It includes a 24-bit *Virtual Network Id* (VNI), plus

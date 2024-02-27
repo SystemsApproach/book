@@ -54,7 +54,7 @@ infrastructure.)
    :width: 500px
    :align: center
 
-   Cloud is widely distributed throughout the Internet 
+   Cloud is widely distributed throughout the Internet
    with private backbones.
 
 Note that while it is possible to replicate *content* across the cloud’s

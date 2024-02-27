@@ -1,7 +1,7 @@
 Chapter 8: Network Security
 ===========================
 
-   It is true greatness to have in one the frailty of a man and the 
+   It is true greatness to have in one the frailty of a man and the
    security of a god.
 
    *—Seneca*

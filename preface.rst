@@ -25,7 +25,7 @@ edition in four main ways:
    keeping with our emphasis on the design process and not just the
    end result, which is especially important today since so much of
    the Internet’s functionality is primarily delivered by
-   proprietary commercial services. 
+   proprietary commercial services.
 
 
 - We place the Internet in the broader context of the Cloud, and just
@@ -36,7 +36,7 @@ edition in four main ways:
   side-effect of this discussion is to foster an appreciation for the
   Internet’s continuous evolution, and the opportunity for innovation
   this represents.
-  
+
 - We distill the important principles of network design in a series
   of *Key Takeaways* throughout the book. Each takeaway is a concise
   statement of either a general system design rule or a fundamental
@@ -62,12 +62,12 @@ which touches multiple layers and affects both end systems and network
 devices. We treat congestion, a system-wide issue, in its own chapter rather than trying to
 shoehorn it into the transport layer, for example. The Systems Approach has a strong focus on
 real-world implementation, with the Internet being the obvious example
-of a widely-deployed, complex networking system. 
+of a widely-deployed, complex networking system.
 
 
 New Material in the Sixth Edition
 ---------------------------------
-  
+
 More specifically, the sixth edition includes the following major changes:
 
 -  New Perspective Section in Chapter 1 introduces the recurring
@@ -82,7 +82,7 @@ More specifically, the sixth edition includes the following major changes:
    overlays, *VXLAN*, and the
    role of overlays in the Cloud.
 -  Refactored topics across Sections 4.1 (*Global Internet*) and 4.2
-   (*IP Version 6*).   
+   (*IP Version 6*).
 -  New Perspective Section in Chapter 4 describes how the *Cloud*
    impacts the Internet’s structure.
 -  Section 5.2 expanded to include a discussion of *QUIC*.
@@ -167,11 +167,11 @@ contributions and bug fixes:
    :columns: 3
 
    -  Mohammed Al-Ameen
-   -  Mike Appelman 
+   -  Mike Appelman
    -  Andy Bavier
    -  Manuel Berfelde
    -  Brian Bohe
-   -  John Craton      
+   -  John Craton
    -  Peter DeLong
    -  Aaron Gember-Jacobson
    -  Chris Goldsworthy
@@ -186,8 +186,8 @@ contributions and bug fixes:
    -  Guo (ZJUGuoShuai)
    -  Hellman (eshellman)
    -  Xtao (vertextao)
-   -  Joep (joepeding) 
-   -  Seth (springbov)      
+   -  Joep (joepeding)
+   -  Seth (springbov)
    -  miluchen (miluchen)
    -  Takashi Idobe (Takashiidobe)
    -  Beth (Innominata88)
@@ -207,7 +207,7 @@ contributions and bug fixes:
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
 
-- Mark J. Indelicato, Rochester Institute of Technology 
+- Mark J. Indelicato, Rochester Institute of Technology
 - Michael Yonshik Choi, Illinois Institute of Technology
 - Sarvesh Kulkarni, Villanova University
 - Alexander L. Wijesinha, Towson University
@@ -251,7 +251,7 @@ Systems Approach over the years, and we’re eager to have you join us
 in this new venture.
 
 
-| Larry & Bruce 
+| Larry & Bruce
 | October 2020
 
 

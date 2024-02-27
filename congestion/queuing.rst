@@ -160,12 +160,12 @@ To understand the algorithm for approximating bit-by-bit round-robin,
 consider the behavior of a single flow and imagine a clock that ticks
 once each time one bit is transmitted from all of the active flows. (A
 flow is active when it has data in the queue.) For this flow, let :math:`P_i`
-denote the length of packet *i*, let :math:`S_i` denote the time when the 
-router starts to transmit packet *i*, and let :math:`F_i` 
-denote the time when the router finishes transmitting packet *i*. If 
+denote the length of packet *i*, let :math:`S_i` denote the time when the
+router starts to transmit packet *i*, and let :math:`F_i`
+denote the time when the router finishes transmitting packet *i*. If
 :math:`P_i` is expressed in terms of how many clock ticks it takes to transmit
 packet *i* (keeping in mind that time advances 1 tick each time this
-flow gets 1 bit’s worth of service), then it is easy to see that 
+flow gets 1 bit’s worth of service), then it is easy to see that
 :math:`F_i = S_i + P_i`.
 
 When do we start transmitting packet *i*? The answer to this question
@@ -176,8 +176,8 @@ after the last bit of packet *i-1*. On the other hand, it is possible
 that the router finished transmitting packet *i-1* long before *i*
 arrived, meaning that there was a period of time during which the queue
 for this flow was empty, so the round-robin mechanism could not transmit
-any packets from this flow. If we let :math:`A_i` 
-denote the time that packet *i* arrives at the router, then 
+any packets from this flow. If we let :math:`A_i`
+denote the time that packet *i* arrives at the router, then
 :math:`S_i = \max(F_{i-1}, A_i)`. Thus, we can compute
 
 .. math::
@@ -185,17 +185,17 @@ denote the time that packet *i* arrives at the router, then
    F_i = \max(F_{i-1}, A_i) + P_i
 
 Now we move on to the situation in which there is more than one flow,
-and we find that there is a catch to determining :math:`A_i`. 
+and we find that there is a catch to determining :math:`A_i`.
 We can’t just read the wall clock when the packet arrives. As noted
 above, we want time to advance by one tick each time all the active
 flows get one bit of service under bit-by-bit round-robin, so we need a
 clock that advances more slowly when there are more flows. Specifically,
 the clock must advance by one tick when *n* bits are transmitted if
-there are *n* active flows. This clock will be used to calculate 
+there are *n* active flows. This clock will be used to calculate
 :math:`A_i`.
 
-Now, for every flow, we calculate :math:`F_i` for each packet that arrives 
-using the above formula. We then treat all the :math:`F_i` as timestamps, 
+Now, for every flow, we calculate :math:`F_i` for each packet that arrives
+using the above formula. We then treat all the :math:`F_i` as timestamps,
 and the next packet to transmit is always the packet
 that has the lowest timestamp—the packet that, based on the above
 reasoning, should finish transmission before all others.
@@ -238,7 +238,7 @@ sending, however, they will start to use their share and the capacity
 available to my flow will drop.
 
 The second thing to notice is that if the link is fully loaded and there
-are *n* flows sending data, I cannot use more than 1/n\ :sup:`th` 
+are *n* flows sending data, I cannot use more than 1/n\ :sup:`th`
 of the link bandwidth. If I try to send more than that, my packets
 will be assigned increasingly large timestamps, causing them to sit in
 the queue longer awaiting transmission. Eventually, the queue will
