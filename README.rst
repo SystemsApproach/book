@@ -1,6 +1,13 @@
 About This Book
 ===============
 
+.. image:: https://github.com/SystemsApproach/book/actions/workflows/publish-docs.yml/badge.svg
+  :align: left
+  :alt: deployment status button
+  :target: https://github.com/SystemsApproach/book/actions/
+
+|
+
 Source for *Computer Networks: A Systems Approach* is available on
 GitHub under terms of the `Creative Commons (CC BY 4.0)
 <https://creativecommons.org/licenses/by/4.0>`__ license. The
