@@ -63,7 +63,7 @@ just as well think about how to encode the data in the smallest set of
 bits possible. For example, if you have a block of data that is made up
 of the 26 symbols A through Z, and if all of these symbols have an equal
 chance of occurring in the data block you are encoding, then encoding
-each symbol in 5 bits is the best you can do (since 2\ :sup:`5` = 32 
+each symbol in 5 bits is the best you can do (since 2\ :sup:`5` = 32
 is the lowest power of 2 above 26). If, however, the symbol R occurs
 50% of the time, then it would be a good idea to use fewer bits to
 encode the R than any of the other symbols. In general, if you know the
@@ -217,9 +217,9 @@ the three dimensions of color for a total of 24 bits. Rather than
 sending those 24 bits per pixel, however, GIF first reduces 24-bit color
 images to 8-bit color images. This is done by identifying the colors
 used in the picture, of which there will typically be considerably fewer
-than 2\ :sup:`24`, and then picking the 256 colors that most closely 
-approximate the colors used in the picture. There might be more than 256 
-colors, however, so the trick is to try not to distort the color too much 
+than 2\ :sup:`24`, and then picking the 256 colors that most closely
+approximate the colors used in the picture. There might be more than 256
+colors, however, so the trick is to try not to distort the color too much
 by picking 256 colors such that no pixel has its color changed too much.
 
 The 256 colors are stored in a table, which can be indexed with an 8-bit
@@ -354,17 +354,17 @@ during decompression, are defined by the following formulas:
 
    \begin{aligned}
    DCT(i,j) &=&  \frac{1}{\sqrt{2N}} C(i) C(j) \sum_{x=0}^{N-1}
-    \sum_{y=0}^{N-1} pixel(x, y) 
+    \sum_{y=0}^{N-1} pixel(x, y)
     \cos \left[ \frac{(2x+1)i \pi}{2N}\right]
     \cos \left[ \frac{(2y+1)j \pi}{2N}\right]\\
    \mathit{pixel}(x,y) &=&  \frac{1}{\sqrt{2N}} \sum_{i=0}^{N-1}
-    \sum_{j=0}^{N-1} C(i) C(j) DCT(i, j) 
+    \sum_{j=0}^{N-1} C(i) C(j) DCT(i, j)
     \cos \left[ \frac{(2x+1)i \pi}{2N}\right]
     \cos \left[ \frac{(2y+1)j \pi}{2N}\right]
    \end{aligned}
 
-where :math:`C(x) = 1/\sqrt{2}` when :math:`x=0` and :math:`1` when 
-:math:`x>0`, and :math:`pixel(x,y)` is the grayscale value of the pixel 
+where :math:`C(x) = 1/\sqrt{2}` when :math:`x=0` and :math:`1` when
+:math:`x>0`, and :math:`pixel(x,y)` is the grayscale value of the pixel
 at position *(x,y)* in the 8 × 8 block being compressed; N = 8 in this case.
 
 The first frequency coefficient, at location (0,0) in the output matrix,
@@ -400,7 +400,7 @@ each number by the quantum 10 using integer arithmetic, yielding 4, 9,
 7 bits needed to encode the original numbers.
 
 .. _tab-quant:
-.. table::  Example JPEG Quantization Table. 
+.. table::  Example JPEG Quantization Table.
    :widths: auto
    :align: center
 
@@ -452,7 +452,7 @@ where
 
    IntegerRound(x) =
        Floor(x + 0.5) if x >= 0
-       Floor(x - 0.5) if x < 0     
+       Floor(x - 0.5) if x < 0
 
 Decompression is then simply defined as
 
@@ -638,9 +638,9 @@ frame (denoted F\ :sub:`c`) is computed as
 
    F_c(x,y) = (F_p(x+x_p,y+y_p) + F_f(x+x_f,y+y_f))/2 + \delta(x,y)
 
-where :math:`\delta` is the delta for the pixel as specified in the B frame. 
-These deltas are encoded in the same way as pixels in I frames; that is, 
-they are run through DCT and then quantized. Since the deltas are typically 
+where :math:`\delta` is the delta for the pixel as specified in the B frame.
+These deltas are encoded in the same way as pixels in I frames; that is,
+they are run through DCT and then quantized. Since the deltas are typically
 small, most of the DCT coefficients are 0 after quantization; hence, they can
 be effectively compressed.
 
@@ -905,7 +905,7 @@ single MPEG stream) or it can be used to compress stand-alone audio (for
 example, an audio CD). The MPEG audio compression standard is just one
 of many for audio compression, but the pivotal role it played means
 that MP3 (which stands for MPEG Layer III—see below) has become almost
-synonymous with audio compression.   
+synonymous with audio compression.
 
 To understand audio compression, we need to begin with the data.
 CD-quality audio, which is the *de facto* digital representation for
@@ -927,8 +927,8 @@ number of bits stored on a CD by a factor of three, so if you just
 read the data from the CD and sent it over the network, you would need
 4.32 Mbps.
 
-Just like video, there is lots of redundancy in audio, and 
-compression takes advantage of this. The 
+Just like video, there is lots of redundancy in audio, and
+compression takes advantage of this. The
 MPEG standards define three levels of compression, as
 enumerated in :numref:`Table %s <tab-mp3>`. Of these, Layer III, which is more
 widely known as MP3, was for many years the most commonly used. In
@@ -936,7 +936,7 @@ recent years, higher bandwidth codecs have proliferated as streaming
 audio has become the dominant way many people consume music.
 
 .. _tab-mp3:
-.. table:: MP3 Compression Rates. 
+.. table:: MP3 Compression Rates.
    :widths: auto
    :align: center
 

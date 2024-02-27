@@ -102,7 +102,7 @@ The current assignment of prefixes is listed in :numref:`Table %s
 .. table:: Address Prefix Assignments for IPv6.
    :align: center
    :widths: auto
-	    
+
    +-----------------+---------------------+
    | Prefix          | Use                 |
    +=================+=====================+
@@ -385,19 +385,19 @@ in ``NextHeader`` containing the value \ ``6``, just as the
 followed by, say, an authentication header, then the fragmentation
 header’s ``NextHeader`` field would contain the value \ ``51``.
 
-4.2.4 Advanced Capabilities 
+4.2.4 Advanced Capabilities
 ---------------------------
 
-As mentioned at the beginning of this section, the primary motivation 
-behind the development of IPv6 was to support the continued growth of 
-the Internet. Once the IP header had to be changed for the sake of the 
-addresses, however, the door was open for a wide variety of other 
+As mentioned at the beginning of this section, the primary motivation
+behind the development of IPv6 was to support the continued growth of
+the Internet. Once the IP header had to be changed for the sake of the
+addresses, however, the door was open for a wide variety of other
 changes, two of which we describe below. But IPv6 includes several
 additional features, most of which are covered elsewhere in this book;
 e.g., mobility, security, quality-of-service. It is interesting to
 note that, in most of these areas, the IPv4 and IPv6 capabilities have
 become virtually indistinguishable, so that the main driver for IPv6
-remains the need for larger addresses. 
+remains the need for larger addresses.
 
 Autoconfiguration
 ~~~~~~~~~~~~~~~~~

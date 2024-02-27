@@ -332,7 +332,7 @@ The function of the timestamp field is to enable the receiver to play
 back samples at the appropriate intervals and to enable different media
 streams to be synchronized. Because different applications may require
 different granularities of timing, RTP itself does not specify the units
-in which time is measured. Instead, the timestamp is just a counter of 
+in which time is measured. Instead, the timestamp is just a counter of
 “ticks,” where the time between ticks is dependent on the encoding in
 use. For example, an audio application that samples data once every
 125 μs could use that value as its clock resolution. The clock

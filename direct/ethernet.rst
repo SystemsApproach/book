@@ -92,7 +92,7 @@ keep it from bouncing back and interfering with trailing signals. The
 original Ethernet specifications used the Manchester encoding scheme
 described in an earlier section, while 4B/5B encoding (or the similar
 8B/10B) scheme is used today on higher speed Ethernets.
-  
+
 It is important to understand that whether a given Ethernet spans a
 single segment, a linear sequence of segments connected by repeaters, or
 multiple segments connected in a star configuration, data
@@ -309,7 +309,7 @@ between each retransmission attempt is a general technique known as
 or 51.2 μs, selected at random. If this effort fails, it then waits 0,
 51.2, 102.4, or 153.6 μs (selected randomly) before trying again; this
 is k × 51.2 for k=0..3. After the third collision, it waits *k × 51.2*
-for k = 0..2\ :sup:`3` - 1, again selected at random. In general, 
+for k = 0..2\ :sup:`3` - 1, again selected at random. In general,
 the algorithm randomly selects a *k* between 0 and 2\ :sup:`n` - 1
 and waits k × 51.2 μs, where *n* is the number of collisions
 experienced so far. The adaptor gives up after a given number of tries

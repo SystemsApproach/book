@@ -98,7 +98,7 @@ prefix. In other words, to take advantage of Ethernet multicasting, IP
 has to map 28-bit IP multicast addresses into 23-bit Ethernet multicast
 addresses. This is implemented by taking the low-order 23 bits of any IP
 multicast address to use as its Ethernet multicast address and ignoring
-the high-order 5 bits. Thus, 32 (2\ :sup:`5`) IP addresses map into each 
+the high-order 5 bits. Thus, 32 (2\ :sup:`5`) IP addresses map into each
 one of the Ethernet addresses.
 
    In this section we use Ethernet as a canonical example of a

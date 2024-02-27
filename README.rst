@@ -44,7 +44,7 @@ Releases and Editions
 
 We release ever-changing open source content rather than publish fixed
 books, although you can roughly equate v6.0 with a 6th Edition. Read the
-`Preface <preface.html>`__ to find out what’s new in this version. Note
+:ref:`preface` to find out what’s new in this version. Note
 that Morgan Kaufmann (Elsevier)  published the 6th edition of the
 textbook based on a fork of v6.0, but going forward, open source
 releases found here will not necessarily stay in sync with any future
@@ -61,7 +61,7 @@ maintenance release (although we do not bother to tag it as such).
 Minor releases (e.g., v6.1) are tagged whenever there is sufficient new
 content to justify the effort. This happens quarterly, give-or-take, and
 is primarily to create a snapshot so that everyone in a course can know
-they are using the same version. 
+they are using the same version.
 
 Build the Book
 --------------
@@ -71,13 +71,13 @@ source:
 
 .. code:: shell
 
-   $ mkdir ~/systemsapproach 
-   $ cd ~/systemsapproach 
-   $ git clone https://github.com/systemsapproach/book.git 
+   $ mkdir ~/systemsapproach
+   $ cd ~/systemsapproach
+   $ git clone https://github.com/systemsapproach/book.git
    $ cd book
 
-The build process is stored in the ``Makefile`` and requires Python be 
-installed. The ``Makefile`` will create a virtualenv (``venv-docs``) which 
+The build process is stored in the ``Makefile`` and requires Python be
+installed. The ``Makefile`` will create a virtualenv (``venv-docs``) which
 installs the documentation generation toolset.  You may also need to
 install the ``enchant`` C library using your system’s package manager
 for the spelling checker to function properly.

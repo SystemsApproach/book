@@ -687,7 +687,7 @@ routing information propagates through the overlay.
 
 The reader may have noticed that although structured overlays provide a
 probabilistic bound on the number of routing hops required to locate a
-given object—the number of hops in Pastry is bounded by :math:`log_{16}N`, 
+given object—the number of hops in Pastry is bounded by :math:`log_{16}N`,
 where N is the number of nodes in the overlay—each hop may contribute
 substantial delay. This is because each intermediate node may be at a
 random location in the Internet. (In the worst case, each node is on a

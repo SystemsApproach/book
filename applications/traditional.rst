@@ -12,7 +12,7 @@ that predated it). By contrast, later sections will look at a class of
 applications that have become popular more recently: streaming
 applications (e.g., multimedia applications like video and audio) and
 various overlay-based applications. (Note that there is a bit of a
-blurring between these classes, as we increasingly access 
+blurring between these classes, as we increasingly access
 streaming multimedia data over the Web, but for now we’ll focus on the
 general usage of the Web to request pages, images, etc.)
 
@@ -534,7 +534,7 @@ sounds, the ``POST`` command enables much mischief (including spam) on
 the Internet.
 
 .. _tab-ops:
-.. table::  HTTP Request Operations. 
+.. table::  HTTP Request Operations.
    :align: center
    :widths: auto
 
@@ -605,7 +605,7 @@ first digit of the code indicating its type. :numref:`Table %s <tab-codes>`
 summarizes the five types of codes.
 
 .. _tab-codes:
-.. table::  Five Types of HTTP Result Codes. 
+.. table::  Five Types of HTTP Result Codes.
    :align: center
    :widths: auto
 
@@ -801,12 +801,12 @@ exchange of certificates and encryption keys follows the establishment
 of a TCP session, QUIC handles these steps as part of session
 establishment, leading to a considerable reduction in the number of
 round-trips needed to establish a secure connection before the first
-content is delivered. 
+content is delivered.
 
 HTTP/3 is implemented in the majority of browsers and is incrementally
 being deployed on servers across the Internet. There remain
 plenty of servers running HTTP/2 and even some HTTP/1.1 as well, so version negotiation is
-likely to be part of HTTP implementations for the foreseeable future. 
+likely to be part of HTTP implementations for the foreseeable future.
 
 Caching
 ~~~~~~~

@@ -150,7 +150,7 @@ two participants use different keys.)
        throughout the book to identify the two endpoints of a
        channel. In the security world, they are typically called
        *principals*.
-       
+
 The U.S. National Institute of Standards and Technology (NIST) has
 issued standards for a series of secret-key ciphers. *Data Encryption
 Standard* (DES) was the first, and it has stood the test of time in

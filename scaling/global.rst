@@ -102,7 +102,7 @@ both area 1 and area 2. A router that is a member of both the backbone
 area and a nonbackbone area is an area border router (ABR). Note that
 these are distinct from the routers that are at the edge of an AS, which
 are referred to as AS border routers for clarity.
- 
+
 .. _fig-ospf-area:
 .. figure:: figures/f04-02-9780123850591.png
    :width: 500px
@@ -469,7 +469,7 @@ to be a few common ones, reflecting common relationships between
 autonomous systems. The most common relationships are illustrated in
 :numref:`Figure %s <fig-as-rels>`. The three common relationships and
 the policies that go with them are as follows:
- 
+
 .. _fig-as-rels:
 .. figure:: figures/f04-08-9780123850591.png
    :width: 500px

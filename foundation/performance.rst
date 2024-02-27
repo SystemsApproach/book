@@ -68,12 +68,12 @@ bandwidth. For logical process-to-process channels, bandwidth is also
 influenced by other factors, including how many times the software that
 implements the channel has to handle, and possibly transform, each bit
 of data.
-   
+
 .. _fig-bit-width:
 .. figure:: figures/f01-16-9780123850591.png
    :width: 400px
    :align: center
-   
+
    Bits transmitted at a particular bandwidth can be
    regarded as having some width: (a) bits transmitted at 1 Mbps
    (each bit is 1 microsecond wide); (b) bits transmitted at 2 Mbps
@@ -96,13 +96,13 @@ the speed-of-light propagation delay. This delay occurs because nothing,
 including a bit on a wire, can travel faster than the speed of light. If
 you know the distance between two points, you can calculate the
 speed-of-light latency, although you have to be careful because light
-travels across different media at different speeds: It travels at 
+travels across different media at different speeds: It travels at
 3.0 × 10\ :sup:`8` m/s in a vacuum, 2.3 × 10\ :sup:`8` m/s
-in a copper cable, and 2.0 × 10\ :sup:`8` m/s in an optical fiber. 
-Second, there is the amount of time it takes to transmit a unit of data. 
-This is a function of the network bandwidth and the size of the packet in 
-which the data is carried. Third, there may be queuing delays inside the 
-network, since packet switches generally need to store packets for some 
+in a copper cable, and 2.0 × 10\ :sup:`8` m/s in an optical fiber.
+Second, there is the amount of time it takes to transmit a unit of data.
+This is a function of the network bandwidth and the size of the packet in
+which the data is carried. Third, there may be queuing delays inside the
+network, since packet switches generally need to store packets for some
 time before forwarding them on an outbound link. So, we could define the
 total latency as
 
@@ -143,12 +143,12 @@ Mbps = 20 seconds), making it relatively unimportant if the image
 is on the other side of a 1-ms channel or a 100-ms channel; the difference
 between a 20.001-second response time and a 20.1-second response time is
 negligible.
-   
+
 .. _fig-latency:
 .. figure:: figures/f01-17-9780123850591.png
    :width: 600px
    :align: center
-   
+
    Perceived latency (response time) versus round-trip
    time for various object sizes and link speeds.
 
@@ -202,7 +202,7 @@ transcontinental channel with a one-way latency of 50 ms and a bandwidth
 of 45 Mbps is able to hold
 
 .. centered:: 50 × 10\ :sup:`-3` × 45 × 10\ :sup:`6` *bits/sec* = 2.25
-	      × 10\ :sup:`6` *bits*
+              × 10\ :sup:`6` *bits*
 
 or approximately 280 KB of data. In other words, this example channel
 (pipe) holds as many bytes as the memory of a personal computer from the
@@ -212,7 +212,7 @@ early 1980s could hold.
 .. figure:: figures/f01-18-9780123850591.png
    :width: 400px
    :align: center
-   
+
    Network as a pipe.
 
 The delay × bandwidth product is important to know when constructing
@@ -240,7 +240,7 @@ one-way latency or RTT is made clear by the context. :numref:`Table %s
 some typical network links.
 
 .. _tab-delay-bw:
-.. table::  Example delay × bandwidth products. 
+.. table::  Example delay × bandwidth products.
    :align: center
    :widths: auto
 
@@ -285,12 +285,12 @@ needs to be transmitted across a 1-Mbps network, while it looks like a
 single packet on a 1-Gbps network. To help drive this point home,
 consider that a 1-MB file is to a 1-Gbps network what a 1-KB *packet* is
 to a 1-Mbps network.
-   
+
 .. _fig-bw-lat:
 .. figure:: figures/f01-19-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Relationship between bandwidth and latency. A 1-MB
    file would fill the 1-Mbps link 80 times but only fill 1/12th of a
    1-Gbps link.

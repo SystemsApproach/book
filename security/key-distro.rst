@@ -323,20 +323,20 @@ much larger number), then we might choose 2 to be the generator *g*
 since:
 
 .. math::
-    
-   1 = 2^0 \bmod p 
+
+   1 = 2^0 \bmod p
 
 .. math::
-    
-   2 = 2^1 \bmod p 
+
+   2 = 2^1 \bmod p
 
 .. math::
-    
-   3 = 2^3 \bmod p 
+
+   3 = 2^3 \bmod p
 
 .. math::
-    
-   4 = 2^2 \bmod p 
+
+   4 = 2^2 \bmod p
 
 Suppose Alice and Bob want to agree on a shared secret key. Alice and
 Bob, and everyone else, already know the values of *p* and *g*. Alice
@@ -347,65 +347,65 @@ corresponding public values—the values they will send to each other
 unencrypted—as follows. Alice’s public value is
 
 .. math::
-    
-   g^a \bmod p 
+
+   g^a \bmod p
 
 and Bob’s public value is
 
 .. math::
-    
-   g^b \bmod p 
+
+   g^b \bmod p
 
 They then exchange their public values. Finally, Alice computes
 
 .. math::
-    
-   g^{ab} \bmod p = (g^b \bmod p)^a \bmod p 
+
+   g^{ab} \bmod p = (g^b \bmod p)^a \bmod p
 
 and Bob computes
 
 .. math::
-    
-   g^{ba} \bmod p = (g^a \bmod p)^b \bmod p. 
 
-Alice and Bob now have :math:`g^{ab} \bmod p` (which is equal to 
+   g^{ba} \bmod p = (g^a \bmod p)^b \bmod p.
+
+Alice and Bob now have :math:`g^{ab} \bmod p` (which is equal to
 :math:`g^{ba} \bmod p)` as their shared secret key.
 
-Any eavesdropper would know *p, g*, and the two public values 
-:math:`g^a \bmod p` and :math:`g^b \bmod p`. 
+Any eavesdropper would know *p, g*, and the two public values
+:math:`g^a \bmod p` and :math:`g^b \bmod p`.
 If only the eavesdropper could determine *a* or *b*, she could easily
 compute the resulting key. Determining *a* or *b* from that information
 is, however, computationally infeasible for suitably large *p,a,* and
 *b*; it is known as the *discrete logarithm problem*.
 
 For example, using *p = 5* and *g = 2* from above, suppose Alice picks
-the random number *a = 3* and Bob picks the random number *b = 4*. 
+the random number *a = 3* and Bob picks the random number *b = 4*.
 Then Alice sends Bob the public value
 
 .. math::
-    
-   2^3 \bmod 5 = 3 
+
+   2^3 \bmod 5 = 3
 
 and Bob sends Alice the public value
 
 .. math::
-    
-   2^4 \bmod 5 = 1 
+
+   2^4 \bmod 5 = 1
 
 Alice is then able to compute
 
 .. math::
-    
+
    g^{ab} \bmod p = (2^b \bmod 5)^3 \bmod 5 = (1)^3 \bmod 5 = 1
 
-by substituting Bob’s public value for :math:`(2^b \bmod 5)`. Similarly, 
+by substituting Bob’s public value for :math:`(2^b \bmod 5)`. Similarly,
 Bob is able to compute
 
 .. math::
-    
-   g^{ba} \bmod p = (g^a \bmod 5)^4 \bmod 5 = (3)^4 \bmod 5 = 1. 
 
-by substituting Alice’s public value for :math:`(2^a \bmod 5)`. 
+   g^{ba} \bmod p = (g^a \bmod 5)^4 \bmod 5 = (3)^4 \bmod 5 = 1.
+
+by substituting Alice’s public value for :math:`(2^a \bmod 5)`.
 Both Alice and Bob now agree that the secret key is :math:`1`.
 
 There is the problem of Diffie-Hellman’s lack of authentication. One
@@ -431,7 +431,7 @@ supports authentication of one or both participants. It relies on
 certificates that are similar to public key certificates but instead
 certify the Diffie-Hellman public parameters of an entity. For example,
 such a certificate would state that Alice’s Diffie-Hellman parameters
-are *p, g*, and :math:`g^a \bmod p` 
+are *p, g*, and :math:`g^a \bmod p`
 (note that the value of *a* would still be known only to Alice). Such
 a certificate would assure Bob that the other participant in
 Diffie-Hellman is Alice—or else the other participant won’t be able to

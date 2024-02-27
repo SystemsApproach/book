@@ -37,13 +37,13 @@ results in a multi-tier cloud similar to the one shown in :numref:`Figure
 .. figure:: figures/access/Slide3.png
    :width: 600px
    :align: center
-   
+
    Emerging multi-tier cloud includes datacenter-based public clouds,
    IXP-hosted distributed clouds, and access-based edge clouds, such as
    CORD. While there are on the order of 150 IXP-hosted clouds
    worldwide, we can expect there to be thousands or even tens of
    thousands of edge clouds.
-  
+
 This is all part of the growing trend to move functionality out of the
 datacenter and closer to the network edge, a trend that puts cloud
 providers and network operators on a collision course. Cloud providers,
@@ -104,9 +104,9 @@ the potential to open the access network to developers that
 instinctively go where there are opportunities to innovate.
 
 .. admonition:: Broader Perspective
-		
+
   To continue reading about the cloudification of the Internet, see
-  :ref:`Perspective: Virtual Networks All the Way Down`. 
+  :ref:`Perspective: Virtual Networks All the Way Down`.
 
   To learn more about the transformation taking place in access networks, we recommend: `CORD: Central Office Re-architected as a Datacenter, IEEE Communications, October 2016 <https://wiki.opencord.org/display/CORD/Documentation?preview=/1278027/1966399/PETERSON_CORD.pdf>`__ and `Democratizing the Network Edge SIGCOMM CCR, April 2019 <https://ccronline.sigcomm.org/2019/democratizing-the-network-edge/>`__.
 

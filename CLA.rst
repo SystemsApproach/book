@@ -4,7 +4,7 @@ Contributor License Agreement
 Thank you for contributing to COMPUTER NETWORKS: A SYSTEMS
 APPROACH (the “Work”). This Agreement between you (the “You”)
 and Elsevier Inc. regarding your Contribution to the Work (the
-“Contribution”) outlines our respective obligations and rights. 
+“Contribution”) outlines our respective obligations and rights.
 
 A. You grant to the Publisher a non-exclusive publishing and
 distribution license in the Contribution in print, electronic and

@@ -84,7 +84,7 @@ as illustrated in :numref:`Figure %s <fig-layers2>`.
 .. figure:: figures/f01-09-9780123850591.png
    :width: 300px
    :align: center
-   
+
    Layered system with alternative abstractions available
    at a given layer.
 
@@ -129,7 +129,7 @@ service (the peer interface). This situation is illustrated in :numref:`Figure
 .. figure:: figures/f01-10-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Service interfaces and peer interfaces.
 
 Except at the hardware level, where peers directly communicate with each
@@ -152,7 +152,7 @@ service.
 .. figure:: figures/f01-11-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Example of a protocol graph.
 
 In this example, suppose that the file access program on host 1 wants to
@@ -204,7 +204,7 @@ message to RRP. From RRP’s perspective, the message it is given by the
 application is an uninterpreted string of bytes. RRP does not care that
 these bytes represent an array of integers, an email message, a digital
 image, or whatever; it is simply charged with sending them to its peer.
-However, RRP must communicate control information to its peer, 
+However, RRP must communicate control information to its peer,
 instructing it how to handle the message when it is received. RRP does
 this by attaching a *header* to the message. Generally speaking, a header
 is a small data structure—from a few bytes to a few dozen bytes—that is
@@ -221,7 +221,7 @@ application’s data is *encapsulated* in the new message created by RRP.
 .. figure:: figures/f01-12-9780123850591.png
    :width: 500px
    :align: center
-   
+
    High-level messages are encapsulated inside of low-level messages.
 
 This process of encapsulation is then repeated at each level of the
@@ -306,7 +306,7 @@ worth a cursory look.
 .. figure:: figures/f01-13-9780123850591.png
    :width: 600px
    :align: center
-   
+
    The OSI 7-layer model.
 
 Starting at the bottom and working up, the *physical* layer handles the
@@ -355,22 +355,22 @@ one of the research and development funding agencies of the
 U.S. Department of Defense. The Internet and ARPANET were around
 before the OSI architecture, and the experience gained from building
 them was a major influence on the OSI reference model.
-	
+
 .. _fig-internet1:
 .. figure:: figures/f01-14-9780123850591.png
    :width: 300px
    :align: center
-   
+
    Internet protocol graph.
 
 .. _fig-internet2:
 .. figure:: figures/f01-15-9780123850591.png
    :width: 250px
    :align: center
-   
+
    Alternative view of the Internet architecture. The "subnetwork" layer
    was historically referred to as the “network” layer and is now often
-   referred to as “Layer 2” (influenced by the OSI model). 
+   referred to as “Layer 2” (influenced by the OSI model).
 
 While the 7-layer OSI model can, with some imagination, be applied to
 the Internet, a simpler stack is often used instead. At the lowest
@@ -417,7 +417,7 @@ transport layer is layer 4, the IP (internetworking or just network)
 layer is layer 3, and the link or subnet layer below IP is layer 2.
 
 .. sidebar:: IETF and Standardization
-	     
+
    Although we call it the "Internet architecture" rather than the
    "IETF architecture," it's fair to say that the IETF is the primary
    standardization body responsible for its definition, as well as the
@@ -437,7 +437,7 @@ layer is layer 3, and the link or subnet layer below IP is layer 2.
    Corporation for Assigned Names and Numbers), a non-profit
    organization that's responsible for the overall stewardship of the
    Internet.
-   
+
 The Internet architecture has three features that are worth
 highlighting. First, as best illustrated by :numref:`Figure %s
 <fig-internet2>`, the Internet architecture does not imply strict

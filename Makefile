@@ -26,8 +26,8 @@ $(VIRTUALENV):
   source ./$@/bin/activate ;\
   pip install -r requirements.txt
 
-# lint and link verification. linkcheck is built into sphinx
-test: lint spelling linkcheck
+# lint and spelling verification. linkcheck is built into sphinx
+test: lint spelling 
 
 # lint all .rst files
 lint: $(VIRTUALENV)

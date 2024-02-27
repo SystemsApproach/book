@@ -103,9 +103,9 @@ numfig_format = {
     }
 
 # Ignore link check for the following websites
-# linkcheck_ignore = [
-#     'https://SDN.systemspproach.org/',
-# ]
+linkcheck_ignore = [
+     'https://www.amazon.com/', 'https://amzn.to',
+]
 
 # -- Options for HTML output -------------------------------------------------
 

@@ -7,12 +7,12 @@ Chapter 5:  End-to-End Protocols
   *—Winston Churchill*
 
 .. toctree::
-   :maxdepth: 2 
+   :maxdepth: 2
 
-   e2e/problem.rst 
-   e2e/udp.rst 
-   e2e/tcp.rst 
-   e2e/rpc.rst 
-   e2e/rtp.rst 
+   e2e/problem.rst
+   e2e/udp.rst
+   e2e/tcp.rst
+   e2e/rpc.rst
+   e2e/rtp.rst
    e2e/trend.rst
-   
+

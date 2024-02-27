@@ -112,7 +112,7 @@ best case study of a scalable internetworking protocol.
    The good news is that when you fully understand the implications of
    this duality, you will have cleared a major hurdle in mastering
    modern packet-switched networks.
-	     
+
 3.3.2 Service Model
 -------------------
 
@@ -334,13 +334,13 @@ reassembling host will be able to recognize those fragments that go
 together. Should all the fragments not arrive at the receiving host, the
 host gives up on the reassembly process and discards the fragments that
 did arrive. IP does not attempt to recover from missing fragments.
-  
+
 .. _fig-frag:
 .. figure:: figures/f03-17-9780123850591.png
    :width: 600px
    :align: center
 
-   IP datagrams traversing the sequence of physical 
+   IP datagrams traversing the sequence of physical
    networks graphed in the earlier figure.
 
 To see what this all means, consider what happens when host H5 sends a
@@ -367,7 +367,7 @@ figure also serves to reinforce two important points:
    :align: center
    :width: 350px
 
-   Header fields used in IP fragmentation: 
+   Header fields used in IP fragmentation:
    (a) unfragmented packet; (b) fragmented packets.
 
 The fragmentation process can be understood in detail by looking at
@@ -481,7 +481,7 @@ part. Therefore, a class C network can have only 256 unique host
 identifiers, which means only 254 attached hosts (one host identifier,
 255, is reserved for broadcast, and 0 is not a valid host number).
 However, the addressing scheme supports 2\ :sup:`21` class C networks.
- 
+
 .. _fig-class:
 .. figure:: figures/f03-19-9780123850591.png
    :width: 350px
@@ -613,7 +613,7 @@ table shown in :numref:`Table %s <tab-ipfwdtab>`, it looks up H8’s
 network number (network 4) and forwards the datagram over the
 point-to-point network to R3. Finally, R3, since it is on the same
 network as H8, forwards the datagram directly to H8.
- 
+
 .. _tab-ipfwdtab:
 .. table:: Forwarding table for Router R2.
    :align: center
@@ -627,12 +627,12 @@ network as H8, forwards the datagram directly to H8.
    | 4          | R3      |
    +------------+---------+
 
-Note that it is possible to include the information about directly 
-connected networks in the forwarding table. For example, we could label 
-the network interfaces of router R2 as interface 0 for the 
-point-to-point link (network 3) and interface 1 for the Ethernet 
-(network 2). Then R2 would have the forwarding table shown 
-in :numref:`Table %s <tab-ipfwdtab2>`. 
+Note that it is possible to include the information about directly
+connected networks in the forwarding table. For example, we could label
+the network interfaces of router R2 as interface 0 for the
+point-to-point link (network 3) and interface 1 for the Ethernet
+(network 2). Then R2 would have the forwarding table shown
+in :numref:`Table %s <tab-ipfwdtab2>`.
 
 .. _tab-ipfwdtab2:
 .. table:: Complete Forwarding table for Router R2.
@@ -713,7 +713,7 @@ more than 255 hosts wastes over 64,000 addresses.
 Assigning one network number per physical network, therefore, uses up
 the IP address space potentially much faster than we would like. While
 we would need to connect over 4 billion hosts to use up all the valid
-addresses, we only need to connect 2\ :sup:`14` (about 16,000) class B 
+addresses, we only need to connect 2\ :sup:`14` (about 16,000) class B
 networks before that part of the address space
 runs out. Therefore, we would like to find some way to use the network
 numbers more efficiently.
@@ -756,7 +756,7 @@ introduce a *subnet number*; all hosts on the same physical network will
 have the same subnet number, which means that hosts may be on different
 physical networks but share a single network number. This concept is
 illustrated in :numref:`Figure %s <fig-subaddr>`.
-  
+
 .. _fig-subaddr:
 .. figure:: figures/f03-20-9780123850591.png
    :width: 350px
@@ -774,7 +774,7 @@ bitwise AND of these two numbers defines the subnet number of the host
 and of all other hosts on the same subnet. In this case, 128.96.34.15
 AND 255.255.255.128 equals 128.96.34.0, so this is the subnet number
 for the topmost subnet in the figure.
- 
+
 .. _fig-subnet:
 .. figure:: figures/f03-21-9780123850591.png
    :width: 500px
@@ -1207,7 +1207,7 @@ unicasts it to the DHCP server and awaits the response, which it will
 then send back to the requesting client. The process of relaying a
 message from a host to a remote DHCP server is shown in :numref:`Figure
 %s <fig-dhcp-relay>`.
-  
+
 .. _fig-dhcp-relay:
 .. figure:: figures/f03-24-9780123850591.png
    :width: 500px
@@ -1223,7 +1223,7 @@ message. The message is actually sent using a protocol called the
 detail in the next chapter, but the only interesting thing it does in
 this context is to provide a demultiplexing key that says, “This is a
 DHCP packet.”
- 
+
 .. _fig-dhcp:
 .. figure:: figures/f03-25-9780123850591.png
    :width: 400px

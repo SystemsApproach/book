@@ -55,8 +55,8 @@ table, which tells us that network prefix 18/8 is to be reached by a
 next hop router with the IP address 171.69.245.10
 
 .. _tab-rtab:
-.. table:: Example row from a routing table. 
-   :align: center 
+.. table:: Example row from a routing table.
+   :align: center
    :widths: auto
 
    +---------------+---------------+
@@ -65,15 +65,15 @@ next hop router with the IP address 171.69.245.10
    | 18/8          | 171.69.245.10 |
    +---------------+---------------+
 
-In contrast, :numref:`Table %s <tab-ftab>` gives an example of a row from a 
+In contrast, :numref:`Table %s <tab-ftab>` gives an example of a row from a
 forwarding table, which contains the information about exactly how to
 forward a packet to that next hop: Send it out interface number 0 with
 a MAC address of 8:0:2b:e4:b:1:2. Note that the last piece
-of information is provided by the Address Resolution Protocol. 
+of information is provided by the Address Resolution Protocol.
 
 .. _tab-ftab:
-.. table:: Example row from a forwarding table. 
-   :align: center 
+.. table:: Example row from a forwarding table.
+   :align: center
    :widths: auto
 
    +---------------+-----------+-----------------+
@@ -119,7 +119,7 @@ a slight simplification. It is more accurate to make the edges
 directed, which typically means that there would be a pair of edges
 between each node—one flowing in each direction, and each with its
 own edge cost.
-  
+
 .. _fig-graph-route:
 .. figure:: figures/f03-28-9780123850591.png
    :width: 400px
@@ -180,7 +180,7 @@ assumption for distance-vector routing is that each node knows the cost
 of the link to each of its directly connected neighbors. These costs may
 be provided when the router is configured by a network manager. A link
 that is down is assigned an infinite cost.
-  
+
 .. _fig-dvroute:
 .. figure:: figures/f03-29-9780123850591.png
    :width: 400px
@@ -189,8 +189,8 @@ that is down is assigned an infinite cost.
    Distance-vector routing: an example network.
 
 .. _tab-dvtab1:
-.. table:: Initial Distances Stored at Each Node (Global View). 
-   :align: center 
+.. table:: Initial Distances Stored at Each Node (Global View).
+   :align: center
    :widths: auto
 
    +---+---+---+---+---+---+---+---+
@@ -233,8 +233,8 @@ reach any reachable node. Initially, then, A’s routing table would
 look like :numref:`Table %s <tab-dvtab2>`.
 
 .. _tab-dvtab2:
-.. table::  Initial Routing Table at Node A. 
-   :align: center 
+.. table::  Initial Routing Table at Node A.
+   :align: center
    :widths: auto
 
    +-------------+------+---------+
@@ -272,7 +272,7 @@ next hops for all nodes in the network. The result is shown in
 
 .. _tab-dvtab3:
 .. table:: Final Routing Table at Node A.
-   :align: center 
+   :align: center
    :widths: auto
 
    +-------------+------+---------+
@@ -305,7 +305,7 @@ any centralized authority.
 
 .. _tab-dvtab4:
 .. table:: Final Distances Stored at Each Node (Global View).
-   :align: center 
+   :align: center
    :widths: auto
 
    +---+---+---+---+---+---+---+---+

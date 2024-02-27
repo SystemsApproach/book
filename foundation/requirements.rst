@@ -94,7 +94,7 @@ rest of the network.
 .. figure:: figures/f01-02-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Direct links: (a) point-to-point; (b) multiple-access.
 
 If computer networks were limited to situations in which all nodes are
@@ -130,7 +130,7 @@ terms interchangeably.
 .. figure:: figures/f01-03-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Switched network.
 
 Packet-switched networks typically use a strategy called
@@ -167,7 +167,7 @@ covered in this book.\ [#]_
 .. figure:: figures/f01-04-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Interconnection of networks.
 
 A second way in which a set of computers can be indirectly connected
@@ -272,7 +272,7 @@ supply of data that it wants to send to its counterpart on the right.
 .. figure:: figures/f01-05-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Multiplexing multiple logical flows over a single
    physical link.
 
@@ -336,7 +336,7 @@ reassembling the packets back into the original message.
 .. figure:: figures/f01-06-9780123850591.png
    :width: 500px
    :align: center
-   
+
    A switch multiplexing packets from multiple sources
    onto one shared link.
 
@@ -422,7 +422,7 @@ application without overly constraining the application designer.
 .. figure:: figures/f01-07-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Processes communicating over an abstract channel.
 
 Intuitively, we view the network as providing logical *channels* over
@@ -572,17 +572,17 @@ to worry about. First, as a packet is transmitted over a physical link,
 *bit errors* may be introduced into the data; that is, a 1 is turned
 into a 0 or *vice versa*. Sometimes single bits are corrupted, but more
 often than not a *burst error* occurs—several consecutive bits are
-corrupted. Bit errors typically occur because outside forces, such as 
+corrupted. Bit errors typically occur because outside forces, such as
 lightning strikes, power surges, and microwave ovens, interfere with the
-transmission of data. The good news is that such bit errors are fairly 
-rare, affecting on average only one out of every 10\ :sup:`6` to 
-10\ :sup:`7` bits on a typical copper-based cable and one out of every 
-10\ :sup:`12` to 10\ :sup:`14` bits on a typical optical fiber. 
-As we will see, there are techniques that detect these bit errors with 
-high probability. Once detected, it is sometimes possible to correct for 
-such errors—if we know which bit or bits are corrupted, we can simply 
+transmission of data. The good news is that such bit errors are fairly
+rare, affecting on average only one out of every 10\ :sup:`6` to
+10\ :sup:`7` bits on a typical copper-based cable and one out of every
+10\ :sup:`12` to 10\ :sup:`14` bits on a typical optical fiber.
+As we will see, there are techniques that detect these bit errors with
+high probability. Once detected, it is sometimes possible to correct for
+such errors—if we know which bit or bits are corrupted, we can simply
 flip them—while in other cases the damage is so bad that it is necessary
-to discard the entire packet. In such a case, the sender may be expected 
+to discard the entire packet. In such a case, the sender may be expected
 to retransmit the packet.
 
 The second class of failure is at the packet, rather than the bit,
@@ -624,7 +624,7 @@ introducing a high number of bit errors.
    application expects and what the underlying technology can provide.
    This is sometimes called the *semantic gap.*  :ref:`[Next]
    <key-hourglass>`
-   
+
 1.2.5 Manageability
 ------------------------
 

@@ -36,7 +36,7 @@ makes everything else possible. This didn’t happen overnight or by
 proclamation, although some did anticipate it would happen. The narrow
 waist drifted slowly up the protocol stack as a consequence of an
 evolution (to mix geoscience and biological metaphors).
- 
+
 .. _fig-waist:
 .. figure:: figures/rpc/Slide3.png
    :width: 500px

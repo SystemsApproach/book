@@ -126,7 +126,7 @@ a single character. For example, the line tells us that “version” has
 the value zero; that is, this message is formatted according to version
 zero of SDP. The next line provides the “origin” of the session which
 contains enough information to uniquely identify the session. ``larry``
-is a username of the session creator, and ``128.112.136.10`` is the IP 
+is a username of the session creator, and ``128.112.136.10`` is the IP
 address of his computer. The number following ``larry`` is a session
 identifier that is chosen to be unique to that machine. This is followed
 by a “version” number for the SDP announcement; if the session information

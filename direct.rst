@@ -7,16 +7,16 @@ Chapter 2:  Direct Links
    *—Winston Churchill*
 
 .. toctree::
-   :maxdepth: 2 
+   :maxdepth: 2
 
-   direct/problem.rst 
+   direct/problem.rst
    direct/perspective.rst
    direct/encoding.rst
    direct/framing.rst
-   direct/error.rst 
+   direct/error.rst
    direct/reliable.rst
    direct/ethernet.rst
    direct/wireless.rst
    direct/access.rst
    direct/trend.rst
-   
+

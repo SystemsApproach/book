@@ -38,7 +38,7 @@ these technologies and how they compare to each other.
 .. table:: Overview of Leading Wireless Technologies.
    :widths: auto
    :align: center
-      
+
    +-------------+-----------------------+-----------------+--------------+
    |             | Bluetooth (802.15.1)  | Wi-Fi (802.11)  | 4G Cellular  |
    +=============+=======================+=================+==============+
@@ -129,7 +129,7 @@ required. :numref:`Figure %s <fig-chipping>` gives an example of a
 .. figure:: figures/f02-27-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Example 4-bit chipping sequence.
 
 Different parts of the electromagnetic spectrum have different
@@ -171,7 +171,7 @@ nodes.
 .. figure:: figures/f02-28-9780123850591.png
    :width: 500px
    :align: center
-   
+
    A wireless network using a base station.
 
 This topology implies three qualitatively different levels of mobility.
@@ -185,7 +185,7 @@ is the case with cell phones and Wi-Fi.
 .. figure:: figures/f02-29-9780123850591.png
    :width: 500px
    :align: center
-   
+
    A wireless ad hoc or mesh network.
 
 An alternative topology that is seeing increasing interest is the
@@ -305,7 +305,7 @@ discussion will illustrate.
 .. figure:: figures/f02-30-9780123850591.png
    :width: 400px
    :align: center
-   
+
    The hidden node problem. Although A and C are hidden
    from each other, their signals can collide at B. (B's reach is not
    shown.)
@@ -322,7 +322,7 @@ neither A nor C is aware of this collision. A and C are said to be
 .. figure:: figures/f02-31-9780123850591.png
    :width: 325px
    :align: center
-   
+
    The exposed node problem. Although B and C are exposed
    to each other's signals, there is no interference if B transmits
    to A while C transmits to D. (A and D's reaches are not shown.)
@@ -405,7 +405,7 @@ be on a different channel than its neighbors.
 .. figure:: figures/f02-32-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Access points connected to a distribution system.
 
 The details of the distribution system are not important to this
@@ -448,7 +448,7 @@ distribution system.
 .. figure:: figures/f02-33-9780123850591.png
    :width: 500px
    :align: center
-   
+
    Node mobility.
 
 Consider the situation shown in :numref:`Figure %s <fig-wireless3>`,
@@ -483,7 +483,7 @@ algorithm, and a pair of 1-bit fields—called ``ToDS`` and
 .. figure:: figures/f02-34-9780123850591.png
    :width: 550px
    :align: center
-   
+
    802.11 frame format.
 
 The peculiar thing about the 802.11 frame format is that it contains
@@ -574,13 +574,13 @@ Bluetooth hardware and software can be simpler and cheaper.
 .. figure:: figures/f02-35-9780123850591.png
    :width: 400px
    :align: center
-   
+
    A Bluetooth piconet.
 
 Since Bluetooth operates in an license-exempt band, it is required to
 use a spread spectrum technique to deal with possible interference in
 the band. It uses frequency-hopping with 79 *channels* (frequencies),
-using each for 625 μs at a time. This provides a natural time slot for 
+using each for 625 μs at a time. This provides a natural time slot for
 Bluetooth to use for
 synchronous time division multiplexing. A frame takes up 1, 3, or 5
 consecutive time slots. Only the master can start to transmit in

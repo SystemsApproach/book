@@ -123,7 +123,7 @@ addresses; we will come back to this issue later in this section.
 
 Like the Unix file hierarchy, the DNS hierarchy can be visualized as a
 tree, where each node in the tree corresponds to a domain, and the
-leaves in the tree correspond to the hosts being named. :numref:`Figure 
+leaves in the tree correspond to the hosts being named. :numref:`Figure
 %s <fig-domains>` gives an example of a domain hierarchy. Note that we
 should not assign any semantics to the term *domain* other than that it
 is simply a context in which additional names can be defined.\ [#]_
@@ -641,8 +641,8 @@ is actively pursuing is called gNMI (*gRPC Network Management
 Interface*). As you might guess from its name, gNMI uses gRPC, which you
 may recall, runs on top of HTTP. This means gNMI also adopts Protobufs
 as the way it specifies the data actually communicated over the HTTP
-connection. Thus, as depicted in :numref:`Figure %s <fig-mgmt>`, gNMI 
-is intended as a standard management interface for network devices. 
+connection. Thus, as depicted in :numref:`Figure %s <fig-mgmt>`, gNMI
+is intended as a standard management interface for network devices.
 What’s not standardized is the richness of the management tool’s ability to
 automate, or the exact form of the operator-facing interface. Like any
 application that is trying to serve a need and support more features

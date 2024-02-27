@@ -1,8 +1,8 @@
 .. image:: _static/SystemsApproachLogoURL.png
    :width: 300px
    :align: center
-   :target: https://systemsapproach.org		   
-	    
+   :target: https://systemsapproach.org
+
 |
 
 Computer Networks: A Systems Approach
@@ -24,7 +24,7 @@ Larry Peterson and Bruce Davie
    foundation.rst
    direct.rst
    internetworking.rst
-   scaling.rst   
+   scaling.rst
    e2e.rst
    congestion.rst
    data.rst

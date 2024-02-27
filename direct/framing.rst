@@ -77,12 +77,12 @@ The Point-to-Point Protocol (PPP), which is commonly used to carry
 Internet Protocol packets over various sorts of point-to-point links,
 uses sentinels and character stuffing. The format for a PPP frame is
 given in :numref:`Figure %s <fig-ppp>`.
- 
+
 .. _fig-ppp:
 .. figure:: figures/f02-08-9780123850591.png
    :width: 500px
    :align: center
-   
+
    PPP frame format.
 
 This figure is the first of many that you will see in this book that are
@@ -139,7 +139,7 @@ analog of the DLE character, a technique known as *bit stuffing*.
 .. figure:: figures/f02-10-9780123850591.png
    :width: 400px
    :align: center
-   
+
    HDLC frame format.
 
 Bit stuffing in the HDLC protocol works as follows. On the sending side,
@@ -223,7 +223,7 @@ in sync and can then interpret the frame correctly.
 .. figure:: figures/f02-11-9780123850591.png
    :width: 500px
    :align: center
-   
+
    A SONET STS-1 frame.
 
 One of the things we are not describing due to the complexity of SONET
@@ -269,24 +269,24 @@ frame.
        we’re focused on framing here, we will stick with STS, but it
        is more likely that you will hear someone refer to an optical
        link by its “OC” name.
-       
+
 Intuitively, the STS-N frame can be thought of as consisting of N STS-1
 frames, where the bytes from these frames are interleaved; that is, a
 byte from the first frame is transmitted, then a byte from the second
 frame is transmitted, and so on. The reason for interleaving the bytes
 from each STS-N frame is to ensure that the bytes in each STS-1 frame
 are evenly paced; that is, bytes show up at the receiver at a smooth
-51 Mbps, rather than all bunched up during one particular :math:`1/N^{th}` 
+51 Mbps, rather than all bunched up during one particular :math:`1/N^{th}`
 of the 125-μs interval.
 
 .. _fig-sonet1:
 .. figure:: figures/f02-12-9780123850591.png
    :width: 350px
    :align: center
-   
+
    Three STS-1 frames multiplexed onto one STS-3c
    frame.
-   
+
 Although it is accurate to view an STS-N signal as being used to
 multiplex N STS-1 frames, the payload from these STS-1 frames can be
 linked together to form a larger STS-N payload; such a link is denoted
@@ -302,7 +302,7 @@ really be viewed as three 51.84-Mbps links that happen to share a fiber.
 .. figure:: figures/f02-13-9780123850591.png
    :width: 450px
    :align: center
-   
+
    SONET frames out of phase.
 
 Finally, the preceding description of SONET is overly simplistic in

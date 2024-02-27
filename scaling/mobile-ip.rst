@@ -156,7 +156,7 @@ located on a network to which the mobile node attaches itself when it is
 away from its home network. We will consider first the operation of
 Mobile IP when a foreign agent is used. An example network with both
 home and foreign agents is shown in :numref:`Figure %s <fig-mobile>`.
- 
+
 .. _fig-mobile:
 .. figure:: figures/f04-27-9780123850591.png
    :width: 500px

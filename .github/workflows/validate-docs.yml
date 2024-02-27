@@ -1,0 +1,22 @@
+name: Validate Docs Workflow
+run-name: ${{ github.actor }} is validating document source
+on: [pull_request, workflow_dispatch]
+jobs:
+  Validate_Docs:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Check out repo
+        uses: actions/checkout@v4
+      - name: Validate source
+        run: make test
+      - name: Build html
+        run: make html
+      - name: List built files
+        run: |
+          ls ${{ github.workspace }}/_build/html
+
+      - run: echo "🍏 This job's status is ${{ job.status }}."
+
