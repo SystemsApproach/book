@@ -697,8 +697,8 @@ down.
 LSPs also carry a time to live. This is used to ensure that old
 link-state information is eventually removed from the network. A node
 always decrements the TTL of a newly received LSP before flooding it to
-its neighbors. It also “ages” the LSP while it is stored in the node.
-When the TTL reaches 0, the node refloods the LSP with a TTL of 0, which
+its neighbors. It also “ages” the LSP over time while it is stored in the node.
+When the TTL reaches 0, the node refloods the LSP (with the TTL of 0), which
 is interpreted by all the nodes in the network as a signal to delete
 that LSP.
 
