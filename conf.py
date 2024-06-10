@@ -39,7 +39,7 @@ release = version
 # -- Project information -----------------------------------------------------
 
 project = u'Computer Networks: A Systems Approach'
-copyright = u'2019'
+copyright = u'2024'
 author = u'Larry Peterson and Bruce Davie'
 
 # -- General configuration ---------------------------------------------------
