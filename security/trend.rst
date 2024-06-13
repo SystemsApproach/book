@@ -53,8 +53,7 @@ cyberattacks over many years.
 
 
 Consider the arrangement of VMs and the firewall in :numref:`Figure %s
-<fig-standard-firewall>`. Suppose that, without network
-virtualization, we wanted to put VM A and VM B in different segments
+<fig-standard-firewall>`. Suppose that we wanted to put VM A and VM B in different segments
 and apply a firewall rule for traffic going from VM A to VM B. We have
 to prevent VM A from sending traffic directly to VM B. To do this,
 would have to configure two VLANs in the physical network, connect A
