@@ -424,7 +424,7 @@ this count, thus unblocking any waiting sender.
    sendSWP(SwpState *state, Msg *frame)
    {
        struct sendQ_slot *slot;
-       hbuf[HLEN];
+       char hbuf[HLEN];
 
        /* wait for send window to open */
        semWait(&state->sendWindowNotFull);
@@ -490,14 +490,14 @@ the prose description given earlier in this section).
 .. code-block:: c
 
    static int
-   deliverSWP(SwpState state, Msg *frame)
+   deliverSWP(SwpState *state, Msg *frame)
    {
        SwpHdr   hdr;
        char     *hbuf;
 
        hbuf = msgStripHdr(frame, HLEN);
        load_swp_hdr(&hdr, hbuf)
-       if (hdr->Flags & FLAG_ACK_VALID)
+       if (hdr.Flags & FLAG_ACK_VALID)
        {
            /* received an acknowledgment—do SENDER side */
            if (swpInWindow(hdr.AckNum, state->LAR + 1, state->LFS))
