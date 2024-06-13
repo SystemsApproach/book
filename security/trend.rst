@@ -15,7 +15,7 @@ attacks in their economic analysis was 2003–2004 by a large margin.
 There are certainly some respects in which security is improving. This
 can be attributed both to greater awareness of the need for strong
 security whenever important information is being handled, and the
-development of new techniques that enable better security practices. 
+development of new techniques that enable better security practices.
 
 One example of a technology development that improved security
 implementations is SDN (software-defined networking). SDN has enabled
@@ -31,14 +31,14 @@ configuration, it meant that lots of machines would be in the same
 zone even if there was no need for them to communicate. Furthermore,
 the complexity of firewall rules would grow over time as more and more
 rules would need to be added to describe the traffic allowed to pass
-from one zone to another. 
+from one zone to another.
 
 By contrast, SDN allows for the creation of precisely defined virtual
 networks that determine both which machines can communicate with each
 other and how they can do so. For example, a three-tier application
 can have its own microsegmentation policy which states:  machines
 in the web-facing tier of the application can talk to the machines in
-the application tier on some set of specified ports, but 
+the application tier on some set of specified ports, but
 web-facing machines may not talk to each other. This is a policy that
 was difficult to implement in the past, because all the web-facing
 machines would sit on the same network segment.
@@ -81,7 +81,7 @@ new tool to make a finer degree of isolation much easier to manage.
     :align: center
 
     A set of virtual machines communicate through a firewall
-    
+
 The development of microsegmentation over the last decade was one of
 the major drives of SDN adoption in the enterprise. It became the
 basis for a best practice in security known as “zero-trust”
@@ -106,8 +106,7 @@ cyber-hygiene techniques.
    Verizon's data breach report can be obtained from
    `Data Breach Investigations Report
    <https://www.verizon.com/business/resources/reports/dbir/>`__.
-   
-   
+
    The economic impact of cyber-attacks is analyzed by *The Economist*
    in this article: `Unexpectedly, the cost of big cyber-attacks is
    falling
@@ -117,6 +116,5 @@ cyber-hygiene techniques.
    A deeper discussion on the use of SDN techniques to improve
    security is provided in Chapter 8 of our book `Software-Defined
    Networking: A Systems Approach
-   <https://sdn.systemsapproach.org/>`__. 
-   
+   <https://sdn.systemsapproach.org/>`__.
 
