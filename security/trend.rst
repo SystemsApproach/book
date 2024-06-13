@@ -1,98 +1,122 @@
-Perspective: Blockchain and a Decentralized Internet
+Perspective: Is Security Getting Worse or Better?
 ====================================================
 
-Probably without giving it much thought, users have invested enormous
-trust in the applications they use, especially those like Facebook and
-Google that not only store their personal photos and videos, but also
-manage their identity (i.e., provide *Single Sign On* for other web
-applications). This is troubling to many people, which has sparked
-interest in *decentralized platforms*, systems for which users do not
-have to trust a third-party. Such systems often build on top of a
-cryptocurrency like Bitcoin, not for its monetary value, but because
-cryptocurrency is itself based on a decentralized technology (called a
-*blockchain*) that no single organization controls. It’s easy to be
-distracted by all the hype, but a blockchain is essentially a
-decentralized log (ledger) that anyone can write a “fact” to, and later
-prove to the world that that fact was recorded.
+Security breaches are now a standard risk of connecting any system to
+the Internet, and it is rare for a week to go by without news of some
+new attack. Verizon, a large telco, conducts an annual review of the state of
+cyber-attacks; in 2024 they reached a milestone with over 10,000
+incidents, such as ransomware and phishing attacks, covered in the
+report. Measured by number of attacks then, it seems that things are
+getting worse. By contrast, an analysis of the economic impact of
+cyber-attacks performed by *The Economist* argued that the
+peak days of cyber-attacks might be behind us. The worst era for
+attacks in their economic analysis was 2003–2004 by a large margin.
 
-Blockstack is an open source implementation of a decentralized platform,
-including the blockchain, but more interestingly, it has been used to
-implement a self-sovereign identity service for Internet applications. A
-self-sovereign identity service is a type of identity service that is
-*administratively decentralized*: it has no distinct service operator,
-and no single principal can control who can create an identity and who
-cannot. Blockstack uses a commodity public blockchain to build a
-replicated identity database log. When this database log is replayed by
-a Blockstack node, it produces the same view of all identities in the
-system as every other Blockstack node reading the same view of the
-underlying blockchain. Anyone can register an identity in Blockstack by
-appending to the blockchain.
+There are certainly some respects in which security is improving. This
+can be attributed both to greater awareness of the need for strong
+security whenever important information is being handled, and the
+development of new techniques that enable better security practices. 
 
-Instead of requiring users to place trust in a distinct set of identity
-providers, Blockstack’s identity protocol instead asks users to trust
-that the majority of the decision-making nodes in the blockchain (called
-*miners*) will preserve the order of writes (called *transactions*). The
-underlying blockchain provides a cryptocurrency to incentivize miners to
-do this. Under normal operation, miners stand to earn the most
-cryptocurrency by participating honestly. This allows Blockstack’s
-database log to remain secure against tampering without a distinct
-service operator. An adversary who wishes to tamper with the log must
-compete against the majority of miners to produce an alternative
-transaction history in the underlying blockchain that the blockchain
-peer network will accept as the canonical write history.
+One example of a technology development that improved security
+implementations is SDN (software-defined networking). SDN has enabled
+a relatively new approach to providing isolation among systems known
+as *microsegmentation*.
 
-The protocol for reading and appending to the Blockstack identity
-database log operates at a logical layer above the blockchain.
-Blockchain transactions are data frames for identity database log
-entries. A client appends to the identity database log by sending a
-blockchain transaction that embeds the database log entry, and a client
-reads the log back by extracting the log entries from blockchain
-transactions in the blockchain-given order. This makes it possible to
-implement the database log “on top” of any blockchain.
 
-Identities in Blockstack are distinguished by user-chosen names.
-Blockstack’s identity protocol binds a name to a public key and to some
-*routing state* (described below). It ensures that names are globally
-unique by assigning them on a first-come first-serve basis.
+Microsegmentation stands in contrast to traditional approaches to
+segmenting networks, in which large sets of machines would
+connect to a “zone” and firewalls would be used to filter traffic
+passing between zones. While this made for relatively simple network
+configuration, it meant that lots of machines would be in the same
+zone even if there was no need for them to communicate. Furthermore,
+the complexity of firewall rules would grow over time as more and more
+rules would need to be added to describe the traffic allowed to pass
+from one zone to another. 
 
-Names are registered in a two-step process—one to bind the client’s
-public key to the *salted hash* of the name, and one to reveal the name
-itself. The two-step process is necessary to prevent front-running—only
-the client that signed the name hash may reveal the name, and only the
-client that calculated the salted hash can reveal the preimage. Once a
-name is registered, only the owner of the name’s private key can
-transfer or revoke the name, or update its routing state.
+By contrast, SDN allows for the creation of precisely defined virtual
+networks that determine both which machines can communicate with each
+other and how they can do so. For example, a three-tier application
+can have its own microsegmentation policy which states:  machines
+in the web-facing tier of the application can talk to the machines in
+the application tier on some set of specified ports, but 
+web-facing machines may not talk to each other. This is a policy that
+was difficult to implement in the past, because all the web-facing
+machines would sit on the same network segment.
 
-.. _fig-blockstack:
-.. figure:: figures/blockchain/Slide1.png
-   :width: 400px
-   :align: center
 
-   Decentralized identity management built on a blockchain foundation.
+Prior to microsegmentation, the complexity of configuring segments was
+such that machines from many applications would likely sit on the same
+segment, creating opportunities for an attack to spread from one
+application to another. The lateral movement of attacks within
+datacenters has been well documented as a key strategy of successful
+cyberattacks over many years.
 
-Each name in Blockstack has an associated piece of routing state that
-contains one or more URLs that point to where the user’s identity
-information can be found online. This data is too big and expensive to
-store on the blockchain directly, so instead Blockstack implements a
-layer of indirection: the hash of the routing state is written to the
-identity database log, and Blockstack peers implement a gossip network
-for disseminating and authenticating the routing state. Each peer
-maintains a full copy of the routing state.
 
-Putting it all together, :numref:`Figure %s <fig-blockstack>` shows
-how resolving a name to its corresponding identity state works. Given
-a name, a client first queries a Blockstack peer for the corresponding
-public key and routing state (Step 1). Once it has the routing state,
-the client obtains the identity data by resolving the URL(s) contained
-within it and authenticates the identity information by verifying that
-it is signed by the name’s public key (Step 2).
+Consider the arrangement of VMs and the firewall in :numref:`Figure %s
+<fig-standard-firewall>`. Suppose that, without network
+virtualization, we wanted to put VM A and VM B in different segments
+and apply a firewall rule for traffic going from VM A to VM B. We have
+to prevent VM A from sending traffic directly to VM B. To do this,
+would have to configure two VLANs in the physical network, connect A
+to one of them, and B to the other, and then configure the routing
+such that the path from the first VLAN to the second passed through
+the firewall. If at some point VM A was moved to another server, we’d then
+have to make sure the appropriate VLAN reached *that* server, connect VM
+A to it, and ensure that the routing configuration was still forcing
+traffic through the firewall. This situation may seem a little
+contrived, but it demonstrates why microsegmentation was effectively
+impossible to manage before the arrival of SDN. By contrast, SDN allows the
+firewall function to be implemented in each virtual switch (vS in the
+figure). Thus, traffic from VM A to VM B passes through the
+firewall without any special routing configuration. It is the job of
+the SDN controller to create the appropriate firewall rule to enforce
+the desired isolation between VM A and VM B (and deal with movements
+of VM A and VM B if they occur). There is no magic, but SDN gave us a
+new tool to make a finer degree of isolation much easier to manage.
+
+
+.. _fig-standard-firewall:
+.. figure:: figures/firewall-std.png
+    :width: 600px
+    :align: center
+
+    A set of virtual machines communicate through a firewall
+    
+The development of microsegmentation over the last decade was one of
+the major drives of SDN adoption in the enterprise. It became the
+basis for a best practice in security known as “zero-trust”
+networking. Zero trust means that, as much as possible, every system in
+the network is assumed to be untrusted, and hence should be isolated
+for all other systems aside from precisely those systems it needs
+access to in order to do its assigned job.
+
+The importance of the Internet in the running of
+critical systems and as the underpinning for
+much of the world's commerce has made it an attractive target for
+hackers. At the same time it drives home the importance of developing and adopting
+best practices such as zero-trust networking. When we read of breaches
+today, it is often the case that some best practice has not been
+followed. The Verizon cybersecurity report, by documenting what has
+gone wrong in thousands of attacks, provides useful information about
+how many of those attacks could be prevented through using established
+cyber-hygiene techniques.
 
 .. admonition:: Broader Perspective
 
-   To continue reading about the cloudification of the Internet, see
-   :ref:`Perspective: The Cloud is the New Internet`.
+   Verizon's data breach report can be obtained from
+   `Data Breach Investigations Report
+   <https://www.verizon.com/business/resources/reports/dbir/>`__.
+   
+   
+   The economic impact of cyber-attacks is analyzed by *The Economist*
+   in this article: `Unexpectedly, the cost of big cyber-attacks is
+   falling
+   <https://www.economist.com/graphic-detail/2024/05/17/unexpectedly-the-cost-of-big-cyber-attacks-is-falling>`__,
+   May 2024.
 
-   To learn more about Blockstack and decentralizing the Internet, we
-   recommend: `Blockstack Whitepaper: A New Decentralized Internet
-   <https://blog.blockstack.org/blockstack-whitepaper-part-1>`__, May
-   2017.
+   A deeper discussion on the use of SDN techniques to improve
+   security is provided in Chapter 8 of our book `Software-Defined
+   Networking: A Systems Approach
+   <https://sdn.systemsapproach.org/>`__. 
+   
+

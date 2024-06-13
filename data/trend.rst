@@ -109,8 +109,6 @@ patterns and the root causes of network failures.
 
 .. admonition::  Broader Perspective
 
-   To continue reading about the cloudification of the Internet, see
-   :ref:`Perspective: Blockchain and a Decentralized Internet`.
 
    To learn more about promising edge-native applications, we recommend:
    `Open Edge Computing Initiative <http://openedgecomputing.org>`__,
