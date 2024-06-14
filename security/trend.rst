@@ -82,17 +82,17 @@ new tool to make a finer degree of isolation much easier to manage.
     A set of virtual machines communicate through a firewall
 
 The development of microsegmentation over the last decade was one of
-the major drives of SDN adoption in the enterprise. It became the
+the major drivers of SDN adoption in the enterprise. It became the
 basis for a best practice in security known as “zero-trust”
 networking. Zero trust means that, as much as possible, every system in
 the network is assumed to be untrusted, and hence should be isolated
-for all other systems aside from precisely those systems it needs
+from all other systems aside from precisely those systems it needs
 access to in order to do its assigned job.
 
 The importance of the Internet in the running of
 critical systems and as the underpinning for
 much of the world's commerce has made it an attractive target for
-hackers. At the same time it drives home the importance of developing and adopting
+hackers. At the same time it drives home the need to develop and adopt
 best practices such as zero-trust networking. When we read of breaches
 today, it is often the case that some best practice has not been
 followed. The Verizon cybersecurity report, by documenting what has
