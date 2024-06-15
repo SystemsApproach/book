@@ -170,7 +170,7 @@ that networks are not perfect channels. Two such functions are:
 -  Support large message sizes through fragmentation and reassembly
 
 An RPC protocol might “define this problem away” by choosing to run on
-top of a reliable protocol like TCP, but in many cases, the RCP protocol
+top of a reliable protocol like TCP, but in many cases, the RPC protocol
 implements its own reliable message delivery layer on top of an
 unreliable substrate (e.g., UDP/IP). Such an RPC protocol would likely
 implement reliability using acknowledgments and timeouts, similarly to
