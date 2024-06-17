@@ -204,6 +204,8 @@ contributions and bug fixes:
    -  Anderson Adon (Anderson-A)
    -  李俊康 (lijunkang12)
    -  Yihao Wang (y1hao)
+   -  Charles Reiss (charlesreiss)
+   -  Karanveer B. (KaranveerB)
 
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
