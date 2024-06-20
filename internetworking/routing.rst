@@ -381,11 +381,11 @@ tables for the network do not stabilize. This situation is known as the
 There are several partial solutions to this problem. The first one is to
 use some relatively small number as an approximation of infinity. For
 example, we might decide that the maximum number of hops to get across a
-certain network is never going to be more than 16, and so we could pick
+certain network is never going to be more than 15, and so we could pick
 16 as the value that represents infinity. This at least bounds the
 amount of time that it takes to count to infinity. Of course, it could
 also present a problem if our network grew to a point where some nodes
-were separated by more than 16 hops.
+were separated by more than 15 hops.
 
 One technique to improve the time to stabilize routing is called *split
 horizon*. The idea is that when a node sends a routing update to its
