@@ -2,10 +2,10 @@
 ==========================
 
 This section describes the predominant example of end-to-end congestion
-control in use today, that implemented by TCP. The essential strategy of
+control in use today, which is implemented by TCP. The essential strategy of
 TCP is to send packets into the network without a reservation and then
 to react to observable events that occur. TCP assumes only FIFO queuing
-in the network’s routers, but also works with fair queuing.
+in the network’s routers, but also works with other queuing strategies.
 
 TCP congestion control was introduced into the Internet in the late
 1980s by Van Jacobson, roughly eight years after the TCP/IP protocol
