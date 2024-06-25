@@ -24,53 +24,54 @@ as *microsegmentation*.
 
 
 Microsegmentation stands in contrast to traditional approaches to
-segmenting networks, in which large sets of machines would
-connect to a “zone” and firewalls would be used to filter traffic
-passing between zones. While this made for relatively simple network
-configuration, it meant that lots of machines would be in the same
+segmenting networks, in which large sets of machines
+connect to a “zone” and firewalls are used to filter traffic
+passing between zones. While this makes for relatively simple network
+configuration, it means that lots of machines are in the same
 zone even if there was no need for them to communicate. Furthermore,
-the complexity of firewall rules would grow over time as more and more
-rules would need to be added to describe the traffic allowed to pass
+the complexity of firewall rules grows over time as more and more
+rules need to be added to describe the traffic allowed to pass
 from one zone to another.
 
 By contrast, SDN allows for the creation of precisely defined virtual
-networks that determine both which machines can communicate with each
+networks—microsegments—that determine both which machines can communicate with each
 other and how they can do so. For example, a three-tier application
 can have its own microsegmentation policy which states:  machines
 in the web-facing tier of the application can talk to the machines in
 the application tier on some set of specified ports, but
 web-facing machines may not talk to each other. This is a policy that
-was difficult to implement in the past, because all the web-facing
-machines would sit on the same network segment.
+was difficult to implement in the past;instead all the web-facing
+machines would sit on the same network segment, free to communicate
+with each other. 
 
 
-Prior to microsegmentation, the complexity of configuring segments was
-such that machines from many applications would likely sit on the same
-segment, creating opportunities for an attack to spread from one
-application to another. The lateral movement of attacks within
-datacenters has been well documented as a key strategy of successful
-cyberattacks over many years.
+The complexity of configuring segments was the reason that machines
+from many applications would likely sit on the same segment, creating
+opportunities for an attack to spread from one application to
+another. The lateral movement of attacks within datacenters has been
+well documented as a key strategy of successful cyberattacks over many
+years.
 
 
 Consider the arrangement of VMs and the firewall in :numref:`Figure %s
 <fig-standard-firewall>`. Suppose that we wanted to put VM A and VM B in different segments
 and apply a firewall rule for traffic going from VM A to VM B. We have
-to prevent VM A from sending traffic directly to VM B. To do this,
-would have to configure two VLANs in the physical network, connect A
+to prevent VM A from sending traffic directly to VM B. To do this, we
+could configure two VLANs in the physical network, connect A
 to one of them, and B to the other, and then configure the routing
-such that the path from the first VLAN to the second passed through
+such that the path from the first VLAN to the second passes through
 the firewall. If at some point VM A was moved to another server, we’d then
 have to make sure the appropriate VLAN reached *that* server, connect VM
-A to it, and ensure that the routing configuration was still forcing
+A to it, and ensure that the routing configuration still forces
 traffic through the firewall. This situation may seem a little
-contrived, but it demonstrates why microsegmentation was effectively
-impossible to manage before the arrival of SDN. By contrast, SDN allows the
+contrived, but it demonstrates why microsegmentation was challenging
+to implement before the arrival of SDN. By contrast, SDN allows the
 firewall function to be implemented in each virtual switch (vS in the
 figure). Thus, traffic from VM A to VM B passes through the
 firewall without any special routing configuration. It is the job of
 the SDN controller to create the appropriate firewall rule to enforce
 the desired isolation between VM A and VM B (and deal with movements
-of VM A and VM B if they occur). There is no magic, but SDN gave us a
+of VM A and VM B if they occur). There is no magic, but SDN gives us a
 new tool to make a finer degree of isolation much easier to manage.
 
 
@@ -87,7 +88,7 @@ basis for a best practice in security known as “zero-trust”
 networking. Zero trust means that, as much as possible, every system in
 the network is assumed to be untrusted, and hence should be isolated
 from all other systems aside from precisely those systems it needs
-access to in order to do its assigned job.
+access to in order to do its assigned job. 
 
 The importance of the Internet in the running of
 critical systems and as the underpinning for
