@@ -326,7 +326,8 @@ out the characters that arrive on the connection.
    {
      struct sockaddr_in sin;
      char buf[MAX_LINE];
-     int buf_len, addr_len;
+     int buf_len;
+     socklen_t addr_len;
      int s, new_s;
 
      /* build address data structure */
@@ -352,7 +353,7 @@ out the characters that arrive on the connection.
          perror("simplex-talk: accept");
          exit(1);
        }
-       while (buf_len = recv(new_s, buf, sizeof(buf), 0))
+       while (buf_len == recv(new_s, buf, sizeof(buf), 0))
          fputs(buf, stdout);
        close(new_s);
      }
