@@ -130,18 +130,18 @@ application will perform much differently on a transcontinental channel
 with a 100-ms RTT than it will on an across-the-room channel with a
 1-ms RTT. Whether the channel is 1 Mbps or 100 Mbps is relatively
 insignificant, however, since the former implies that the time to
-transmit a byte (``Transmit``) is 8 μs and the latter implies
-``Transmit`` = 0.08 μs.
+transmit a byte (``Transmit``) is 1 μs and the latter implies
+``Transmit`` = 0.01 μs.
 
 In contrast, consider a digital library program that is being asked to
 fetch a 25-megabyte (MB) image—the more bandwidth that is available, the
 faster it will be able to return the image to the user. Here, the
 bandwidth of the channel dominates performance. To see this, suppose
-that the channel has a bandwidth of 10 Mbps. It will take 20 seconds to
+that the channel has a bandwidth of 10 Mbps. It will take 2.5 seconds to
 transmit the image (25 × 10\ :sup:`6` × 8-bits / (10 × 10\ :sup:`6`
-Mbps = 20 seconds), making it relatively unimportant if the image
+× 8-bits = 2.5 seconds), making it relatively unimportant if the image
 is on the other side of a 1-ms channel or a 100-ms channel; the difference
-between a 20.001-second response time and a 20.1-second response time is
+between a 2.501-second response time and a 2.6-second response time is
 negligible.
 
 .. _fig-latency:
