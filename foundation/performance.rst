@@ -201,8 +201,8 @@ time) you can calculate how many bits fit in the pipe. For example, a
 transcontinental channel with a one-way latency of 50 ms and a bandwidth
 of 45 Mbps is able to hold
 
-.. centered:: 50 × 10\ :sup:`-3` × 45 × 10\ :sup:`6` *bits/sec* = 2.25
-              × 10\ :sup:`6` *bits*
+.. centered:: 50 × 10\ :sup:`-3` × 45 × 10\ :sup:`6` *bytes/sec* = 2.25
+              × 10\ :sup:`6` *bytes*
 
 or approximately 280 KB of data. In other words, this example channel
 (pipe) holds as many bytes as the memory of a personal computer from the
@@ -226,7 +226,7 @@ well. The bits in the pipe are said to be “in flight,” which means that
 if the receiver tells the sender to stop transmitting it might receive
 up to one RTT × bandwidth’s worth of data before the sender manages to
 respond. In our example above, that amount corresponds to
-5.5 × 10\ :sup:`6` bits (671 KB) of data. On the other hand, if
+5.5 × 10\ :sup:`6` bits (688 KB) of data. On the other hand, if
 the sender does not fill the pipe—i.e., does not send a whole RTT ×
 bandwidth product’s worth of data before it stops to wait for a
 signal—the sender will not fully utilize the network.
@@ -247,11 +247,11 @@ some typical network links.
    +---------------------+-----------+------------------+---------+-----------------+
    | Link Type           | Bandwidth | One-Way Distance | RTT     | RTT x Bandwidth |
    +=====================+===========+==================+=========+=================+
-   | Wireless LAN        | 54 Mbps   | 50 m             | 0.33 μs | 18 bits         |
+   | Wireless LAN        | 54 Mbps   | 50 m             | 0.33 μs | 18 bytes        |
    +---------------------+-----------+------------------+---------+-----------------+
-   | Satellite           | 1 Gbps    | 35,000 km        | 230 ms  | 230 Mb          |
+   | Satellite           | 1 Gbps    | 35,000 km        | 230 ms  | 230 bytes       |
    +---------------------+-----------+------------------+---------+-----------------+
-   | Cross-country fiber | 10 Gbps   | 4,000 km         | 40 ms   | 400 Mb          |
+   | Cross-country fiber | 10 Gbps   | 4,000 km         | 40 ms   | 400 bytes       |
    +---------------------+-----------+------------------+---------+-----------------+
 
 1.5.3 High-Speed Networks
