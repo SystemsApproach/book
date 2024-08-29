@@ -138,7 +138,7 @@ fetch a 25-megabyte (MB) image—the more bandwidth that is available, the
 faster it will be able to return the image to the user. Here, the
 bandwidth of the channel dominates performance. To see this, suppose
 that the channel has a bandwidth of 10 Mbps. It will take 20 seconds to
-transmit the image (25 × 10\ :sup:`6` × 8-bits / (10 × 10\ :sup:`6`
+transmit the image (25 × 10\ :sup:`6` × 8-bits / 10 × 10\ :sup:`6`
 Mbps = 20 seconds), making it relatively unimportant if the image
 is on the other side of a 1-ms channel or a 100-ms channel; the difference
 between a 20.001-second response time and a 20.1-second response time is
