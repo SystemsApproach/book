@@ -326,7 +326,8 @@ out the characters that arrive on the connection.
    {
      struct sockaddr_in sin;
      char buf[MAX_LINE];
-     int buf_len, addr_len;
+     int buf_len;
+     socklen_t addr_len;
      int s, new_s;
 
      /* build address data structure */
