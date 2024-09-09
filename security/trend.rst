@@ -42,7 +42,7 @@ the application tier on some set of specified ports, but
 web-facing machines may not talk to each other. This is a policy that
 was difficult to implement in the past;instead all the web-facing
 machines would sit on the same network segment, free to communicate
-with each other. 
+with each other.
 
 
 The complexity of configuring segments was the reason that machines
@@ -88,7 +88,7 @@ basis for a best practice in security known as “zero-trust”
 networking. Zero trust means that, as much as possible, every system in
 the network is assumed to be untrusted, and hence should be isolated
 from all other systems aside from precisely those systems it needs
-access to in order to do its assigned job. 
+access to in order to do its assigned job.
 
 The importance of the Internet in the running of
 critical systems and as the underpinning for
