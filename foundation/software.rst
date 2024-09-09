@@ -353,7 +353,7 @@ out the characters that arrive on the connection.
          perror("simplex-talk: accept");
          exit(1);
        }
-       while (buf_len == recv(new_s, buf, sizeof(buf), 0))
+       while (buf_len = recv(new_s, buf, sizeof(buf), 0))
          fputs(buf, stdout);
        close(new_s);
      }
