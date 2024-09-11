@@ -98,8 +98,8 @@ More specifically, the sixth edition includes the following major changes:
 -  New Section 8.1 introduces the duality of *Threats* and *Trust*.
 -  Refactored topics across Sections 8.3 (*Key Predistribution*) and
    8.4 (*Authentication Protocols*).
--  New Perspective Section in Chapter 8 describes *Decentralized
-   Identity Management* and the role of *Blockchains*.
+-  New Perspective Section in Chapter 8 discusses the trajectory of
+   network security and asks if security is improving or worsening.
 -  Section 9.1 updated to include a description of *HTTP/2*, along with
    a discussion of *REST*, *gRPC*, and *Cloud Services*.
 -  Section 9.3 expanded to include a description of modern *Network
@@ -134,6 +134,24 @@ covers the specifics of Switched Ethernet and the IP Internet
 (3.5). Similarly, Chapter 6 starts with foundational ideas (6.1-6.2),
 then explores TCP congestion control (6.3), and concludes with
 optional advanced material (6.4-6.5).
+
+Supplemental Materials
+----------------------
+
+We have produced a set of supplemental materials, including slides for
+instructors and a solutions manual for the exercises that appear in
+the print version of this book. The solutions manual is controlled by
+Elsevier in an effort to restrict access to authorized instructors. It
+can be found at:
+https://educate.elsevier.com/book/details/9780128182000 (in the U.S.)
+or:
+https://educate.elsevier.com/book/details/9780128182000 (outside the
+U.S.). The slides are at the same place but they can also be found in our
+GitHub repo:
+https://github.com/SystemsApproach/book (see the 6E-bottomupslides
+directory).
+If you have any trouble accessing these materials, please get in touch
+via ``discuss@systemsapproach.org``.
 
 Code Examples
 -------------
