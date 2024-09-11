@@ -145,7 +145,7 @@ Elsevier in an effort to restrict access to authorized instructors. It
 can be found at:
 https://educate.elsevier.com/book/details/9780128182000 (in the U.S.)
 or:
-https://educate.elsevier.com/book/details/9780128182000 (outside the
+https://inspectioncopy.elsevier.com/book/details/9780128182000 (outside the
 U.S.). The slides are at the same place but they can also be found in our
 GitHub repo:
 https://github.com/SystemsApproach/book (see the 6E-bottomupslides
