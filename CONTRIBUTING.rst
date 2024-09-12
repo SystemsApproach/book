@@ -7,19 +7,13 @@ significant rewrites or new sections/chapters) on the
 effort. The first step is to `join the
 forum <https://groups.google.com/a/systemsapproach.org/forum/#!forum/discuss>`__.
 
-Also, while GitHub is a great place to archive and track revisions over
-time, it is often the case that a shared Google Document is a better
-tool for collaboration. This is true not only for from-scratch efforts,
-but also as a way to get comments and feedback on a fairly complete
-draft. If you’re game, we have a shared `Google Drive
-Folder <https://drive.google.com/drive/u/2/folders/1diDcXKTyMFyuR7g1M6gTRuCnHXAUYj7C?ths=true>`__.
 
 If you have new material that doesn’t fit into the current book
-organization in an obvious way, check it into one of the following
+organization in an obvious way, you may want to look at one of the following
 repositories:
 
--  `sdn <https://github.com/SystemsApproach/sdn>`__: Sections or
-   articles related to Software-Defined Networking.
+-  `sdn <https://github.com/SystemsApproach/sdn>`__: Our microbook on
+   Software-Defined Networking.
 
 -  `cloud <https://github.com/SystemsApproach/cloud>`__: Sections or
    articles related to cloud networking, both how Internet protocols
