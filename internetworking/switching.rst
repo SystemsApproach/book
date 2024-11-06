@@ -372,11 +372,11 @@ for this new connection. This entry is exactly the same as shown
 previously in :numref:`Table %s <tab-vctab>`. The main difference is
 that now the task of assigning an unused VCI value on the interface is
 performed by the switch for that port. In this example, the switch
-picks the value 5. The virtual circuit table now has the following
+picks the value 11. The virtual circuit table now has the following
 information: “When packets arrive on port 2 with identifier 5, send
-them out on port 1.” Another issue is that, somehow, host A will need
-to learn that it should put the VCI value of 5 in packets that it
-wants to send to B; we will see how that happens below.
+them out on port 1 with identifier 11.” Another issue is that, somehow,
+host A will need to learn that it should put the VCI value of 5 in packets
+that it wants to send to B; we will see how that happens below.
 
 When switch 2 receives the setup message, it performs a similar process;
 in this example, it picks the value 11 as the incoming VCI value.
