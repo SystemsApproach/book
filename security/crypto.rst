@@ -412,46 +412,63 @@ format that has been standardized by NIST. DSS signatures may use any
 one of three public-key ciphers, one based on RSA, another on ElGamal,
 and a third called the *Elliptic Curve Digital Signature Algorithm*.
 
-Another kind of authenticator is similar, but instead of encrypting a
-hash it uses a hash-like function that takes a secret value (known
-only to the sender and the receiver) as a parameter, as illustrated in
-:numref:`Figure %s <fig-macAndHmac>`. Such a function outputs an
-authenticator called a *message authentication code* (MAC). The sender
-appends the MAC to her plaintext message. The receiver recomputes the
-MAC using the plaintext and the secret value and compares that
-recomputed MAC to the received MAC.
+An widely used alternative approach to encrypting a hash is to use a
+hash function that takes a secret value (a key known only to the
+sender and the receiver) as an input parameter in addition to the
+message text. Such a function outputs a message authentication code
+that is a function of both the secret key and the message
+contents. The sender appends the calculated message authentication
+code to the plaintext message. The receiver recomputes the
+authentication code using the plaintext and the secret value and
+compares that recomputed code to the code received in the message. The
+most common approaches to generating these codes are called HMACs or
+keyed-hash message authentication codes.
 
-.. _fig-macAndHmac:
-.. figure:: figures/f08-05-9780123850591.png
-   :width: 600px
-   :align: center
+HMACs can use any hash function of the sort described above, but they
+also include the key as part of the material to be hashed, so that a
+HMAC is a function of both the key and the input text. An approach to
+calculating HMACs has been standardized by NIST and takes the
+following form:
 
-   Computing a MAC (a) versus computing an HMAC (b).
+HMAC = H((K⊕opad) || H((K⊕ipad) || text))
 
-A common variation on MACs is to apply a cryptographic hash (such as
-MD5 or SHA-1) to the concatenation of the plaintext message and the
-secret value, as illustrated in :numref:`Figure %s
-<fig-macAndHmac>`. The resulting digest is called a *hashed message
-authentication code* (HMAC) since it is essentially a MAC. The HMAC,
-but not the secret value, is appended to the plaintext. Only a receiver
-who knows the secret value can compute the correct HMAC to compare
-with the received HMAC. If it weren’t for the one-way property of the
-hash, an adversary might be able to find the input that generated the
-HMAC and compare it to the plaintext message to determine the secret
-value.
+H is the hash function, K is the key, and opad (output pad) and ipad
+(input pad) are well-known strings that are XORed (⊕) with the key. ||
+represents concatenation.
+
+A deep explanation of this HMAC function is beyond the scope of this
+book. However, this approach has been proved to be secure as long as
+the underlying hash function H has the appropriate
+collision-resistance properties outlined above. Note that the HMAC
+takes a hash function *H* that is not keyed, and turns it into a keyed
+hash by using the key (XORed with another string, *ipad*) as the first
+block to be fed into the hash function. The output of
+the keyed hash is then itself subjected to another keyed hash (again
+by XORing the key with a string and using that as the first block fed
+to the hash). The two passes of the keyed-hash function are important
+to the proof of security for this HMAC construction.
 
 Up to this point, we have been assuming that the message wasn’t
-confidential, so the original message could be transmitted as plaintext.
-To add confidentiality to a message with an authenticator, it suffices
-to encrypt the concatenation of the entire message including its
-authenticator—the MAC, HMAC, or encrypted digest. Remember that, in
-practice, confidentiality is implemented using secret-key ciphers
-because they are so much faster than public-key ciphers. Furthermore, it
-costs little to include the authenticator in the encryption, and it
-increases security. A common simplification is to encrypt the message
-with its (raw) digest, such that the digest is only encrypted once; in
-this case, the entire ciphertext message is considered to be an
-authenticator.
+confidential, so the original message could be transmitted as
+plaintext.  To add confidentiality to a message with an authentication
+code, it suffices to encrypt the concatenation of the entire message
+including its authentication code. Remember that, in practice,
+confidentiality is implemented using secret-key ciphers because they
+are so much faster than public-key ciphers. Furthermore, it costs
+little to include the authenticator in the encryption, and it
+increases security.
+
+In recent years, the idea of using a single algorithm to support both
+authentication and encryption has gained support for reasons of
+performance and simplicity of implementation. This is referred to as
+*authenticated encryption* or *authenticated encryption with
+associated data*. The latter term allows for some data fields (e.g.,
+packet headers) to be transmitted as plaintext—these are the
+associated data—while the rest of the message is encrypted, and the
+whole thing, headers included, is authenticated. We won't go into
+details here, but there is now a set of integrated algorithms that
+produce both ciphertext and authentication codes using a combination
+of ciphers and hash functions.
 
 Although authenticators may seem to solve the authentication problem, we
 will see in a later section that they are only the foundation of a
