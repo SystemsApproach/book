@@ -114,6 +114,29 @@ sending/receiving messages through the socket, and closing the socket.
 To simplify the discussion, we will limit ourselves to showing how
 sockets are used with TCP.
 
+Similar to Javadocs, information from the implementors is available
+about the GNU/Linux networking API. On most desktop GNU/Linux systems,
+an offline treatment of the usage and interactions of these primitives
+can be obtained using the GNU/Linux shell commands:
+
+- ``man man`` provides instructions for navigating the system manuals
+- ``man 2 intro`` explains "system calls" at a high level
+- ``man 7 socket`` details relations among the "socket interface" system
+  calls
+- ``socket(2)`` in the text refers to another page that can be accessed
+  via ``man 2 socket`` noticing that the section is a command argument
+
+While this information may be considered authoritative, ultimately the
+behavior of the underlying implementation referenced by the C library
+headers, and implemented by the C libraries shall be the primary source
+of ground truth about intended system behavior, and of course the OS
+implementation responding to the invocation.
+
+Also, you should not expect to immediately memorize the details
+presented. The API is presented here primarily in the interest of
+relating its elements, conceptually, to the protocol service/peer
+interface introduced in section 1.3.1 to a concrete example.
+
 The first step is to create a socket, which is done with the following
 operation:
 
