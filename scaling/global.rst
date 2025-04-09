@@ -292,7 +292,7 @@ terminates on nodes within an AS, and *transit traffic* as traffic that
 passes through an AS. We can classify autonomous systems into three
 broad types:
 
--  Stub AS—an AS that only carry local traffic. The small corporation in
+-  Stub AS—an AS that only carries local traffic. The small corporation in
    :numref:`Figure %s <fig-inet-1995>` is an example of a stub AS.
 
 -  Multihomed Stub AS—an AS that has connections to more than one other AS
