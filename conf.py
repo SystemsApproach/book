@@ -147,8 +147,9 @@ html_use_index = False
 #
 # html_sidebars = {}
 
+#load the rybbit analytics script
 html_js_files = [
-    ('https://app.rybbit.io/api/script.js',{'data-site-id': '580', 'async': 'async'})
+    ('https://app.rybbit.io/api/script.js',{'data-site-id': '581', 'async': 'async'})
     ]
 
 #extra HTML files
