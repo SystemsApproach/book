@@ -22,7 +22,7 @@ our companion books that cover emerging topics in more depth.
 
 * `Edge Cloud Operations: A Systems Approach
   <https://systemsapproach.org/books/#opsbook>`__
-  
+
 * `TCP Congestion Control: A Systems Approach <https://systemsapproach.org/books/#tcpbook>`__
 
 
