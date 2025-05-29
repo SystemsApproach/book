@@ -228,7 +228,7 @@ its cache.
 
 Finally, the ``Class`` field was included to allow entities other than the NIC to
 define useful record types. To date, the only widely used ``Class`` is
-the one used by the Internet; it is denoted ``IN``. 
+the one used by the Internet; it is denoted ``IN``.
 
 To better understand how resource records represent the information in
 the domain hierarchy, consider the following examples drawn from the
