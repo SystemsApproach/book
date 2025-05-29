@@ -203,7 +203,7 @@ fields:
 
 ::
 
-   (Name, Value, Type, Class, TTL)
+   (Name, TTL, Type, Class, Value)
 
 The ``Name`` and ``Value`` fields are exactly what you would expect,
 while the ``Type`` field specifies how the ``Value`` should be
@@ -221,18 +221,19 @@ mapping we have been assuming. Other record types include:
 -  ``MX``—The ``Value`` field gives the domain name for a host that is
    running a mail server that accepts messages for the specified domain.
 
-The ``Class`` field was included to allow entities other than the NIC to
-define useful record types. To date, the only widely used ``Class`` is
-the one used by the Internet; it is denoted ``IN``. Finally, the
-time-to-live (``TTL``) field shows how long this resource record is
+The time-to-live (``TTL``) field shows how long this resource record is
 valid. It is used by servers that cache resource records from other
 servers; when the ``TTL`` expires, the server must evict the record from
 its cache.
 
+Finally, the ``Class`` field was included to allow entities other than the NIC to
+define useful record types. To date, the only widely used ``Class`` is
+the one used by the Internet; it is denoted ``IN``.
+
 To better understand how resource records represent the information in
 the domain hierarchy, consider the following examples drawn from the
 domain hierarchy given in :numref:`Figure %s <fig-domains>`. To
-simplify the example, we ignore the ``TTL`` field and we give the
+simplify the example, we ignore the ``TTL`` and ``Class`` fields and we give the
 relevant information for only one of the name servers that implement
 each zone.
 
@@ -246,10 +247,10 @@ TLD servers.
 
 ::
 
-   (edu, a3.nstld.com, NS, IN)
-   (a3.nstld.com, 192.5.6.32, A, IN)
-   (com, a.gtld-servers.net, NS, IN)
-   (a.gtld-servers.net, 192.5.6.30, A, IN)
+   (edu, NS, a3.nstld.com)
+   (a3.nstld.com, A, 192.5.6.32)
+   (com, NS, a.gtld-servers.net)
+   (a.gtld-servers.net, A, 192.5.6.30)
    ...
 
 Moving our way down the hierarchy by one level, the server has records
@@ -257,8 +258,8 @@ for domains like this:
 
 ::
 
-   (princeton.edu, dns.princeton.edu, NS, IN)
-   (dns.princeton.edu, 128.112.129.15, A, IN)
+   (princeton.edu, NS, dns.princeton.edu)
+   (dns.princeton.edu, A, 128.112.129.15)
    ...
 
 In this case, we get an ``NS`` record and an ``A`` record for the name
@@ -270,9 +271,9 @@ server at yet another layer in the hierarchy (e.g., for a query about
 
 ::
 
-   (email.princeton.edu, 128.112.198.35, A, IN)
-   (penguins.cs.princeton.edu, dns1.cs.princeton.edu, NS, IN)
-   (dns1.cs.princeton.edu, 128.112.136.10, A, IN)
+   (email.princeton.edu, A, 128.112.198.35)
+   (penguins.cs.princeton.edu, NS, dns1.cs.princeton.edu)
+   (dns1.cs.princeton.edu, A, 128.112.136.10)
    ...
 
 Finally, a third-level name server, such as the one managed by domain
@@ -291,11 +292,11 @@ change everyone’s email address.
 
 ::
 
-   (penguins.cs.princeton.edu, 128.112.155.166, A, IN)
-   (www.cs.princeton.edu, coreweb.cs.princeton.edu, CNAME, IN)
-   (coreweb.cs.princeton.edu, 128.112.136.35, A, IN)
-   (cs.princeton.edu, mail.cs.princeton.edu, MX, IN)
-   (mail.cs.princeton.edu, 128.112.136.72, A, IN)
+   (penguins.cs.princeton.edu, A, 128.112.155.166)
+   (www.cs.princeton.edu, CNAME, coreweb.cs.princeton.edu)
+   (coreweb.cs.princeton.edu, A, 128.112.136.35)
+   (cs.princeton.edu, MX, mail.cs.princeton.edu)
+   (mail.cs.princeton.edu, A, 128.112.136.72)
    ...
 
 Note that, although resource records can be defined for virtually any
@@ -357,8 +358,8 @@ records for one or more of the root servers, for example:
 
 ::
 
-   ('root', a.root-servers.net, NS, IN)
-   (a.root-servers.net, 198.41.0.4, A, IN)
+   ('root', NS, a.root-servers.net)
+   (a.root-servers.net, A, 198.41.0.4, A)
 
 Thus, resolving a name actually involves a client querying the local
 server, which in turn acts as a client that queries the remote servers
@@ -390,6 +391,32 @@ names before sending out a query.
 
    Name resolution in practice, where the numbers 1 to 10 show the sequence
    of steps in the process.
+
+If you want to get a hands-on view of how name resolution works, you
+can use the command-line tool ``dig`` to make queries and receive
+responses in the form
+
+::
+
+   Name TTL Class Type Value
+
+If you invoke ``dig`` with the ``+trace`` option you can see the
+recursive process happening as the tool starts at the top of the DNS
+hierarchy and works its way down to resolve the query. Here is a subset of the
+output when we use the simple form of ``dig`` to look up ``www.cs.princeton.edu``
+
+::
+
+  $ dig www.cs.princeton.edu
+
+  ...
+
+  ;; QUESTION SECTION:
+  ;www.cs.princeton.edu.		IN	A
+
+  ;; ANSWER SECTION:
+  www.cs.princeton.edu.	60	IN	CNAME	coreweb.cs.princeton.edu.
+  coreweb.cs.princeton.edu. 60	IN	A	128.112.136.35
 
 .. _key-naming:
 .. admonition:: Key Takeaway
