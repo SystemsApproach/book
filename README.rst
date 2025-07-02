@@ -1,6 +1,11 @@
 About This Book
 ===============
-
+.. image:: _static/Written-By-Humans-Not-By-AI-Badge-black.png
+  :align: left
+  :scale: 50%
+  :alt: written by humans not by AI button
+  :target: https://notbyai.fyi
+           
 .. image:: https://github.com/SystemsApproach/book/actions/workflows/publish-docs.yml/badge.svg
   :align: left
   :alt: deployment status button
