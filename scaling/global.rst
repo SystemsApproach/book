@@ -60,7 +60,7 @@ use within their networks and on how metrics should be assigned to links
 in their network. Because of this independence, each provider’s network
 is usually a single *autonomous system* (AS). We will define this term
 more precisely in a later section, but for now it is adequate to think
-of an AS as a network that is administered independently of other ASs.
+of an AS as a network that is administered independently of other ASes.
 
 The fact that the Internet has a discernible structure can be used to
 our advantage as we tackle the problem of scalability. In fact, we need
@@ -209,7 +209,7 @@ improving scalability, the AS model decouples the intradomain routing
 that takes place in one AS from that taking place in another. Thus, each
 AS can run whatever intradomain routing protocols it chooses. It can
 even use static routes or multiple protocols, if desired. The
-interdomain routing problem is then one of having different ASs share
+interdomain routing problem is then one of having different ASes share
 reachability information—descriptions of the set of IP addresses that
 can be reached via a given AS—with each other.
 
@@ -320,8 +320,8 @@ able to forward any packet destined anywhere in the Internet. That means
 having a routing table that will provide a match for any valid IP
 address. While CIDR has helped to control the number of distinct
 prefixes that are carried in the Internet’s backbone routing, there is
-inevitably a lot of routing information to pass around—roughly 700,000
-prefixes in mid-2018.
+inevitably a lot of routing information to pass around—the number of
+prefixes has exceeded one million by 2025.
 
 A further challenge in interdomain routing arises from the autonomous
 nature of the domains. Note that each domain may run its own interior
