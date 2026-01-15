@@ -97,29 +97,35 @@ data. This data is still represented as ASCII text, but because it may
 be an encoded version of, say, a JPEG image, it’s not necessarily
 readable by human users. More on MIME in a moment.
 
-The message header is a series of ``<CRLF>``-terminated lines.
-(``<CRLF>`` stands for carriage-return plus line-feed, which are a pair
-of ASCII control characters often used to indicate the end of a line of
-text.) The header is separated from the message body by a blank line.
-Each header line contains a type and value separated by a colon. Many of
-these header lines are familiar to users, since they are asked to fill
-them out when they compose an email message; for example, the header
-identifies the message recipient, and the header says something about
-the purpose of the message. Other headers are filled in by the
-underlying mail delivery system. Examples include (when the message was
-transmitted), (what user sent the message), and (each mail server that
-handled this message). There are, of course, many other header lines;
-the interested reader is referred to RFC 822.
 
-RFC 822 was extended in 1993 (and updated quite a few times since then)
-to allow email messages to carry many different types of data: audio,
-video, images, PDF documents, and so on. MIME consists of three basic
-pieces. The first piece is a collection of header lines that augment the
-original set defined by RFC 822. These header lines describe, in various
-ways, the data being carried in the message body. They include (the
-version of MIME being used), (a human-readable description of what’s in
-the message, analogous to the line), (the type of data contained in the
-message), and (how the data in the message body is encoded).
+
+The message header is a series of ``<CRLF>``-terminated lines.
+(``<CRLF>`` stands for carriage-return plus line-feed, which are a
+pair of ASCII control characters often used to indicate the end of a
+line of text.) The header is separated from the message body by a
+blank line.  Each header line contains a type and value separated by a
+colon. Many of these header lines are familiar to users, since they
+are asked to fill them out when they compose an email message; for
+example, the ``To:`` header identifies the message recipient, and the
+``Subject:`` header says something about the purpose of the
+message. Other headers are filled in by the underlying mail delivery
+system. Examples include ``Date:`` (when the message was transmitted),
+``From:`` (what user sent the message), and ``Received:`` (each mail
+server that handled this message). There are, of course, many other
+header lines; the interested reader is referred to RFC 822.
+
+RFC 822 was extended in 1993 (and updated quite a few times since
+then) to allow email messages to carry many different types of data:
+audio, video, images, PDF documents, and so on. MIME consists of three
+basic pieces. The first piece is a collection of header lines that
+augment the original set defined by RFC 822. These header lines
+describe, in various ways, the data being carried in the message
+body. They include ``MIME-Version:`` (the version of MIME being used),
+``Content-Description:`` (a human-readable description of what’s in
+the message, analogous to the ``Subject:`` line), ``Content-Type:``
+(the type of data contained in the message), and
+``Content-Transfer-Encoding:`` (how the data in the message body is
+encoded).
 
 The second piece is definitions for a set of content types (and
 subtypes). For example, MIME defines several different image types,
