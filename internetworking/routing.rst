@@ -1171,7 +1171,7 @@ common approach to setting metrics is to use a constant multiplied by
    time, so it’s important to deploy a simple solution sooner rather
    than later, and expect to improve it over time. Staying stuck in the
    design phase indefinitely is usually not a good plan. The second
-   is the well-know KISS principle: *Keep it Simple, Stupid.* When
+   is the well-known KISS principle: *Keep it Simple, Stupid.* When
    building a complex system, less is often more. Opportunities to
    invent sophisticated optimizations are plentiful, and it’s a tempting
    opportunity to pursue. While such optimizations sometimes have
