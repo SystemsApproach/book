@@ -81,7 +81,7 @@ understanding the underlying ideas.)
           into a multi-billion dollar industry. Starting from the
           humble beginnings of the client/server paradigm and a
           handful of simple application programs like email, file
-          transfer, and remote login, everyone now has access to an
+          transfer, and remote login, everyone now has access to a
           never-ending supply of cloud applications from their
           smartphones.
 
