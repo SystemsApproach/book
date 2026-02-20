@@ -310,14 +310,14 @@ that can be achieved over a network is given by the simple relationship
 
 .. centered:: Throughput = TransferSize / TransferTime
 
-where TransferTime includes not only the elements of one-way latency
+where ``TransferTime`` includes not only the elements of one-way latency
 identified earlier in this section, but also any additional time spent
 requesting or setting up the transfer. Generally, we represent this
 relationship as
 
 .. centered:: TransferTime = RTT + 1/Bandwidth x TransferSize
 
-We use RTT in this calculation to account for a request message being sent
+We use ``RTT`` in this calculation to account for a request message being sent
 across the network and the data being sent back. For example, consider a
 situation where a user wants to fetch a 1-MB file across a 1-Gbps link with a
 round-trip time of 100 ms. This includes both the transmit time for 1 MB
