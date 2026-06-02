@@ -1,8 +1,6 @@
-Sphinx~=5.3.0
-doc8~=0.10.1
-docutils~=0.17.1
-reuse~=0.14.0
-sphinx-rtd-theme~=1.0.0
-sphinxcontrib-spelling~=7.3.2
+Sphinx~=8.2.3
+doc8~=2.0.0
+reuse~=5.0.2
+sphinx-rtd-theme~=3.0.2
+sphinxcontrib-spelling~=8.0.1
 sphinx-multiversion~=0.2.4
-pytz~=2023.3

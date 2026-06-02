@@ -269,7 +269,7 @@ following code fragment:
    }
 
 where ``state`` represents the state of a particular TCP connection and
-defines an upper bound on how large the congestion window is allowed to
+``TCP_MAXWIN`` defines an upper bound on how large the congestion window is allowed to
 grow.
 
 :numref:`Figure %s <fig-trace1>` traces how TCP’s ``CongestionWindow``

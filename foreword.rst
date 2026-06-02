@@ -8,7 +8,7 @@ how long ago the foundations of the Internet were laid.
 
 In 1996, the NSFNET had just been decommissioned, and the commercial
 phase of the Internet was just beginning. The first search engine
-(Alta Vista—do you remember?) had just been demonstrated. Content
+(AltaVista—do you remember?) had just been demonstrated. Content
 delivery networks did not exist—Akamai was founded two years later
 in 1998, the same year Google was officially born. Cloud was only a
 distant haze on the horizon. And there was no such thing as

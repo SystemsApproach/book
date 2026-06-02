@@ -136,7 +136,7 @@ Except at the hardware level, where peers directly communicate with each
 other over a physical medium, peer-to-peer communication is
 indirect—each protocol communicates with its peer by passing messages to
 some lower-level protocol, which in turn delivers the message to *its*
-peer. In addition, there are potentially more than one protocol at any
+peer. In addition, there may be more than one protocol at any
 given level, each providing a different communication service. We
 therefore represent the suite of protocols that make up a network system
 with a *protocol graph*. The nodes of the graph correspond to protocols,
@@ -424,9 +424,9 @@ layer is layer 3, and the link or subnet layer below IP is layer 2.
    specification of many of its protocols, such as TCP, UDP, IP,
    DNS, and BGP. But the Internet architecture also embraces many
    protocols defined by other organizations, including IEEE's
-   802.11 ethernet and Wi-Fi standards, W3C's HTTP/HTML web
-   specifications, 3GPP's 4G and 5G cellular networks standards,
-   and ITU-T's H.232 video encoding standards, to name a few.
+   802.3 Ethernet and 802.11 Wi-Fi standards, W3C's HTTP/HTML web
+   specifications, 3GPP's 4G and 5G cellular network standards,
+   and ITU-T's H.264 video encoding standard, to name a few.
 
    In addition to defining architectures and specifying protocols,
    there are yet other organizations that support the larger goal of
@@ -486,4 +486,3 @@ meetings:
    capabilities, and evolve rapidly. The narrow-waisted model is
    critical to the Internet’s ability to adapt to new user
    demands and changing technologies. :ref:`[Next] <key-pipe-full>`
-

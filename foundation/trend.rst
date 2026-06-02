@@ -17,7 +17,7 @@ Facebook, Google, Amazon, Microsoft, Apple, Netflix, Spotify), and of
 course, subscribers and customers (i.e., individuals, but also
 enterprises and businesses). The lines between these players are not
 always crisp, with many companies playing multiple roles. The most
-notable example of this are the large cloud providers, who (a) build
+notable examples are the large cloud providers, who (a) build
 their own networking equipment using commodity components, (b) deploy
 and operate their own networks, and (c) provide end-user services and
 applications on top of their networks.
@@ -36,7 +36,7 @@ changes with each new edition of the textbook over the years. Doing that
 on a timeline measured in years has historically been good enough, but
 anyone that has downloaded and used the latest smartphone app knows how
 glacially slow anything measured in years is by today’s standards.
-Designing for evolution has to be part of the decision making process.
+Designing for evolution has to be part of the decision-making process.
 
 On the second point, the companies that build networks are almost always
 the same ones that operate them. They are collectively known as *network

@@ -253,8 +253,8 @@ TLD servers.
    (a.gtld-servers.net, A, 192.5.6.30)
    ...
 
-Moving our way down the hierarchy by one level, the server has records
-for domains like this:
+Moving our way down the hierarchy by one level, the ``a3.nstld.com`` server has records
+for ``.edu`` domains like this:
 
 ::
 

@@ -151,7 +151,7 @@ perceptible and annoying.
 A final function that we might want to put into the protocol is some
 way of identifying senders that is more user-friendly than an IP
 address. As illustrated in :numref:`Figure %s <fig-zoom>`, audio and
-video conferencing applications can display strings such as on their
+video conferencing applications can display strings such as ``User <user@example.com>`` on their
 control panels, and thus the application protocol should support the
 association of such a string with a data stream.
 
