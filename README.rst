@@ -75,6 +75,11 @@ content to justify the effort. This happens quarterly, give-or-take, and
 is primarily to create a snapshot so that everyone in a course can know
 they are using the same version.
 
+We are now working on the 7th edition, which is different enough from
+prior editions to warrant its own repository. You can read the draft
+at https://7e.systemsapproach.org and view the sources (and
+contribute) at https://github.com/SystemsApproach/7E.
+
 Build the Book
 --------------
 

@@ -10,6 +10,8 @@ up to date with the latest developments by subscribing to the
 connect the concepts and lessons in this book to what's happening in
 the Internet today.
 
+The next edition of this book is in development at https://7e.systemsapproach.org.
+
 `Book Series: <https://systemsapproach.org/books/>`__ Also check out
 our companion books that cover emerging topics in more depth.
 
