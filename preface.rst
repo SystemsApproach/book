@@ -226,6 +226,7 @@ contributions and bug fixes:
    -  Karanveer B. (KaranveerB)
    -  Meek Msaki (mmsaki)
    -  Jeroen van der Ham-de Vos (jeroen)
+   -  Ayelet Lotem
 
 Finally, we would like to thank the following reviewers for their many
 helpful comments and suggestions. Their impact was significant.
