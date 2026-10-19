@@ -496,7 +496,7 @@ the prose description given earlier in this section).
        char     *hbuf;
 
        hbuf = msgStripHdr(frame, HLEN);
-       load_swp_hdr(&hdr, hbuf)
+       load_swp_hdr(&hdr, hbuf);
        if (hdr.Flags & FLAG_ACK_VALID)
        {
            /* received an acknowledgment—do SENDER side */
