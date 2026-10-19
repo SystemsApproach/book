@@ -250,7 +250,7 @@ signal with enough transitions to enable clock recovery.
 
 SONET supports the multiplexing of multiple low-speed links in the
 following way. A given SONET link runs at one of a finite set of
-possible rates, ranging from 51.84 Mbps (STS-1) to 39,813,120 Mbps
+possible rates, ranging from 51.84 Mbps (STS-1) to 39,813.12 Mbps
 (STS-768).\ [#]_ Note that all of these rates are integer multiples of STS-1.
 The significance for framing is that a single SONET frame can contain
 subframes for multiple lower-rate channels. A second related feature is
@@ -295,7 +295,7 @@ for this purpose. :numref:`Figure %s <fig-sonet1>` schematically depicts
 concatenation in the case of three STS-1 frames being concatenated into
 a single STS-3c frame. The significance of a SONET link being designated
 as STS-3c rather than STS-3 is that, in the former case, the user of the
-link can view it as a single 155.25-Mbps pipe, whereas an STS-3 should
+link can view it as a single 155.52-Mbps pipe, whereas an STS-3 should
 really be viewed as three 51.84-Mbps links that happen to share a fiber.
 
 .. _fig-sonet3:
