@@ -335,7 +335,7 @@ with the stated properties:
 
 - All single-bit errors, as long as the :math:`x^{k}` and :math:`x^{0}` terms have nonzero coefficients
 
-- All double-bit errors that are :math:`j` bits apart, as long as 
+- All double-bit errors that are :math:`j` bits apart, as long as
   the :math:`x^{0}` term is nonzero and
   :math:`C(x)` does not divide evenly into :math:`x^{j} + 1`
 
